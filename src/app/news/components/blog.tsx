@@ -1,37 +1,5 @@
 import PostCard from "@/components/post-card";
-
-const posts = [
-  {
-    title: "UX review presentations",
-    image: "/images/blog.png",
-    shortDesc:
-      "How do you create compelling presentations that wow your colleagues and impress your managers?",
-    readTime: "8 min read",
-    author: "Olivia Rhye",
-    authorImage: "/images/Avatar.png",
-    date: "20 Jan 2022",
-  },
-  {
-    title: "UX review presentations",
-    image: "/images/blog.png",
-    shortDesc:
-      "How do you create compelling presentations that wow your colleagues and impress your managers?",
-    readTime: "8 min read",
-    author: "Olivia Rhye",
-    authorImage: "/images/Avatar.png",
-    date: "20 Jan 2022",
-  },
-  {
-    title: "UX review presentations",
-    image: "/images/blog.png",
-    shortDesc:
-      "How do you create compelling presentations that wow your colleagues and impress your managers?",
-    readTime: "8 min read",
-    author: "Olivia Rhye",
-    authorImage: "/images/Avatar.png",
-    date: "20 Jan 2022",
-  },
-];
+import { posts } from "@/lib/data";
 
 export default function Blog() {
   return (

@@ -5,8 +5,11 @@ type BanerProps = {
 
 export function Banner({ image, children }: BanerProps) {
   return (
-    <div style={{ backgroundImage: `url(${image})` }} className="h-[calc(100vh-72px)] lg:h-[calc(100vh-80px)] container flex items-center">
-      {children}
-    </div>
+    <section
+      style={{ backgroundImage: `url(${image})` }}
+      className="h-[calc(100vh-72px)] lg:h-[calc(100vh-80px)] flex items-center"
+    >
+      <div className="container z-50">{children}</div>
+    </section>
   );
 }

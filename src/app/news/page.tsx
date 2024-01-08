@@ -21,13 +21,13 @@ const data = [
 
 export default function Page() {
   return (
-    <>
-      {/* <Banner image="/">
-        <p>Our Activities</p>
-      </Banner> */}
-      <section className="container">
+    <section className="space-y-6 lg:space-y-14">
+      <Banner image="/images/banners/news-banner.png">
+        <h1 className="text-5xl font-semibold text-white">News and Events</h1>
+      </Banner>
+      <div className="container">
         <ActivityTabs data={data} />
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

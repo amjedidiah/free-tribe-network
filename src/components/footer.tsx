@@ -1,5 +1,27 @@
 import Image from "next/image";
+import ContactCard from "./contact-card";
 import { Button } from "./ui/button";
+
+const contact = [
+  {
+    image: "/icons/message-circle.svg",
+    header: "Chat to support",
+    subHeader: "We’re here to help.",
+    text: "Freetribenetwork@gmail.com",
+  },
+  {
+    image: "/icons/message-circle.svg",
+    header: "Visit Us",
+    subHeader: "Visit our office HQ.",
+    text: "No 15/11b, YK Abass, Ore-Ofe Estate, Elewiodo, Ibadan.",
+  },
+  {
+    image: "/icons/phone.svg",
+    header: "Call us",
+    subHeader: "Mon-Fri from 8am to 5pm.",
+    text: "+234 (0) 815 3494 508",
+  },
+];
 
 export default function Footer() {
   return (
@@ -7,40 +29,14 @@ export default function Footer() {
       <div className="container py-6 lg:py-24 flex flex-col gap-8 lg:gap-24">
         <div className="flex flex-col gap-2 lg:gap-6">
           <h1 className="text-2xl lg:text-4xl font-semibold">We’d love to hear from you</h1>
-          <p className="text-base lg:text-xl font-medium">Our friendly team is always here to chat.</p>
+          <p className="text-base lg:text-xl font-medium">
+            Our friendly team is always here to chat.
+          </p>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <div className="flex flex-col justify-between p-3 lg:p-6 gap-8 lg:gap-12 bg-[#E6EFF380] rounded-xl">
-            <div className="bg-secondary w-fit p-2 rounded-lg">
-              <Image src="/icons/message-circle.svg" alt="Message Icon" width={24} height={24} />
-            </div>
-            <div className="space-y-2">
-              <p className="text-xl font-medium">Chat to support</p>
-              <p>We’re here to help.</p>
-            </div>
-            <p className="text-primary">Freetribenetwork@gmail.com</p>
-          </div>
-          <div className="flex flex-col justify-between p-3 lg:p-6 gap-8 lg:gap-12 bg-[#E6EFF380] rounded-xl">
-            <div className="bg-secondary w-fit p-2 rounded-lg">
-              <Image src="/icons/map-pin.svg" alt="Message Icon" width={24} height={24} />
-            </div>
-            <div className="space-y-2">
-              <p className="text-xl font-medium">Visit us</p>
-              <p>Visit our office HQ.</p>
-            </div>
-            <p className="text-primary">No 15/11b, YK Abass, Ore-Ofe Estate, Elewiodo, Ibadan.</p>
-          </div>
-
-          <div className="flex flex-col justify-between p-3 lg:p-6 gap-8 lg:gap-12 bg-[#E6EFF380] rounded-xl">
-            <div className="bg-secondary w-fit p-2 rounded-lg">
-              <Image src="/icons/phone.svg" alt="Message Icon" width={24} height={24} />
-            </div>
-            <div className="space-y-2">
-              <p className="text-xl font-medium">Call us</p>
-              <p>Mon-Fri from 8am to 5pm.</p>
-            </div>
-            <p className="text-primary">+234 (0) 815 3494 508</p>
-          </div>
+          {contact.map((i) => (
+            <ContactCard key={i.header} {...i} />
+          ))}
         </div>
       </div>
       <footer className="bg-secondary-900 py-6 lg:py-12">
