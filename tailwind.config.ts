@@ -13,7 +13,12 @@ const config = {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: {
+        DEFAULT: "1rem",
+        sm: "2rem",
+        lg: "4rem",
+        xl: "5rem",
+      },
       screens: {
         "2xl": "1400px",
       },
@@ -32,6 +37,7 @@ const config = {
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
+          900: "#032637",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
