@@ -37,3 +37,4 @@ next-env.d.ts
 
 .nx
 pnpm-lock.yaml
+certificates

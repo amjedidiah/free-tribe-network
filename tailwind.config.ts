@@ -13,9 +13,12 @@ const config = {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: {
+        DEFAULT: "1rem",
+        xl: "2rem",
+      },
       screens: {
-        "2xl": "1400px",
+        xl: "1280px",
       },
     },
     extend: {
@@ -28,10 +31,12 @@ const config = {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          700: "#6941C6",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
+          900: "#032637",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -53,6 +58,12 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        gray: {
+          100: "#F2F4F7",
+          200: "#F2F2F2",
+        },
+        black: "#1a1a1a",
+        description: "rgba(var(--description), 0.7)",
       },
       borderRadius: {
         lg: "var(--radius)",
