@@ -1,0 +1,8 @@
+<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="map-pin">
+<g id="Icon">
+<path d="M21.832 10C21.832 17 12.832 23 12.832 23C12.832 23 3.83203 17 3.83203 10C3.83203 7.61305 4.78024 5.32387 6.46807 3.63604C8.1559 1.94821 10.4451 1 12.832 1C15.219 1 17.5082 1.94821 19.196 3.63604C20.8838 5.32387 21.832 7.61305 21.832 10Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.832 13C14.4889 13 15.832 11.6569 15.832 10C15.832 8.34315 14.4889 7 12.832 7C11.1752 7 9.83203 8.34315 9.83203 10C9.83203 11.6569 11.1752 13 12.832 13Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</svg>
