@@ -37,7 +37,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
         )}
       >
         <Nav />
-        <main>{children}</main>
+        <main className="space-y-6 lg:space-y-14">{children}</main>
         <Footer />
         <WhatsappChat />
       </body>

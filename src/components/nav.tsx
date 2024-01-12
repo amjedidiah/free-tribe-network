@@ -14,7 +14,7 @@ export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed w-full z-10">
+    <header className="fixed w-full z-10 shadow">
       <div></div>
       <nav className="bg-white border-b border-gray-100">
         <div

@@ -1,3 +1,7 @@
+import Blog from "@/app/news-events/components/blog";
+import Recent from "@/app/news-events/components/recent";
+import Upcoming from "@/app/news-events/components/upcoming";
+
 export const routes = [
   {
     label: "Home",
@@ -113,36 +117,42 @@ export const activities = [
     description: "Design Handoff and Developer Handover",
     image: "/images/Frame 17.jpg",
     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
+    category: "star",
   },
   {
     title: "Design Handoff and Developer Handover",
     description: "Design Handoff and Developer Handover",
     image: "/images/Frame 17.jpg",
     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
+    category: "star",
   },
   {
     title: "Design Handoff and Developer Handover",
     description: "Design Handoff and Developer Handover",
     image: "/images/Frame 17.jpg",
     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
+    category: "star",
   },
   {
     title: "Design Handoff and Developer Handover",
     description: "Design Handoff and Developer Handover",
     image: "/images/Frame 17.jpg",
     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
+    category: "star",
   },
   {
     title: "Design Handoff and Developer Handover",
     description: "Design Handoff and Developer Handover",
     image: "/images/Frame 17.jpg",
     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
+    category: "star",
   },
   {
     title: "Design Handoff and Developer Handover",
     description: "Design Handoff and Developer Handover",
     image: "/images/Frame 17.jpg",
     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
+    category: "star",
   },
 ];
 
@@ -156,6 +166,7 @@ export const posts = [
     author: "Olivia Rhye",
     authorImage: "/images/Avatar.png",
     date: "20 Jan 2022",
+    category: "star",
   },
   {
     title: "UX review presentations",
@@ -166,6 +177,7 @@ export const posts = [
     author: "Olivia Rhye",
     authorImage: "/images/Avatar.png",
     date: "20 Jan 2022",
+    category: "star",
   },
   {
     title: "UX review presentations",
@@ -176,5 +188,21 @@ export const posts = [
     author: "Olivia Rhye",
     authorImage: "/images/Avatar.png",
     date: "20 Jan 2022",
+    category: "star",
+  },
+];
+
+export const activityTabsData = [
+  {
+    trigger: "Recent Activites",
+    Component: Recent,
+  },
+  {
+    trigger: "Upcoming Activities",
+    Component: Upcoming,
+  },
+  {
+    trigger: "Blog Post",
+    Component: Blog,
   },
 ];

@@ -101,7 +101,12 @@ export default function Footer() {
                       key={name}
                     >
                       <span className="hidden">{name}</span>
-                      <Image src={src} alt={name} fill />
+                      <Image
+                        src={src}
+                        alt={name}
+                        fill
+                        style={{ objectPosition: "center", objectFit: "cover" }}
+                      />
                     </a>
                   ))}
                 </div>
