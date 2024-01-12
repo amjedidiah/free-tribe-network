@@ -61,6 +61,8 @@ const config = {
           100: "#F2F4F7",
           200: "#F2F2F2",
         },
+        black: "#1a1a1a",
+        description: "rgba(var(--description), 0.7)",
       },
       borderRadius: {
         lg: "var(--radius)",

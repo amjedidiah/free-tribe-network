@@ -1,13 +1,18 @@
 import Image from "next/image";
 import ContactCard from "@/components/contact-card";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { routes } from "@/lib/data";
 
-const contact = [
+export const contactNumber = "+2348153494508";
+
+export const contactChannels = [
   {
     image: "/icons/message-circle.svg",
     header: "Chat to support",
     subHeader: "We’re here to help.",
-    text: "Freetribenetwork@gmail.com",
+    text: "freetribenetwork@gmail.com",
+    href: "mailto:freetribenetwork@gmail.com",
   },
   {
     image: "/icons/message-circle.svg",
@@ -19,119 +24,122 @@ const contact = [
     image: "/icons/phone.svg",
     header: "Call us",
     subHeader: "Mon-Fri from 8am to 5pm.",
-    text: "+234 (0) 815 3494 508",
+    text: "+234 (815) 3494 508",
+    href: `tel:${contactNumber}`,
   },
 ];
 
+const socials = [
+  {
+    name: "twitter",
+    src: "/icons/twitter-icon.svg",
+    href: "https://twitter.com/freetribenetwrk",
+  },
+  {
+    name: "linkedin",
+    src: "/icons/linkedin-icon.svg",
+    href: "https://www.linkedin.com/company/freetribenetwork",
+  },
+  {
+    name: "facebook",
+    src: "/icons/facebook-icon.svg",
+    href: "https://web.facebook.com/freetribenetwrk",
+  },
+  {
+    name: "instagram",
+    src: "/icons/instagram-icon.svg",
+    href: "https://www.instagram.com/freetribenetwork",
+  },
+];
+
+const currentYear = new Date().getFullYear();
+
 export default function Footer() {
   return (
-    <>
-      <div
-        className="container py-6 lg:py-24 flex flex-col gap-8 lg:gap-24"
-        id="contact-us"
-      >
-        <div className="flex flex-col gap-2 lg:gap-6">
-          <h1 className="text-2xl lg:text-4xl font-semibold">
+    <footer>
+      <section className="container" id="contact-us">
+        <article className="py-12 lg:py-24 grid gap-6">
+          <h1 className="text-2xl lg:text-[2rem] leading-[3rem] spacing font-semibold text-black">
             We&apos;d love to hear from you
           </h1>
           <p className="text-base lg:text-xl font-medium">
             Our friendly team is always here to chat.
           </p>
-        </div>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {contact.map((i) => (
+        </article>
+
+        <article className="pb-12 lg:pb-24 grid lg:grid-cols-3 gap-6">
+          {contactChannels.map((i) => (
             <ContactCard key={i.header} {...i} />
           ))}
-        </div>
-      </div>
-      <footer className="bg-secondary-900 py-6 lg:py-12">
-        <div className="container flex flex-col gap-6 lg:gap-8 text-white ">
-          <div className="flex justify-between">
-            <Image
-              src="/images/free tribe white.png"
-              alt="logo"
-              width={49}
-              height={47}
-            />
-            <div className="flex gap-2 lg:gap-4 items-center ">
-              <div className="bg-white text-secondary-900 px-4 py-2 lg:py-4 lg:px-6 rounded-full">
-                Chat With Us
-              </div>
-              <Image
-                src="/icons/whatsapp-icon.svg"
-                alt="Whatsapp Icon"
-                width={48}
-                height={48}
-              />
-            </div>
-          </div>
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
-            <div className="flex flex-col gap-4 lg:gap-10">
-              <ul className="flex flex-col lg:flex-row gap-4 lg:gap-10">
-                <li>Home</li>
-                <li>About Us</li>
-                <li>Our Initiatives</li>
-                <li>Donate</li>
-              </ul>
-              <div className="flex gap-8">
+        </article>
+      </section>
+      <section className="bg-secondary-900 py-6 lg:py-10">
+        <div className="container grid gap-6 lg:gap-8 text-white">
+          <div className="flex flex-col lg:flex-row justify-between gap-10">
+            <div className="flex flex-col gap-4">
+              <Link href="/">
                 <Image
-                  src={"/icons/twitter-icon.svg"}
-                  alt={"twitter Icon"}
-                  width={24}
-                  height={24}
+                  src="/images/free tribe white.png"
+                  alt="logo"
+                  width={60}
+                  height={60}
                 />
-                <Image
-                  src={"/icons/linkedin-icon.svg"}
-                  alt={"twitter Icon"}
-                  width={24}
-                  height={24}
-                />
-                <Image
-                  src={"/icons/facebook-icon.svg"}
-                  alt={"twitter Icon"}
-                  width={24}
-                  height={24}
-                />
-                <Image
-                  src={"/icons/instagram-icon.svg"}
-                  alt={"twitter Icon"}
-                  width={24}
-                  height={24}
-                />
+              </Link>
+              <div className="grid gap-4">
+                <ul className="flex flex-col lg:flex-row gap-4 lg:gap-10">
+                  {routes.map(({ links, ...item }) => (
+                    <li key={item.label}>
+                      <Link href={item.href}>{item.label}</Link>
+                    </li>
+                  ))}
+                </ul>
+                <div className="flex gap-8">
+                  {socials.map(({ name, src, href }) => (
+                    <a
+                      href={href}
+                      className="w-5 h-5 lg:w-6 lg:h-6 relative"
+                      key={name}
+                    >
+                      <span className="hidden">{name}</span>
+                      <Image src={src} alt={name} fill />
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
-            <div className="lg:w-[30rem] space-y-2">
-              <h3 className="font-extrabold text-lg">Subscribe to our mail</h3>
-              <p>
-                By registering, you agree{" "}
-                <span className="font-bold">Free Trip Network</span> storing and
-                using your email address for the purpose of sending you our
-                monthly newsletter. If you wish to unsubscribe or find out how
-                your data is processed
-              </p>
+
+            <div className="lg:w-[30rem] flex flex-col justify-between gap-4">
+              <div>
+                <h3 className="font-extrabold text-xl">
+                  Subscribe to our mail
+                </h3>
+                <p className="text-xs text-slate-300">
+                  By registering, you agree to{" "}
+                  <span className="font-bold">Free Tribe Network</span> storing
+                  and using your email address for the purpose of sending you
+                  our monthly newsletter.
+                </p>
+              </div>
               <form className="flex gap-2 lg:gap-4">
                 <input
-                  className="rounded-md flex-grow"
+                  className="rounded-md flex-grow text-black py-2 px-3 h-auto"
                   type="email"
                   name="email"
                   aria-label="Email Address"
+                  placeholder="Email Address"
                   autoComplete="email"
                 />
-                <Button>Subscribe</Button>
+                <Button className="h-auto w-32">Subscribe</Button>
               </form>
             </div>
           </div>
           <hr />
           <div className="flex flex-col lg:flex-row items-center justify-between gap-2">
-            <p>© 2077 Untitled UI. All rights reserved.</p>
-            <ul className="flex gap-4">
-              <li>Terms</li>
-              <li>Privacy</li>
-              <li>Cookies</li>
-            </ul>
+            <p>&copy; {currentYear} Free Tribe Network</p>
+            <p>All rights reserved</p>
           </div>
         </div>
-      </footer>
-    </>
+      </section>
+    </footer>
   );
 }

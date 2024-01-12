@@ -5,6 +5,7 @@ import Nav from "@/components/nav";
 import Footer from "@/components/footer";
 import { PropsWithChildren } from "react";
 import { cn } from "@/lib/utils";
+import WhatsappChat from "@/components/whatsapp-chat";
 
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" });
 
@@ -31,13 +32,14 @@ export default function RootLayout({ children }: PropsWithChildren) {
     <html lang="en" className="h-full">
       <body
         className={cn(
-          "font-manrope min-h-full grid grid-rows-[auto,1fr,auto]",
+          "font-manrope min-h-full grid grid-rows-[1fr,auto]",
           manrope.variable
         )}
       >
         <Nav />
-        {children}
+        <main>{children}</main>
         <Footer />
+        <WhatsappChat />
       </body>
     </html>
   );
