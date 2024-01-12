@@ -1,102 +1,106 @@
+import Blog from "@/app/news-events/components/blog";
+import Recent from "@/app/news-events/components/recent";
+import Upcoming from "@/app/news-events/components/upcoming";
+
 export const routes = [
   {
     label: "Home",
     href: "/",
   },
   {
-    label: "Who  we are",
+    label: "Who we are",
     href: "/who-we-are",
     links: [
       {
         label: "Our History",
-        href: "/",
+        href: "our-history",
         icon: "/icons/our-history.svg",
       },
       {
         label: "Mission & Vision",
-        href: "/",
+        href: "mission-vision",
         icon: "/icons/mission.svg",
       },
       {
         label: "What we do",
-        href: "/",
+        href: "what-we-do",
         icon: "/icons/what-we-do.svg",
       },
       {
         label: "BOT",
-        href: "/",
+        href: "bot",
         icon: "/icons/bot.svg",
       },
       {
         label: "Staff",
-        href: "/",
+        href: "staff",
         icon: "/icons/staff.svg",
       },
       {
         label: "Work with us",
-        href: "/",
+        href: "work-with-us",
         icon: "/icons/work-with-us.svg",
       },
       {
         label: "Testimonials",
-        href: "/",
+        href: "testimonials",
         icon: "/icons/testimonials.svg",
       },
     ],
   },
   {
     label: "Our Initiatives",
-    href: "/initiatives",
+    href: "/our-initiatives",
     links: [
       {
         label: "STAR project",
-        href: "/",
+        href: "star-project",
         icon: "/icons/star-project.svg",
       },
       {
         label: "ReproMatters",
-        href: "/",
+        href: "repromatters",
         icon: "/icons/repromatters.svg",
       },
       {
         label: "Free Tribe Boost-Camp",
-        href: "/",
+        href: "free-tribe-boost-camp",
         icon: "/icons/ft-boost-camp.svg",
       },
       {
         label: "Free Tribe Helpline",
-        href: "/",
+        href: "free-tribe-helpline",
         icon: "/icons/ft-helpline.svg",
       },
       {
         label: "Free Tribe Clubs",
-        href: "/",
+        href: "free-tribe-clubs",
         icon: "/icons/ft-clubs.svg",
       },
       {
         label: "RFH Advocacy",
-        href: "/",
+        href: "rfh-advocacy",
         icon: "/icons/rfh.svg",
       },
     ],
   },
   {
     label: "News & Events",
-    href: "/news",
+    href: "/news-events",
     links: [
       {
         label: "Upcoming Events",
-        href: "/",
+        href: "upcoming-events",
         icon: "/icons/upcoming.svg",
       },
       {
         label: "Past Events",
-        href: "/",
+        href: "past-events",
         icon: "/icons/past-event.svg",
       },
       {
         label: "Blog",
-        href: "/",
+        href: "blog",
         icon: "/icons/blog.svg",
       },
     ],
@@ -113,36 +117,42 @@ export const activities = [
     description: "Design Handoff and Developer Handover",
     image: "/images/Frame 17.jpg",
     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
+    category: "star",
   },
   {
     title: "Design Handoff and Developer Handover",
     description: "Design Handoff and Developer Handover",
     image: "/images/Frame 17.jpg",
     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
+    category: "star",
   },
   {
     title: "Design Handoff and Developer Handover",
     description: "Design Handoff and Developer Handover",
     image: "/images/Frame 17.jpg",
     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
+    category: "star",
   },
   {
     title: "Design Handoff and Developer Handover",
     description: "Design Handoff and Developer Handover",
     image: "/images/Frame 17.jpg",
     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
+    category: "star",
   },
   {
     title: "Design Handoff and Developer Handover",
     description: "Design Handoff and Developer Handover",
     image: "/images/Frame 17.jpg",
     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
+    category: "star",
   },
   {
     title: "Design Handoff and Developer Handover",
     description: "Design Handoff and Developer Handover",
     image: "/images/Frame 17.jpg",
     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
+    category: "star",
   },
 ];
 
@@ -156,6 +166,7 @@ export const posts = [
     author: "Olivia Rhye",
     authorImage: "/images/Avatar.png",
     date: "20 Jan 2022",
+    category: "star",
   },
   {
     title: "UX review presentations",
@@ -166,6 +177,7 @@ export const posts = [
     author: "Olivia Rhye",
     authorImage: "/images/Avatar.png",
     date: "20 Jan 2022",
+    category: "star",
   },
   {
     title: "UX review presentations",
@@ -176,5 +188,21 @@ export const posts = [
     author: "Olivia Rhye",
     authorImage: "/images/Avatar.png",
     date: "20 Jan 2022",
+    category: "star",
+  },
+];
+
+export const activityTabsData = [
+  {
+    trigger: "Recent Activites",
+    Component: Recent,
+  },
+  {
+    trigger: "Upcoming Activities",
+    Component: Upcoming,
+  },
+  {
+    trigger: "Blog Post",
+    Component: Blog,
   },
 ];

@@ -1,15 +1,29 @@
-type BanerProps = {
+type BannerProps = {
   image: string;
   children: React.ReactNode;
+  positionClass?:
+    | "bg-top"
+    | "bg-left-top"
+    | "bg-right-top"
+    | "bg-bottom"
+    | "bg-left-bottom"
+    | "bg-right-bottom"
+    | "bg-center"
+    | "bg-left"
+    | "bg-right";
 };
 
-export function Banner({ image, children }: BanerProps) {
+export default function Banner({
+  image,
+  children,
+  positionClass = "bg-center",
+}: BannerProps) {
   return (
     <section
       style={{ backgroundImage: `url(${image})` }}
-      className="h-[calc(100vh-72px)] lg:h-[calc(100vh-80px)] flex items-center"
+      className={`h-[85vh] max-h-[772px] flex items-center bg-cover bg-no-repeat ${positionClass}`}
     >
-      <div className="container z-50">{children}</div>
+      <div className="container z-[2]">{children}</div>
     </section>
   );
 }
