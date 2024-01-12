@@ -15,12 +15,10 @@ const config = {
       center: true,
       padding: {
         DEFAULT: "1rem",
-        sm: "2rem",
-        lg: "4rem",
-        xl: "5rem",
+        xl: "2rem",
       },
       screens: {
-        "2xl": "1400px",
+        xl: "1280px",
       },
     },
     extend: {
@@ -58,6 +56,10 @@ const config = {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+        },
+        gray: {
+          100: "#F2F4F7",
+          200: "#F2F2F2",
         },
       },
       borderRadius: {
