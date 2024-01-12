@@ -1,6 +1,22 @@
 import Blog from "@/app/news-events/components/blog";
 import Recent from "@/app/news-events/components/recent";
 import Upcoming from "@/app/news-events/components/upcoming";
+import { formatLinkLabel } from "@/lib/utils";
+
+export const activityTabsData = [
+  {
+    trigger: "recent-activites",
+    Component: Recent,
+  },
+  {
+    trigger: "upcoming-activities",
+    Component: Upcoming,
+  },
+  {
+    trigger: "blog-posts",
+    Component: Blog,
+  },
+];
 
 export const routes = [
   {
@@ -89,18 +105,18 @@ export const routes = [
     href: "/news-events",
     links: [
       {
-        label: "Upcoming Events",
-        href: "upcoming-events",
+        label: formatLinkLabel(activityTabsData[0].trigger),
+        href: activityTabsData[0].trigger,
         icon: "/icons/upcoming.svg",
       },
       {
-        label: "Past Events",
-        href: "past-events",
+        label: formatLinkLabel(activityTabsData[1].trigger),
+        href: activityTabsData[1].trigger,
         icon: "/icons/past-event.svg",
       },
       {
-        label: "Blog",
-        href: "blog",
+        label: formatLinkLabel(activityTabsData[2].trigger),
+        href: activityTabsData[2].trigger,
         icon: "/icons/blog.svg",
       },
     ],
@@ -189,20 +205,5 @@ export const posts = [
     authorImage: "/images/Avatar.png",
     date: "20 Jan 2022",
     category: "star",
-  },
-];
-
-export const activityTabsData = [
-  {
-    trigger: "Recent Activites",
-    Component: Recent,
-  },
-  {
-    trigger: "Upcoming Activities",
-    Component: Upcoming,
-  },
-  {
-    trigger: "Blog Post",
-    Component: Blog,
   },
 ];

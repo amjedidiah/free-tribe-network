@@ -1,3 +1,4 @@
+"use client";
 import ActivityTabsContent from "@/components/activity-tabs-content";
 import PostCard from "@/components/post-card";
 import { posts } from "@/lib/data";

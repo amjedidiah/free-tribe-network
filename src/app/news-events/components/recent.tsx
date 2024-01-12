@@ -1,3 +1,4 @@
+"use client";
 import ActivityCard from "@/components/activity-card";
 import ActivityTabsContent from "@/components/activity-tabs-content";
 import { activities } from "@/lib/data";
