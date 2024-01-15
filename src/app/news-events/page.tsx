@@ -1,5 +1,5 @@
-import ActivityTabs from "@/components/activity-tabs";
-import Banner from "@/components/banner";
+import ActivityTabs from "@/components/news-events/activity-tabs";
+import Banner from "@/components/shared/banner";
 import { activityTabsData } from "@/lib/data";
 import { Fragment } from "react";
 

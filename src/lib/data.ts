@@ -1,6 +1,6 @@
-import Blog from "@/app/news-events/components/blog";
-import Recent from "@/app/news-events/components/recent";
-import Upcoming from "@/app/news-events/components/upcoming";
+import Blog from "@/components/news-events/blog";
+import Recent from "@/components/news-events/recent";
+import Upcoming from "@/components/news-events/upcoming";
 import { formatLinkLabel } from "@/lib/utils";
 
 export const activityTabsData = [
@@ -127,52 +127,58 @@ export const routes = [
   },
 ];
 
-export const activities = [
+export const activitiesData = [
   {
     title: "Design Handoff and Developer Handover",
     description: "Design Handoff and Developer Handover",
     image: "/images/Frame 17.jpg",
     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
-    category: "star",
+    initiative: "rfh-advocacy",
+    slug: "activity-1",
   },
   {
     title: "Design Handoff and Developer Handover",
     description: "Design Handoff and Developer Handover",
     image: "/images/Frame 17.jpg",
     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
-    category: "star",
+    initiative: "free-tribe-clubs",
+    slug: "activity-2",
   },
   {
     title: "Design Handoff and Developer Handover",
     description: "Design Handoff and Developer Handover",
     image: "/images/Frame 17.jpg",
     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
-    category: "star",
+    initiative: "free-tribe-helpline",
+    slug: "activity-3",
   },
   {
     title: "Design Handoff and Developer Handover",
     description: "Design Handoff and Developer Handover",
     image: "/images/Frame 17.jpg",
     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
-    category: "star",
+    initiative: "free-tribe-boost-camp",
+    slug: "activity-4",
   },
   {
     title: "Design Handoff and Developer Handover",
     description: "Design Handoff and Developer Handover",
     image: "/images/Frame 17.jpg",
     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
-    category: "star",
+    initiative: "repromatters",
+    slug: "activity-5",
   },
   {
     title: "Design Handoff and Developer Handover",
     description: "Design Handoff and Developer Handover",
     image: "/images/Frame 17.jpg",
     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
-    category: "star",
+    initiative: "star-project",
+    slug: "activity-6",
   },
 ];
 
-export const posts = [
+export const postsData = [
   {
     title: "UX review presentations",
     image: "/images/blog.png",
@@ -182,7 +188,7 @@ export const posts = [
     author: "Olivia Rhye",
     authorImage: "/images/Avatar.png",
     date: "20 Jan 2022",
-    category: "star",
+    initiative: "star-project",
   },
   {
     title: "UX review presentations",
@@ -193,7 +199,7 @@ export const posts = [
     author: "Olivia Rhye",
     authorImage: "/images/Avatar.png",
     date: "20 Jan 2022",
-    category: "star",
+    initiative: "repromatters",
   },
   {
     title: "UX review presentations",
@@ -204,6 +210,35 @@ export const posts = [
     author: "Olivia Rhye",
     authorImage: "/images/Avatar.png",
     date: "20 Jan 2022",
-    category: "star",
+    initiative: "free-tribe-boost-camp",
   },
 ];
+
+export const initiatives = [
+  {
+    name: "star-project",
+    label: "Stand Against Recycled Violence (STAR) project",
+  },
+  {
+    name: "repromatters",
+    label: "ReproMatters",
+  },
+  {
+    name: "free-tribe-boost-camp",
+    label: "Free Tribe Boost-Camp",
+  },
+  {
+    name: "free-tribe-helpline",
+    label: "Free Tribe Helpline",
+  },
+  {
+    name: "free-tribe-clubs",
+    label: "Free Tribe Clubs",
+  },
+  {
+    name: "rfh-advocacy",
+    label: "Reproductive and Family health advocacy",
+  },
+];
+
+export const defaultNewsEventSection = "upcoming-activities";

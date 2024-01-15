@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ContactCard from "@/components/contact-card";
+import ContactCard from "@/components/layout/contact-card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { routes } from "@/lib/data";
@@ -31,9 +31,9 @@ export const contactChannels = [
 
 const socials = [
   {
-    name: "twitter",
-    src: "/icons/twitter-icon.svg",
-    href: "https://twitter.com/freetribenetwrk",
+    name: "x",
+    src: "/icons/x-icon.svg",
+    href: "https://x.com/freetribenetwrk",
   },
   {
     name: "linkedin",

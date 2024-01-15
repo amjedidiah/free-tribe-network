@@ -5,4 +5,5 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-export const formatLinkLabel = (href: string) => href.replace(/-/g, " ");
+export const formatLinkLabel = (href: string | null) =>
+  !href ? "" : href.replace(/-/g, " ");

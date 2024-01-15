@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 import { Manrope } from "next/font/google";
 import "@/styles/globals.css";
-import Nav from "@/components/nav";
-import Footer from "@/components/footer";
+import Nav from "@/components/layout/nav";
+import Footer from "@/components/layout/footer";
 import { PropsWithChildren } from "react";
 import { cn } from "@/lib/utils";
-import WhatsappChat from "@/components/whatsapp-chat";
+import WhatsappChat from "@/components/layout/whatsapp-chat";
 
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" });
 

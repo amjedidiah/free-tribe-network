@@ -1,12 +1,18 @@
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
-import { activities } from "@/lib/data";
+import { activitiesData } from "@/lib/data";
+import { useMemo } from "react";
+import { formatLinkLabel } from "@/lib/utils";
 
 type ActivityCardProps = {
-  event: (typeof activities)[number];
+  event: (typeof activitiesData)[number];
 };
 
 export default function ActivityCard({ event }: ActivityCardProps) {
+  const formattedInitiative = useMemo(
+    () => formatLinkLabel(event.initiative),
+    [event.initiative]
+  );
   return (
     <div className="flex gap-4 items-center">
       <div className="rounded-[0.5rem] overflow-hidden w-[187px] max-h-[206px] h-full relative">
@@ -31,7 +37,7 @@ export default function ActivityCard({ event }: ActivityCardProps) {
           variant="outline"
           className="text-xs rounded-2xl flex items-center py-[2px] px-2 w-fit text-primary-700 uppercase"
         >
-          {event.category}
+          {formattedInitiative}
         </Badge>
       </div>
     </div>

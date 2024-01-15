@@ -13,6 +13,7 @@ type BannerProps = {
     | "bg-right";
 };
 
+// TODO: Make banner image shorter, but full-width
 export default function Banner({
   image,
   children,

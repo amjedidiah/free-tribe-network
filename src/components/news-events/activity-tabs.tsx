@@ -1,7 +1,7 @@
 "use client";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import useScrollToSection from "@/hooks/use-scroll-to-section";
-import { activityTabsData } from "@/lib/data";
+import { activityTabsData, defaultNewsEventSection } from "@/lib/data";
 import { formatLinkLabel } from "@/lib/utils";
 
 type ActivityTabsProps = {
@@ -9,9 +9,9 @@ type ActivityTabsProps = {
 };
 
 export default function ActivityTabs({ data }: ActivityTabsProps) {
-  const { handleSectionChange, activeSection } = useScrollToSection(
-    "upcoming-activities"
-  );
+  const { handleSectionChange, activeSection } = useScrollToSection({
+    initUrlSection: defaultNewsEventSection,
+  });
 
   return (
     <Tabs

@@ -4,16 +4,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { Link as ScrollLink } from "react-scroll";
 import { Button } from "@/components/ui/button";
-import Menu from "@/components/menu";
+import Menu from "@/components/layout/menu";
 import { Menu as Burger } from "lucide-react";
 import { routes } from "@/lib/data";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
-import useScrollToSection from "@/hooks/use-scroll-to-section";
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
-  useScrollToSection();
 
   return (
     <header className="fixed w-full z-10 shadow">

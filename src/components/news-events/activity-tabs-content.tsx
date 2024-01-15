@@ -1,5 +1,5 @@
 import { TabsContent } from "@/components/ui/tabs";
-import ActivityPagination from "@/components/activity-pagination";
+import ActivityPagination from "@/components/news-events/activity-pagination";
 import { cn } from "@/lib/utils";
 import { PropsWithChildren } from "react";
 

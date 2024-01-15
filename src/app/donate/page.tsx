@@ -51,16 +51,25 @@ export default function Page() {
     <main>
       <section className="space-y-4">
         <div className="container space-y-2 lg:space-y-3">
-          <h1 className="font-semibold text-3xl lg:text-5xl">Our Accomplishment</h1>
+          <h1 className="font-semibold text-3xl lg:text-4xl">
+            Our Accomplishment
+          </h1>
           <p className="tracking-wide">
-            The Free Tribe Network is dedicated to creating a world where everyone has the
-            knowledge, resources and support needed for optimal reproductive health and family
-            well-being. Join us to build healthier, happier communities, by empowering us to do even
-            more.
+            The Free Tribe Network is dedicated to creating a world where
+            everyone has the knowledge, resources and support needed for optimal
+            reproductive health and family well-being. Join us to build
+            healthier, happier communities, by empowering us to do even more.
           </p>
-          <p className="tracking-wide">Thank you for being a part of the change.</p>
+          <p className="tracking-wide">
+            Thank you for being a part of the change.
+          </p>
         </div>
-        <Image src="/images/donate.png" alt="Donate" width={1440} height={400} />
+        <Image
+          src="/images/donate.png"
+          alt="Donate"
+          width={1440}
+          height={400}
+        />
       </section>
       <section className="bg-[#E6EFF3] py-12 lg:py-24">
         <div className="container flex flex-col gap-6 lg:gap-16">
