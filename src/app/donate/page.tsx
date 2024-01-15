@@ -51,7 +51,7 @@ export default function Page() {
     <main>
       <section className="space-y-4">
         <div className="container space-y-2 lg:space-y-3">
-          <h1 className="font-semibold text-3xl lg:text-4xl">
+          <h1 className="font-semibold text-2xl lg:text-4xl">
             Our Accomplishment
           </h1>
           <p className="tracking-wide">

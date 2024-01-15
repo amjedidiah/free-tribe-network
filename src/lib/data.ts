@@ -5,7 +5,7 @@ import { formatLinkLabel } from "@/lib/utils";
 
 export const activityTabsData = [
   {
-    trigger: "recent-activites",
+    trigger: "recent-activities",
     Component: Recent,
   },
   {

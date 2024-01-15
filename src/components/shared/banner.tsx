@@ -1,30 +1,22 @@
+import Image from "next/image";
+
 type BannerProps = {
   image: string;
-  children: React.ReactNode;
-  positionClass?:
-    | "bg-top"
-    | "bg-left-top"
-    | "bg-right-top"
-    | "bg-bottom"
-    | "bg-left-bottom"
-    | "bg-right-bottom"
-    | "bg-center"
-    | "bg-left"
-    | "bg-right";
+  title: string;
+  children?: React.ReactNode;
 };
 
 // TODO: Make banner image shorter, but full-width
-export default function Banner({
-  image,
-  children,
-  positionClass = "bg-center",
-}: BannerProps) {
+export default function Banner({ image, title, children }: BannerProps) {
   return (
-    <section
-      style={{ backgroundImage: `url(${image})` }}
-      className={`h-[85vh] max-h-[772px] flex items-center bg-cover bg-no-repeat ${positionClass}`}
-    >
-      <div className="container z-[2]">{children}</div>
+    <section className="min-h-fit h-auto flex items-center mt-20 relative border">
+      <Image src={image} alt="banner" width={1500} height={692} />
+      <div className="container z-[2] absolute ">
+        <h1 className="text-4xl lg:text-5xl font-semibold text-white">
+          {title}
+        </h1>
+        {children}
+      </div>
     </section>
   );
 }

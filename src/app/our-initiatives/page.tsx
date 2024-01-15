@@ -9,15 +9,10 @@ import { initiatives } from "@/lib/data";
 export default function Page() {
   return (
     <Fragment>
-      <Image
-        src="/images/banners/our-initiatives.png"
-        alt="banner"
-        width={10}
-        height={10}
+      <Banner
+        image="/images/banners/our-initiatives.png"
+        title="Our Initiatives"
       />
-      <Banner image="/images/banners/our-initiatives.png">
-        <h1 className="text-5xl font-semibold text-white">Our Initiatives</h1>
-      </Banner>
       <section className="container" id="initiativesContainer">
         {initiatives.map((item) => (
           <InitiativeBlock key={item.name} {...item} />
@@ -46,6 +41,7 @@ export default function Page() {
               alt="classroom"
               width={674}
               height={522}
+              className="max-w-full overflow-hidden"
             />
           </div>
           <div className="text-white flex flex-col gap-7">

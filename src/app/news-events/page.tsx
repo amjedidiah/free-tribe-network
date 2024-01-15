@@ -6,9 +6,7 @@ import { Fragment } from "react";
 export default function Page() {
   return (
     <Fragment>
-      <Banner image="/images/banners/news-banner.png">
-        <h1 className="text-5xl font-semibold text-white">News and Events</h1>
-      </Banner>
+      <Banner image="/images/banners/news-banner.png" title="News and Events" />
       <section className="container">
         <ActivityTabs data={activityTabsData} />
       </section>
