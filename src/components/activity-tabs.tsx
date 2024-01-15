@@ -1,6 +1,6 @@
 "use client";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import useScrollTab from "@/hooks/use-scroll-tab";
+import useScrollToSection from "@/hooks/use-scroll-to-section";
 import { activityTabsData } from "@/lib/data";
 import { formatLinkLabel } from "@/lib/utils";
 
@@ -9,12 +9,14 @@ type ActivityTabsProps = {
 };
 
 export default function ActivityTabs({ data }: ActivityTabsProps) {
-  const { handleTabChange, activeTab } = useScrollTab();
+  const { handleSectionChange, activeSection } = useScrollToSection(
+    "upcoming-activities"
+  );
 
   return (
     <Tabs
-      value={activeTab}
-      onValueChange={handleTabChange}
+      value={activeSection}
+      onValueChange={handleSectionChange}
       className="grid grid-cols-1 gap-4 lg:gap-14"
     >
       <TabsList className="py-2 px-[0.625rem] bg-gray-200 rounded-full flex flex-wrap gap-[0.625rem] place-self-center">
@@ -28,8 +30,8 @@ export default function ActivityTabs({ data }: ActivityTabsProps) {
           </TabsTrigger>
         ))}
       </TabsList>
-      {activeTab && (
-        <div id={activeTab}>
+      {activeSection && (
+        <div id={activeSection}>
           {data.map(({ trigger, Component }) => (
             <Component key={trigger} trigger={trigger} />
           ))}

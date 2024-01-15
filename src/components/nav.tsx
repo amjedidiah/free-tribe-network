@@ -9,9 +9,11 @@ import { Menu as Burger } from "lucide-react";
 import { routes } from "@/lib/data";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import useScrollToSection from "@/hooks/use-scroll-to-section";
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
+  useScrollToSection();
 
   return (
     <header className="fixed w-full z-10 shadow">
