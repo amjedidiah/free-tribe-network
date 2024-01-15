@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ContactCard from "@/components/contact-card";
+import ContactCard from "@/components/layout/contact-card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { routes } from "@/lib/data";
@@ -31,9 +31,9 @@ export const contactChannels = [
 
 const socials = [
   {
-    name: "twitter",
-    src: "/icons/twitter-icon.svg",
-    href: "https://twitter.com/freetribenetwrk",
+    name: "x",
+    src: "/icons/x-icon.svg",
+    href: "https://x.com/freetribenetwrk",
   },
   {
     name: "linkedin",
@@ -86,7 +86,7 @@ export default function Footer() {
                 />
               </Link>
               <div className="grid gap-4">
-                <ul className="flex flex-col lg:flex-row gap-4 lg:gap-10">
+                <ul className="flex flex-col lg:flex-row gap-4">
                   {routes.map(({ links, ...item }) => (
                     <li key={item.label}>
                       <Link href={item.href}>{item.label}</Link>
@@ -113,7 +113,7 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="lg:w-[30rem] flex flex-col justify-between gap-4">
+            <div className="lg:w-[25rem] flex flex-col justify-between gap-4">
               <div>
                 <h3 className="font-extrabold text-xl">
                   Subscribe to our mail

@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
-import { posts } from "@/lib/data";
+import { postsData } from "@/lib/data";
 
 type PostCardProps = {
-  post: (typeof posts)[number];
+  post: (typeof postsData)[number];
 };
 
 export default function PostCard({ post }: PostCardProps) {
@@ -24,7 +24,7 @@ export default function PostCard({ post }: PostCardProps) {
               variant={"secondary"}
               className="bg-white text-primary-700 rounded-full px-2 py-[2px] uppercase"
             >
-              {post.category}
+              {post.initiative}
             </Badge>
             <span>{post.readTime}</span>
           </div>
