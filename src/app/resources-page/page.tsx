@@ -61,34 +61,34 @@ const Resources = () => {
       <section className="bg-[#E6EFF3]">
         <div className="container mx-auto lg:py-24 py-12 lg:text-start">
           <h2>Bulletins</h2>
-          <div className="flex gap-12 pt-12 flex-wrap justify-center lg:overflow-x-scroll snap-x ">
+          <div className="flex justify-center xl:justify-start gap-12 pt-12 overflow-x-auto flex-wrap xl:flex-nowrap lg:overflow-x-scroll snap-x ">
             <Card
               showDescription={true}
               title="Design Handoff and Developer Handover"
               supportText="Nov 24, 2023"
               buttonColor="bg-[#065B82]"
-              className="max-w-96"
+              className="min-w-96"
             />
             <Card
               showDescription={true}
               title="Design Handoff and Developer Handover"
               supportText="Nov 24, 2023"
               buttonColor="bg-[#065B82]"
-              className="max-w-96"
+              className="min-w-96"
             />
             <Card
               showDescription={true}
               title="Design Handoff and Developer Handover"
               supportText="Nov 24, 2023"
               buttonColor="bg-[#065B82]"
-              className="max-w-96"
+              className="min-w-96"
             />
             <Card
               showDescription={true}
               title="Design Handoff and Developer Handover"
               supportText="Nov 24, 2023"
               buttonColor="bg-[#065B82]"
-              className="max-w-96"
+              className="min-w-96"
             />
           </div>
         </div>
@@ -101,48 +101,48 @@ const Resources = () => {
             showDescription={true}
             title="Design Handoff and Developer Handover"
             supportText="Nov 24, 2023"
-            className="h-[30rem] border-pink-300 border-4 xl:col-start-1 xl:col-end-3 lg:col-start-1 lg:col-end-4"
-            buttonColor="bg-pink-500"
+            className="h-[30rem] max-w-[26rem] border-pink-300 border-4 xl:col-start-1 xl:col-end-3 lg:col-start-1 lg:col-end-4"
+            buttonColor="bg-pink-500 hover:bg-pink-700"
           />
           <Card
             description="Networking: Connect with fellow designers, UI/UX enthusiasts, and Figma aficionados in a relaxed"
             showDescription={true}
             title="Design Handoff and Developer Handover"
             supportText="Nov 24, 2023"
-            className="h-[30rem] border-pink-300 border-4 xl:col-start-3 xl:col-end-5 lg:col-start-4 lg:col-end-7"
-            buttonColor="bg-pink-500"
+            className="h-[30rem] max-w-[26rem] border-pink-300 border-4 xl:col-start-3 xl:col-end-5 lg:col-start-4 lg:col-end-7"
+            buttonColor="bg-pink-500 hover:bg-pink-700"
           />
           <Card
             description="Networking: Connect with fellow designers, UI/UX enthusiasts, and Figma aficionados in a relaxed"
             showDescription={true}
             title="Design Handoff and Developer Handover"
             supportText="Nov 24, 2023"
-            className="h-[30rem] border-pink-300 border-4 xl:col-start-5 xl:col-end-7 lg:col-start-1 lg:col-end-4"
-            buttonColor="bg-pink-500"
+            className="h-[30rem] max-w-[26rem] border-pink-300 border-4 xl:col-start-5 xl:col-end-7 lg:col-start-1 lg:col-end-4"
+            buttonColor="bg-pink-500 hover:bg-pink-700"
           />
           <Card
             description="Networking: Connect with fellow designers, UI/UX enthusiasts, and Figma aficionados in a relaxed"
             showDescription={true}
             title="Design Handoff and Developer Handover"
             supportText="Nov 24, 2023"
-            className="h-[30rem] border-pink-300 border-4 xl:col-start-1 xl:col-end-3 lg:col-start-4 lg:col-end-7"
-            buttonColor="bg-pink-500"
+            className="h-[30rem] max-w-[26rem] border-pink-300 border-4 xl:col-start-1 xl:col-end-3 lg:col-start-4 lg:col-end-7"
+            buttonColor="bg-pink-500 hover:bg-pink-700"
           />
           <Card
             description="Networking: Connect with fellow designers, UI/UX enthusiasts, and Figma aficionados in a relaxed"
             showDescription={true}
             title="Design Handoff and Developer Handover"
             supportText="Nov 24, 2023"
-            className="h-[30rem] border-pink-300 border-4 xl:col-start-3 xl:col-end-5 lg:col-start-1 lg:col-end-4"
-            buttonColor="bg-pink-500"
+            className="h-[30rem] max-w-[26rem] border-pink-300 border-4 xl:col-start-3 xl:col-end-5 lg:col-start-1 lg:col-end-4"
+            buttonColor="bg-pink-500 hover:bg-pink-700"
           />
           <Card
             description="Networking: Connect with fellow designers, UI/UX enthusiasts, and Figma aficionados in a relaxed"
             showDescription={true}
             title="Design Handoff and Developer Handover"
             supportText="Nov 24, 2023"
-            className="h-[30rem] border-pink-300 border-4 xl:col-start-5 xl:col-end-7 lg:col-start-4 lg:col-end-7"
-            buttonColor="bg-pink-500"
+            className="h-[30rem] max-w-[26rem] border-pink-300 border-4 xl:col-start-5 xl:col-end-7 lg:col-start-4 lg:col-end-7"
+            buttonColor="bg-pink-500 hover:bg-pink-700"
           />
         </div>
       </section>
@@ -165,13 +165,13 @@ const Resources = () => {
       <section className="bg-[#E6EFF3]">
         <div className="container mx-auto lg:py-24">
           <h2>Annual Report</h2>
-          <div className="grid gap-6 items-center justify-center lg:grid-cols-6 lg:grid-rows-2 lg:pt-24">
+          <div className="grid gap-12 justify-center  lg:grid-cols-6 lg:grid-rows-2 lg:pt-24 pt-12">
             <Card
               description="Networking: Connect with fellow designers, UI/UX enthusiasts, and Figma aficionados in a relaxed"
               showDescription={true}
               title="Design Handoff and Developer Handover"
               supportText="Nov 24, 2023"
-              className="h-[30rem] border-[#B2CCD8] border-4 xl:col-start-1 xl:col-end-3 lg:col-start-1 lg:col-end-4"
+              className="h-[30rem] max-w-[26rem] border-[#B2CCD8] border-4 xl:col-start-1 xl:col-end-3 lg:col-start-1 lg:col-end-4"
               buttonColor="bg-[#387C9B]"
             />
             <Card
@@ -179,7 +179,7 @@ const Resources = () => {
               showDescription={true}
               title="Design Handoff and Developer Handover"
               supportText="Nov 24, 2023"
-              className="h-[30rem] border-[#B2CCD8] border-4 xl:col-start-3 xl:col-end-5 lg:col-start-4 lg:col-end-7"
+              className="h-[30rem] max-w-[26rem] border-[#B2CCD8] border-4 xl:col-start-3 xl:col-end-5 lg:col-start-4 lg:col-end-7"
               buttonColor="bg-[#387C9B]"
             />
             <Card
@@ -187,7 +187,7 @@ const Resources = () => {
               showDescription={true}
               title="Design Handoff and Developer Handover"
               supportText="Nov 24, 2023"
-              className="h-[30rem] border-[#B2CCD8] border-4 xl:col-start-5 xl:col-end-7 lg:col-start-1 lg:col-end-4"
+              className="h-[30rem] max-w-[26rem] border-[#B2CCD8] border-4 xl:col-start-5 xl:col-end-7 lg:col-start-1 lg:col-end-4"
               buttonColor="bg-[#387C9B]"
             />
             <Card
@@ -195,7 +195,7 @@ const Resources = () => {
               showDescription={true}
               title="Design Handoff and Developer Handover"
               supportText="Nov 24, 2023"
-              className="h-[30rem] border-[#B2CCD8] border-4 xl:col-start-1 xl:col-end-3 lg:col-start-4 lg:col-end-7"
+              className="h-[30rem] max-w-[26rem] border-[#B2CCD8] border-4 xl:col-start-1 xl:col-end-3 lg:col-start-4 lg:col-end-7"
               buttonColor="bg-[#387C9B]"
             />
             <Card
@@ -203,7 +203,7 @@ const Resources = () => {
               showDescription={true}
               title="Design Handoff and Developer Handover"
               supportText="Nov 24, 2023"
-              className="h-[30rem] border-[#B2CCD8] border-4 xl:col-start-3 xl:col-end-5 lg:col-start-1 lg:col-end-4"
+              className="h-[30rem] max-w-[26rem] border-[#B2CCD8] border-4 xl:col-start-3 xl:col-end-5 lg:col-start-1 lg:col-end-4"
               buttonColor="bg-[#387C9B]"
             />
             <Card
@@ -211,7 +211,7 @@ const Resources = () => {
               showDescription={true}
               title="Design Handoff and Developer Handover"
               supportText="Nov 24, 2023"
-              className="h-[30rem] border-[#B2CCD8] border-4 xl:col-start-5 xl:col-end-7 lg:col-start-4 lg:col-end-7"
+              className="h-[30rem] max-w-[26rem] border-[#B2CCD8] border-4 xl:col-start-5 xl:col-end-7 lg:col-start-4 lg:col-end-7"
               buttonColor="bg-[#387C9B]"
             />
           </div>
@@ -225,40 +225,40 @@ const Resources = () => {
           height="200"
         />
       </div>
-      <section className="container lg:py-24">
+      <section className="container mx-auto lg:py-24 py-12">
         <h2>Special Publications</h2>
-        <div className="flex gap-12 pt-12 flex-wrap justify-center lg:overflow-x-scroll snap-x">
+        <div className="flex justify-center xl:justify-start gap-12 pt-12 overflow-x-auto flex-wrap xl:flex-nowrap lg:overflow-x-scroll snap-x ">
           <Card
             description="Networking: Connect with fellow designers, UI/UX enthusiasts, and Figma aficionados in a relaxed"
             showDescription={true}
             title="Design Handoff and Developer Handover"
             supportText="Nov 24, 2023"
-            className="h-[30rem] border-pink-300 border-4 max-w-96"
-            buttonColor="bg-pink-500"
+            className="h-[30rem] min-w-96 max-w-[26rem] border-pink-300 border-4"
+            buttonColor="bg-pink-500 hover:bg-pink-700"
           />
           <Card
             description="Networking: Connect with fellow designers, UI/UX enthusiasts, and Figma aficionados in a relaxed"
             showDescription={true}
             title="Design Handoff and Developer Handover"
             supportText="Nov 24, 2023"
-            className="h-[30rem] border-pink-300 border-4 max-w-96"
-            buttonColor="bg-pink-500"
+            className="h-[30rem] min-w-96 max-w-[26rem] border-pink-300 border-4"
+            buttonColor="bg-pink-500 hover:bg-pink-700"
           />
           <Card
             description="Networking: Connect with fellow designers, UI/UX enthusiasts, and Figma aficionados in a relaxed"
             showDescription={true}
             title="Design Handoff and Developer Handover"
             supportText="Nov 24, 2023"
-            className="h-[30rem] border-pink-300 border-4 max-w-96"
-            buttonColor="bg-pink-500"
+            className="h-[30rem] min-w-96 max-w-[26rem] border-pink-300 border-4"
+            buttonColor="bg-pink-500 hover:bg-pink-700"
           />
           <Card
             description="Networking: Connect with fellow designers, UI/UX enthusiasts, and Figma aficionados in a relaxed"
             showDescription={true}
             title="Design Handoff and Developer Handover"
             supportText="Nov 24, 2023"
-            className="h-[30rem] border-pink-300 border-4 max-w-96"
-            buttonColor="bg-pink-500"
+            className="h-[30rem] min-w-96 max-w-[26rem] border-pink-300 border-4"
+            buttonColor="bg-pink-500 hover:bg-pink-700"
           />
         </div>
       </section>

@@ -13,7 +13,7 @@ const Card = ({
 }: CardProps) => {
   return (
     <div
-      className={`border bg-white rounded p-4 h-96 lg:min-w-80 flex flex-col justify-between snap-center ${className}`}
+      className={`border bg-white rounded p-4 h-96 flex flex-col justify-between snap-center ${className}`}
     >
       <Image
         alt="bulletin"

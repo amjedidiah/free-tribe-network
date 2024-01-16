@@ -7,7 +7,7 @@ const Button = ({ title, className, handleClick }: ButtonProps) => {
     <button
       disabled={false}
       type={"button"}
-      className={`hover:bg-pink-700 text-white font-bold py-2 px-4 rounded ${className}`}
+      className={` text-white font-bold py-2 px-4 rounded ${className}`}
       onClick={handleClick}
     >
       {title}
