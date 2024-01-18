@@ -1,5 +1,5 @@
 import { TabsContent } from "@/components/ui/tabs";
-import ActivityPagination from "@/components/activity-pagination";
+import ActivityPagination from "@/components/news-events/activity-pagination";
 import { cn } from "@/lib/utils";
 import { PropsWithChildren } from "react";
 
@@ -18,9 +18,9 @@ export default function ActivityTabsContent({
     <TabsContent key={trigger} value={trigger}>
       <div className="flex flex-col gap-4 lg:gap-8">
         <div
-          className={cn("grid sm:grid-cols-2", {
-            "lg:grid-cols-3 gap-8": isBlog,
-            "gap-7": !isBlog,
+          className={cn("grid ", {
+            "lg:grid-cols-3 gap-8 sm:grid-cols-2": isBlog,
+            "gap-7 md:grid-cols-2": !isBlog,
           })}
         >
           {children}

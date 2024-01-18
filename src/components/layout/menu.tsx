@@ -35,7 +35,7 @@ export default function Menu({ label, links, href }: MenuProps) {
                       navigationMenuTriggerStyle(),
                       "flex items-center gap-4 w-full p-3 text-sm md:text-base"
                     )}
-                    href={`${href}#${i.href}`}
+                    href={`${href}?section=${i.href}`}
                   >
                     <Image src={i.icon} alt={i.label} width={24} height={24} />
                     <span className="flex-1">{i.label}</span>

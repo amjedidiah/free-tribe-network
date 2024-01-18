@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Link as ScrollLink } from "react-scroll";
 import { Button } from "@/components/ui/button";
-import Menu from "@/components/menu";
+import Menu from "@/components/layout/menu";
 import { Menu as Burger } from "lucide-react";
 import { routes } from "@/lib/data";
 import { useState } from "react";
