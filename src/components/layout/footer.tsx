@@ -131,7 +131,10 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="lg:w-[25rem] max-w-[30rem] flex flex-col justify-between gap-4">
+            <div
+              id="mailing-list"
+              className="lg:w-[25rem] max-w-[30rem] flex flex-col justify-between gap-4"
+            >
               <div>
                 <h3 className="font-extrabold text-xl">
                   Subscribe to our mail

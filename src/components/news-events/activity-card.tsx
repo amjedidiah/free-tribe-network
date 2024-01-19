@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { activitiesData } from "@/lib/data";
 import { useMemo } from "react";
 import { formatLinkLabel } from "@/lib/utils";
+import Link from "next/link";
 
 type ActivityCardProps = {
   event: (typeof activitiesData)[number];
@@ -33,12 +34,18 @@ export default function ActivityCard({ event }: ActivityCardProps) {
           </h2>
           <p className="text-description">{event.description}</p>
         </div>
-        <Badge
-          variant="outline"
-          className="text-xs rounded-2xl flex items-center py-[2px] px-2 w-fit text-primary-700 uppercase"
+        <Link
+          href="/news-events/initiatives/[initiative]"
+          as={`/news-events?initiative=${event.initiative}`}
+          scroll={false}
         >
-          {formattedInitiative}
-        </Badge>
+          <Badge
+            variant="outline"
+            className="text-xs rounded-2xl flex items-center py-[2px] px-2 w-fit text-primary-700 uppercase"
+          >
+            {formattedInitiative}
+          </Badge>
+        </Link>
       </div>
     </div>
   );

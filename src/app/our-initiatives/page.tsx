@@ -10,7 +10,7 @@ export default function Page() {
   return (
     <Fragment>
       <Banner
-        image="/images/banners/our-initiatives.webp"
+        image="/images/banners/our-initiatives-banner.png"
         title="Our Initiatives"
       />
       <section className="container" id="initiativesContainer">

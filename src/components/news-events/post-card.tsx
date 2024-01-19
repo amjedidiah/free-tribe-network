@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { postsData } from "@/lib/data";
+import { formatLinkLabel } from "@/lib/utils";
+import Link from "next/link";
 
 type PostCardProps = {
   post: (typeof postsData)[number];
@@ -9,23 +11,30 @@ type PostCardProps = {
 export default function PostCard({ post }: PostCardProps) {
   return (
     <div className="flex flex-col gap-6 lg:gap-8">
-      <div className="w-full relative h-[240px]">
+      <div className="w-full relative h-[240px] rounded-[0.625rem]">
         <Image
           src={post.image}
           alt={post.title}
           fill
           style={{ objectPosition: "center", objectFit: "cover" }}
+          className="rounded-[0.625rem]"
         />
       </div>
       <div className="flex flex-col items-stretch gap-8">
         <div className="grid gap-4">
-          <div className="flex gap-2 p-1 pr-3 w-fit text-primary-700 items-center text-xs bg-gray-200 rounded-full">
-            <Badge
-              variant={"secondary"}
-              className="bg-white text-primary-700 rounded-full px-2 py-[2px] uppercase"
+          <div className="flex gap-2 p-1 pr-3 w-fit text-secondary-500 items-center text-xs bg-[rgba(230,239,243,0.5)] rounded-full font-medium">
+            <Link
+              href="/news-events/initiatives/[initiative]"
+              as={`/news-events?initiative=${post.initiative}`}
+              scroll={false}
             >
-              {post.initiative}
-            </Badge>
+              <Badge
+                variant={"secondary"}
+                className="bg-white rounded-full px-2 py-[2px] uppercase"
+              >
+                {formatLinkLabel(post.initiative)}
+              </Badge>
+            </Link>
             <span>{post.readTime}</span>
           </div>
           <div className="flex flex-col gap-3">
@@ -40,7 +49,7 @@ export default function PostCard({ post }: PostCardProps) {
                 height={24}
               />
             </div>
-            <p>{post.shortDesc}</p>
+            <p className="text-description">{post.shortDesc}</p>
           </div>
         </div>
 
@@ -51,9 +60,9 @@ export default function PostCard({ post }: PostCardProps) {
             src={post.authorImage}
             alt={post.author}
           />
-          <div className="text-gray-900 text-sm ">
+          <div className="text-gray-900 text-sm">
             <p className="font-medium">{post.author}</p>
-            <p>{post.date}</p>
+            <p className="text-gray-500 text-sm">{post.date}</p>
           </div>
         </div>
       </div>
