@@ -67,6 +67,6 @@
 
 @layer components {
   .radial-primary {
-    background: radial-gradient(74.29% 50.12% at 46.55% 50%, rgba(234, 2, 140, 0.89) 0%, #EA0256 100%);
+    background: radial-gradient(74.29% 50.12% at 46.55% 50%, rgba(234 2 140 89%) 0%, #EA0256 100%);
   }
 }
