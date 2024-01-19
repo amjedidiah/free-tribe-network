@@ -73,7 +73,20 @@ export const initiativeData = {
     </p>
   </div>
 `,
-    images: [{ src: "/images/star.png", alt: "star" }],
+    images: [
+      {
+        src: "/images/initiatives/star-project/star-project-1.jpg",
+        alt: "star-project-1",
+      },
+      {
+        src: "/images/initiatives/star-project/star-project-2.jpg",
+        alt: "star-project-2",
+      },
+      {
+        src: "/images/initiatives/star-project/star-project-3.jpeg",
+        alt: "star-project-3",
+      },
+    ],
   },
   repromatters: {
     content: `<div><p>A bi-monthly program utilizing real life stories, medical knowledge, public health expertise, and the wide reach of the social media space, to discuss important issues affecting reproductive health and family wellbeing. Topics covered will center around women’s health, men’s health, children and adolescent health and well-being.</p></div>`,
@@ -81,7 +94,20 @@ export const initiativeData = {
   },
   "free-tribe-boost-camp": {
     content: `<div><p>A bi-monthly capacity building program for staff and volunteers of the Free Tribe Network, set to improve corporate work skills, teach industry-relevant skills, and foster bonding amongst members of the Free Tribe Network.</p></div>`,
-    images: [{ src: "/images/boost.png", alt: "boost" }],
+    images: [
+      {
+        src: "/images/initiatives/boost-camp/boost-camp-1.jpg",
+        alt: "boost-camp-1",
+      },
+      {
+        src: "/images/initiatives/boost-camp/boost-camp-2.jpeg",
+        alt: "boost-camp-2",
+      },
+      {
+        src: "/images/initiatives/boost-camp/boost-camp-3.jpeg",
+        alt: "boost-camp-3",
+      },
+    ],
   },
   "free-tribe-helpline": {
     content: `<div><p>A social service for telephone support, access to information, advice, informed interventions, and referral to reproductive and family health professionals.</p></div>`,
@@ -93,7 +119,20 @@ export const initiativeData = {
   },
   "rfh-advocacy": {
     content: `<div><p>This includes rallies, campaigns, weekly advocacy messages (#TeachTuesday and #FactFriday), and media programs to promote and inspire positive health behaviours.</p></div>`,
-    images: [{ src: "/images/rfh.png", alt: "rfh" }],
+    images: [
+      {
+        src: "/images/initiatives/family-health/family-health-1.jpeg",
+        alt: "family-health-1",
+      },
+      {
+        src: "/images/initiatives/family-health/family-health-2.jpeg",
+        alt: "family-health-2",
+      },
+      {
+        src: "/images/initiatives/family-health/family-health-3.png",
+        alt: "family-health-3",
+      },
+    ],
   },
 };
 
@@ -121,6 +160,15 @@ export default function InitiativeBlock({ name, label }: InitiativeBlockProps) {
 
     api.on("select", () => {
       setCurrent(api.selectedScrollSnap() + 1);
+    });
+
+    api.on("scroll", () => {
+      const current = api.selectedScrollSnap();
+
+      api.slideNodes().forEach((slide, index) => {
+        if (index !== current) slide.classList.add("h-0");
+        else slide.classList.remove("h-0");
+      });
     });
   }, [api]);
 
@@ -156,7 +204,7 @@ export default function InitiativeBlock({ name, label }: InitiativeBlockProps) {
         </div>
         <div className="relative">
           <Carousel
-            className="relative"
+            className="relative rounded-lg shadow-xl"
             setApi={setApi}
             plugins={[plugin.current]}
             onMouseEnter={plugin.current.stop}
@@ -168,13 +216,15 @@ export default function InitiativeBlock({ name, label }: InitiativeBlockProps) {
           >
             <CarouselContent>
               {images.map((i) => (
-                <CarouselItem key={i.alt}>
+                <CarouselItem
+                  key={i.alt}
+                  className="h-[200px] sm:h-[300px] lg:h-[400px] relative"
+                >
                   <Image
                     src={i.src}
                     alt={i.alt}
-                    height={407}
-                    width={1219}
-                    className="rounded-lg"
+                    fill
+                    style={{ objectFit: "cover", objectPosition: "center" }}
                   />
                 </CarouselItem>
               ))}

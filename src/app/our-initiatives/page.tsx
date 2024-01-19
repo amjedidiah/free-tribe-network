@@ -10,7 +10,7 @@ export default function Page() {
   return (
     <Fragment>
       <Banner
-        image="/images/banners/our-initiatives.png"
+        image="/images/banners/our-initiatives.webp"
         title="Our Initiatives"
       />
       <section className="container" id="initiativesContainer">
@@ -18,13 +18,7 @@ export default function Page() {
           <InitiativeBlock key={item.name} {...item} />
         ))}
       </section>
-      <section
-        className="relative z-[2]"
-        style={{
-          background:
-            "radial-gradient(74.29% 50.12% at 46.55% 50%, rgba(234, 2, 140, 0.89) 0%, #EA0256 100%)",
-        }}
-      >
+      <section className="relative z-[2] radial-primary">
         <div className="hidden lg:block -z-[2] absolute inset-y-0 lg:-left-52 xl:-left-44 2xl:-left-20">
           <Image
             src="/images/ankara.png"
