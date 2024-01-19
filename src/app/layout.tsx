@@ -7,7 +7,11 @@ import { PropsWithChildren } from "react";
 import { cn } from "@/lib/utils";
 import WhatsappChat from "@/components/layout/whatsapp-chat";
 
-const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" });
+const manrope = Manrope({
+  subsets: ["latin"],
+  variable: "--font-manrope",
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
+});
 
 // TODO: Finish configuring all other metadata fields with client suggestion
 // type Props = {

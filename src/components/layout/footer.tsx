@@ -3,6 +3,8 @@ import ContactCard from "@/components/layout/contact-card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { routes } from "@/lib/data";
+import { FaMedium, FaTiktok } from "react-icons/fa6";
+import CustomIcon from "@/components/shared/icon";
 
 export const contactNumber = "+2348153494508";
 
@@ -38,7 +40,7 @@ const socials = [
   {
     name: "linkedin",
     src: "/icons/linkedin-icon.svg",
-    href: "https://www.linkedin.com/company/freetribenetwork",
+    href: "https://linkedin.com/company/freetribenetwork",
   },
   {
     name: "facebook",
@@ -48,7 +50,17 @@ const socials = [
   {
     name: "instagram",
     src: "/icons/instagram-icon.svg",
-    href: "https://www.instagram.com/freetribenetwork",
+    href: "https://instagram.com/freetribenetwork",
+  },
+  {
+    name: "tiktok",
+    Icon: FaTiktok,
+    href: "https://tiktok.com/@freetribenetwork",
+  },
+  {
+    name: "medium",
+    Icon: FaMedium,
+    href: "https://medium.com/@freetribenetwork",
   },
 ];
 
@@ -94,34 +106,40 @@ export default function Footer() {
                   ))}
                 </ul>
                 <div className="flex gap-8">
-                  {socials.map(({ name, src, href }) => (
+                  {socials.map(({ name, src, href, Icon }) => (
                     <a
                       href={href}
-                      className="w-5 h-5 lg:w-6 lg:h-6 relative"
+                      className="w-5 h-5 lg:w-6 lg:h-6 relative flex items-center"
                       key={name}
                     >
                       <span className="hidden">{name}</span>
-                      <Image
-                        src={src}
-                        alt={name}
-                        fill
-                        style={{ objectPosition: "center", objectFit: "cover" }}
-                      />
+                      {Icon && <CustomIcon icon={Icon} />}
+                      {src && (
+                        <Image
+                          src={src}
+                          alt={name}
+                          fill
+                          style={{
+                            objectPosition: "center",
+                            objectFit: "cover",
+                          }}
+                        />
+                      )}
                     </a>
                   ))}
                 </div>
               </div>
             </div>
 
-            <div className="lg:w-[25rem] flex flex-col justify-between gap-4">
+            <div className="lg:w-[25rem] max-w-[30rem] flex flex-col justify-between gap-4">
               <div>
                 <h3 className="font-extrabold text-xl">
                   Subscribe to our mail
                 </h3>
                 <p className="text-xs text-slate-300">
-                  By registering, you agree to{" "}
-                  <span className="font-bold">Free Tribe Network</span> storing
-                  and using your email address for the purpose of sending you
+                  By registering, you permit the{" "}
+                  <span className="font-bold">Free Tribe Network</span> to store
+                  and collect your email address for the purpose of sending you
                   our monthly newsletter.
                 </p>
               </div>
