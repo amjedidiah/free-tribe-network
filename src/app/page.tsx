@@ -21,7 +21,7 @@ export default function Home() {
           </div>
 
           {/* SDGs */}
-          <div className="grid sm:max-lg:grid-cols-3 lg:grid-cols-2 [&>div]:pt-6 [&>div]:px-6">
+          <div className="grid sm:max-lg:grid-cols-3 lg:grid-cols-2 [&>div]:pt-4 [&>div]:px-4">
             <div className="flex flex-col max-lg:justify-between lg:flex-row lg:items-center gap-4 bg-[#f69fd2] lg:col-span-2">
               <div className="">
                 <span className="bg-primary-900 py-[2px] px-1 text-primary-100 ">
@@ -91,6 +91,23 @@ export default function Home() {
             </p>
           </div>
           <BlogList />
+        </article>
+      </section>
+      <section className="bg-secondary-500 py-16 text-white">
+        <article className="container grid gap-6">
+          <div className="flex flex-col gap-6 text-center">
+            <h2 className="text-3xl lg:text-5xl font-semibold">
+              Our Initiatives
+            </h2>
+            <p>
+              At The Free Tribe Network, we offer a range of core programs and
+              services to support reproductive wellness, health seeking and
+              reporting behaviors, and improve reproductive health and family
+              well-being. Our mission is to empower individuals and communities
+              to make informed decisions about their reproductive health and
+              rights.
+            </p>
+          </div>
         </article>
       </section>
     </Fragment>
