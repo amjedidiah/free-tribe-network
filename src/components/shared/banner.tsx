@@ -8,7 +8,6 @@ type BannerProps = {
   wrapperClassName?: string;
 };
 
-// TODO: Make banner image shorter, but full-width
 export default function Banner({
   image,
   title,
@@ -17,12 +16,13 @@ export default function Banner({
   wrapperClassName,
 }: BannerProps) {
   return (
-    <section className="max-h-[692px] h-[73vh] relative mt-20 text-white">
+    <section className="max-h-[692px] h-[80vh] relative mt-20 text-white">
       <Image
         src={image}
         fill
         alt="banner"
         style={{ objectFit: "cover", objectPosition: picturePosition }}
+        priority
       />
       <article
         className={`absolute h-full w-full left-0 top-0 flex flex-col justify-center ${wrapperClassName}`}

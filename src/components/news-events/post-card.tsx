@@ -18,6 +18,7 @@ export default function PostCard({ post }: PostCardProps) {
           fill
           style={{ objectPosition: "center", objectFit: "cover" }}
           className="rounded-[0.625rem]"
+          sizes="100%"
         />
       </div>
       <div className="flex flex-col items-stretch gap-8">

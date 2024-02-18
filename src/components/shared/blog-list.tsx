@@ -9,8 +9,8 @@ type Props = {
 export default function BlogList({ postsData = data }: Props) {
   return (
     <div className="grid lg:grid-cols-3 gap-8 sm:grid-cols-2">
-      {postsData.map((post) => (
-        <PostCard key={post.title} post={post} />
+      {postsData.map((post, i) => (
+        <PostCard key={`${post.title}-${i}`} post={post} />
       ))}
     </div>
   );

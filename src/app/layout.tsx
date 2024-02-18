@@ -1,17 +1,11 @@
-import type { Metadata } from 'next'
-import { Manrope } from "next/font/google";
+import type { Metadata } from "next";
 import "@/styles/globals.css";
 import Nav from "@/components/layout/nav";
 import Footer from "@/components/layout/footer";
 import { PropsWithChildren } from "react";
 import { cn } from "@/lib/utils";
 import WhatsappChat from "@/components/layout/whatsapp-chat";
-
-const manrope = Manrope({
-  subsets: ["latin"],
-  variable: "--font-manrope",
-  weight: ["200", "300", "400", "500", "600", "700", "800"],
-});
+import manrope from "@/lib/font";
 
 // TODO: Finish configuring all other metadata fields with client suggestion
 // type Props = {

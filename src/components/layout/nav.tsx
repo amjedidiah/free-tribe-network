@@ -26,7 +26,7 @@ export default function Nav() {
           )}
         >
           <Link href="/">
-            <Image src="/images/logo.webp" alt="logo" width={60} height={60} />
+            <Image src="/images/logo.webp" alt="logo" width={60} height={57} />
           </Link>
           <div
             className={cn(

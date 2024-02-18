@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { contactNumber } from "@/components/layout/footer";
+import { contactNumber } from "@/lib/data";
 
 export default function WhatsappChat() {
   return (
