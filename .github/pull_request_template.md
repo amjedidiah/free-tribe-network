@@ -6,7 +6,7 @@
 
 ## Reviewer Context
 
-- GTmetrix results screenshots 📉
+- PageSpeed Insights results screenshots 📉
 
 ## Check List
 
@@ -15,5 +15,5 @@
 - [ ] Removed all unnecessary logs and comments :fire:
 - [ ] Self reviewed :eyes:
 - [ ] Linked Github issue to this PR :link:
-- [ ] Verified passing GTmetrix score :white_check_mark:
+- [ ] Verified passing PageSpeed Insights score :white_check_mark:
 - [ ] Made corresponding changes needed to the documentation :memo:

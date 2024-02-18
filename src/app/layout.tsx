@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
-import "@/app/globals.css";
-
-const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" });
+import "@/styles/globals.css";
+import Nav from "@/components/layout/nav";
+import Footer from "@/components/layout/footer";
+import { PropsWithChildren } from "react";
+import { cn } from "@/lib/utils";
+import WhatsappChat from "@/components/layout/whatsapp-chat";
+import manrope from "@/lib/font";
 
 // TODO: Finish configuring all other metadata fields with client suggestion
 // type Props = {
@@ -22,14 +25,20 @@ export const metadata: Metadata = {
   description: "Welcome to Free Tribe Network",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: PropsWithChildren) {
   return (
-    <html lang="en">
-      <body className={`${manrope.variable} font-manrope`}>{children}</body>
+    <html lang="en" className="h-full">
+      <body
+        className={cn(
+          "font-manrope min-h-full grid grid-rows-[1fr,auto]",
+          manrope.variable
+        )}
+      >
+        <Nav />
+        <main>{children}</main>
+        <Footer />
+        <WhatsappChat />
+      </body>
     </html>
   );
 }
