@@ -2,76 +2,15 @@ import Image from "next/image";
 import ContactCard from "@/components/layout/contact-card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { routes } from "@/lib/data";
-import { FaMedium, FaTiktok } from "react-icons/fa6";
+import { contactChannels, currentYear, routes, socials } from "@/lib/data";
 import CustomIcon from "@/components/shared/icon";
-
-export const contactNumber = "+2348153494508";
-
-export const contactChannels = [
-  {
-    image: "/icons/message-circle.svg",
-    header: "Chat to support",
-    subHeader: "We’re here to help.",
-    text: "freetribenetwork@gmail.com",
-    href: "mailto:freetribenetwork@gmail.com",
-  },
-  {
-    image: "/icons/message-circle.svg",
-    header: "Visit Us",
-    subHeader: "Visit our office HQ.",
-    text: "No 15/11b, YK Abass, Ore-Ofe Estate, Elewiodo, Ibadan.",
-  },
-  {
-    image: "/icons/phone.svg",
-    header: "Call us",
-    subHeader: "Mon-Fri from 8am to 5pm.",
-    text: "+234 (815) 3494 508",
-    href: `tel:${contactNumber}`,
-  },
-];
-
-const socials = [
-  {
-    name: "x",
-    src: "/icons/x-icon.svg",
-    href: "https://x.com/freetribenetwrk",
-  },
-  {
-    name: "linkedin",
-    src: "/icons/linkedin-icon.svg",
-    href: "https://linkedin.com/company/freetribenetwork",
-  },
-  {
-    name: "facebook",
-    src: "/icons/facebook-icon.svg",
-    href: "https://web.facebook.com/freetribenetwrk",
-  },
-  {
-    name: "instagram",
-    src: "/icons/instagram-icon.svg",
-    href: "https://instagram.com/freetribenetwork",
-  },
-  {
-    name: "tiktok",
-    Icon: FaTiktok,
-    href: "https://tiktok.com/@freetribenetwork",
-  },
-  {
-    name: "medium",
-    Icon: FaMedium,
-    href: "https://medium.com/@freetribenetwork",
-  },
-];
-
-const currentYear = new Date().getFullYear();
 
 export default function Footer() {
   return (
     <footer>
       <section className="container" id="contact-us">
         <article className="py-12 lg:py-24 grid gap-6">
-          <h1 className="text-2xl lg:text-[2rem] leading-[3rem] spacing font-semibold text-black">
+          <h1 className="text-2xl lg:text-[2rem] spacing font-semibold text-black">
             We&apos;d love to hear from you
           </h1>
           <p className="text-base lg:text-xl font-medium">
@@ -131,7 +70,10 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="lg:w-[25rem] max-w-[30rem] flex flex-col justify-between gap-4">
+            <div
+              id="mailing-list"
+              className="lg:w-[25rem] max-w-[30rem] flex flex-col justify-between gap-4"
+            >
               <div>
                 <h3 className="font-extrabold text-xl">
                   Subscribe to our mail

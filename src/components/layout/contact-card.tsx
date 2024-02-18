@@ -1,5 +1,5 @@
+import { contactChannels } from "@/lib/data";
 import Image from "next/image";
-import { contactChannels } from "@/components/layout/footer";
 
 type ContactCardProps = (typeof contactChannels)[number];
 

@@ -5,46 +5,8 @@ import {
   AccordionItem,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
+import { donationFAQs } from "@/lib/data";
 import Image from "next/image";
-
-const data = [
-  {
-    id: "1",
-    question: "How is my donation used? ",
-    answer:
-      "Your donation is used to support programs, projects and research conducted by the  Free Tribe Network.",
-  },
-  {
-    id: "2",
-    question: "How can I be sure my donation is safe?",
-    answer:
-      "We use SSL encryption to protect your information and ensure that your donation is secure. Your card and personal data will be safe and secure.",
-  },
-  {
-    id: "3",
-    question: "Can I sponsor a specific interest? ",
-    answer:
-      " donation is used to support programs, projects and research conducted by the  Free Tribe Network ",
-  },
-  {
-    id: "4",
-    question: "Will I get a receipt for my donation?",
-    answer:
-      "Your donation is used to support programs, projects and research conducted by the  Free Tribe Network ",
-  },
-  {
-    id: "5",
-    question: "How do I contact Free Tribe Network for ​additional information or inquiries ?",
-    answer:
-      "Your donation is used to support programs, projects and research conducted by the  Free Tribe Network ",
-  },
-  {
-    id: "6",
-    question: "How can I get involved?",
-    answer:
-      "Your donation is used to support programs, projects and research conducted by the  Free Tribe Network ",
-  },
-];
 
 export default function Page() {
   return (
@@ -82,7 +44,7 @@ export default function Page() {
           </div>
           <div className="max-w-5xl w-full mx-auto">
             <Accordion type="single" collapsible className="w-full">
-              {data.map((i) => (
+              {donationFAQs.map((i) => (
                 <AccordionItem key={i.id} value={i.id}>
                   <AccordionTrigger>{i.question}</AccordionTrigger>
                   <AccordionContent>{i.answer}</AccordionContent>
