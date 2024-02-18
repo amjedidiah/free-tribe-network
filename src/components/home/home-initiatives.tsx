@@ -2,6 +2,7 @@ import { topInitiativesData } from "@/lib/data";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import SafeHTML from "@/components/shared/safe-html";
 
 export default function HomeInitiatives() {
   return (
@@ -38,10 +39,8 @@ export default function HomeInitiatives() {
                     <h3 className="text-xl lg:text-2xl font-semibold capitalize">
                       {label}
                     </h3>
-                    <div
-                      dangerouslySetInnerHTML={{
-                        __html: "summary" in rest ? rest.summary : content,
-                      }}
+                    <SafeHTML
+                      htmlContent={"summary" in rest ? rest.summary : content}
                     />
                   </div>
                 </div>

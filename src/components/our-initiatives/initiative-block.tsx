@@ -9,6 +9,7 @@ import { initiatives } from "@/lib/data";
 import { Element } from "react-scroll";
 import useScrollToSection from "@/hooks/use-scroll-to-section";
 import Slider from "@/components/shared/slider";
+import SafeHTML from "@/components/shared/safe-html";
 
 type InitiativeBlockProps = (typeof initiatives)[number];
 
@@ -17,7 +18,7 @@ type InitiativeDataImage = {
   alt: string;
 };
 export default function InitiativeBlock({ name, label }: InitiativeBlockProps) {
-  const [content, setContent] = useState<TrustedHTML>(``);
+  const [content, setContent] = useState<TrustedHTML | string>();
   const [images, setImages] = useState<InitiativeDataImage[]>([]);
   const { handleScroll } = useScrollToSection({
     initUrlSection: initiatives[0].name,
@@ -32,7 +33,8 @@ export default function InitiativeBlock({ name, label }: InitiativeBlockProps) {
         setContent(data.content);
         setImages(data.images);
       })
-      .then(handleScroll);
+      .then(handleScroll)
+      .catch(console.error);
   }, [handleScroll, name]);
 
   return (
@@ -43,12 +45,12 @@ export default function InitiativeBlock({ name, label }: InitiativeBlockProps) {
             <h2 className="text-black font-semibold text-2xl lg:text-4xl">
               {label}
             </h2>
-            <div
-              className="flex flex-col gap-5 [&>div]:flex [&>div]:flex-col [&>div]:gap-4 [&_.heading]:text-xl [&_.heading]:lg:text-2xl [&>div_p]:text-description [&_ul]:pl-8 [&_ul]:list-disc [&_ul]:list-outside [&_ul]:text-description"
-              dangerouslySetInnerHTML={{
-                __html: content,
-              }}
-            />
+            {content && (
+              <SafeHTML
+                className="flex flex-col gap-5 [&>div]:flex [&>div]:flex-col [&>div]:gap-4 [&_.heading]:text-xl [&_.heading]:lg:text-2xl [&>div_p]:text-description [&_ul]:pl-8 [&_ul]:list-disc [&_ul]:list-outside [&_ul]:text-description"
+                htmlContent={content}
+              />
+            )}
           </div>
           <Link href={`/news-events?initiative=${name}`}>
             <Button className="w-fit">View Activities</Button>
