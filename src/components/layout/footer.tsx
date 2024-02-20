@@ -58,6 +58,7 @@ export default function Footer() {
                           src={src}
                           alt={name}
                           fill
+                          sizes="100%"
                           style={{
                             objectPosition: "center",
                             objectFit: "cover",

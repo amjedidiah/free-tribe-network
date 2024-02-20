@@ -1,33 +1,60 @@
-import { bot } from "@/lib/data";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
+import { HTMLAttributes } from "react";
 
-export default function Team() {
+type Mate = {
+  name: string;
+  src: string;
+  title: string;
+};
+
+type TeamProps = {
+  title: string;
+  shouldSeeMore?: boolean;
+  mates: Mate[];
+  matesContainerClassName: string;
+} & HTMLAttributes<HTMLDivElement>;
+
+export default function Team({
+  title,
+  shouldSeeMore = false,
+  mates,
+  id,
+  className,
+  matesContainerClassName,
+}: TeamProps) {
   return (
-    <section className="py-10 lg:py-24 bg-snow grid gap-8">
+    <section className={cn("py-10 grid gap-8", className)} id={id}>
       <article className="container">
         <div className="flex flex-wrap justify-between gap-4 items-center">
-          <h2 className="text-3xl lg:text-5xl font-semibold">
-            Board of Trustees
-          </h2>
-          <Link
-            href="/who-we-are?section=staff"
-            className=" bg-primary-400 text-white font-semibold py-[0.625rem] px-[1.125rem] rounded-[0.5rem] shadow-md"
-          >
-            See More
-          </Link>
+          <h2 className="text-3xl lg:text-5xl font-semibold">{title}</h2>
+          {shouldSeeMore && (
+            <Link
+              href="/who-we-are?section=staff"
+              className=" bg-primary-400 text-white font-semibold py-[0.625rem] px-[1.125rem] rounded-[0.5rem] shadow-md"
+            >
+              See More
+            </Link>
+          )}
         </div>
       </article>
       <article className="container lg:overflow-x-visible">
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5 max-lg:flex-wrap max-lg:justify-evenly lg:flex lg:min-w-[100vw] lg:overflow-auto lg:pr-24 lg:pb-5">
-          {bot.map(({ name, src, title }) => (
+        <div
+          className={cn(
+            "grid sm:grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-7 max-lg:justify-evenly",
+            matesContainerClassName
+          )}
+        >
+          {mates.map(({ name, src, title }) => (
             <div key={name} className="grid gap-6">
-              <div className="lg:w-[288px] h-[296px] relative">
+              <div className="lg:w-[288px] h-[296px] relative image-container">
                 <Image
                   src={src}
                   alt={name}
                   fill
-                  style={{ objectFit: "cover" }}
+                  sizes="100%"
+                  style={{ objectFit: "cover", objectPosition: "center" }}
                   className="shadow-xl"
                 />
               </div>

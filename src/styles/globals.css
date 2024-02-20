@@ -70,3 +70,20 @@
     background: radial-gradient(74.29% 50.12% at 46.55% 50%, rgba(234 2 140 / 89%) 0%, #EA0256 100%);
   }
 }
+
+.border-ankara-1 {
+  border: 10px solid transparent;
+  border-image: url('/images/ankaras/ankara-1.png') 10 repeat;
+}
+
+.swiper-button-prev {
+  background: url("/images/arrow-left.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.swiper-button-next {
+  background: url("/images/arrow-right.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}

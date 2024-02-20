@@ -613,51 +613,64 @@ export const testimonials = [
   },
 ];
 
-export const bot = [
+export const bots = [
   {
     src: "/images/bot/bot-1.png",
     name: "Dr Adebayo, Ayodeji Mattew",
     title: "Chairman, BOT",
+    description: `<p>A public health physician, a seasoned researcher, and a senior lecturer in the Department of Community Medicine, University of Ibadan, Nigeria. He has published over 85 academic papers, and presented at several international and national conferences. He is a recipient of several grants, and was Principal Investigator for a World Bank funded project, targeting couples in Ibadan, Nigeria.</p>`,
   },
   {
     src: "/images/bot/bot-2.png",
     name: "Rev Eweje, John",
     title: "Vice Chairman, BOT",
+    description: `<p>A retired Project Manager with 30 years of experience at the Shell Petroleum Development Company of Nigeria. He holds a PhD in Strategy, Project and Programs management, and serves post-retirement as a missionary in Europe.`,
   },
   {
     src: "/images/bot/bot-3.png",
     name: "Oluwagbemi-Jacob Tosin",
     title: "Secretary, BOT",
+    description: `<p>A public health specialist and the Executive Director of the Free Tribe Network. With over 5 years invested in administrative planning, project and program management, research, monitoring and evaluation, he has efficiently managed over 20 nonprofit projects and operations across Nigeria.</p>
+<p>His collaborations with the University College Hospital, Ibadan, and other other notable institutes reflect an especial interest and dedication to mental health, reproductive health and family wellbeing.</p>`,
   },
   {
     src: "/images/bot/bot-4.png",
-    name: "Prof. Obafemi, Frances Ngozi",
+    name: "Prof. Obafemi, Fances Ngozi",
     title: "Member, BOT",
+    description: `<p>A Professor of Monetary Economics with extensive publications, industrial policy drafting experience, and consultancy roles with the World Bank and United Nations Industrial Development Organization (UNIDO). She has served as a research fellow for the National Defense College, Abuja, and the National Institute for Policy & Strategic Studies (NIPSS), and is the co-founder of the Happy Home Club; a teaching/coaching establishment for single and married persons.</p>`,
   },
   {
     src: "/images/bot/bot-5.png",
     name: "Dr Atoyebi, Aderonke O.",
     title: "Member, BOT",
+    description: `<p>A senior registrar at the Department of Community Medicine, University College Hospital, Ibadan. She specialises in women’s health and gender based violence. She is a medical doctor certified in Economic Evaluation in Global Health, currently rounding off a Masters of Public Health. She has diverse experience, including research assistance for the World Maternal Anti-fibrinolytic Trial, survey supervision for the World Health Organization, and contributions to COVID-19 response efforts and reproductive health policy implementation in Nigeria.</p>`,
   },
   {
     src: "/images/bot/bot-6.png",
     name: "Nwokafor, Obiora",
     title: "Member, BOT",
+    description: `<p>A realtor, and the General Manger of Suncity Gardens Estates. He runs a social support community called ‘Boy’s lounge’ for boys aged 9 to 25 years, and has mentored and supported several young men across Nigeria.</p>
+<p>He coordinated a two-year project to manage pregnant women living with HIV/AIDS, to prevent Maternal-To-Child-Transmission during this period.</p>`,
   },
   {
     src: "/images/bot/bot-7.png",
     name: "Madu, Ihuomachidire I.",
     title: "Member, BOT",
+    description: `<p>The partnership Manager and Legal Advisoor at Silicon Africa Technologies Ltd, and  Project Manager for Social Media Fest (SMFEST); a global social impact platform that exposes creatives to the advantages and leverages of social media and technology.</p>
+<p>She is a lawyer and human rights activist; a passionate advocate for youth development and financial literacy, inspiring young women into leadership and responsibility.</p>`,
   },
   {
     src: "/images/bot/bot-8.png",
     name: "Fadayomi, Sefunmi G.",
     title: "Member, BOT",
+    description: `<p>Excelled as the most outstanding student during her Masters at Eastern Kentucky University, USA. A public health specialist in Environmental and Occupational Health, currently working with Owens Corning to promote basic healthcare, education, and safe, efficient housing solutions.</p>
+<p>She worked as a scholarship officer with the Bethesda Child Support agency, to support disadvantaged children with free education in Nigeria.</p>`,
   },
   {
     src: "/images/bot/bot-9.png",
     name: "Mfon, Andikan A.",
     title: "Member, BOT",
+    description: `<p>A seasoned Analyst in Investment Banking at Afrinvest West Africa Limited. He is an Associate Chartered Accountant, with over 5 years of expertise in various financial areas, including equity and debt capital raise, mergers and acquisitions, business valuation, and financial due diligence.</p>`,
   },
 ];
 
@@ -671,4 +684,66 @@ export const partners = [
     src: prettylittleladies,
   },
   { name: "chiin", src: chiin },
+];
+
+export const visionMissionData = [
+  {
+    title: "Mission",
+    content:
+      "To improve reproductive health and family wellness, by providing support through charitable initiatives.",
+    icon: "/streamgrey.svg",
+    className: "bg-secondary-50 text-secondary-500",
+  },
+  {
+    title: "Vision",
+    content:
+      "A global community of people making lifelong decisions to improve and reinforce reproductive health and family well-being.",
+    icon: "/streampink.svg",
+    className: "bg-primary-50 text-primary-500",
+  },
+  {
+    title: "Purpose",
+    content:
+      "To help vulnerable persons navigate the burden and unmet needs of reproductive health and family well-being.",
+    icon: "/streamgrey.svg",
+    className: "bg-secondary-50 text-secondary-500",
+  },
+];
+
+export const workFamily = [
+  {
+    src: "/images/work-family/work-family-1.png",
+    name: "Busayo Oyetubosun",
+    title: "Admin",
+  },
+  {
+    src: "/images/work-family/work-family-2.png",
+    name: "Mikka Erem",
+    title: "Program Officer",
+  },
+  {
+    src: "/images/work-family/work-family-3.png",
+    name: "Susan Kebu",
+    title: "Project Associate",
+  },
+  {
+    src: "/images/work-family/work-family-4.png",
+    name: "Tolu Oluwagbemi-Jacob",
+    title: "Communications Officer",
+  },
+  {
+    src: "/images/work-family/work-family-5.png",
+    name: "Uche Kennedy",
+    title: "IT Lead",
+  },
+  {
+    src: "/images/work-family/work-family-6.png",
+    name: "Oluwatobi Alawode",
+    title: "Logistics Officer",
+  },
+  {
+    src: "/images/work-family/work-family-7.png",
+    name: "Grace Vin-Otebele",
+    title: "Monitoring & Evaluation Officer",
+  },
 ];

@@ -8,6 +8,7 @@ import Support from "@/components/shared/support";
 import Team from "@/components/shared/team";
 import Partners from "@/components/shared/partners";
 import Tweets from "@/components/home/tweets";
+import { bots } from "@/lib/data";
 
 export default function Home() {
   return (
@@ -17,7 +18,13 @@ export default function Home() {
       <HomeNewsEvents />
       <HomeInitiatives />
       <Testimonials />
-      <Team />
+      <Team
+        title="Board of Trustees"
+        mates={bots}
+        className="lg:py-24 bg-snow"
+        matesContainerClassName="max-lg:flex-wrap lg:flex lg:overflow-auto lg:min-w-[100vw] lg:pr-24 lg:pb-5"
+        shouldSeeMore
+      />
       <Support />
       <Partners />
       <Tweets />

@@ -19,6 +19,7 @@ export default function ActivityCard({ event }: ActivityCardProps) {
       <div className="rounded-[0.5rem] overflow-hidden w-[187px] max-h-[206px] h-full relative">
         <Image
           fill
+          sizes="100%"
           src={event.image}
           alt={event.title}
           style={{ objectPosition: "center", objectFit: "cover" }}

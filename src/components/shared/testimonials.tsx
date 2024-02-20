@@ -6,7 +6,7 @@ import { CarouselItem } from "@/components/ui/carousel";
 
 export default function Testimonials() {
   return (
-    <section className="py-10 pb-20 lg:py-24 lg:pb-32">
+    <section className="py-10 pb-20 lg:py-24 lg:pb-32" id="testimonials">
       <article className="container">
         <Slider
           hasShadow={false}
@@ -30,7 +30,8 @@ export default function Testimonials() {
                       alt={name}
                       className="rounded-full"
                       fill
-                      style={{ objectFit: "cover" }}
+                      style={{ objectFit: "cover", objectPosition: "center" }}
+                      sizes="100%"
                     />
                   </div>
                   <div>
