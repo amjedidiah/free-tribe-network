@@ -5,23 +5,24 @@ import Link from "next/link";
 export default function Support() {
   return (
     <section className="relative z-[2] radial-primary">
-      <div className="hidden lg:block -z-[2] absolute inset-y-0 lg:-left-52 xl:-left-44 2xl:-left-20">
+      <div className="hidden lg:block -z-[2] absolute inset-y-0 lg:-left-52 xl:-left-44 2xl:-left-20 h-full w-[calc(100vw/2)] xl:w-[calc(100vw/2-150px)] 2xl:w-[calc(100vw/2-300px)]">
         <Image
-          src="/images/ankara.png"
+          src="/images/ankaras/ankara-2.png"
           alt="ankara background"
           className="max-h-full"
-          width={645}
-          height={645}
+          fill
+          style={{ objectFit: "cover", objectPosition: "center" }}
+          sizes="100%"
         />
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-9 lg:gap-18 container pt-20 lg:pt-40">
-        <div className="order-last lg:order-first">
+        <div className="order-last lg:order-first max-lg:max-h-96 overflow-hidden">
           <Image
             src="/images/support.png"
             alt="classroom"
             width={674}
             height={522}
-            className="max-w-full overflow-hidden"
+            className="w-full max-w-full overflow-hidden"
           />
         </div>
         <div className="text-white flex flex-col gap-7">

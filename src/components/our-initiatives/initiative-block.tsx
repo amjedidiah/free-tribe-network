@@ -66,6 +66,7 @@ export default function InitiativeBlock({ name, label }: InitiativeBlockProps) {
                 src={i.src}
                 alt={i.alt}
                 fill
+                sizes="100%"
                 style={{ objectFit: "cover", objectPosition: "center" }}
               />
             </CarouselItem>

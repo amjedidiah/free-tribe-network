@@ -31,6 +31,7 @@ export default function HomeInitiatives() {
                       src={images[0].src}
                       alt="name"
                       fill
+                      sizes="100%"
                       style={{ objectFit: "cover" }}
                       className="shadow-xl"
                     />

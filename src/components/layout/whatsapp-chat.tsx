@@ -15,6 +15,7 @@ export default function WhatsappChat() {
                 src="/icons/whatsapp-icon.svg"
                 alt="Whatsapp Icon"
                 fill
+                sizes="100%"
                 style={{ objectPosition: "center", objectFit: "cover" }}
               />
             </span>

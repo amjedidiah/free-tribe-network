@@ -20,6 +20,7 @@ export default function Banner({
       <Image
         src={image}
         fill
+        sizes="100%"
         alt="banner"
         style={{ objectFit: "cover", objectPosition: picturePosition }}
         priority
