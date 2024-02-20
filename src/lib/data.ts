@@ -253,19 +253,19 @@ export const initiativeData = {
   <div>
     <p>
       A public health project that seeks to capture and reduce the witnessing of
-      interparental violence, and the intergenerational transmission of violence
+      inter-parental violence, and the intergenerational transmission of violence
       to adolescents. The project aims to improve institutional supportive
       structures within public secondary schools, to discourage the acceptance
       or use of violence in future relationships. It combines a powerful blend
       of research and public health programs to address reproductive health and
-      family wellbeing.
+      family well-being.
     </p>
   </div>
 
   <div>
     <h4 class="heading"> Identifying the Issue! </h4>
     <p>
-      We observed that Intimate Partner Violence (Interparental Violence) had a
+      We observed that Intimate Partner Violence (Inter-parental Violence) had a
       significant effect on the physical, mental, and social well-being of
       children and adolescents. Children witnessing these violent behaviours
       were prone to exhibit difficulties in social interactions, endured
@@ -282,7 +282,7 @@ export const initiativeData = {
       The Stand Against Recycled Violence (STAR) Project: an initiative to
       counter the intergenerational recycling of violence. We combined a
       powerful blend of research and public health programs, to address the
-      incidence of interparental violence, bullying (peer violence), and
+      incidence of inter-parental violence, bullying (peer violence), and
       violence justification. The strategies of the STAR project help us to
       improve institutional supportive structures within secondary schools, and
       to discourage the acceptance and use of violence in future relationships.
@@ -317,7 +317,7 @@ export const initiativeData = {
   },
   repromatters: {
     ...initiatives[1],
-    content: `<div><p>A bi-monthly program utilizing real life stories, medical knowledge, public health expertise, and the wide reach of the social media space, to discuss important issues affecting reproductive health and family wellbeing. Topics covered will center around women’s health, men’s health, children and adolescent health and well-being.</p></div>`,
+    content: `<div><p>A bi-monthly program utilizing real life stories, medical knowledge, public health expertise, and the wide reach of the social media space, to discuss important issues affecting reproductive health and family well-being. Topics covered will center around women’s health, men’s health, children and adolescent health and well-being.</p></div>`,
     images: [{ src: "/images/repro.png", alt: "repro" }],
   },
   "free-tribe-boost-camp": {
@@ -531,13 +531,13 @@ export const testimonials = [
   },
   {
     testimony:
-      "I love the ReproMatters program. Listening to the experiences of people and what they’ve been through gives a better perspective to the issues the nonprofit is addressing",
+      "I love the ReproMatters program. Listening to the experiences of people and what they’ve been through gives a better perspective to the issues the non-profit is addressing",
     src: "/images/testimonials/testimonial-2.jpeg",
     name: "Moses Plangkat",
   },
   {
     testimony:
-      "As a beneficiary of the family planning resources offered by the nonprofit, I can attest to the positive impact on our lives. It has empowered us to plan and nurture a healthier, happier family.",
+      "As a beneficiary of the family planning resources offered by the non-profit, I can attest to the positive impact on our lives. It has empowered us to plan and nurture a healthier, happier family.",
     src: "/images/testimonials/testimonial-3.jpeg",
     name: "Mrs. Blessing Omenka",
     title: "Head of Design, Layers",
@@ -557,7 +557,7 @@ export const testimonials = [
   },
   {
     testimony:
-      "As an organization focused on empowering people via healthcare education, CHIIN's partnership with this nonprofit has expanded our capacity to serve the community. Their shared commitment to improving reproductive health has resulted in a stronger, healthier population.",
+      "As an organization focused on empowering people via healthcare education, CHIIN's partnership with this non-profit has expanded our capacity to serve the community. Their shared commitment to improving reproductive health has resulted in a stronger, healthier population.",
     src: "/images/testimonials/testimonial-6.jpeg",
     name: "Sayo Eweje",
     title:
@@ -572,7 +572,7 @@ export const testimonials = [
   },
   {
     testimony:
-      "Our organization is proud to be in partnership with this nonprofit. Their innovative programs and unwavering support have greatly enhanced our ability to address reproductive health challenges, ultimately improving the lives of those we serve",
+      "Our organization is proud to be in partnership with this non-profit. Their innovative programs and unwavering support have greatly enhanced our ability to address reproductive health challenges, ultimately improving the lives of those we serve",
     src: "/images/testimonials/testimonial-8.jpeg",
     name: "Dr Gbonjubola Abiri",
     title: "CEO, RediMed Consulting",
@@ -589,11 +589,11 @@ export const testimonials = [
       "I enjoyed my time with the Free Tribe Network. There are so many good things to say about the network and the awesome work they do!  Most of all, their public relations is the best I have ever seen. They will leave an indelible mark in the sands of time.",
     src: "/images/testimonials/testimonial-10.jpeg",
     name: "Pharm. Tobechuckwu Nneji ",
-    title: "Subpharmacist",
+    title: "Pharmacist",
   },
   {
     testimony:
-      "Through the Free Tribe Network’s initiatives, I have gained access to essential healthcare services, empowering me to make informed choices for my family's wellbeing. Grateful for the positive impact!",
+      "Through the Free Tribe Network’s initiatives, I have gained access to essential healthcare services, empowering me to make informed choices for my family's well-being. Grateful for the positive impact!",
     src: "/images/testimonials/testimonial-11.jpeg",
     name: "Dr Muhammed Odedeji",
     title: "Medical Doctor",
@@ -616,7 +616,7 @@ export const testimonials = [
 export const bots = [
   {
     src: "/images/bot/bot-1.png",
-    name: "Dr Adebayo, Ayodeji Mattew",
+    name: "Dr Adebayo, Ayodeji Matthew",
     title: "Chairman, BOT",
     description: `<p>A public health physician, a seasoned researcher, and a senior lecturer in the Department of Community Medicine, University of Ibadan, Nigeria. He has published over 85 academic papers, and presented at several international and national conferences. He is a recipient of several grants, and was Principal Investigator for a World Bank funded project, targeting couples in Ibadan, Nigeria.</p>`,
   },
@@ -630,14 +630,14 @@ export const bots = [
     src: "/images/bot/bot-3.png",
     name: "Oluwagbemi-Jacob Tosin",
     title: "Secretary, BOT",
-    description: `<p>A public health specialist and the Executive Director of the Free Tribe Network. With over 5 years invested in administrative planning, project and program management, research, monitoring and evaluation, he has efficiently managed over 20 nonprofit projects and operations across Nigeria.</p>
-<p>His collaborations with the University College Hospital, Ibadan, and other other notable institutes reflect an especial interest and dedication to mental health, reproductive health and family wellbeing.</p>`,
+    description: `<p>A public health specialist and the Executive Director of the Free Tribe Network. With over 5 years invested in administrative planning, project and program management, research, monitoring and evaluation, he has efficiently managed over 20 non-profit projects and operations across Nigeria.</p>
+<p>His collaborations with the University College Hospital, Ibadan, and other other notable institutes reflect an especial interest and dedication to mental health, reproductive health and family well-being.</p>`,
   },
   {
     src: "/images/bot/bot-4.png",
     name: "Prof. Obafemi, Fances Ngozi",
     title: "Member, BOT",
-    description: `<p>A Professor of Monetary Economics with extensive publications, industrial policy drafting experience, and consultancy roles with the World Bank and United Nations Industrial Development Organization (UNIDO). She has served as a research fellow for the National Defense College, Abuja, and the National Institute for Policy & Strategic Studies (NIPSS), and is the co-founder of the Happy Home Club; a teaching/coaching establishment for single and married persons.</p>`,
+    description: `<p>A Professor of Monetary Economics with extensive publications, industrial policy drafting experience, and consultancy roles with the World Bank and United Nations Industrial Development Organization (UNIDO). She has served as a research fellow for the National Defence College, Abuja, and the National Institute for Policy & Strategic Studies (NIPSS), and is the co-founder of the Happy Home Club; a teaching/coaching establishment for single and married persons.</p>`,
   },
   {
     src: "/images/bot/bot-5.png",
@@ -656,7 +656,7 @@ export const bots = [
     src: "/images/bot/bot-7.png",
     name: "Madu, Ihuomachidire I.",
     title: "Member, BOT",
-    description: `<p>The partnership Manager and Legal Advisoor at Silicon Africa Technologies Ltd, and  Project Manager for Social Media Fest (SMFEST); a global social impact platform that exposes creatives to the advantages and leverages of social media and technology.</p>
+    description: `<p>The partnership Manager and Legal Advisor at Silicon Africa Technologies Ltd, and  Project Manager for Social Media Fest (SMFEST); a global social impact platform that exposes creatives to the advantages and leverages of social media and technology.</p>
 <p>She is a lawyer and human rights activist; a passionate advocate for youth development and financial literacy, inspiring young women into leadership and responsibility.</p>`,
   },
   {
@@ -750,4 +750,4 @@ export const workFamily = [
 
 // TODO: Fix these
 export const volunteerNowLink = "#";
-export const currentVancanciesLink = "#"
+export const currentVacanciesLink = "#";

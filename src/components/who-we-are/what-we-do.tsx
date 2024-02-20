@@ -20,7 +20,7 @@ export default function WhatWeDo() {
             className="bg-secondary-50 text-secondary-500 lg:col-start-4 lg:col-end-7"
           />
           <WhatWeDoCard
-            title="Policcy & Reasearch activities"
+            title="Policy & Research activities"
             icon="/images/policy.svg"
             className="bg-primary-50 text-primary-500 lg:col-start-1 lg:col-end-3 lg:row-start-2"
           />

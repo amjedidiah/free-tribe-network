@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { currentVancanciesLink, volunteerNowLink } from "@/lib/data";
+import { currentVacanciesLink, volunteerNowLink } from "@/lib/data";
 
 export default function WorkWithUs() {
   return (
@@ -45,7 +45,7 @@ export default function WorkWithUs() {
               </Button>
             </Link>
 
-            <Link href={currentVancanciesLink}>
+            <Link href={currentVacanciesLink}>
               <Button className="bg-transparent hover:bg-transparent py-2 px-4 w-fit text-white border border-white">
                 Current Vacancies
               </Button>
