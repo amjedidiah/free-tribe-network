@@ -747,3 +747,7 @@ export const workFamily = [
     title: "Monitoring & Evaluation Officer",
   },
 ];
+
+// TODO: Fix these
+export const volunteerNowLink = "#";
+export const currentVancanciesLink = "#"

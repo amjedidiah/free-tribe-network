@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { currentVancanciesLink, volunteerNowLink } from "@/lib/data";
 
 export default function WorkWithUs() {
   return (
@@ -38,13 +39,13 @@ export default function WorkWithUs() {
             </p>
           </div>
           <div className="flex gap-6">
-            <Link href="donate">
+            <Link href={volunteerNowLink}>
               <Button className="bg-primary-500 hover:bg-primary-500 py-2 px-4 w-fit text-white">
                 Volunteer Now
               </Button>
             </Link>
 
-            <Link href="donate">
+            <Link href={currentVancanciesLink}>
               <Button className="bg-transparent hover:bg-transparent py-2 px-4 w-fit text-white border border-white">
                 Current Vacancies
               </Button>
