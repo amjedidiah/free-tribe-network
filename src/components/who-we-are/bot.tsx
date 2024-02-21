@@ -64,7 +64,7 @@ export default function Bot() {
           </div>
         </div>
         <div className="flex flex-col lg:flex-row gap-8">
-          <div className="max-sm:w-[calc(100vw-2rem)] sm:w-[612px] md:w-[736px] max-lg:mx-auto lg:w-[515px] relative">
+          <div className="w-contain lg:w-[515px] relative">
             <div className="bg bg-[rgba(129,1,77,0.3)] w-11 h-full absolute top-0 left-0 z-[2] pointer-events-none" />
             <div className="bg bg-[rgba(129,1,77,0.3)] w-11 h-full absolute top-0 right-0 z-[2] pointer-events-none" />
             <div className="flex items-center h-full z-0 [&>.swiper]:static">

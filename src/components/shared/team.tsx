@@ -27,12 +27,12 @@ export default function Team({
   return (
     <section className={cn("py-10 grid gap-8", className)} id={id}>
       <article className="container">
-        <div className="flex flex-wrap justify-between gap-4 items-center">
-          <h2 className="text-3xl lg:text-5xl font-semibold">{title}</h2>
+        <div className="flex flex-row flex-wrap h2-gap justify-between items-center">
+          <h2>{title}</h2>
           {shouldSeeMore && (
             <Link
               href="/who-we-are?section=staff"
-              className=" bg-primary-400 text-white font-semibold py-[0.625rem] px-[1.125rem] rounded-[0.5rem] shadow-md"
+              className="bg-primary-400 text-white py-[0.625rem] px-[1.125rem] rounded-[0.5rem] shadow-md"
             >
               See More
             </Link>
@@ -47,7 +47,7 @@ export default function Team({
           )}
         >
           {mates.map(({ name, src, title }) => (
-            <div key={name} className="grid gap-6">
+            <div key={name} className="grid gap-4">
               <div className="lg:w-[288px] h-[296px] relative image-container">
                 <Image
                   src={src}
@@ -58,7 +58,7 @@ export default function Team({
                   className="shadow-xl"
                 />
               </div>
-              <div className="grid gap-1">
+              <div>
                 <p className="text-gray-900 text-xl font-medium">{name}</p>
                 <p className="text-secondary-500 text-lg">{title}</p>
               </div>

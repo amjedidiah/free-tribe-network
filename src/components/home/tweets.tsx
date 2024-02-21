@@ -3,10 +3,10 @@ import Script from "next/script";
 export default function Tweets() {
   return (
     <section className="py-10 lg:pt-20 max-w-full">
-      <article className="container grid gap-6">
-        <h2 className="text-black font-semibold text-2xl lg:text-[2rem]">
+      <article className="container h3-gap">
+        <h3 className="text-black">
           Keep in touch with our Twitter activities
-        </h2>
+        </h3>
         <div id="tweets" className="max-w-full">
           <a
             className="twitter-timeline"

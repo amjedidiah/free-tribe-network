@@ -1,17 +1,14 @@
-"use client";
 import PostCard from "@/components/news-events/post-card";
-import { postsData as data } from "@/lib/data";
+import { Post } from "@/hooks/use-medium";
 
 type Props = {
-  postsData?: typeof data;
+  list: Post[];
 };
 
-export default function BlogList({ postsData = data }: Props) {
-  return (
-    <div className="grid lg:grid-cols-3 gap-8 sm:grid-cols-2">
-      {postsData.map((post, i) => (
-        <PostCard key={`${post.title}-${i}`} post={post} />
-      ))}
-    </div>
-  );
+export default function BlogList({ list }: Props) {
+  if (!list) return null;
+
+  return list.map((item, i) => (
+    <PostCard key={`${item.title}-${i}`} {...item} />
+  ));
 }
