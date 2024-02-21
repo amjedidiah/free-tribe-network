@@ -19,7 +19,7 @@ export default function WhatWeDoCard({
       <div className="w-20 h-20 relative rounded-full overflow-hidden">
         <Image alt={title} src={icon} sizes="100%" fill />
       </div>
-      <h4 className="font-semibold max-w-64 text-center">{title}</h4>
+      <h5 className="max-w-64 text-center">{title}</h5>
     </div>
   );
 }

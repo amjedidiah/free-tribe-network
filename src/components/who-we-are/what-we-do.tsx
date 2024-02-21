@@ -4,11 +4,9 @@ import Link from "next/link";
 export default function WhatWeDo() {
   return (
     <section className="py-10 lg:py-14" id="what-we-do">
-      <article className="container grid gap-11">
-        <h2 className="text-black text-3xl lg:text-5xl font-semibold">
-          What We Do
-        </h2>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-6 lg:grid-rows-2 text-xl lg:text-2xl">
+      <article className="container grid gap-8">
+        <h2 className="text-black">What We Do</h2>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-6 lg:grid-rows-2">
           <WhatWeDoCard
             title="Advocacy & Awareness campaigns"
             icon="/images/advocacy.svg"
@@ -36,10 +34,7 @@ export default function WhatWeDo() {
           />
         </div>
         <div className=" [&_a]:py-[0.625rem] [&_a]:px-[1.125rem] [&_a]:rounded-[0.5rem] [&_a]:shadow-md">
-          <Link
-            href="/news-events"
-            className=" bg-primary-400 text-white font-semibold"
-          >
+          <Link href="/news-events" className=" bg-primary-400 text-white">
             View Activities
           </Link>
         </div>

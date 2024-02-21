@@ -7,7 +7,6 @@ import { cn } from "@/lib/utils";
 import WhatsappChat from "@/components/layout/whatsapp-chat";
 import manrope from "@/lib/font";
 
-// TODO: Finish configuring all other metadata fields with client suggestion
 // type Props = {
 //   searchParams: { [key: string]: string | string[] | undefined };
 // };

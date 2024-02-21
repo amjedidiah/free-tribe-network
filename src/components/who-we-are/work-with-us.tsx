@@ -27,9 +27,9 @@ export default function WorkWithUs() {
           />
         </div>
         <div className="text-white flex flex-col gap-7 justify-center">
-          <div className="flex flex-col gap-6">
-            <h2 className="text-3xl lg:text-4xl">Work With Us!</h2>
-            <p className="lg:text-lg">
+          <div className="h2-gap">
+            <h2>Work With Us!</h2>
+            <p>
               At Free Tribe Network, our staff and volunteers are driven for
               positive world change. Our web of experts, interns, and
               enthusiasts give their best to ensure health, equity, and social
