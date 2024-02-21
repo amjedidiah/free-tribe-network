@@ -54,7 +54,8 @@ const extractContentImage = (text: string) => {
 export const formatPostsData = (postsData?: PostData[]) => {
   if (!postsData) return [];
   return postsData.map(({ category, title, content, published, link }) => ({
-    image: extractContentImage(content) || "",
+    image:
+      extractContentImage(content) || "/images/banners/who-we-are-banner.jpeg",
     initiatives: category,
     title,
     link,
