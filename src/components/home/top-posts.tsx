@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function TopPosts() {
   const { topPosts, posts } = useMedium();
-  if (!topPosts) return null;
+  if (!topPosts.length) return null;
 
   return (
     <section className="py-10 lg:py-28">
