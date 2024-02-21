@@ -124,62 +124,64 @@ export const routes = [
       },
     ],
   },
-  {
-    label: "Resources",
-    href: "/resources",
-  },
+  // {
+  //   label: "Resources",
+  //   href: "/resources",
+  // },
 ];
 
-export const activitiesData = [
-  {
-    title: "Design Handoff and Developer Handover",
-    description: "Design Handoff and Developer Handover",
-    image: "/images/Frame 17.jpg",
-    details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
-    initiative: "rfh-advocacy",
-    slug: "activity-1",
-  },
-  {
-    title: "Design Handoff and Developer Handover",
-    description: "Design Handoff and Developer Handover",
-    image: "/images/Frame 17.jpg",
-    details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
-    initiative: "free-tribe-clubs",
-    slug: "activity-2",
-  },
-  {
-    title: "Design Handoff and Developer Handover",
-    description: "Design Handoff and Developer Handover",
-    image: "/images/Frame 17.jpg",
-    details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
-    initiative: "free-tribe-helpline",
-    slug: "activity-3",
-  },
-  {
-    title: "Design Handoff and Developer Handover",
-    description: "Design Handoff and Developer Handover",
-    image: "/images/Frame 17.jpg",
-    details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
-    initiative: "free-tribe-boost-camp",
-    slug: "activity-4",
-  },
-  {
-    title: "Design Handoff and Developer Handover",
-    description: "Design Handoff and Developer Handover",
-    image: "/images/Frame 17.jpg",
-    details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
-    initiative: "repromatters",
-    slug: "activity-5",
-  },
-  {
-    title: "Design Handoff and Developer Handover",
-    description: "Design Handoff and Developer Handover",
-    image: "/images/Frame 17.jpg",
-    details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
-    initiative: "star-project",
-    slug: "activity-6",
-  },
-];
+// export const activitiesData = [
+//   {
+//     title: "Design Handoff and Developer Handover",
+//     description: "Design Handoff and Developer Handover",
+//     image: "/images/Frame 17.jpg",
+//     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
+//     initiative: "rfh-advocacy",
+//     slug: "activity-1",
+//   },
+//   {
+//     title: "Design Handoff and Developer Handover",
+//     description: "Design Handoff and Developer Handover",
+//     image: "/images/Frame 17.jpg",
+//     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
+//     initiative: "free-tribe-clubs",
+//     slug: "activity-2",
+//   },
+//   {
+//     title: "Design Handoff and Developer Handover",
+//     description: "Design Handoff and Developer Handover",
+//     image: "/images/Frame 17.jpg",
+//     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
+//     initiative: "free-tribe-helpline",
+//     slug: "activity-3",
+//   },
+//   {
+//     title: "Design Handoff and Developer Handover",
+//     description: "Design Handoff and Developer Handover",
+//     image: "/images/Frame 17.jpg",
+//     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
+//     initiative: "free-tribe-boost-camp",
+//     slug: "activity-4",
+//   },
+//   {
+//     title: "Design Handoff and Developer Handover",
+//     description: "Design Handoff and Developer Handover",
+//     image: "/images/Frame 17.jpg",
+//     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
+//     initiative: "repromatters",
+//     slug: "activity-5",
+//   },
+//   {
+//     title: "Design Handoff and Developer Handover",
+//     description: "Design Handoff and Developer Handover",
+//     image: "/images/Frame 17.jpg",
+//     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
+//     initiative: "star-project",
+//     slug: "activity-6",
+//   },
+// ];
+
+export const activitiesData: any[] = [];
 
 export const initiatives = [
   {

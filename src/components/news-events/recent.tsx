@@ -10,7 +10,7 @@ type Props = {
 };
 
 export default function Recent({ trigger }: Props) {
-  const { displayedData, shouldShowRefreshButton } =
+  const { displayedData } =
     useInitiativeEvent<(typeof activitiesData)[number]>(activitiesData);
 
   return (
@@ -20,7 +20,8 @@ export default function Recent({ trigger }: Props) {
       ))}
 
       {!displayedData.length && (
-        <NoInitiativeData shouldShowRefreshButton={shouldShowRefreshButton} />
+        // <NoInitiativeData shouldShowRefreshButton={shouldShowRefreshButton} />
+        <NoInitiativeData shouldShowRefreshButton={false} />
       )}
     </ActivityTabsContent>
   );
