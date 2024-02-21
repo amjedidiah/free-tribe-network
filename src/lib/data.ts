@@ -181,42 +181,6 @@ export const activitiesData = [
   },
 ];
 
-export const postsData = [
-  {
-    title: "UX review presentations",
-    image: "/images/blog.png",
-    shortDesc:
-      "How do you create compelling presentations that wow your colleagues and impress your managers?",
-    readTime: "8 min read",
-    author: "Olivia Rhye",
-    authorImage: "/images/Avatar.png",
-    date: "20 Jan 2022",
-    initiative: "star-project",
-  },
-  {
-    title: "UX review presentations",
-    image: "/images/blog.png",
-    shortDesc:
-      "How do you create compelling presentations that wow your colleagues and impress your managers?",
-    readTime: "8 min read",
-    author: "Olivia Rhye",
-    authorImage: "/images/Avatar.png",
-    date: "20 Jan 2022",
-    initiative: "repromatters",
-  },
-  {
-    title: "UX review presentations",
-    image: "/images/blog.png",
-    shortDesc:
-      "How do you create compelling presentations that wow your colleagues and impress your managers?",
-    readTime: "8 min read",
-    author: "Olivia Rhye",
-    authorImage: "/images/Avatar.png",
-    date: "20 Jan 2022",
-    initiative: "free-tribe-boost-camp",
-  },
-];
-
 export const initiatives = [
   {
     name: "star-project",
