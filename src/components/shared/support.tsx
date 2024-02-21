@@ -26,9 +26,9 @@ export default function Support() {
           />
         </div>
         <div className="text-white flex flex-col gap-7">
-          <div className="flex flex-col gap-6">
-            <h2 className="text-3xl lg:text-4xl">Support Our Mission Today!</h2>
-            <p className="lg:text-lg">
+          <div className="h2-gap max-w-md">
+            <h2>Support Our Mission Today!</h2>
+            <p>
               Join our cause to transform structures around reproductive health
               and family well-being.
             </p>

@@ -10,7 +10,7 @@ type PostCardProps = {
 
 export default function PostCard({ post }: PostCardProps) {
   return (
-    <div className="flex flex-col gap-6 lg:gap-8">
+    <div className="flex flex-col gap-6">
       <div className="w-full relative h-[240px] rounded-[0.625rem]">
         <Image
           src={post.image}
@@ -21,8 +21,8 @@ export default function PostCard({ post }: PostCardProps) {
           sizes="100%"
         />
       </div>
-      <div className="flex flex-col items-stretch gap-8">
-        <div className="grid gap-4">
+      <div className="flex flex-col items-stretch gap-4">
+        <div className="grid gap-3">
           <div className="flex gap-2 p-1 pr-3 w-fit text-secondary-500 items-center text-xs bg-[rgba(230,239,243,0.5)] rounded-full font-medium">
             <Link
               href="/news-events/initiatives/[initiative]"
@@ -38,11 +38,9 @@ export default function PostCard({ post }: PostCardProps) {
             </Link>
             <span>{post.readTime}</span>
           </div>
-          <div className="flex flex-col gap-3">
+          <div className="h5-gap">
             <div className="flex justify-between items-center">
-              <h2 className="text-xl text-gray-900 font-semibold">
-                {post.title}
-              </h2>
+              <h5 className="text-gray-900">{post.title}</h5>
               <Image
                 src="/icons/arrow-up-right.svg"
                 alt="arrow-up-right"

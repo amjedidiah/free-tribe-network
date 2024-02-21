@@ -20,9 +20,7 @@ export default function Testimonials() {
           {testimonials.map(({ name, testimony, src, ...rest }) => (
             <CarouselItem key={name} className="relative">
               <div className="grid text-center gap-8">
-                <p className="text-description text-2xl lg:text-3xl">
-                  {testimony}
-                </p>
+                <h4 className="text-description">{testimony}</h4>
                 <div className="flex flex-col items-center gap-4">
                   <div className="w-16 h-16 rounded-full relative">
                     <Image

@@ -56,34 +56,78 @@
 
   html, body {
     @apply bg-background text-foreground max-w-full overflow-x-hidden;
+    font-size: 16px;
+  }
 
-    font-size: 14px;
+  h1 {
+    @apply text-5xl lg:text-6xl font-extrabold;
 
-    @media (width >= 768px) {
-      font-size: 16px;
-    }
+  }
+
+  h2 {
+    @apply text-4xl lg:text-5xl font-bold;
+  }
+
+  h3 {
+    @apply text-3xl lg:text-4xl font-medium;
+  }
+
+  h4 {
+    @apply text-2xl lg:text-3xl;
+  }
+
+  h5 {
+    @apply text-xl lg:text-2xl font-light;
+  }
+
+  a, button {
+    @apply font-medium
   }
 }
 
 @layer components {
+  .h1-gap {
+    @apply flex flex-col gap-4 lg:gap-6;
+  }
+
+  .h2-gap {
+    @apply flex flex-col gap-2 lg:gap-4;
+  }
+
+  .h3-gap {
+    @apply flex flex-col gap-1 lg:gap-2;
+  }
+
+  .h5-gap {
+    @apply flex flex-col gap-1;
+  }
+
   .radial-primary {
     background: radial-gradient(74.29% 50.12% at 46.55% 50%, rgba(234 2 140 / 89%) 0%, #EA0256 100%);
   }
-}
 
-.border-ankara-1 {
-  border: 10px solid transparent;
-  border-image: url('/images/ankaras/ankara-1.png') 10 repeat;
-}
+  .border-ankara-1 {
+    border: 10px solid transparent;
+    border-image: url('/images/ankaras/ankara-1.png') 10 repeat;
+  }
 
-.swiper-button-prev {
-  background: url("/images/arrow-left.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
+  .swiper-button-prev {
+    background: url("/images/arrow-left.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 
-.swiper-button-next {
-  background: url("/images/arrow-right.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
+  .swiper-button-next {
+    background: url("/images/arrow-right.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .stats-shadow {
+    box-shadow: 0px 0px 24px 8px rgba(0, 0, 0, 0.06)
+  }
+
+  .w-contain {
+    @apply max-sm:w-[calc(100vw-2rem)] sm:w-[612px] md:w-[736px] max-lg:mx-auto;
+  }
 }
