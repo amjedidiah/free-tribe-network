@@ -333,14 +333,15 @@ export const initiativeData = {
 };
 
 export const contactNumber = "+2348153494508";
+export const contactEmail = "hello@freetribenetwork.org";
 
 export const contactChannels = [
   {
     image: "/icons/message-circle.svg",
     header: "Chat to support",
     subHeader: "We’re here to help.",
-    text: "freetribenetwork@gmail.com",
-    href: "mailto:freetribenetwork@gmail.com",
+    text: contactEmail,
+    href: `mailto:${contactEmail}`,
   },
   {
     image: "/icons/message-circle.svg",
@@ -395,8 +396,7 @@ export const currentYear = new Date().getFullYear();
 export const homeBannerData = [
   {
     image: "/images/banners/home-banner/home-banner-1.png",
-    title:
-      "Inspiring actions for sustained reproductive health and family well-being",
+    title: "Sustained reproductive health and family well-being",
     picturePosition: "center right",
     wrapperClassName: "max-xl:bg-[rgba(5,83,118,0.45)]",
     content:
@@ -447,32 +447,31 @@ export const donationFAQs = [
     id: "2",
     question: "How can I be sure my donation is safe?",
     answer:
-      "We use SSL encryption to protect your information and ensure that your donation is secure. Your card and personal data will be safe and secure.",
+      "Our payment provider, <strong>PayStack</strong>, uses SSL encryption to protect your information and ensure that your donation is secure. Your card and personal data will be safe and secure.",
   },
   {
     id: "3",
     question: "Can I sponsor a specific interest? ",
-    answer:
-      " donation is used to support programs, projects and research conducted by the  Free Tribe Network ",
+    answer: "Yes, you can.",
   },
   {
     id: "4",
     question: "Will I get a receipt for my donation?",
     answer:
-      "Your donation is used to support programs, projects and research conducted by the  Free Tribe Network ",
+      "Yes, you will be emailed a <strong>PayStack</strong> receipt for your donation.",
   },
   {
     id: "5",
     question:
       "How do I contact Free Tribe Network for ​additional information or inquiries ?",
     answer:
-      "Your donation is used to support programs, projects and research conducted by the  Free Tribe Network ",
+      "You can call us on <a href='tel:+2348153494508'>+234 (815) 3494 508</a> or email us at <a href='mailto:hello@freetribenetwork.org'>hello@freetribenetwork.org</a>",
   },
   {
     id: "6",
     question: "How can I get involved?",
     answer:
-      "Your donation is used to support programs, projects and research conducted by the  Free Tribe Network ",
+      "You can get involved by volunteering, donating, or spreading awareness about reproductive health and rights.",
   },
 ];
 

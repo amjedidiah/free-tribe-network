@@ -3,7 +3,7 @@ import Banner from "@/components/shared/banner";
 import { activityTabsData } from "@/lib/data";
 import { Fragment } from "react";
 
-export default function Page() {
+export default function NewsEvents() {
   return (
     <Fragment>
       <Banner image="/images/banners/news-banner.png" title="News and Events" />

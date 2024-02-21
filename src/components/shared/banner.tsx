@@ -6,6 +6,7 @@ type BannerProps = {
   children?: React.ReactNode;
   picturePosition?: string;
   wrapperClassName?: string;
+  id?: string;
 };
 
 export default function Banner({
@@ -14,9 +15,13 @@ export default function Banner({
   children,
   picturePosition = "center",
   wrapperClassName,
+  id,
 }: BannerProps) {
   return (
-    <section className="max-h-[692px] h-[80vh] relative mt-20 text-white">
+    <section
+      className="max-h-[692px] h-[85vh] relative mt-20 text-white"
+      id={id}
+    >
       <Image
         src={image}
         fill
