@@ -48,9 +48,9 @@ export default function ActivityTabsContent({
       )}
       <div className="flex flex-col gap-4 lg:gap-8">
         <div
-          className={cn("grid ", {
-            "lg:grid-cols-3 gap-8 sm:grid-cols-2": isBlog,
-            "gap-7 md:grid-cols-2": !isBlog,
+          className={cn("grid gap-10", {
+            "lg:grid-cols-3 sm:grid-cols-2": isBlog,
+            "md:grid-cols-2": !isBlog,
           })}
         >
           {children}

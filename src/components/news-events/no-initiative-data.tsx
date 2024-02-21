@@ -17,9 +17,9 @@ export default function NoInitiativeData({
   return (
     <article className="col-span-full text-center grid gap-3 p-8">
       {title && (
-        <h1 className="text-lg lg:text-2xl font-light">
+        <h5>
           No <span className="font-medium">{title}</span> for this selection
-        </h1>
+        </h5>
       )}
       {shouldShowRefreshButton && (
         <Link href="/news-events">

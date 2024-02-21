@@ -41,13 +41,11 @@ export default function InitiativeBlock({ name, label }: InitiativeBlockProps) {
     <Element name={name} id={name}>
       <div className="flex flex-col py-10 gap-6 lg:gap-8">
         <div className="flex flex-col gap-6">
-          <div className="flex flex-col gap-7">
-            <h2 className="text-black font-semibold text-2xl lg:text-4xl">
-              {label}
-            </h2>
+          <div className="h2-gap">
+            <h2 className="text-black">{label}</h2>
             {content && (
               <SafeHTML
-                className="flex flex-col gap-5 [&>div]:flex [&>div]:flex-col [&>div]:gap-4 [&_.heading]:text-xl [&_.heading]:lg:text-2xl [&>div_p]:text-description [&_ul]:pl-8 [&_ul]:list-disc [&_ul]:list-outside [&_ul]:text-description"
+                className="flex flex-col gap-5 [&>div]:flex [&>div]:flex-col [&>div_p]:text-description [&_ul]:pl-8 [&_ul]:list-disc [&_ul]:list-outside [&_ul]:text-description"
                 htmlContent={content}
               />
             )}

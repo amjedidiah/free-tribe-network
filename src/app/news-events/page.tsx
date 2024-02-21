@@ -7,8 +7,10 @@ export default function Page() {
   return (
     <Fragment>
       <Banner image="/images/banners/news-banner.png" title="News and Events" />
-      <section className="container">
-        <ActivityTabs data={activityTabsData} />
+      <section className="py-10 lg:py-14">
+        <article className="container">
+          <ActivityTabs data={activityTabsData} />
+        </article>
       </section>
     </Fragment>
   );

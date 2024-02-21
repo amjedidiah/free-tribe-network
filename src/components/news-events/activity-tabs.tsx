@@ -19,7 +19,7 @@ export default function ActivityTabs({ data }: ActivityTabsProps) {
       onValueChange={handleSectionChange}
       className="grid grid-cols-1 gap-4 lg:gap-14"
     >
-      <TabsList className="py-2 px-[0.625rem] bg-gray-200 rounded-full flex flex-wrap gap-[0.625rem] place-self-center">
+      <TabsList className="py-2 px-[0.625rem] bg-secondary-50 rounded-full flex flex-wrap gap-[0.625rem] place-self-center">
         {data.map(({ trigger }) => (
           <TabsTrigger
             className="py-2 px-10 lg:py-4 lg:px-20 font-semibold capitalize"

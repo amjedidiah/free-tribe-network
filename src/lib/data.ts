@@ -226,8 +226,8 @@ export const initiativeData = {
     </p>
   </div>
 
-  <div>
-    <h4 class="heading"> Identifying the Issue! </h4>
+  <div className="h5-gap">
+    <h4>Identifying the Issue!</h4>
     <p>
       We observed that Intimate Partner Violence (Inter-parental Violence) had a
       significant effect on the physical, mental, and social well-being of
@@ -240,8 +240,8 @@ export const initiativeData = {
     </p>
   </div>
 
-  <div>
-    <h4 class="heading">Our Approach!</h4>
+  <div className="h5-gap">
+    <h4>Our Approach!</h4>
     <p>
       The Stand Against Recycled Violence (STAR) Project: an initiative to
       counter the intergenerational recycling of violence. We combined a
