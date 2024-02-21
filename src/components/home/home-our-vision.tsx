@@ -4,10 +4,8 @@ export default function HomeOurVision() {
   return (
     <section className="bg-secondary-900 py-10">
       <article className="container grid lg:grid-cols-[1fr,625px] gap-10 items-center">
-        <div className="flex flex-col gap-6">
-          <h2 className="text-secondary-50 text-3xl lg:text-5xl font-semibold">
-            Our Vision
-          </h2>
+        <div className="h2-gap">
+          <h2 className="text-secondary-50">Our Vision</h2>
           <p className="text-secondary-100 max-w-[35rem]">
             To build a global community of people making lifelong decisions, to
             improve their reproductive and family well-being, in line with the
@@ -19,12 +17,12 @@ export default function HomeOurVision() {
         <div className="grid sm:max-lg:grid-cols-3 lg:grid-cols-2 [&>div]:pt-4 [&>div]:px-4">
           <div className="flex flex-col max-lg:justify-between lg:flex-row lg:items-center gap-4 bg-[#f69fd2] lg:col-span-2">
             <div className="">
-              <span className="bg-primary-900 py-[2px] px-1 text-primary-100 ">
+              <span className="bg-primary-900 py-[2px] px-1 text-primary-100">
                 SDG 5
               </span>
-              <p className="text-primary-800 text-2xl lg:text-[2rem] uppercase font-extrabold lg:max-w-[11.625rem] lg:leading-10">
+              <h4 className="text-primary-800 uppercase lg:max-w-[11.625rem]">
                 gender equality
-              </p>
+              </h4>
             </div>
             <div className="flex lg:flex-1 justify-end">
               <Image
@@ -40,9 +38,9 @@ export default function HomeOurVision() {
               <span className="bg-secondary-800 py-[2px] px-1 text-secondary-100 ">
                 SDG 10
               </span>
-              <p className="text-secondary-800 text-2xl lg:text-[2rem] uppercase font-extrabold lg:leading-10">
+              <h4 className="text-secondary-800 uppercase">
                 reduced inequalities
-              </p>
+              </h4>
             </div>
             <div className="flex justify-end">
               <Image
@@ -58,9 +56,9 @@ export default function HomeOurVision() {
               <span className="bg-secondary-900 py-[2px] px-1 text-secondary-100 ">
                 SDG 3
               </span>
-              <p className="text-secondary-100 text-2xl lg:text-[2rem] uppercase font-extrabold lg:leading-10">
+              <h4 className="text-secondary-100 uppercase">
                 good health and well being
-              </p>
+              </h4>
             </div>
             <div className="flex justify-end">
               <Image

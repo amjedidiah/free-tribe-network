@@ -20,7 +20,7 @@ export default function Menu({ label, links, href }: MenuProps) {
     <NavigationMenu className="block max-lg:[&_*]:animate-none max-lg:[&>div]:static max-lg:[&_*]:justify-start max-lg:[&>div]:block max-lg:[&_div.absolute_*]:p-0 max-lg:[&_div.absolute_*]:border-none max-lg:[&_div.absolute_*]:shadow-none max-lg:[&_div.absolute_ul_li_*]:flex">
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="m-0 px-0 py-1 h-fit font-normal text-sm md:text-base">
+          <NavigationMenuTrigger className="m-0 px-0 py-1 h-fit">
             {label}
           </NavigationMenuTrigger>
           <NavigationMenuContent>
@@ -33,7 +33,7 @@ export default function Menu({ label, links, href }: MenuProps) {
                   <NavigationMenuLink
                     className={cn(
                       navigationMenuTriggerStyle(),
-                      "flex items-center gap-4 w-full p-3 text-sm md:text-base"
+                      "flex items-center gap-4 w-full p-3"
                     )}
                     href={`${href}?section=${i.href}`}
                   >

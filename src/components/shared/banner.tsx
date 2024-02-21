@@ -28,10 +28,8 @@ export default function Banner({
       <article
         className={`absolute h-full w-full left-0 top-0 flex flex-col justify-center ${wrapperClassName}`}
       >
-        <div className="container">
-          <h1 className="text-4xl lg:text-[3.5rem] lg:leading-[4rem] font-bold max-w-[50rem]">
-            {title}
-          </h1>
+        <div className="container h1-gap">
+          <h1 className="max-w-[50rem]">{title}</h1>
           {children}
         </div>
       </article>

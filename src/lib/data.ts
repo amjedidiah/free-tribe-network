@@ -181,42 +181,6 @@ export const activitiesData = [
   },
 ];
 
-export const postsData = [
-  {
-    title: "UX review presentations",
-    image: "/images/blog.png",
-    shortDesc:
-      "How do you create compelling presentations that wow your colleagues and impress your managers?",
-    readTime: "8 min read",
-    author: "Olivia Rhye",
-    authorImage: "/images/Avatar.png",
-    date: "20 Jan 2022",
-    initiative: "star-project",
-  },
-  {
-    title: "UX review presentations",
-    image: "/images/blog.png",
-    shortDesc:
-      "How do you create compelling presentations that wow your colleagues and impress your managers?",
-    readTime: "8 min read",
-    author: "Olivia Rhye",
-    authorImage: "/images/Avatar.png",
-    date: "20 Jan 2022",
-    initiative: "repromatters",
-  },
-  {
-    title: "UX review presentations",
-    image: "/images/blog.png",
-    shortDesc:
-      "How do you create compelling presentations that wow your colleagues and impress your managers?",
-    readTime: "8 min read",
-    author: "Olivia Rhye",
-    authorImage: "/images/Avatar.png",
-    date: "20 Jan 2022",
-    initiative: "free-tribe-boost-camp",
-  },
-];
-
 export const initiatives = [
   {
     name: "star-project",
@@ -751,3 +715,31 @@ export const workFamily = [
 // TODO: Fix these
 export const volunteerNowLink = "#";
 export const currentVacanciesLink = "#";
+
+export const stats = [
+  {
+    src: "/images/stats/stat-1.svg",
+    value: "200+",
+    title: "Advocacy and Awareness Campaigns",
+  },
+  { src: "/images/stats/stat-2.svg", value: "20+", title: "Training Programs" },
+  {
+    src: "/images/stats/stat-3.svg",
+    value: "1",
+    title: "Policy and Research activities",
+  },
+  { src: "/images/stats/stat-4.svg", value: "10+", title: "Community Project" },
+  { src: "/images/stats/stat-5.svg", value: "16+", title: "Collaborations" },
+  {
+    src: "/images/stats/stat-6.svg",
+    value: "3000+",
+    title: "Students reached",
+  },
+  {
+    src: "/images/stats/stat-7.svg",
+    value: "25,000+",
+    title: "Volunteering Hours",
+  },
+];
+
+export const subScribeMessageError = "You are already subscribed";

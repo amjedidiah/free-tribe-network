@@ -1,25 +1,21 @@
 "use client";
 import ActivityTabsContent from "@/components/news-events/activity-tabs-content";
-import useInitiativeEvent from "@/hooks/use-initiative-data";
-import { postsData } from "@/lib/data";
 import NoInitiativeData from "@/components/news-events/no-initiative-data";
 import BlogList from "@/components/shared/blog-list";
+import useMedium from "@/hooks/use-medium";
 
 type Props = {
   trigger: string;
 };
 
 export default function Blog({ trigger }: Props) {
-  const { displayedData, shouldShowRefreshButton } =
-    useInitiativeEvent<(typeof postsData)[number]>(postsData);
+  const { posts } = useMedium();
 
   return (
     <ActivityTabsContent trigger={trigger} isBlog>
-      <BlogList postsData={displayedData} />
+      <BlogList list={posts} />
 
-      {!displayedData.length && (
-        <NoInitiativeData shouldShowRefreshButton={shouldShowRefreshButton} />
-      )}
+      {!posts.length && <NoInitiativeData shouldShowRefreshButton={false} />}
     </ActivityTabsContent>
   );
 }

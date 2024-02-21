@@ -12,14 +12,11 @@ export default function HomeBanner() {
       {homeBannerData.map(({ content, ...rest }, i) => (
         <CarouselItem key={i} className="relative">
           <Banner {...rest}>
-            <div className="flex flex-col gap-6 mt-6">
+            <div className="flex flex-col gap-6">
               <p className="max-w-[41rem]">{content}</p>
 
               <div className="flex items-center gap-6 [&_a]:py-[0.625rem] [&_a]:px-[1.125rem] [&_a]:rounded-[0.5rem] [&_a]:shadow-md">
-                <Link
-                  href="/donate"
-                  className=" bg-primary-400 text-white font-semibold"
-                >
+                <Link href="/donate" className=" bg-primary-400 text-white">
                   Support
                 </Link>
                 <ScrollLink
