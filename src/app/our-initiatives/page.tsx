@@ -4,7 +4,7 @@ import Banner from "@/components/shared/banner";
 import { initiatives } from "@/lib/data";
 import Support from "@/components/shared/support";
 
-export default function Page() {
+export default function OurInitiatives() {
   return (
     <Fragment>
       <Banner

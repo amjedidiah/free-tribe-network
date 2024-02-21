@@ -395,8 +395,7 @@ export const currentYear = new Date().getFullYear();
 export const homeBannerData = [
   {
     image: "/images/banners/home-banner/home-banner-1.png",
-    title:
-      "Inspiring actions for sustained reproductive health and family well-being",
+    title: "Sustained reproductive health and family well-being",
     picturePosition: "center right",
     wrapperClassName: "max-xl:bg-[rgba(5,83,118,0.45)]",
     content:

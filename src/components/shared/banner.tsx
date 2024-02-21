@@ -16,7 +16,7 @@ export default function Banner({
   wrapperClassName,
 }: BannerProps) {
   return (
-    <section className="max-h-[692px] h-[80vh] relative mt-20 text-white">
+    <section className="max-h-[692px] h-[85vh] relative mt-20 text-white">
       <Image
         src={image}
         fill

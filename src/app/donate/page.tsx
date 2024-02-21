@@ -1,3 +1,5 @@
+"use client";
+import DonateBanner from "@/components/donate/donate-banner";
 import {
   Accordion,
   AccordionContent,
@@ -7,10 +9,12 @@ import {
 import { Button } from "@/components/ui/button";
 import { donationFAQs } from "@/lib/data";
 import Image from "next/image";
+import { Fragment } from "react";
 
-export default function Page() {
+export default function Donate() {
   return (
-    <main>
+    <Fragment>
+      <DonateBanner />
       <section className="space-y-4">
         <div className="container space-y-2 lg:space-y-3">
           <h1 className="font-semibold text-2xl lg:text-4xl">
@@ -54,6 +58,6 @@ export default function Page() {
           </div>
         </div>
       </section>
-    </main>
+    </Fragment>
   );
 }
