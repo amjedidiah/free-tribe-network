@@ -1,6 +1,6 @@
 import Image from "next/image";
 import ContactCard from "@/components/layout/contact-card";
-import { Button } from "@/components/ui/button";
+import SubscribeForm from "@/components/subscribe-form";
 import Link from "next/link";
 import { contactChannels, currentYear, routes, socials } from "@/lib/data";
 import CustomIcon from "@/components/shared/icon";
@@ -67,31 +67,7 @@ export default function Footer() {
               </div>
             </div>
 
-            <div
-              id="mailing-list"
-              className="lg:w-[25rem] w-contain flex flex-col justify-between gap-4"
-            >
-              <div className="flex flex-col gap-1">
-                <h4>Subscribe to our mail</h4>
-                <p className="text-slate-300">
-                  By registering, you permit the{" "}
-                  <span className="font-bold">Free Tribe Network</span> to store
-                  and collect your email address for the purpose of sending you
-                  our monthly newsletter.
-                </p>
-              </div>
-              <form className="flex gap-4">
-                <input
-                  className="rounded-md flex-grow text-black py-2 px-3 h-auto"
-                  type="email"
-                  name="email"
-                  aria-label="Email Address"
-                  placeholder="Email Address"
-                  autoComplete="email"
-                />
-                <Button className="h-auto w-32">Subscribe</Button>
-              </form>
-            </div>
+            <SubscribeForm />
           </div>
           <hr />
           <div className="flex flex-col lg:flex-row items-center justify-between gap-1">

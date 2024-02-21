@@ -12,3 +12,4 @@ export const formatLinkLabel = (href: string | null) =>
 export const fetchInitiativeData = async (name: string) =>
   Promise.resolve(initiativeData[name as keyof typeof initiativeData]);
 
+export const isDev = process.env.NODE_ENV === "development";

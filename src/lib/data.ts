@@ -777,3 +777,5 @@ export const stats = [
     title: "Volunteering Hours",
   },
 ];
+
+export const subScribeMessageError = "You are already subscribed";
