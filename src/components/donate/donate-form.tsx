@@ -22,7 +22,7 @@ export default function DonateForm() {
   } = useDonateForm();
 
   return (
-    <div className="flex flex-col gap-1 sm:gap-3 p-4 sm:p-8 lg:p-12 bg-white shadow-xl rounded-[0.5rem] lg:absolute -top-16 right-8 max-sm:w-[calc(100vw-2rem)]">
+    <div className="flex flex-col gap-1 sm:gap-3 p-4 sm:p-8 lg:p-12 bg-white shadow-xl rounded-[0.5rem] lg:absolute top-1/2 lg:-translate-y-1/2 right-8 max-sm:w-[calc(100vw-2rem)]">
       <form className="flex flex-col gap-3 sm:gap-5" onSubmit={handleSubmit}>
         <div className="text-black flex items-center justify-between border border-[#ddd] rounded-[0.5rem] p-3 lg:p-4">
           <div className="flex gap-2 items-center text-lg">
@@ -55,7 +55,7 @@ export default function DonateForm() {
             title="currency"
             name="currency"
             id="currency"
-            className="uppercase bg-transparent text-sm outline-none border-none flex-1 cursor-pointer"
+            className="uppercase bg-transparent text-sm outline-none border-none cursor-pointer"
             value={currencyCount}
             onChange={handleChangeCurrencyCount}
           >

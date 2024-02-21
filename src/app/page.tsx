@@ -9,7 +9,7 @@ import Team from "@/components/shared/team";
 import Partners from "@/components/shared/partners";
 import Tweets from "@/components/home/tweets";
 import { bots } from "@/lib/data";
-import OurImpact from "@/components/home/our-impact";
+import OurImpact from "@/components/shared/our-impact";
 
 export default function Home() {
   return (

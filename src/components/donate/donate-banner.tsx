@@ -7,6 +7,7 @@ export default function DonateBanner() {
       image="/images/banners/donate-banner.png"
       title="Help People Across the Globe"
       wrapperClassName="[&_.container]:relative [&_h1]:lg:max-w-lg [&_h1]:xl:max-w-xl"
+      id="donate-banner"
     >
       <div className="flex flex-col gap-3 sm:gap-6">
         <p className="lg:max-w-lg xl:max-w-xl">
