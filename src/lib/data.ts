@@ -712,7 +712,6 @@ export const workFamily = [
   },
 ];
 
-// TODO: Fix these
 export const volunteerNowLink = "#";
 export const currentVacanciesLink = "#";
 

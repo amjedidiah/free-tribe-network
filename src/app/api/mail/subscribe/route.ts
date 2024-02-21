@@ -49,8 +49,6 @@ export async function POST(request: NextRequest) {
             ? subScribeMessageError
             : error.response.body.message
         );
-
-        // TODO: Email me if error is not subScribeMessageError
       });
 
     return NextResponse.json(

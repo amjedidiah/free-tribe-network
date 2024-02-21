@@ -7,11 +7,9 @@ export default function HistoryMissionVision() {
   return (
     <section className="py-10 lg:pt-28">
       <div className="container flex flex-col gap-8">
-        <article className="flex flex-col gap-7" id="our-history">
-          <h2 className="text-black text-3xl lg:text-5xl font-semibold">
-            Our History
-          </h2>
-          <div className="text-description flex flex-col gap-4 [&_a]:font-bold [&_a]:underline">
+        <article className="h2-gap" id="our-history">
+          <h2 className="text-black">Our History</h2>
+          <div className="text-description flex flex-col gap-3 [&_a]:underline">
             <p>
               The Free Tribe Network is a non-profit charity founded by Tosin
               Oluwagbemi-Jacob in 2022, in memory and inspiration of late Mrs.
