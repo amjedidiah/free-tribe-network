@@ -5,6 +5,7 @@ import { FaMedium, FaTiktok } from "react-icons/fa6";
 import asido from "../../public/images/partners/asido-foundation.png";
 import prettylittleladies from "../../public/images/partners/pretty-little-ladies.png";
 import chiin from "../../public/images/partners/chiin.png";
+import livewire from "../../public/images/partners/live-wire.png";
 
 export const activityTabsData = [
   {
@@ -124,62 +125,64 @@ export const routes = [
       },
     ],
   },
-  {
-    label: "Resources",
-    href: "/resources",
-  },
+  // {
+  //   label: "Resources",
+  //   href: "/resources",
+  // },
 ];
 
-export const activitiesData = [
-  {
-    title: "Design Handoff and Developer Handover",
-    description: "Design Handoff and Developer Handover",
-    image: "/images/Frame 17.jpg",
-    details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
-    initiative: "rfh-advocacy",
-    slug: "activity-1",
-  },
-  {
-    title: "Design Handoff and Developer Handover",
-    description: "Design Handoff and Developer Handover",
-    image: "/images/Frame 17.jpg",
-    details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
-    initiative: "free-tribe-clubs",
-    slug: "activity-2",
-  },
-  {
-    title: "Design Handoff and Developer Handover",
-    description: "Design Handoff and Developer Handover",
-    image: "/images/Frame 17.jpg",
-    details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
-    initiative: "free-tribe-helpline",
-    slug: "activity-3",
-  },
-  {
-    title: "Design Handoff and Developer Handover",
-    description: "Design Handoff and Developer Handover",
-    image: "/images/Frame 17.jpg",
-    details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
-    initiative: "free-tribe-boost-camp",
-    slug: "activity-4",
-  },
-  {
-    title: "Design Handoff and Developer Handover",
-    description: "Design Handoff and Developer Handover",
-    image: "/images/Frame 17.jpg",
-    details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
-    initiative: "repromatters",
-    slug: "activity-5",
-  },
-  {
-    title: "Design Handoff and Developer Handover",
-    description: "Design Handoff and Developer Handover",
-    image: "/images/Frame 17.jpg",
-    details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
-    initiative: "star-project",
-    slug: "activity-6",
-  },
-];
+// export const activitiesData = [
+//   {
+//     title: "Design Handoff and Developer Handover",
+//     description: "Design Handoff and Developer Handover",
+//     image: "/images/Frame 17.jpg",
+//     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
+//     initiative: "rfh-advocacy",
+//     slug: "activity-1",
+//   },
+//   {
+//     title: "Design Handoff and Developer Handover",
+//     description: "Design Handoff and Developer Handover",
+//     image: "/images/Frame 17.jpg",
+//     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
+//     initiative: "free-tribe-clubs",
+//     slug: "activity-2",
+//   },
+//   {
+//     title: "Design Handoff and Developer Handover",
+//     description: "Design Handoff and Developer Handover",
+//     image: "/images/Frame 17.jpg",
+//     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
+//     initiative: "free-tribe-helpline",
+//     slug: "activity-3",
+//   },
+//   {
+//     title: "Design Handoff and Developer Handover",
+//     description: "Design Handoff and Developer Handover",
+//     image: "/images/Frame 17.jpg",
+//     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
+//     initiative: "free-tribe-boost-camp",
+//     slug: "activity-4",
+//   },
+//   {
+//     title: "Design Handoff and Developer Handover",
+//     description: "Design Handoff and Developer Handover",
+//     image: "/images/Frame 17.jpg",
+//     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
+//     initiative: "repromatters",
+//     slug: "activity-5",
+//   },
+//   {
+//     title: "Design Handoff and Developer Handover",
+//     description: "Design Handoff and Developer Handover",
+//     image: "/images/Frame 17.jpg",
+//     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
+//     initiative: "star-project",
+//     slug: "activity-6",
+//   },
+// ];
+
+export const activitiesData: any[] = [];
 
 export const initiatives = [
   {
@@ -598,7 +601,7 @@ export const bots = [
   },
   {
     src: "/images/bot/bot-4.png",
-    name: "Prof. Obafemi, Fances Ngozi",
+    name: "Prof. Obafemi, Frances Ngozi",
     title: "Member, BOT",
     description: `<p>A Professor of Monetary Economics with extensive publications, industrial policy drafting experience, and consultancy roles with the World Bank and United Nations Industrial Development Organization (UNIDO). She has served as a research fellow for the National Defence College, Abuja, and the National Institute for Policy & Strategic Studies (NIPSS), and is the co-founder of the Happy Home Club; a teaching/coaching establishment for single and married persons.</p>`,
   },
@@ -647,6 +650,7 @@ export const partners = [
     src: prettylittleladies,
   },
   { name: "chiin", src: chiin },
+  { name: "livewire", src: livewire },
 ];
 
 export const visionMissionData = [
@@ -711,8 +715,9 @@ export const workFamily = [
   },
 ];
 
-export const volunteerNowLink = "#";
-export const currentVacanciesLink = "#";
+export const volunteerNowLink = "https://forms.gle/nFKWiE5SEvCPsyJ26";
+export const currentVacanciesLink =
+  "https://www.linkedin.com/company/freetribenetwork/jobs/";
 
 export const stats = [
   {

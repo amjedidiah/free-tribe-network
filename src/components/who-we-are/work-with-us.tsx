@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import { currentVacanciesLink, volunteerNowLink } from "@/lib/data";
 
 export default function WorkWithUs() {
@@ -39,17 +38,17 @@ export default function WorkWithUs() {
             </p>
           </div>
           <div className="flex gap-6">
-            <Link href={volunteerNowLink}>
+            <a href={volunteerNowLink} target="_blank">
               <Button className="bg-primary-500 hover:bg-primary-500 py-2 px-4 w-fit text-white">
-                Volunteer Now
+                Volunteer
               </Button>
-            </Link>
+            </a>
 
-            <Link href={currentVacanciesLink}>
+            <a href={currentVacanciesLink} target="_blank">
               <Button className="bg-transparent hover:bg-transparent py-2 px-4 w-fit text-white border border-white">
-                Current Vacancies
+                Job Vacancies
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </div>

@@ -22,6 +22,7 @@ export default function PostCard({
           style={{ objectPosition: "center", objectFit: "cover" }}
           className="rounded-[0.625rem]"
           sizes="100%"
+          quality={100}
         />
       </div>
       <div className="flex flex-col items-stretch gap-3">

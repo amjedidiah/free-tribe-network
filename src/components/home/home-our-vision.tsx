@@ -62,7 +62,7 @@ export default function HomeOurVision() {
             </div>
             <div className="flex justify-end">
               <Image
-                src="/images/sdg-3.png"
+                src="/images/sdg/sdg-3.svg"
                 alt="sdg 3"
                 width={309}
                 height={241}

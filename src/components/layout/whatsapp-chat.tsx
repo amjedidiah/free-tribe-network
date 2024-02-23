@@ -3,7 +3,7 @@ import { contactNumber } from "@/lib/data";
 
 export default function WhatsappChat() {
   return (
-    <aside className="fixed right-0 bottom-20 lg:bottom-[10vh] w-full pointer-events-none z-[2]">
+    <aside className="fixed right-0 bottom-20 lg:bottom-[10vh] w-full z-[2]">
       <div className="container grid justify-end relative lg:-right-4">
         <a href={`https://wa.me/${contactNumber}`} draggable>
           <div className="flex gap-2 lg:gap-4 items-center">

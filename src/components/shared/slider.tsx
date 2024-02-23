@@ -22,7 +22,7 @@ type SliderProps = {
 
 export default function Slider({
   children,
-  shouldFit = true,
+  shouldFit = false,
   delay = 2000,
   hasShadow = true,
   dots = {
@@ -36,6 +36,7 @@ export default function Slider({
   const plugin = useRef(Autoplay({ delay, stopOnInteraction: true }));
   const [count, setCount] = useState(0);
   const [current, setCurrent] = useState(0);
+  const [clickCount, setClickCount] = useState(0);
 
   useEffect(() => {
     if (!api) return;
@@ -44,6 +45,9 @@ export default function Slider({
     setCurrent(api.selectedScrollSnap() + 1);
 
     api.on("select", () => setCurrent(api.selectedScrollSnap() + 1));
+
+    // slide next on click
+    api.on("pointerDown", () => setClickCount((prev) => prev + 1));
 
     if (shouldFit)
       api.on("scroll", () => {
@@ -55,6 +59,11 @@ export default function Slider({
         });
       });
   }, [api, shouldFit]);
+
+  useEffect(() => {
+    if (clickCount % 1) return;
+    api?.scrollNext();
+  }, [api, clickCount]);
 
   return (
     <div className="relative">

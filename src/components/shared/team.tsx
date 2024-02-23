@@ -31,7 +31,7 @@ export default function Team({
           <h2>{title}</h2>
           {shouldSeeMore && (
             <Link
-              href="/who-we-are?section=staff"
+              href="/who-we-are?section=bot"
               className="bg-primary-400 text-white py-[0.625rem] px-[1.125rem] rounded-[0.5rem] shadow-md"
             >
               See More

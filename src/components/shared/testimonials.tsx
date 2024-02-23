@@ -18,9 +18,12 @@ export default function Testimonials() {
           contentClassName="max-sm:max-w-[calc(100vw-2rem)]"
         >
           {testimonials.map(({ name, testimony, src, ...rest }) => (
-            <CarouselItem key={name} className="relative">
+            <CarouselItem
+              key={name}
+              className="relative flex flex-col justify-end"
+            >
               <div className="grid text-center gap-8">
-                <h4 className="text-description">{testimony}</h4>
+                <h5 className="text-description">{testimony}</h5>
                 <div className="flex flex-col items-center gap-4">
                   <div className="w-16 h-16 rounded-full relative">
                     <Image

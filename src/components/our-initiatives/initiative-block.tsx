@@ -54,7 +54,7 @@ export default function InitiativeBlock({ name, label }: InitiativeBlockProps) {
             <Button className="w-fit">View Activities</Button>
           </Link>
         </div>
-        <Slider>
+        <Slider shouldFit>
           {images.map((i) => (
             <CarouselItem
               key={i.alt}

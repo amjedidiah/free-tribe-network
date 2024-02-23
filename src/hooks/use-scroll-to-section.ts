@@ -39,7 +39,7 @@ export default function useScrollToSection({
 
             isDynamic: true,
           }),
-        500
+        0
       );
   }, [activeSection]);
 

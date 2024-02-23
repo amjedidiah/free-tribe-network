@@ -1,7 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["cdn-images-1.medium.com"],
+    remotePatterns: [
+      {
+        hostname: "cdn-images-1.medium.com",
+      },
+    ],
   },
 };
 
