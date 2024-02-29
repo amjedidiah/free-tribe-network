@@ -13,7 +13,7 @@ export default function DonateFAQ() {
   return (
     <section className="bg-secondary-50 py-10 lg:py-16">
       <article className="container flex flex-col gap-8 lg:gap-10">
-        <div className="flex flex-row flex-wrap h2-gap justify-between items-center">
+        <div className="flex flex-row flex-wrap h2-gap justify-between items-center text-center">
           <h2>
             Got Questions?
             <br />

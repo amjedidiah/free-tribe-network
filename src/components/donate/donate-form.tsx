@@ -31,6 +31,8 @@ export default function DonateForm() {
             </span>
             <input
               type="text"
+              name="email"
+              id="email"
               aria-label="email"
               className="outline-none border-none text-lg"
               placeholder="Email address"
@@ -44,6 +46,8 @@ export default function DonateForm() {
             <span>{currency?.sign}</span>
             <input
               type="number"
+              name="amount"
+              id="amount"
               aria-label="amount"
               className="outline-none border-none text-lg"
               value={amount}
@@ -84,16 +88,15 @@ export default function DonateForm() {
           </div>
           <div
             className={cn(
-              "cursor-pointer p-3 lg:p-5 rounded-[0.5rem] border border-[#ddd] h5-gap items-start gap-1 bg-slate-200",
+              "cursor-pointer p-3 lg:p-5 rounded-[0.5rem] border border-[#ddd] h5-gap items-start gap-1",
               { "shadow-xl border-2 border-primary-500": isReoccurring }
             )}
-            // onClick={() => setIsReoccurring(true)}
+            onClick={() => setIsReoccurring(true)}
           >
             <h5 className="text-black flex items-center">
               <span>Monthly</span>
             </h5>
-            {/* <p className="text-[#777]">Donate monthly</p> */}
-            <p className="text-[#777]">Coming soon</p>
+            <p className="text-[#777]">Donate monthly</p>
           </div>
         </div>
         <Button

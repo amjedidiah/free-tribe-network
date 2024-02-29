@@ -1,4 +1,5 @@
 import { formatPostsData } from "@/lib/utils";
+import axios from "axios";
 import { useEffect, useMemo, useState } from "react";
 
 export type PostData = {
@@ -33,13 +34,9 @@ export default function useMedium() {
   const topPosts = useMemo(() => posts?.slice(0, 3), [posts]);
 
   const handleFetchPosts = () =>
-    fetch("https://v1.nocodeapi.com/freetribenetwork/medium/OHsUxriHCyMnpQwH", {
-      headers: {
-        "Content-Type": "application/json",
-      },
-      redirect: "follow",
-    })
-      .then((response) => response.json())
+    axios
+      .get("https://v1.nocodeapi.com/freetribenetwork/medium/OHsUxriHCyMnpQwH")
+      .then(({ data }) => data)
       .then(setPostsData)
       .catch(console.error);
 

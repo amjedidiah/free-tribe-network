@@ -2,7 +2,6 @@ import { NextRequest, NextResponse } from "next/server";
 import { HttpError, handleResponseError } from "@/lib/error";
 import { validate } from "deep-email-validator";
 import { isDev } from "@/lib/utils";
-import { subScribeMessageError } from "@/lib/data";
 const SibApiV3Sdk = require("sib-api-v3-typescript");
 
 // ContactAPI Instance
@@ -46,7 +45,7 @@ export async function POST(request: NextRequest) {
         throw new HttpError(
           error.statusCode,
           error.response.body.message === "Contact already exist"
-            ? subScribeMessageError
+            ? "You are already subscribed"
             : error.response.body.message
         );
       });

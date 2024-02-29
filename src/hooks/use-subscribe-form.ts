@@ -1,5 +1,5 @@
-import { subScribeMessageError } from "@/lib/data";
-import axios, { AxiosError } from "axios";
+import { getFEErrorMessage } from "@/lib/error";
+import axios from "axios";
 import { ChangeEvent, FormEvent, useState } from "react";
 
 export default function useSubscribeForm() {
@@ -17,15 +17,11 @@ export default function useSubscribeForm() {
     try {
       const { data } = await axios.post("/api/mail/subscribe", { email });
 
-      setMessage(data.message);
+      setMessage(data?.message);
       setHasError(false);
     } catch (error) {
-      setMessage(
-        error instanceof AxiosError &&
-          subScribeMessageError === error.response?.data.message
-          ? error.response?.data.message
-          : "An error occurred. Try again later"
-      );
+      const errorMessage = getFEErrorMessage(error);
+      setMessage(errorMessage);
       setHasError(true);
     } finally {
       setIsLoading(false);

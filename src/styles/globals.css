@@ -87,22 +87,6 @@
 }
 
 @layer components {
-  .h1-gap {
-    @apply flex flex-col gap-4 lg:gap-6;
-  }
-
-  .h2-gap {
-    @apply flex flex-col gap-2 lg:gap-4;
-  }
-
-  .h3-gap {
-    @apply flex flex-col gap-1 lg:gap-2;
-  }
-
-  .h5-gap {
-    @apply flex flex-col gap-1;
-  }
-
   .radial-primary {
     background: radial-gradient(74.29% 50.12% at 46.55% 50%, rgba(234 2 140 / 89%) 0%, #EA0256 100%);
   }
@@ -126,6 +110,44 @@
 
   .stats-shadow {
     box-shadow: 0 0 24px 8px rgba(0 0 0 / 6%)
+  }
+
+  .bg-problem-1 {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 31.55%, rgba(0, 0, 0, 0.80) 69.19%), url('/images/the-problem/limited-education.png') lightgray 50% / cover no-repeat;
+  }
+
+  .bg-problem-2 {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 31.55%, rgba(0, 0, 0, 0.80) 69.19%), url('/images/the-problem/data-fragmentation.png') lightgray 50% / cover no-repeat;
+  }
+
+  .bg-problem-3 {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 31.55%, rgba(0, 0, 0, 0.80) 69.19%), url('/images/the-problem/isolated-communities.png') lightgray 50% / cover no-repeat;
+  }
+
+  .bg-problem-4 {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 31.55%, rgba(0, 0, 0, 0.80) 69.19%), url('/images/the-problem/health-inequality.png') lightgray 50% / cover no-repeat;
+  }
+
+  .bg-problem-5 {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 31.55%, rgba(0, 0, 0, 0.80) 69.19%), url('/images/the-problem/stigma-taboos.png') lightgray 50% / cover no-repeat;
+  }
+}
+
+@layer utilities {
+  .h1-gap {
+    @apply flex flex-col gap-4 lg:gap-6;
+  }
+
+  .h2-gap {
+    @apply flex flex-col gap-2 lg:gap-4;
+  }
+
+  .h3-gap {
+    @apply flex flex-col gap-1 lg:gap-2;
+  }
+
+  .h5-gap {
+    @apply flex flex-col gap-1;
   }
 
   .w-contain {

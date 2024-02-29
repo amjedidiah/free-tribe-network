@@ -745,4 +745,50 @@ export const stats = [
   },
 ];
 
-export const subScribeMessageError = "You are already subscribed";
+export const problems = [
+  {
+    title: "Limited Education",
+    description:
+      "A lack of comprehensive RH and FH education leaves individuals vulnerable to misinformation and prevents them from making informed decisions about their well-being.",
+    image: "/images/the-problem/limited-education.png",
+  },
+  {
+    title: "Data Fragmentation ",
+    description:
+      "Without a centralized database of reproductive health (RH) and family health (FH) issues, interventions are often scattered and inefficient, leaving gaps in addressing critical needs.",
+    image: "/images/the-problem/data-fragmentation.png",
+  },
+  {
+    title: "Isolated Communities",
+    description:
+      "Many communities lack access to adequate reproductive and family health resources, leading to feelings of isolation and uncertainty about where to turn for support.",
+    image: "/images/the-problem/isolated-communities.png",
+  },
+  {
+    title: "Health Inequality",
+    description:
+      "Disparities in access to reproductive and family health resources perpetuate inequalities, leaving marginalized populations at a disadvantage in maintaining their well-being.",
+    image: "/images/the-problem/health-inequality.png",
+  },
+  {
+    title: "Stigma and Taboos",
+    description:
+      "Cultural taboos and stigma surrounding reproductive and family health topics prevent open discussion and access to necessary support services, leading to shame and secrecy among affected individuals",
+    image: "/images/the-problem/stigma-taboos.png",
+  },
+];
+
+export const currencies = [
+  {
+    label: "NGN",
+    sign: "₦",
+    min: 100,
+  },
+  // {
+  //   label: "USD",
+  //   sign: "$",
+  //   min: 1,
+  // },
+];
+
+export const validCurrencies = currencies.map((currency) => currency.label);
