@@ -14,3 +14,29 @@ export interface ButtonProps {
   className?: string;
   handleClick: MouseEventHandler<HTMLButtonElement>;
 }
+
+// type settings for Posts
+export interface Node {
+  title: string;
+  id: string;
+  slug: string;
+  excerpt: string;
+}
+
+export interface Post {
+  node: Node;
+}
+
+export interface ClassName {
+  [key: number]: string;
+}
+
+export interface GeneralSettings {
+  title: string;
+  description: string;
+}
+
+export interface Props {
+  page: GeneralSettings;
+  posts: Node[];
+}

@@ -1,10 +1,14 @@
-import type { Metadata } from 'next'
+"use client";
+
+import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "@/styles/globals.css";
 import Nav from "@/components/nav";
 import Footer from "@/components/footer";
 import { PropsWithChildren } from "react";
 import { cn } from "@/lib/utils";
+import { ApolloProvider } from "@apollo/client";
+import { getApolloClient } from "@/lib/apollo-client";
 
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" });
 
@@ -21,10 +25,11 @@ const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" });
 //   };
 // }
 
-export const metadata: Metadata = {
-  title: "Home | Free Tribe Network",
-  description: "Welcome to Free Tribe Network",
-};
+// export const metadata: Metadata = {
+//   title: "Home | Free Tribe Network",
+//   description: "Welcome to Free Tribe Network",
+// };
+const client = getApolloClient();
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
@@ -36,7 +41,8 @@ export default function RootLayout({ children }: PropsWithChildren) {
         )}
       >
         <Nav />
-        {children}
+        <ApolloProvider client={client}>{children}</ApolloProvider>
+        {/* {children} */}
         <Footer />
       </body>
     </html>
