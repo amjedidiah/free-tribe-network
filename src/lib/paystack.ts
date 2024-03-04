@@ -1,30 +1,27 @@
 import { Paystack } from "paystack-sdk";
 import { HttpError } from "@/lib/error";
-import { validCurrencies } from "@/lib/data";
-import { amountToCents, formatAmount } from "@/lib/utils";
+import { CurrencyKeys } from "@/lib/data";
+import {
+  amountToCents,
+  formatAmount,
+  validateDonationAmount,
+} from "@/lib/utils";
 import { Currency } from "paystack-sdk/dist/interface";
 
 const paystack = new Paystack(process.env.PAYSTACK_SECRET_KEY!);
 
-export const getValidAmount = (
-  amount: PaymentCurrencyAmount["value"] | null | number
-) => {
-  if (!amount) throw new HttpError(400, "Please provide an amount");
-
-  const amountNumber = Number(amount);
-  if (Number.isNaN(amountNumber))
-    throw new HttpError(400, "Please provide a valid amount");
+export const getValidAmount = (amount: number, currencyLabel: CurrencyKeys) => {
+  const isValidAmount = validateDonationAmount(amount, currencyLabel);
+  if (!isValidAmount) throw new HttpError(400, "Please provide a valid amount");
 
   return {
-    formattedAmount: formatAmount(amountNumber),
-    amountInCents: amountToCents(amountNumber),
+    formattedAmount: formatAmount(amount),
+    amountInCents: amountToCents(amount),
   };
 };
 
-export const getValidCurrency = (currency: Currency | null) => {
-  if (!currency) throw new HttpError(400, "Please provide a currency");
-
-  if (!validCurrencies.includes(currency))
+export const getValidCurrency = (currency: CurrencyKeys) => {
+  if (!CurrencyKeys[currency])
     throw new HttpError(400, "Please provide a valid currency");
 
   return currency;

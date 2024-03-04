@@ -12,8 +12,8 @@ export default function DonateForm() {
     currency,
     amount,
     handleAmountChange,
-    currencyCount,
-    handleChangeCurrencyCount,
+    currencyLabel,
+    handleChangeCurrencyLabel,
     currencies,
     hasError,
     message,
@@ -25,7 +25,7 @@ export default function DonateForm() {
     <div className="flex flex-col gap-1 sm:gap-3 p-4 sm:p-8 lg:p-12 bg-white shadow-xl rounded-[0.5rem] lg:absolute top-1/2 lg:-translate-y-1/2 right-8 max-sm:w-[calc(100vw-2rem)]">
       <form className="flex flex-col gap-3 sm:gap-5" onSubmit={handleSubmit}>
         <div className="text-black flex items-center justify-between border border-[#ddd] rounded-[0.5rem] p-3 lg:p-4">
-          <div className="flex gap-2 items-center text-lg">
+          <div className="flex gap-2 items-center text-lg flex-1">
             <span>
               <FaEnvelope />
             </span>
@@ -34,22 +34,22 @@ export default function DonateForm() {
               name="email"
               id="email"
               aria-label="email"
-              className="outline-none border-none text-lg"
+              className="outline-none border-none text-lg flex-1"
               placeholder="Email address"
               value={email}
               onChange={handleEmailChange}
             />
           </div>
         </div>
-        <div className="text-black flex items-center justify-between border border-[#ddd] rounded-[0.5rem] p-3 lg:p-4">
-          <div className="flex gap-2 items-center text-lg">
+        <div className="text-black flex gap-2 items-center justify-between border border-[#ddd] rounded-[0.5rem] p-3 lg:p-4">
+          <div className="flex gap-2 items-center text-lg flex-1">
             <span>{currency?.sign}</span>
             <input
               type="number"
               name="amount"
               id="amount"
               aria-label="amount"
-              className="outline-none border-none text-lg"
+              className="outline-none border-none text-lg flex-1"
               value={amount}
               onChange={handleAmountChange}
               min={1}
@@ -60,14 +60,14 @@ export default function DonateForm() {
             name="currency"
             id="currency"
             className="uppercase bg-transparent text-sm outline-none border-none cursor-pointer"
-            value={currencyCount}
-            onChange={handleChangeCurrencyCount}
+            value={currencyLabel}
+            onChange={handleChangeCurrencyLabel}
           >
-            <option disabled value={2}>
+            <option disabled value={""}>
               Choose
             </option>
-            {currencies.map(({ label }, i) => (
-              <option key={label} value={i}>
+            {Object.values(currencies).map(({ label }) => (
+              <option key={label} value={label}>
                 {label}
               </option>
             ))}

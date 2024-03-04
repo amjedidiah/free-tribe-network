@@ -1,19 +1,23 @@
 import {
   amountToCents,
   formatAmount,
+  getDonationCurrency,
+  validateDonationAmount,
   validateEmailWithRegex,
 } from "@/lib/utils";
 import { ChangeEvent, FormEvent, useEffect, useMemo, useState } from "react";
 import { useDebouncedCallback } from "use-debounce";
-import { currencies } from "@/lib/data";
+import { CurrencyKeys, currencies } from "@/lib/data";
 import usePayStack from "./use-paystack";
 import axios from "axios";
 import { getFEErrorMessage } from "@/lib/error";
 
 const INIT_AMOUNT = 1;
 const INIT_RATE = 1;
-const INIT_CURRENCY_INDEX = 2;
-const DOLLAR_CURRENCY_INDEX = 1;
+const INIT_CURRENCY_LABEL = "" as CurrencyKeys;
+// TODO: Uncomment when Dollar donation is settled
+// const DOLLAR_CURRENCY_LABEL = CurrencyKeys.USD;
+const DOLLAR_CURRENCY_LABEL = "USD" as CurrencyKeys;
 const VALIDATION_WAIT_TIME = 1000;
 const RESPONSE_DISPLAY_TIME = 2500;
 
@@ -24,12 +28,13 @@ export default function useDonateForm() {
   const [rate, setRate] = useState(INIT_RATE);
   const [isReoccurring, setIsReoccurring] = useState(true);
   const [amount, setAmount] = useState(INIT_AMOUNT);
-  const [currencyCount, setCurrencyCount] = useState(INIT_CURRENCY_INDEX);
+  const [currencyLabel, setCurrencyLabel] =
+    useState<CurrencyKeys>(INIT_CURRENCY_LABEL);
   const currency = useMemo(() => {
-    if (currencyCount === INIT_CURRENCY_INDEX) return;
+    if (currencyLabel === INIT_CURRENCY_LABEL) return;
 
-    return currencies[currencyCount];
-  }, [currencyCount]);
+    return getDonationCurrency(currencyLabel);
+  }, [currencyLabel]);
   const initializePayment = usePayStack();
 
   const resetMessage = () =>
@@ -49,18 +54,19 @@ export default function useDonateForm() {
     setEmail(e.currentTarget.value);
 
   const getMultiplier = () => {
-    const prevCurrencyCount = currencyCount;
-    if (prevCurrencyCount === DOLLAR_CURRENCY_INDEX) return rate;
-    if (prevCurrencyCount === INIT_CURRENCY_INDEX) return 1;
+    const prevCurrencyCount = currencyLabel;
+
+    if (prevCurrencyCount === DOLLAR_CURRENCY_LABEL) return rate;
+    if (prevCurrencyCount === INIT_CURRENCY_LABEL) return 1;
 
     return 1 / rate;
   };
 
-  const handleChangeCurrencyCount = (e: ChangeEvent<HTMLSelectElement>) => {
+  const handleChangeCurrencyLabel = (e: ChangeEvent<HTMLSelectElement>) => {
     const multiplier = getMultiplier();
 
     setAmount((prev) => Math.round(prev * multiplier) || INIT_AMOUNT);
-    setCurrencyCount(+e.currentTarget.value);
+    setCurrencyLabel(e.currentTarget.value as CurrencyKeys);
   };
 
   const handleSubscription = async () => {
@@ -72,12 +78,12 @@ export default function useDonateForm() {
     // Create a plan with the amount and currency if the plan does not exist
     let plan_code = data?.data?.plan_code;
     if (!plan_code) {
-      const response = await axios.post("/api/plans", {
+      const { data } = await axios.post("/api/plans", {
         amount,
         currency: currency?.label,
       });
 
-      plan_code = response.data?.data?.plan_code;
+      plan_code = data?.data?.plan_code;
     }
 
     // Subscribe to this plan
@@ -138,7 +144,7 @@ export default function useDonateForm() {
   }, VALIDATION_WAIT_TIME);
 
   const handleValidateAmount = useDebouncedCallback((amount: number) => {
-    const isValidAmount = amount >= (currency?.min || 0);
+    const isValidAmount = validateDonationAmount(amount, currencyLabel);
 
     setHasError(!isValidAmount);
     setMessage(
@@ -162,7 +168,7 @@ export default function useDonateForm() {
     if (rate === INIT_RATE)
       axios
         .post("/api/rate", { currency: "NGN" })
-        .then(({ data }) => setRate(data))
+        .then(({ data }) => setRate(data.data))
         .catch(console.error);
   }, [rate]);
 
@@ -173,8 +179,8 @@ export default function useDonateForm() {
     currency,
     amount,
     handleAmountChange,
-    currencyCount,
-    handleChangeCurrencyCount,
+    currencyLabel,
+    handleChangeCurrencyLabel,
     currencies,
     hasError,
     message,

@@ -778,17 +778,20 @@ export const problems = [
   },
 ];
 
-export const currencies = [
-  {
-    label: "NGN",
+export enum CurrencyKeys {
+  NGN = "NGN",
+  // USD = "USD",
+}
+
+export const currencies = {
+  [CurrencyKeys.NGN]: {
+    label: CurrencyKeys.NGN,
     sign: "₦",
     min: 100,
   },
-  // {
-  //   label: "USD",
+  // [CurrencyKeys.USD]: {
+  //   label: CurrencyKeys.USD,
   //   sign: "$",
   //   min: 1,
   // },
-];
-
-export const validCurrencies = currencies.map((currency) => currency.label);
+};

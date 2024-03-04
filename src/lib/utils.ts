@@ -1,6 +1,6 @@
 import { type ClassValue, clsx } from "clsx"
 import { twMerge } from "tailwind-merge"
-import { initiativeData } from "@/lib/data";
+import { CurrencyKeys, currencies, initiativeData } from "@/lib/data";
 import { PostData } from "@/hooks/use-medium";
 import truncateHtml from "truncate-html";
 
@@ -13,8 +13,6 @@ export const formatLinkLabel = (href: string | null) =>
 
 export const fetchInitiativeData = async (name: string) =>
   Promise.resolve(initiativeData[name as keyof typeof initiativeData]);
-
-export const isDev = process.env.NODE_ENV === "development";
 
 const contentWithoutImage = (text: string) => {
   let parser = new DOMParser();
@@ -69,11 +67,13 @@ export const formatPostsData = (postsData?: PostData[]) => {
 };
 
 export const validateEmailWithRegex = (email: string) =>
-  String(email)
-    .toLowerCase()
-    .match(
-      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    );
+  Boolean(
+    String(email)
+      .toLowerCase()
+      .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      )
+  );
 
 export const amountToCents = (amount: number) => amount * 100;
 
@@ -82,3 +82,11 @@ export const formatAmount = (amount: number) =>
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
   });
+
+export const getDonationCurrency = (currencyLabel: CurrencyKeys) =>
+  currencies[currencyLabel];
+
+export const validateDonationAmount = (
+  amount: number | string,
+  currencyLabel: CurrencyKeys
+) => Number(amount) >= (getDonationCurrency(currencyLabel)?.min || 0);

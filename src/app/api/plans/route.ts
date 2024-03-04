@@ -1,3 +1,4 @@
+import { CurrencyKeys } from "@/lib/data";
 import { HttpError, handleResponseError } from "@/lib/error";
 import paystack, {
   fetchPlan,
@@ -5,7 +6,6 @@ import paystack, {
   getValidCurrency,
 } from "@/lib/paystack";
 import { NextRequest, NextResponse } from "next/server";
-import { Currency } from "paystack-sdk/dist/interface";
 
 export async function GET(request: NextRequest) {
   try {
@@ -15,8 +15,11 @@ export async function GET(request: NextRequest) {
     const currency = searchParams.get("currency");
 
     // Validate params
-    const { amountInCents } = getValidAmount(amount);
-    const planCurrency = getValidCurrency(currency as Currency | null);
+    const planCurrency = getValidCurrency(currency as CurrencyKeys);
+    const { amountInCents } = getValidAmount(
+      Number(amount),
+      currency as CurrencyKeys
+    );
 
     // Fetch plan
     const body = await fetchPlan(amountInCents, planCurrency);
@@ -36,8 +39,8 @@ export async function POST(request: NextRequest) {
     const { amount, currency } = await request.json();
 
     // Validate body
-    const { amountInCents, formattedAmount } = getValidAmount(amount);
     const planCurrency = getValidCurrency(currency);
+    const { amountInCents, formattedAmount } = getValidAmount(amount, currency);
 
     // Check if plan already exists
     const { data: plan } = await fetchPlan(amountInCents, planCurrency);
