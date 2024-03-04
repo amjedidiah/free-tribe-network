@@ -13,7 +13,7 @@ export default function Tweets() {
           >
             Tweets by freetribenetwrk
           </a>{" "}
-          <Script async src="https://platform.twitter.com/widgets.js" />
+          <Script src="https://platform.twitter.com/widgets.js" />
         </div>
       </article>
     </section>
