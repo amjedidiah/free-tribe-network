@@ -24,7 +24,7 @@ export default function Home() {
         title="Board of Trustees"
         mates={bots}
         className="lg:py-24 bg-snow"
-        matesContainerClassName="max-lg:flex-wrap lg:flex lg:overflow-auto lg:min-w-[100vw] lg:pr-24 lg:pb-5"
+        matesContainerClassName="max-lg:flex-wrap lg:flex lg:overflow-auto lg:min-w-[100vw] lg:pr-24 lg:pb-8"
         shouldSeeMore
       />
       <Support />
