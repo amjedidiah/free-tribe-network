@@ -10,22 +10,23 @@ type Resource = {
   description?: string | TrustedHTML;
 };
 
-type Props = {
-  resources: Resource[];
+export type ResourcesListProps = {
   hasOverflow?: boolean;
   title: string;
   isSecondary?: boolean;
   hasBorder?: boolean;
+  resourceList: Resource[];
 } & HTMLAttributes<HTMLDivElement>;
 
-export default function ResourceList({
-  resources,
+export default function ResourcesList({
   className,
   hasOverflow = false,
   title,
   isSecondary = false,
   hasBorder = false,
-}: Props) {
+  resourceList,
+}: ResourcesListProps) {
+  console.log(resourceList);
   return (
     <section
       className={cn("py-10", className, {
@@ -40,14 +41,14 @@ export default function ResourceList({
         <h2>{title}</h2>
         <div
           className={cn("gap-6", {
-            "flex max-sm:flex-wrap lg:overflow-auto lg:min-w-[100vw] pb-8 sm:pr-40":
+            "flex max-sm:flex-wrap sm:overflow-auto sm:min-w-[100vw] pb-8 sm:pr-40":
               hasOverflow,
             "grid sm:grid-cols-2 lg:grid-cols-3": !hasOverflow,
           })}
         >
-          {resources.map((item) => (
+          {resourceList?.map((item, i) => (
             <ResourcesCard
-              key={item.title}
+              key={`${item.title}-${i}`}
               className={cn({
                 "min-w-96 w-full": hasOverflow,
                 "[&_a]:bg-secondary-500": isSecondary,

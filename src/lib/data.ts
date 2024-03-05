@@ -125,10 +125,10 @@ export const routes = [
       },
     ],
   },
-  // {
-  //   label: "Resources",
-  //   href: "/resources",
-  // },
+  {
+    label: "Resources",
+    href: "/resources",
+  },
 ];
 
 // export const activitiesData = [

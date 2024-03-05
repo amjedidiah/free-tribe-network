@@ -1,6 +1,6 @@
 import ProjectReportCard from "./project-report-card";
 
-const reports = Array(6).fill(0);
+const reports = Array(7).fill(0);
 export default function ProjectReport() {
   if (!reports.length) return null;
 
@@ -8,7 +8,7 @@ export default function ProjectReport() {
     <section className="py-10 lg:py-16 border-ankara-1 border-b-[20px]">
       <div className="container flex flex-col gap-10">
         <h2 className="mb-4">Project / Activity Reports</h2>
-        <div className="flex flex-wrap justify-around gap-x-6 gap-y-14">
+        <div className="flex flex-wrap justify-around xl:after:contents-[''] xl:after:flex-auto gap-x-6 gap-y-14">
           {reports.map((item, i) => (
             <ProjectReportCard
               key={`taffiya-${i}`}

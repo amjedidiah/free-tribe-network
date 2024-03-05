@@ -84,10 +84,6 @@
   a, button {
     @apply font-medium
   }
-  h2 {
-    font-size: 3rem;
-    font-weight: bold;
-  }
 }
 
 @layer components {
