@@ -26,7 +26,6 @@ export default function ResourcesList({
   hasBorder = false,
   resourceList,
 }: ResourcesListProps) {
-  console.log(resourceList);
   return (
     <section
       className={cn("py-10", className, {
