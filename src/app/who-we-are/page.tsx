@@ -6,10 +6,14 @@ import Testimonials from "@/components/shared/testimonials";
 import WhoWeAreBanner from "@/components/who-we-are/who-we-are-banner";
 import HistoryMissionVision from "@/components/who-we-are/history-mission-vision";
 import WhatWeDo from "@/components/who-we-are/what-we-do";
-import Bot from "@/components/who-we-are/bot";
+import dynamic from "next/dynamic";
 import Team from "@/components/shared/team";
 import { workFamily } from "@/lib/data";
 import WorkWithUs from "@/components/who-we-are/work-with-us";
+
+const LazyBot = dynamic(() => import("@/components/who-we-are/bot"), {
+  ssr: false,
+});
 
 export default function WhoWeAre() {
   useScrollToSection();
@@ -19,7 +23,7 @@ export default function WhoWeAre() {
       <WhoWeAreBanner />
       <HistoryMissionVision />
       <WhatWeDo />
-      <Bot />
+      <LazyBot />
       <Team
         title="The Work Family"
         mates={workFamily}
