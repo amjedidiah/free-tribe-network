@@ -12,7 +12,7 @@ export interface CardProps {
 export interface ButtonProps {
   title: string;
   className?: string;
-  handleClick: MouseEventHandler<HTMLButtonElement>;
+  handleClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
 // type settings for Posts
