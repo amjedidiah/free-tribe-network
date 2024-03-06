@@ -135,7 +135,6 @@ export const routes = [
 //   {
 //     title: "Design Handoff and Developer Handover",
 //     description: "Design Handoff and Developer Handover",
-//     image: "/images/Frame 17.jpg",
 //     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
 //     initiative: "rfh-advocacy",
 //     slug: "activity-1",
@@ -143,7 +142,6 @@ export const routes = [
 //   {
 //     title: "Design Handoff and Developer Handover",
 //     description: "Design Handoff and Developer Handover",
-//     image: "/images/Frame 17.jpg",
 //     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
 //     initiative: "free-tribe-clubs",
 //     slug: "activity-2",
@@ -151,7 +149,6 @@ export const routes = [
 //   {
 //     title: "Design Handoff and Developer Handover",
 //     description: "Design Handoff and Developer Handover",
-//     image: "/images/Frame 17.jpg",
 //     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
 //     initiative: "free-tribe-helpline",
 //     slug: "activity-3",
@@ -159,7 +156,6 @@ export const routes = [
 //   {
 //     title: "Design Handoff and Developer Handover",
 //     description: "Design Handoff and Developer Handover",
-//     image: "/images/Frame 17.jpg",
 //     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
 //     initiative: "free-tribe-boost-camp",
 //     slug: "activity-4",
@@ -167,7 +163,6 @@ export const routes = [
 //   {
 //     title: "Design Handoff and Developer Handover",
 //     description: "Design Handoff and Developer Handover",
-//     image: "/images/Frame 17.jpg",
 //     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
 //     initiative: "repromatters",
 //     slug: "activity-5",
@@ -175,7 +170,6 @@ export const routes = [
 //   {
 //     title: "Design Handoff and Developer Handover",
 //     description: "Design Handoff and Developer Handover",
-//     image: "/images/Frame 17.jpg",
 //     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
 //     initiative: "star-project",
 //     slug: "activity-6",
@@ -347,7 +341,7 @@ export const contactChannels = [
     href: `mailto:${contactEmail}`,
   },
   {
-    image: "/icons/message-circle.svg",
+    image: "/icons/map-pin.svg",
     header: "Visit Us",
     subHeader: "Visit our office HQ.",
     text: "No 15/11b, YK Abass, Ore-Ofe Estate, Elewiodo, Ibadan.",
@@ -658,21 +652,21 @@ export const visionMissionData = [
     title: "Mission",
     content:
       "To improve reproductive health and family wellness, by providing support through charitable initiatives.",
-    icon: "/streamgrey.svg",
+    icon: "/icons/streamgrey.svg",
     className: "bg-secondary-50 text-secondary-500",
   },
   {
     title: "Vision",
     content:
       "A global community of people making lifelong decisions to improve and reinforce reproductive health and family well-being.",
-    icon: "/streampink.svg",
+    icon: "/icons/streampink.svg",
     className: "bg-primary-50 text-primary-500",
   },
   {
     title: "Purpose",
     content:
       "To help vulnerable persons navigate the burden and unmet needs of reproductive health and family well-being.",
-    icon: "/streamgrey.svg",
+    icon: "/icons/streamgrey.svg",
     className: "bg-secondary-50 text-secondary-500",
   },
 ];

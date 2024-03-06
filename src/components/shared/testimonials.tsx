@@ -1,4 +1,3 @@
-"use client";
 import { testimonials } from "@/lib/data";
 import Image from "next/image";
 import Slider from "@/components/shared/slider";
@@ -9,7 +8,6 @@ export default function Testimonials() {
     <section className="py-10 pb-20 lg:py-24 lg:pb-32" id="testimonials">
       <article className="container">
         <Slider
-          hasShadow={false}
           dots={{
             activeClassName: "bg-black",
             className: "w-[0.625rem] h-[0.625rem] rounded-full top-10",
@@ -31,7 +29,10 @@ export default function Testimonials() {
                       alt={name}
                       className="rounded-full"
                       fill
-                      style={{ objectFit: "cover", objectPosition: "center" }}
+                      style={{
+                        objectFit: "cover",
+                        objectPosition: "center top",
+                      }}
                       sizes="100%"
                     />
                   </div>

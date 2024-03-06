@@ -43,8 +43,9 @@ export default function BotSlide({
       width={288}
       height={296}
       style={{ objectFit: "cover" }}
-      className={cn("shadow-xl", {
+      className={cn("shadow-xl mx-auto", {
         "border-ankara-1": swiperSlide.isActive,
+        "scale-[85%]": !swiperSlide.isActive,
       })}
     />
   );

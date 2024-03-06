@@ -24,7 +24,7 @@ export default function Slider({
   children,
   shouldFit = false,
   delay = 2000,
-  hasShadow = true,
+  hasShadow = false,
   dots = {
     activeClassName: "bg-primary-500",
     className: "w-7 lg:w-14 h-1 lg:h-2 border-none",

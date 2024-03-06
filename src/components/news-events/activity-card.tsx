@@ -20,7 +20,7 @@ export default function ActivityCard({ event }: ActivityCardProps) {
         <Image
           fill
           sizes="100%"
-          src={event.image}
+          src={event.image || "/images/activity.png"}
           alt={event.title}
           style={{ objectPosition: "center", objectFit: "cover" }}
         />

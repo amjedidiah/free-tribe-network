@@ -10,21 +10,28 @@ import Partners from "@/components/shared/partners";
 import Tweets from "@/components/home/tweets";
 import { bots } from "@/lib/data";
 import OurImpact from "@/components/shared/our-impact";
+import { fetchMediumPosts } from "@/lib/actions";
+import { DAILY_REVALIDATION } from "@/lib/constants";
 
-export default function Home() {
+// TODO: Cancel revalidation on this when post has become more than 3
+export const revalidate = DAILY_REVALIDATION;
+
+export default async function Home() {
+  const mediumPosts = await fetchMediumPosts();
+
   return (
     <Fragment>
       <HomeBanner />
       <OurImpact />
       <HomeOurVision />
-      <TopPosts />
+      <TopPosts {...mediumPosts} />
       <HomeInitiatives />
       <Testimonials />
       <Team
         title="Board of Trustees"
         mates={bots}
         className="lg:py-24 bg-snow"
-        matesContainerClassName="max-lg:flex-wrap lg:flex lg:overflow-auto lg:min-w-[100vw] lg:pr-24 lg:pb-8"
+        matesContainerClassName="max-lg:flex-wrap lg:flex lg:overflow-auto lg:min-w-[100vw] lg:pr-32 2xl:pr-[30%] lg:pb-5"
         shouldSeeMore
       />
       <Support />
