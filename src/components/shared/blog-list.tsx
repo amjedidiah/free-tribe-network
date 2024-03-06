@@ -1,5 +1,5 @@
 import PostCard from "@/components/news-events/post-card";
-import { Post } from "@/hooks/use-medium";
+import { Post } from "@/lib/types";
 
 type Props = {
   list: Post[];

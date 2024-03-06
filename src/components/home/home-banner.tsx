@@ -8,7 +8,7 @@ import Slider from "@/components/shared/slider";
 
 export default function HomeBanner() {
   return (
-    <Slider>
+    <Slider hasShadow>
       {homeBannerData.map(({ content, ...rest }, i) => (
         <CarouselItem key={i} className="relative">
           <Banner {...rest}>

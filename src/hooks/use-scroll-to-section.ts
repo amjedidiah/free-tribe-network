@@ -7,10 +7,8 @@ type UseScrollToSectionProps = {
   shouldScroll?: boolean;
 };
 
-export default function useScrollToSection({
-  initUrlSection,
-  shouldScroll = true,
-}: UseScrollToSectionProps) {
+export default function useScrollToSection(props?: UseScrollToSectionProps) {
+  const { initUrlSection, shouldScroll = true } = props || {};
   const searchParams = useSearchParams();
   const router = useRouter();
   const urlSection = searchParams.get("section");

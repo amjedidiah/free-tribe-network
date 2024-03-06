@@ -1,14 +1,12 @@
 "use client";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import useScrollToSection from "@/hooks/use-scroll-to-section";
-import { activityTabsData, defaultNewsEventSection } from "@/lib/data";
+import { fetchMediumPosts } from "@/lib/actions";
+import { activityTabsData as data, defaultNewsEventSection } from "@/lib/data";
 import { formatLinkLabel } from "@/lib/utils";
+import { preload } from "swr";
 
-type ActivityTabsProps = {
-  data: typeof activityTabsData;
-};
-
-export default function ActivityTabs({ data }: ActivityTabsProps) {
+export default function ActivityTabs() {
   const { handleSectionChange, activeSection } = useScrollToSection({
     initUrlSection: defaultNewsEventSection,
   });
@@ -25,6 +23,7 @@ export default function ActivityTabs({ data }: ActivityTabsProps) {
             className="py-2 px-10 lg:py-4 lg:px-20 font-semibold capitalize"
             key={trigger}
             value={trigger}
+            onMouseOver={() => preload("/api/medium", fetchMediumPosts)}
           >
             {formatLinkLabel(trigger)}
           </TabsTrigger>

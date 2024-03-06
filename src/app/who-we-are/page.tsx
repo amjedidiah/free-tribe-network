@@ -12,9 +12,7 @@ import { workFamily } from "@/lib/data";
 import WorkWithUs from "@/components/who-we-are/work-with-us";
 
 export default function WhoWeAre() {
-  useScrollToSection({
-    initUrlSection: "our-history",
-  });
+  useScrollToSection();
 
   return (
     <Fragment>

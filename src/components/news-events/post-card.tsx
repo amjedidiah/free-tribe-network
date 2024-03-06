@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { formatLinkLabel } from "@/lib/utils";
-import { Post } from "@/hooks/use-medium";
+import { Post } from "@/lib/types";
 import SafeHTML from "@/components/shared/safe-html";
 
 export default function PostCard({
