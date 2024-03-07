@@ -1,33 +1,45 @@
 import { gql } from "@apollo/client";
 
-export const GET_RESOURCES_CATEGORIES_DATA = gql`
-  query GetResourcesCategoriesData($databaseId: ID!) {
-    category(id: $databaseId) {
-      databaseId
-      children {
-        edges {
-          node {
-            databaseId
-            posts {
-              edges {
-                node {
-                  excerpt
-                  id
-                  title(format: RENDERED)
-                  modifiedGmt
-                  featuredImage {
-                    node {
-                      altText
-                      link
-                    }
-                  }
-                  link
-                  content
-                }
+export const GET_RESOURCES_BY_CATEGORY_ID = gql`
+  query GetResourcesByCategory($id: ID!, $env: String!) {
+    category(id: $id) {
+      id
+      name
+      posts(where: { tag: $env }) {
+        nodes {
+          id
+          title
+          excerpt
+          modifiedGmt
+          featuredImage {
+            node {
+              mediaItemUrl
+            }
+          }
+          resourcesFieldGroup {
+            minsread
+            file {
+              node {
+                link
               }
             }
           }
         }
+      }
+    }
+  }
+`;
+
+export const GET_IMAGE_BY_TITLE = gql`
+  query getImageByTitle($title: String!) {
+    mediaItems(where: { title: $title }) {
+      nodes {
+        id
+        mediaItemUrl
+        caption
+        description
+        slug
+        title
       }
     }
   }

@@ -36,6 +36,7 @@
     "react-paystack": "^5.0.0",
     "react-scroll": "^1.9.0",
     "rss-to-json": "^2.1.1",
+    "sharp": "^0.33.2",
     "sib-api-v3-typescript": "^2.2.2",
     "swiper": "^11.0.5",
     "swr": "^2.2.5",

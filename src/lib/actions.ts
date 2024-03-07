@@ -6,6 +6,12 @@ import truncateHtml from "truncate-html";
 import { cache } from "react";
 import { Post, PostData } from "@/lib/types";
 import { parse } from "rss-to-json";
+import { getApolloClient } from "@/lib/apollo-client";
+import {
+  GET_IMAGE_BY_TITLE,
+  GET_RESOURCES_BY_CATEGORY_ID,
+} from "@/lib/queries";
+import { Resource } from "@/components/resources/resources-card";
 
 export const validateEmailAPI = (email: string) =>
   validate({
@@ -74,5 +80,66 @@ export const fetchMediumPosts = cache(async () => {
   } catch (error) {
     console.error(error);
     return { posts: [], topPosts: [] };
+  }
+});
+
+const extractResourcesContent = (
+  { excerpt, id, title, modifiedGmt, featuredImage, resourcesFieldGroup }: any,
+  hideDescription = false
+) => ({
+  id,
+  title,
+  description: hideDescription
+    ? ""
+    : truncateHtml(excerpt, 20, {
+        byWords: true,
+      }),
+  modifiedDate: new Date(modifiedGmt).toDateString(),
+  src: featuredImage?.node?.mediaItemUrl,
+  url: resourcesFieldGroup.file?.node?.link,
+  minsRead: resourcesFieldGroup.minsread,
+});
+
+export const fetchResourcesByCategoryId = cache(
+  async (id: string, hideDescription = false) => {
+    const apolloClient = getApolloClient();
+
+    try {
+      const resourcesData = await apolloClient.query({
+        query: GET_RESOURCES_BY_CATEGORY_ID,
+        variables: {
+          id,
+          env: process.env.NODE_ENV,
+        },
+      });
+
+      return {
+        title: resourcesData.data.category.name,
+        resourceList: resourcesData.data.category.posts.nodes.map((item: any) =>
+          extractResourcesContent(item, hideDescription)
+        ) as Resource[],
+      };
+    } catch (error) {
+      console.error(error);
+      return {};
+    }
+  }
+);
+
+export const fetchImageByTitle = cache(async (title: string) => {
+  const apolloClient = getApolloClient();
+
+  try {
+    const imageData = await apolloClient.query({
+      query: GET_IMAGE_BY_TITLE,
+      variables: {
+        title,
+      },
+    });
+
+    return imageData.data.mediaItems.nodes[0];
+  } catch (error) {
+    console.error(error);
+    return {};
   }
 });

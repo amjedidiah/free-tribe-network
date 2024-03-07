@@ -1,31 +1,30 @@
 import { HTMLAttributes } from "react";
-import ResourcesCard from "./resources-card";
+import ResourcesCard from "@/components/resources/resources-card";
 import { cn } from "@/lib/utils";
-
-type Resource = {
-  title: string;
-  uploadDate: string;
-  src: string;
-  link: string;
-  description?: string | TrustedHTML;
-};
+import { fetchResourcesByCategoryId } from "@/lib/actions";
 
 export type ResourcesListProps = {
   hasOverflow?: boolean;
-  title: string;
   isSecondary?: boolean;
   hasBorder?: boolean;
-  resourceList: Resource[];
+  resourceId: string;
+  hideDescription?: boolean;
 } & HTMLAttributes<HTMLDivElement>;
 
-export default function ResourcesList({
+export default async function ResourcesList({
   className,
   hasOverflow = false,
-  title,
   isSecondary = false,
   hasBorder = false,
-  resourceList,
+  resourceId,
+  hideDescription = false,
 }: ResourcesListProps) {
+  const { resourceList, title } = await fetchResourcesByCategoryId(
+    resourceId,
+    hideDescription
+  );
+  if (!resourceList?.length) return null;
+
   return (
     <section
       className={cn("py-10", className, {
