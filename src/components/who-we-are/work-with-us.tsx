@@ -40,7 +40,7 @@ export default function WorkWithUs() {
           <div className="flex gap-6">
             <a href={volunteerNowLink} target="_blank">
               <Button className="bg-primary-500 hover:bg-primary-500 py-2 px-4 w-fit text-white">
-                Volunteer
+                Volunteer Now
               </Button>
             </a>
 

@@ -2,8 +2,8 @@ import Image from "next/image";
 import ContactCard from "@/components/layout/contact-card";
 import SubscribeForm from "@/components/subscribe-form";
 import Link from "next/link";
-import { contactChannels, currentYear, routes, socials } from "@/lib/data";
-import CustomIcon from "@/components/shared/icon";
+import { contactChannels, currentYear, routes } from "@/lib/data";
+import Socials from "@/components/shared/socials";
 
 export default function Footer() {
   return (
@@ -40,30 +40,7 @@ export default function Footer() {
                     </li>
                   ))}
                 </ul>
-                <div className="flex gap-8">
-                  {socials.map(({ name, src, href, Icon }) => (
-                    <a
-                      href={href}
-                      className="w-5 h-5 lg:w-6 lg:h-6 relative flex items-center"
-                      key={name}
-                    >
-                      <span className="hidden">{name}</span>
-                      {Icon && <CustomIcon icon={Icon} />}
-                      {src && (
-                        <Image
-                          src={src}
-                          alt={name}
-                          fill
-                          sizes="100%"
-                          style={{
-                            objectPosition: "center",
-                            objectFit: "cover",
-                          }}
-                        />
-                      )}
-                    </a>
-                  ))}
-                </div>
+                <Socials className="[&_*]:text-white" />
               </div>
             </div>
 

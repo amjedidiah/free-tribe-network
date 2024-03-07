@@ -2,7 +2,7 @@ import Image from "next/image";
 
 type BannerProps = {
   image: string;
-  title: string;
+  title?: string;
   children?: React.ReactNode;
   picturePosition?: string;
   wrapperClassName?: string;
