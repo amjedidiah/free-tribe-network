@@ -2,15 +2,13 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 import { scroller } from "react-scroll";
 
-type UseScrollToSectionProps = {
-  initUrlSection: string;
+export type UseScrollToSectionProps = {
+  initUrlSection?: string;
   shouldScroll?: boolean;
 };
 
-export default function useScrollToSection({
-  initUrlSection,
-  shouldScroll = true,
-}: UseScrollToSectionProps) {
+export default function useScrollToSection(props?: UseScrollToSectionProps) {
+  const { initUrlSection, shouldScroll = true } = props || {};
   const searchParams = useSearchParams();
   const router = useRouter();
   const urlSection = searchParams.get("section");
@@ -39,7 +37,7 @@ export default function useScrollToSection({
 
             isDynamic: true,
           }),
-        500
+        0
       );
   }, [activeSection]);
 

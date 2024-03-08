@@ -26,7 +26,7 @@ export default function HomeOurVision() {
             </div>
             <div className="flex lg:flex-1 justify-end">
               <Image
-                src="/images/sdg-5.png"
+                src="/images/sdg/sdg-5.png"
                 alt="sdg 5"
                 width={420}
                 height={411}
@@ -44,7 +44,7 @@ export default function HomeOurVision() {
             </div>
             <div className="flex justify-end">
               <Image
-                src="/images/sdg-10.png"
+                src="/images/sdg/sdg-10.png"
                 alt="sdg 10"
                 width={309}
                 height={241}
@@ -62,7 +62,7 @@ export default function HomeOurVision() {
             </div>
             <div className="flex justify-end">
               <Image
-                src="/images/sdg-3.png"
+                src="/images/sdg/sdg-3.svg"
                 alt="sdg 3"
                 width={309}
                 height={241}

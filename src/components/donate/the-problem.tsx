@@ -1,33 +1,44 @@
-import Image from "next/image";
+import { problems } from "@/lib/data";
+import { cn } from "@/lib/utils";
 
 export default function TheProblem() {
   return (
-    <section className="pt-10 lg:pt-12 overflow-y-hidden">
+    <section className="py-10 lg:pt-12 lg:pb-20 overflow-y-hidden">
       <article className="container h2-gap">
         <h2>The Problem</h2>
-        <div className="text-description flex flex-col gap-3">
-          <p>
-            About 30% of Nigerian women aged 15-49 have experienced physical
-            violence, while 68% have experienced psychological, sexual, and
-            economic forms of abuse. The African region accounts for a
-            prevalence of 43.5% of bullying among adolescents.
-          </p>
-          <p>
-            Women autonomy to make decisions regarding their sexual/reproductive
-            health: 46% 30.3% of girls in Nigeria are married before their 18th
-            birthday and 12.3% are married before the age of 15. 78% of global
-            suicides occur in low- and middle-income countries.
-          </p>
-          <p>
-            Total fertility rate in Nigeria (the average number of children born
-            to a woman over a lifetime): 5.7 Maternal Mortality Rate in Nigeria:
-            545 deaths per 100,000 live births Contraceptive prevalence rate:
-            18% (all women) 21% (married or in union) People living with HIV in
-            Nigeria: 1.9million
-          </p>
+        {/* <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6"> */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6">
+          {problems.map(({ title, description, image }, i) => (
+            <div
+              key={title}
+              className=" basis-96 flex-auto h-[446px] relative rounded-2xl"
+            >
+              <div
+                className={cn("flex items-end h-full rounded-2xl", {
+                  "bg-problem-1": i === 0,
+                  "bg-problem-2": i === 1,
+                  "bg-problem-3": i === 2,
+                  "bg-problem-4": i === 3,
+                  "bg-problem-5": i === 4,
+                })}
+                // style={{
+                //   background: `linear-gradient(180deg, rgba(0, 0, 0, 0.00) 31.55%, rgba(0, 0, 0, 0.80) 69.19%), url('${image}') lightgray 50% / cover no-repeat;`,
+                // }}
+              >
+                <div className="text-white flex flex-col items-stretch justify-stretch gap-2 p-4 md:p-6 rounded-b-2xl">
+                  {/* <h5 className="font-semibold">{title}</h5> */}
+                  {/* <p className="xl:max-2xl:min-h-32">{description}</p> */}
+                  <h5 className="font-semibold">{title}</h5>
+                  <p className="lg:max-xl:min-h-44 xl:max-2xl:min-h-32">
+                    {description}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </article>
-      <article className="flex justify-end max-w-[1600px] mx-auto">
+      {/* <article className="flex justify-end max-w-[1600px] mx-auto">
         <Image
           src="/images/donate.png"
           alt="Donate"
@@ -39,7 +50,7 @@ export default function TheProblem() {
           height={369.15}
           className="relative top-10"
         />
-      </article>
+      </article> */}
     </section>
   );
 }

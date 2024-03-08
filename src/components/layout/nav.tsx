@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { Link as ScrollLink } from "react-scroll";
@@ -9,9 +8,11 @@ import { Menu as Burger } from "lucide-react";
 import { routes } from "@/lib/data";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { usePathname } from "next/navigation";
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header className="fixed w-full z-10 shadow">
@@ -43,7 +44,13 @@ export default function Nav() {
                 route.links ? (
                   <Menu key={route.label} {...route} />
                 ) : (
-                  <li key={route.label} className="m-0 py-1">
+                  <li
+                    key={route.label}
+                    className={cn("m-0 py-1 relative", {
+                      "text-primary-500 [&_a]:font-bold":
+                        route.href === pathname,
+                    })}
+                  >
                     <Link href={route.href}>{route.label}</Link>
                   </li>
                 )

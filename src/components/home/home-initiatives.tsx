@@ -35,7 +35,7 @@ export default function HomeInitiatives() {
                     />
                   </div>
                   <div className="h5-gap">
-                    <h5 className="capitalize">{label}</h5>
+                    <h5 className="capitalize lg:min-h-16">{label}</h5>
                     <SafeHTML
                       htmlContent={"summary" in rest ? rest.summary : content}
                     />

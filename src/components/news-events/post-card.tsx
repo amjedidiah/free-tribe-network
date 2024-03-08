@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { formatLinkLabel } from "@/lib/utils";
-import { Post } from "@/hooks/use-medium";
+import { Post } from "@/lib/types";
 import SafeHTML from "@/components/shared/safe-html";
 
 export default function PostCard({
@@ -22,6 +22,7 @@ export default function PostCard({
           style={{ objectPosition: "center", objectFit: "cover" }}
           className="rounded-[0.625rem]"
           sizes="100%"
+          quality={100}
         />
       </div>
       <div className="flex flex-col items-stretch gap-3">

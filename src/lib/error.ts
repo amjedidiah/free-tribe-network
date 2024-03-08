@@ -1,4 +1,4 @@
-import { AxiosError } from "axios";
+import { isAxiosError } from "axios";
 import { NextResponse } from "next/server";
 
 export class HttpError extends Error {
@@ -16,10 +16,7 @@ export const handleResponseError = (error: unknown) => {
 
   if (typeof error === "string") errorObject.message = error;
   else if (error instanceof HttpError) errorObject = error;
-  else if (error instanceof AxiosError) {
-    errorObject.message = error.message;
-    errorObject.status = error.status;
-  } else if (error instanceof Error) errorObject.message = error.message;
+  else if (error instanceof Error) errorObject.message = error.message;
 
   console.error(error);
   return NextResponse.json(
@@ -31,4 +28,15 @@ export const handleResponseError = (error: unknown) => {
       status: errorObject.status || 500,
     }
   );
+};
+
+export const getFEErrorMessage = (error: unknown) => {
+  console.error(error);
+
+  let errorMessage = "";
+  if (isAxiosError(error))
+    errorMessage = error.response?.data.message ?? error.message;
+  else errorMessage = "An error occurred. Try again later";
+
+  return errorMessage;
 };

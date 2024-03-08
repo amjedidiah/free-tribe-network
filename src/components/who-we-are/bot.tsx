@@ -61,8 +61,8 @@ export default function Bot() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col lg:flex-row gap-8">
-          <div className="w-contain lg:w-[515px] relative">
+        <div className="flex flex-col lg:flex-row gap-4 xl:gap-8">
+          <div className="w-contain lg:w-[415px] relative">
             <div className="bg bg-[rgba(129,1,77,0.3)] w-11 h-full absolute top-0 left-0 z-[2] pointer-events-none" />
             <div className="bg bg-[rgba(129,1,77,0.3)] w-11 h-full absolute top-0 right-0 z-[2] pointer-events-none" />
             <div className="flex items-center h-full z-0 [&>.swiper]:static">
@@ -100,7 +100,7 @@ export default function Bot() {
               </Swiper>
             </div>
           </div>
-          <div className="py-20 px-12 flex-1 flex flex-col gap-7 text-white bg-primary-900">
+          <div className="py-20 px-12 flex-1 flex flex-col gap-7 text-white bg-primary-900 lg:min-h-[508px] xl:min-h-[412px] 2xl:min-h-[364px]">
             <div>
               <p className="font-bold lg:text-xl">{bots[bot].name}</p>
               <p className="lg:text-lg">{bots[bot].title}</p>

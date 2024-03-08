@@ -7,21 +7,9 @@ import { cn } from "@/lib/utils";
 import WhatsappChat from "@/components/layout/whatsapp-chat";
 import manrope from "@/lib/font";
 
-// type Props = {
-//   searchParams: { [key: string]: string | string[] | undefined };
-// };
-// export async function generateMetadata({
-//   searchParams,
-// }: Props): Promise<Metadata> {
-//   return {
-//     title: "Home | Free Tribe Network",
-//     description: "Welcome to Free Tribe Network",
-//   };
-// }
-
 export const metadata: Metadata = {
-  title: "Home | Free Tribe Network",
-  description: "Welcome to Free Tribe Network",
+  title: "Free Tribe Network",
+  description: "Welcome to the Free Tribe Network",
 };
 
 export default function RootLayout({ children }: PropsWithChildren) {

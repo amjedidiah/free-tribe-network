@@ -1,12 +1,15 @@
-"use client";
 import BlogList from "@/components/shared/blog-list";
-import useMedium from "@/hooks/use-medium";
+import { Post } from "@/lib/types";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-export default function TopPosts() {
-  const { topPosts, posts } = useMedium();
-  if (!topPosts.length) return null;
+type Props = {
+  posts: Post[];
+  topPosts: Post[];
+};
+
+export default function TopPosts({ posts, topPosts }: Props) {
+  if (!posts.length) return null;
 
   return (
     <section className="py-10 lg:py-28">

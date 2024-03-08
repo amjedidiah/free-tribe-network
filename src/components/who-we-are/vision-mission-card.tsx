@@ -17,7 +17,15 @@ export default function VisionMissionCard({
   return (
     <div className={`${className} flex flex-col gap-4 p-4 rounded`}>
       <div className="bg-white h-14 w-14 p-4 rounded-full">
-        <Image alt="history" src={icon} height="24" width="24" />
+        <div className="relative h-6 w-6">
+          <Image
+            alt="history"
+            src={icon}
+            fill
+            sizes="100%"
+            style={{ objectFit: "cover", objectPosition: "center" }}
+          />
+        </div>
       </div>
       <div className="h5-gap">
         <h5>{title}</h5>

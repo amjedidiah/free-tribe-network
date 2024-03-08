@@ -1,10 +1,18 @@
 import Blog from "@/components/news-events/blog";
 import Recent from "@/components/news-events/recent";
 import Upcoming from "@/components/news-events/upcoming";
-import { FaMedium, FaTiktok } from "react-icons/fa6";
+import {
+  FaInstagram,
+  FaMedium,
+  FaFacebook,
+  FaTiktok,
+  FaXTwitter,
+  FaLinkedin,
+} from "react-icons/fa6";
 import asido from "../../public/images/partners/asido-foundation.png";
 import prettylittleladies from "../../public/images/partners/pretty-little-ladies.png";
 import chiin from "../../public/images/partners/chiin.png";
+import livewire from "../../public/images/partners/live-wire.png";
 
 export const activityTabsData = [
   {
@@ -124,17 +132,16 @@ export const routes = [
       },
     ],
   },
-  // {
-  //   label: "Resources",
-  //   href: "/resources",
-  // },
+  {
+    label: "Resources",
+    href: "/resources",
+  },
 ];
 
 // export const activitiesData = [
 //   {
 //     title: "Design Handoff and Developer Handover",
 //     description: "Design Handoff and Developer Handover",
-//     image: "/images/Frame 17.jpg",
 //     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
 //     initiative: "rfh-advocacy",
 //     slug: "activity-1",
@@ -142,7 +149,6 @@ export const routes = [
 //   {
 //     title: "Design Handoff and Developer Handover",
 //     description: "Design Handoff and Developer Handover",
-//     image: "/images/Frame 17.jpg",
 //     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
 //     initiative: "free-tribe-clubs",
 //     slug: "activity-2",
@@ -150,7 +156,6 @@ export const routes = [
 //   {
 //     title: "Design Handoff and Developer Handover",
 //     description: "Design Handoff and Developer Handover",
-//     image: "/images/Frame 17.jpg",
 //     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
 //     initiative: "free-tribe-helpline",
 //     slug: "activity-3",
@@ -158,7 +163,6 @@ export const routes = [
 //   {
 //     title: "Design Handoff and Developer Handover",
 //     description: "Design Handoff and Developer Handover",
-//     image: "/images/Frame 17.jpg",
 //     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
 //     initiative: "free-tribe-boost-camp",
 //     slug: "activity-4",
@@ -166,7 +170,6 @@ export const routes = [
 //   {
 //     title: "Design Handoff and Developer Handover",
 //     description: "Design Handoff and Developer Handover",
-//     image: "/images/Frame 17.jpg",
 //     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
 //     initiative: "repromatters",
 //     slug: "activity-5",
@@ -174,7 +177,6 @@ export const routes = [
 //   {
 //     title: "Design Handoff and Developer Handover",
 //     description: "Design Handoff and Developer Handover",
-//     image: "/images/Frame 17.jpg",
 //     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
 //     initiative: "star-project",
 //     slug: "activity-6",
@@ -346,7 +348,7 @@ export const contactChannels = [
     href: `mailto:${contactEmail}`,
   },
   {
-    image: "/icons/message-circle.svg",
+    image: "/icons/map-pin.svg",
     header: "Visit Us",
     subHeader: "Visit our office HQ.",
     text: "No 15/11b, YK Abass, Ore-Ofe Estate, Elewiodo, Ibadan.",
@@ -363,22 +365,22 @@ export const contactChannels = [
 export const socials = [
   {
     name: "x",
-    src: "/icons/x-icon.svg",
+    Icon: FaXTwitter,
     href: "https://x.com/freetribenetwrk",
   },
   {
     name: "linkedin",
-    src: "/icons/linkedin-icon.svg",
+    Icon: FaLinkedin,
     href: "https://linkedin.com/company/freetribenetwork",
   },
   {
     name: "facebook",
-    src: "/icons/facebook-icon.svg",
+    Icon: FaFacebook,
     href: "https://web.facebook.com/freetribenetwrk",
   },
   {
     name: "instagram",
-    src: "/icons/instagram-icon.svg",
+    Icon: FaInstagram,
     href: "https://instagram.com/freetribenetwork",
   },
   {
@@ -397,7 +399,7 @@ export const currentYear = new Date().getFullYear();
 
 export const homeBannerData = [
   {
-    image: "/images/banners/home-banner/home-banner-1.png",
+    imageTitle: "home-banner-1",
     title: "Sustained reproductive health and family well-being",
     picturePosition: "center right",
     wrapperClassName: "max-xl:bg-[rgba(5,83,118,0.45)]",
@@ -405,7 +407,7 @@ export const homeBannerData = [
       "At the Free Tribe Network, we promote reproductive wellness, and family well-being. We provide charitable services in the forms of programs, projects and research, to translate knowledge into perception, and perceptions into actions and behaviours.",
   },
   {
-    image: "/images/banners/home-banner/home-banner-2.png",
+    imageTitle: "home-banner-2",
     title: "Mastery",
     picturePosition: "center",
     wrapperClassName: "max-xl:bg-[rgba(5,83,118,0.45)]",
@@ -413,7 +415,7 @@ export const homeBannerData = [
       "A relentless pursuit of excellence by leveraging on critical experience, expertise, and scientific evidence, to tailor our initiatives into best practices.",
   },
   {
-    image: "/images/banners/home-banner/home-banner-3.png",
+    imageTitle: "home-banner-3",
     title: "Social Justice",
     picturePosition: "center",
     wrapperClassName: "max-xl:bg-[rgba(5,83,118,0.45)]",
@@ -421,7 +423,7 @@ export const homeBannerData = [
       "We believe that every individual should be treated with dignity and respect, and their fundamental human rights should be protected.",
   },
   {
-    image: "/images/banners/home-banner/home-banner-4.png",
+    imageTitle: "home-banner-4",
     title: "Equity",
     picturePosition: "center",
     wrapperClassName: "max-xl:bg-[rgba(5,83,118,0.45)]",
@@ -429,7 +431,7 @@ export const homeBannerData = [
       "We believe in a fair distribution of services and resources, and equal access to opportunities, irrespective of age, gender, race, education, ethnicity, religion, or personal beliefs.",
   },
   {
-    image: "/images/banners/home-banner/home-banner-5.png",
+    imageTitle: "home-banner-5",
     title: "Community",
     picturePosition: "center",
     wrapperClassName: "max-xl:bg-[rgba(5,83,118,0.45)]",
@@ -600,7 +602,7 @@ export const bots = [
   },
   {
     src: "/images/bot/bot-4.png",
-    name: "Prof. Obafemi, Fances Ngozi",
+    name: "Prof. Obafemi, Frances Ngozi",
     title: "Member, BOT",
     description: `<p>A Professor of Monetary Economics with extensive publications, industrial policy drafting experience, and consultancy roles with the World Bank and United Nations Industrial Development Organization (UNIDO). She has served as a research fellow for the National Defence College, Abuja, and the National Institute for Policy & Strategic Studies (NIPSS), and is the co-founder of the Happy Home Club; a teaching/coaching establishment for single and married persons.</p>`,
   },
@@ -649,6 +651,7 @@ export const partners = [
     src: prettylittleladies,
   },
   { name: "chiin", src: chiin },
+  { name: "livewire", src: livewire },
 ];
 
 export const visionMissionData = [
@@ -656,21 +659,21 @@ export const visionMissionData = [
     title: "Mission",
     content:
       "To improve reproductive health and family wellness, by providing support through charitable initiatives.",
-    icon: "/streamgrey.svg",
+    icon: "/icons/streamgrey.svg",
     className: "bg-secondary-50 text-secondary-500",
   },
   {
     title: "Vision",
     content:
       "A global community of people making lifelong decisions to improve and reinforce reproductive health and family well-being.",
-    icon: "/streampink.svg",
+    icon: "/icons/streampink.svg",
     className: "bg-primary-50 text-primary-500",
   },
   {
     title: "Purpose",
     content:
       "To help vulnerable persons navigate the burden and unmet needs of reproductive health and family well-being.",
-    icon: "/streamgrey.svg",
+    icon: "/icons/streamgrey.svg",
     className: "bg-secondary-50 text-secondary-500",
   },
 ];
@@ -713,8 +716,9 @@ export const workFamily = [
   },
 ];
 
-export const volunteerNowLink = "#";
-export const currentVacanciesLink = "#";
+export const volunteerNowLink = "https://forms.gle/nFKWiE5SEvCPsyJ26";
+export const currentVacanciesLink =
+  "https://www.linkedin.com/company/freetribenetwork/jobs/";
 
 export const stats = [
   {
@@ -742,4 +746,53 @@ export const stats = [
   },
 ];
 
-export const subScribeMessageError = "You are already subscribed";
+export const problems = [
+  {
+    title: "Limited Education",
+    description:
+      "A lack of comprehensive RH and FH education leaves individuals vulnerable to misinformation and prevents them from making informed decisions about their well-being.",
+    image: "/images/the-problem/limited-education.png",
+  },
+  {
+    title: "Data Fragmentation ",
+    description:
+      "Without a centralized database of reproductive health (RH) and family health (FH) issues, interventions are often scattered and inefficient, leaving gaps in addressing critical needs.",
+    image: "/images/the-problem/data-fragmentation.png",
+  },
+  {
+    title: "Isolated Communities",
+    description:
+      "Many communities lack access to adequate reproductive and family health resources, leading to feelings of isolation and uncertainty about where to turn for support.",
+    image: "/images/the-problem/isolated-communities.png",
+  },
+  {
+    title: "Health Inequality",
+    description:
+      "Disparities in access to reproductive and family health resources perpetuate inequalities, leaving marginalized populations at a disadvantage in maintaining their well-being.",
+    image: "/images/the-problem/health-inequality.png",
+  },
+  {
+    title: "Stigma and Taboos",
+    description:
+      "Cultural taboos and stigma surrounding reproductive and family health topics prevent open discussion and access to necessary support services, leading to shame and secrecy among affected individuals",
+    image: "/images/the-problem/stigma-taboos.png",
+  },
+];
+
+export enum CurrencyKeys {
+  NGN = "NGN",
+  // USD = "USD",
+}
+
+export const currencies = {
+  [CurrencyKeys.NGN]: {
+    label: CurrencyKeys.NGN,
+    sign: "₦",
+    min: 100,
+  },
+  // [CurrencyKeys.USD]: {
+  //   label: CurrencyKeys.USD,
+  //   sign: "$",
+  //   min: 1,
+  // },
+};

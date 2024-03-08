@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { HttpError, handleResponseError } from "@/lib/error";
-import { validate } from "deep-email-validator";
-import { isDev } from "@/lib/utils";
-import { subScribeMessageError } from "@/lib/data";
+import { validateEmailAPI } from "@/lib/actions";
 const SibApiV3Sdk = require("sib-api-v3-typescript");
 
 // ContactAPI Instance
@@ -15,23 +13,12 @@ apiKey.apiKey = process.env.BREVO_API_KEY!;
 // Subscribe List id
 const subscribeListId = Number(process.env.BREVO_SUBSCRIBE_LIST_ID!);
 
-// Email validation
-const validateEmail = (email: string) =>
-  validate({
-    email,
-    validateDisposable: !isDev,
-    validateRegex: true,
-    validateSMTP: true,
-    validateMx: true,
-    validateTypo: false,
-  });
-
 export async function POST(request: NextRequest) {
   try {
     const { email } = await request.json();
 
     // Validate email
-    const { valid } = await validateEmail(email);
+    const { valid } = await validateEmailAPI(email);
     if (!valid) throw new HttpError(400, "Invalid email address");
 
     // Create contact method
@@ -46,7 +33,7 @@ export async function POST(request: NextRequest) {
         throw new HttpError(
           error.statusCode,
           error.response.body.message === "Contact already exist"
-            ? subScribeMessageError
+            ? "You are already subscribed"
             : error.response.body.message
         );
       });
