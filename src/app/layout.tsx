@@ -9,7 +9,7 @@ import manrope from "@/lib/font";
 
 export const metadata: Metadata = {
   title: "Free Tribe Network",
-  description: "Welcome to Free Tribe Network",
+  description: "Welcome to the Free Tribe Network",
 };
 
 export default function RootLayout({ children }: PropsWithChildren) {
