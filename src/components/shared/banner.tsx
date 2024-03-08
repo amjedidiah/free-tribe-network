@@ -9,7 +9,6 @@ type BannerProps = {
   title?: string;
   picturePosition?: string;
   wrapperClassName?: string;
-  id?: string;
 } & PropsWithChildren &
   HTMLAttributes<HTMLDivElement>;
 

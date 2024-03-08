@@ -18,7 +18,7 @@ export default function NoInitiativeData({
     <article className="col-span-full text-center grid gap-3 p-8">
       {title && (
         <h5>
-          No <span className="font-medium">{title}</span> for this selection
+          No <span className="font-medium">{title}</span> for this selection yet
         </h5>
       )}
       {shouldShowRefreshButton && (

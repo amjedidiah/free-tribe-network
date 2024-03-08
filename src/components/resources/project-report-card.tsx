@@ -12,20 +12,21 @@ const ProjectReportCard = ({ title, minsRead, src, url }: Props) => {
         <div className="relative h-full">
           <div className="bg-primary-500 px-10 pt-5 pb-3 flex flex-col justify-between gap-4 absolute w-full h-full">
             <div className="bg-primary-50 flex-1">
-              <div className="relative -left-5 top-3 h-full">
-                <a href={url} target="_blank">
-                  <span className="hidden">{title}</span>
+              <a href={url} target="_blank">
+                <span className="hidden">{title}</span>
+                <div className="relative -left-5 top-3 h-full">
                   <Image
                     src={src}
                     alt={title}
                     fill
+                    sizes="100%"
                     style={{
                       objectFit: "cover",
                       objectPosition: "center",
                     }}
                   />
-                </a>
-              </div>
+                </div>
+              </a>
             </div>
             <div className="h5-gap text-center">
               <p className="text-primary-100 text-sm">{minsRead} mins read</p>

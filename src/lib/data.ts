@@ -1,7 +1,14 @@
 import Blog from "@/components/news-events/blog";
 import Recent from "@/components/news-events/recent";
 import Upcoming from "@/components/news-events/upcoming";
-import { FaMedium, FaTiktok } from "react-icons/fa6";
+import {
+  FaInstagram,
+  FaMedium,
+  FaFacebook,
+  FaTiktok,
+  FaXTwitter,
+  FaLinkedin,
+} from "react-icons/fa6";
 import asido from "../../public/images/partners/asido-foundation.png";
 import prettylittleladies from "../../public/images/partners/pretty-little-ladies.png";
 import chiin from "../../public/images/partners/chiin.png";
@@ -358,22 +365,22 @@ export const contactChannels = [
 export const socials = [
   {
     name: "x",
-    src: "/icons/x-icon.svg",
+    Icon: FaXTwitter,
     href: "https://x.com/freetribenetwrk",
   },
   {
     name: "linkedin",
-    src: "/icons/linkedin-icon.svg",
+    Icon: FaLinkedin,
     href: "https://linkedin.com/company/freetribenetwork",
   },
   {
     name: "facebook",
-    src: "/icons/facebook-icon.svg",
+    Icon: FaFacebook,
     href: "https://web.facebook.com/freetribenetwrk",
   },
   {
     name: "instagram",
-    src: "/icons/instagram-icon.svg",
+    Icon: FaInstagram,
     href: "https://instagram.com/freetribenetwork",
   },
   {

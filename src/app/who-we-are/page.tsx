@@ -1,5 +1,5 @@
 import Partners from "@/components/shared/partners";
-import { Fragment } from "react";
+import { Fragment, Suspense } from "react";
 import Testimonials from "@/components/shared/testimonials";
 import WhoWeAreBanner from "@/components/who-we-are/who-we-are-banner";
 import HistoryMissionVision from "@/components/who-we-are/history-mission-vision";
@@ -13,7 +13,9 @@ export default function WhoWeAre() {
   return (
     <Fragment>
       <WhoWeAreBanner />
-      <HistoryMissionVision />
+      <Suspense fallback={null}>
+        <HistoryMissionVision />
+      </Suspense>
       <WhatWeDo />
       <Bot />
       <Team

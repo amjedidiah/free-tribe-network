@@ -32,7 +32,6 @@ export default async function ResourcesList({
     initData: fetchData,
     params: { id: resourceId, hideDescription },
   };
-  if (!fetchData.resourceList?.length) return null;
 
   return (
     <section

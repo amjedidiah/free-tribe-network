@@ -2,8 +2,8 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 import { scroller } from "react-scroll";
 
-type UseScrollToSectionProps = {
-  initUrlSection: string;
+export type UseScrollToSectionProps = {
+  initUrlSection?: string;
   shouldScroll?: boolean;
 };
 
