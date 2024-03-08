@@ -13,7 +13,15 @@ export default function ContactCard({
   return (
     <div className="flex flex-col p-4 lg:p-6 gap-8 lg:gap-12 bg-[#E6EFF380] rounded-[0.625rem]">
       <div className="bg-secondary w-fit p-2 rounded-lg">
-        <Image src={image} alt={`${header}-icon`} width={24} height={24} />
+        <div className="relative w-6 h-6">
+          <Image
+            src={image}
+            alt={`${header}-icon`}
+            fill
+            style={{ objectFit: "cover", objectPosition: "center" }}
+            sizes="100%"
+          />
+        </div>
       </div>
       <div className="h5-gap">
         <h5>{header}</h5>
