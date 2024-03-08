@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { Resource } from "@/components/resources/resources-card";
+import { Resource } from "@/lib/types";
 
 type Props = Pick<Resource, "title" | "minsRead" | "src" | "url">;
 

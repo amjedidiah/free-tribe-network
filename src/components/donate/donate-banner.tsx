@@ -4,7 +4,7 @@ import DonateForm from "@/components/donate/donate-form";
 export default function DonateBanner() {
   return (
     <Banner
-      image="/images/banners/donate-banner.png"
+      imageTitle="donate-banner"
       title="Help People Across the Globe"
       wrapperClassName="[&_.container]:relative [&_h1]:lg:max-w-lg [&_h1]:xl:max-w-xl"
       id="donate-banner"

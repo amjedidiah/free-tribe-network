@@ -1,13 +1,9 @@
-"use client";
 import Banner from "@/components/shared/banner";
-import useScrollToSection from "@/hooks/use-scroll-to-section";
 
 export default function WhoWeAreBanner() {
-  useScrollToSection();
-
   return (
     <Banner
-      image="/images/banners/who-we-are-banner.jpeg"
+      imageTitle="who-we-are-banner"
       title="Empowering Communities"
       wrapperClassName="bg-[rgba(26,26,26,0.25)]"
     >

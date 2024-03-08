@@ -392,7 +392,7 @@ export const currentYear = new Date().getFullYear();
 
 export const homeBannerData = [
   {
-    image: "/images/banners/home-banner/home-banner-1.png",
+    imageTitle: "home-banner-1",
     title: "Sustained reproductive health and family well-being",
     picturePosition: "center right",
     wrapperClassName: "max-xl:bg-[rgba(5,83,118,0.45)]",
@@ -400,7 +400,7 @@ export const homeBannerData = [
       "At the Free Tribe Network, we promote reproductive wellness, and family well-being. We provide charitable services in the forms of programs, projects and research, to translate knowledge into perception, and perceptions into actions and behaviours.",
   },
   {
-    image: "/images/banners/home-banner/home-banner-2.png",
+    imageTitle: "home-banner-2",
     title: "Mastery",
     picturePosition: "center",
     wrapperClassName: "max-xl:bg-[rgba(5,83,118,0.45)]",
@@ -408,7 +408,7 @@ export const homeBannerData = [
       "A relentless pursuit of excellence by leveraging on critical experience, expertise, and scientific evidence, to tailor our initiatives into best practices.",
   },
   {
-    image: "/images/banners/home-banner/home-banner-3.png",
+    imageTitle: "home-banner-3",
     title: "Social Justice",
     picturePosition: "center",
     wrapperClassName: "max-xl:bg-[rgba(5,83,118,0.45)]",
@@ -416,7 +416,7 @@ export const homeBannerData = [
       "We believe that every individual should be treated with dignity and respect, and their fundamental human rights should be protected.",
   },
   {
-    image: "/images/banners/home-banner/home-banner-4.png",
+    imageTitle: "home-banner-4",
     title: "Equity",
     picturePosition: "center",
     wrapperClassName: "max-xl:bg-[rgba(5,83,118,0.45)]",
@@ -424,7 +424,7 @@ export const homeBannerData = [
       "We believe in a fair distribution of services and resources, and equal access to opportunities, irrespective of age, gender, race, education, ethnicity, religion, or personal beliefs.",
   },
   {
-    image: "/images/banners/home-banner/home-banner-5.png",
+    imageTitle: "home-banner-5",
     title: "Community",
     picturePosition: "center",
     wrapperClassName: "max-xl:bg-[rgba(5,83,118,0.45)]",

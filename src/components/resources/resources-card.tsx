@@ -2,16 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import SafeHTML from "@/components/shared/safe-html";
-
-export type Resource = {
-  id: string;
-  title: string;
-  description?: string | TrustedHTML;
-  modifiedDate: string;
-  src: string;
-  url: string;
-  minsRead: number;
-};
+import { Resource } from "@/lib/types";
 
 type ResourcesCardProps = Resource & {
   className?: string;
@@ -28,7 +19,7 @@ export default function ResourcesCard({
   return (
     <div
       className={cn(
-        "p-2 pb-4 flex flex-col gap-4 bg-white rounded-[8px] max-w-md h-fit",
+        "p-2 pb-4 flex flex-col gap-4 bg-white rounded-[8px]",
         className
       )}
     >

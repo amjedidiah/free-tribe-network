@@ -20,3 +20,47 @@ export type Post = {
   date: string;
   link: string;
 };
+
+export type Resource = {
+  id: string;
+  cursor: string;
+  title: string;
+  description?: string | TrustedHTML;
+  modifiedDate: string;
+  src: string;
+  url: string;
+  minsRead: number;
+};
+
+export enum ResourcesIds {
+  AnnualReports = "dGVybTo3",
+  Bulletins = "dGVybTo1",
+  Researches = "dGVybTo2",
+  SpecialPublications = "dGVybTo4",
+  ProjectActivityReport = "dGVybToxMA==",
+}
+
+export type FetchCategoriesByIdVars = {
+  id: ResourcesIds;
+  hideDescription?: boolean;
+  before?: string;
+  after?: string;
+  first?: number;
+  last?: number;
+  hasOverflow?: boolean;
+};
+
+export type FetchCategoriesByIdData = {
+  hasPreviousPage: boolean;
+  hasNextPage: boolean;
+  startCursor: string;
+  endCursor: string;
+  resourceList: Resource[];
+  title: string;
+};
+
+export interface IContentImage {
+  id: string;
+  mediaItemUrl: string;
+  title: string;
+}

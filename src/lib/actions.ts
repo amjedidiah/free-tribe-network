@@ -1,17 +1,23 @@
 "use server";
 import { validate } from "deep-email-validator";
-import { isDev } from "@/lib/constants";
+import { RESOURCES_PAGE_LIMIT, isDev } from "@/lib/constants";
 import { JSDOM } from "jsdom";
 import truncateHtml from "truncate-html";
 import { cache } from "react";
-import { Post, PostData } from "@/lib/types";
+import {
+  FetchCategoriesByIdData,
+  FetchCategoriesByIdVars,
+  IContentImage,
+  Post,
+  PostData,
+  Resource,
+} from "@/lib/types";
 import { parse } from "rss-to-json";
 import { getApolloClient } from "@/lib/apollo-client";
 import {
   GET_IMAGE_BY_TITLE,
   GET_RESOURCES_BY_CATEGORY_ID,
 } from "@/lib/queries";
-import { Resource } from "@/components/resources/resources-card";
 
 export const validateEmailAPI = (email: string) =>
   validate({
@@ -84,10 +90,21 @@ export const fetchMediumPosts = cache(async () => {
 });
 
 const extractResourcesContent = (
-  { excerpt, id, title, modifiedGmt, featuredImage, resourcesFieldGroup }: any,
+  {
+    node: {
+      excerpt,
+      id,
+      title,
+      modifiedGmt,
+      featuredImage,
+      resourcesFieldGroup,
+    },
+    cursor,
+  }: any,
   hideDescription = false
-) => ({
+): Resource => ({
   id,
+  cursor,
   title,
   description: hideDescription
     ? ""
@@ -101,7 +118,15 @@ const extractResourcesContent = (
 });
 
 export const fetchResourcesByCategoryId = cache(
-  async (id: string, hideDescription = false) => {
+  async ({
+    id,
+    hideDescription = false,
+    before = "",
+    after = "",
+    hasOverflow,
+    first = !hasOverflow ? RESOURCES_PAGE_LIMIT : 0,
+    last,
+  }: FetchCategoriesByIdVars) => {
     const apolloClient = getApolloClient();
 
     try {
@@ -110,18 +135,23 @@ export const fetchResourcesByCategoryId = cache(
         variables: {
           id,
           env: process.env.NODE_ENV,
+          first,
+          last,
+          before,
+          after,
         },
       });
 
       return {
+        ...resourcesData.data.category.posts.pageInfo,
         title: resourcesData.data.category.name,
-        resourceList: resourcesData.data.category.posts.nodes.map((item: any) =>
+        resourceList: resourcesData.data.category.posts.edges.map((item: any) =>
           extractResourcesContent(item, hideDescription)
-        ) as Resource[],
-      };
+        ),
+      } as FetchCategoriesByIdData;
     } catch (error) {
       console.error(error);
-      return {};
+      return {} as FetchCategoriesByIdData;
     }
   }
 );
@@ -137,9 +167,9 @@ export const fetchImageByTitle = cache(async (title: string) => {
       },
     });
 
-    return imageData.data.mediaItems.nodes[0];
+    return imageData.data.mediaItems.nodes[0] as IContentImage;
   } catch (error) {
     console.error(error);
-    return {};
+    return {} as IContentImage;
   }
 });

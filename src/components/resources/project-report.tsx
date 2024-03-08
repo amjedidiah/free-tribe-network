@@ -1,11 +1,11 @@
 import ProjectReportCard from "@/components/resources/project-report-card";
 import { fetchResourcesByCategoryId } from "@/lib/actions";
-import { ResourcesIds } from "@/lib/constants";
+import { ResourcesIds } from "@/lib/types";
 
 export default async function ProjectReport() {
-  const { resourceList, title } = await fetchResourcesByCategoryId(
-    ResourcesIds.ProjectActivityReport
-  );
+  const { resourceList, title } = await fetchResourcesByCategoryId({
+    id: ResourcesIds.ProjectActivityReport,
+  });
   if (!resourceList?.length) return null;
 
   return (

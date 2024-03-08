@@ -6,7 +6,8 @@ type Props = {
 } & Omit<ImageProps, "src" | "alt">;
 
 export default async function ContentImage({ title, ...rest }: Props) {
-  const { mediaItemUrl } = await fetchImageByTitle(title);
+  const data = await fetchImageByTitle(title);
+  if (!data) return null;
 
-  return <Image src={mediaItemUrl} alt={title} {...rest} />;
+  return <Image src={data.mediaItemUrl} alt={title} {...rest} />;
 }
