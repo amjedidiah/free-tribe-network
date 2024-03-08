@@ -3,7 +3,7 @@ import Banner from "@/components/shared/banner";
 export default function WhoWeAreBanner() {
   return (
     <Banner
-      image="/images/banners/who-we-are-banner.jpeg"
+      imageTitle="who-we-are-banner"
       title="Empowering Communities"
       wrapperClassName="bg-[rgba(26,26,26,0.25)]"
     >

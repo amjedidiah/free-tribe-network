@@ -15,8 +15,14 @@ export default function OurImpact() {
               key={title}
               className="stats-shadow pt-6 pb-14 px-10 flex flex-col gap-8 items-center text-center basis-56 flex-1"
             >
-              <div className="h-14 w-14 rounded-full bg-primary-50 flex items-center justify-center relative">
-                <Image src={src} alt={title} fill sizes="100%" />
+              <div className="h-20 w-20 rounded-full bg-primary-50 flex items-center justify-center relative">
+                <Image
+                  src={src}
+                  alt={title}
+                  fill
+                  sizes="100%"
+                  className="p-3"
+                />
               </div>
               <div className="h3-gap">
                 <h3 className="text-secondary-500">{value}</h3>

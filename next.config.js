@@ -5,6 +5,9 @@ const nextConfig = {
       {
         hostname: "cdn-images-1.medium.com",
       },
+      {
+        hostname: "freetribenetwork.org",
+      },
     ],
   },
 };

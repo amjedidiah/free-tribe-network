@@ -1,4 +1,3 @@
-import { defaultNewsEventSection } from "@/lib/data";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 import { scroller } from "react-scroll";
@@ -8,10 +7,8 @@ export type UseScrollToSectionProps = {
   shouldScroll?: boolean;
 };
 
-export default function useScrollToSection({
-  initUrlSection = defaultNewsEventSection,
-  shouldScroll = false,
-}: UseScrollToSectionProps) {
+export default function useScrollToSection(props?: UseScrollToSectionProps) {
+  const { initUrlSection, shouldScroll = true } = props || {};
   const searchParams = useSearchParams();
   const router = useRouter();
   const urlSection = searchParams.get("section");

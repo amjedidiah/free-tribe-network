@@ -8,7 +8,7 @@ import {
 import { ChangeEvent, FormEvent, useEffect, useMemo, useState } from "react";
 import { useDebouncedCallback } from "use-debounce";
 import { CurrencyKeys, currencies } from "@/lib/data";
-import usePayStack from "./use-paystack";
+import usePayStack from "@/hooks/use-paystack";
 import axios from "axios";
 import { getFEErrorMessage } from "@/lib/error";
 

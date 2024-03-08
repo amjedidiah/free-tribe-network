@@ -5,10 +5,10 @@ import { Fragment } from "react";
 export default function NewsEvents() {
   return (
     <Fragment>
-      <Banner image="/images/banners/news-banner.png" title="News and Events" />
+      <Banner imageTitle="news-banner" title="News and Events" />
       <section className="py-10 lg:py-14">
         <article className="container">
-          <ActivityTabs shouldScroll />
+          <ActivityTabs />
         </article>
       </section>
     </Fragment>

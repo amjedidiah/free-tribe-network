@@ -132,17 +132,16 @@ export const routes = [
       },
     ],
   },
-  // {
-  //   label: "Resources",
-  //   href: "/resources",
-  // },
+  {
+    label: "Resources",
+    href: "/resources",
+  },
 ];
 
 // export const activitiesData = [
 //   {
 //     title: "Design Handoff and Developer Handover",
 //     description: "Design Handoff and Developer Handover",
-//     image: "/images/Frame 17.jpg",
 //     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
 //     initiative: "rfh-advocacy",
 //     slug: "activity-1",
@@ -150,7 +149,6 @@ export const routes = [
 //   {
 //     title: "Design Handoff and Developer Handover",
 //     description: "Design Handoff and Developer Handover",
-//     image: "/images/Frame 17.jpg",
 //     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
 //     initiative: "free-tribe-clubs",
 //     slug: "activity-2",
@@ -158,7 +156,6 @@ export const routes = [
 //   {
 //     title: "Design Handoff and Developer Handover",
 //     description: "Design Handoff and Developer Handover",
-//     image: "/images/Frame 17.jpg",
 //     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
 //     initiative: "free-tribe-helpline",
 //     slug: "activity-3",
@@ -166,7 +163,6 @@ export const routes = [
 //   {
 //     title: "Design Handoff and Developer Handover",
 //     description: "Design Handoff and Developer Handover",
-//     image: "/images/Frame 17.jpg",
 //     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
 //     initiative: "free-tribe-boost-camp",
 //     slug: "activity-4",
@@ -174,7 +170,6 @@ export const routes = [
 //   {
 //     title: "Design Handoff and Developer Handover",
 //     description: "Design Handoff and Developer Handover",
-//     image: "/images/Frame 17.jpg",
 //     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
 //     initiative: "repromatters",
 //     slug: "activity-5",
@@ -182,7 +177,6 @@ export const routes = [
 //   {
 //     title: "Design Handoff and Developer Handover",
 //     description: "Design Handoff and Developer Handover",
-//     image: "/images/Frame 17.jpg",
 //     details: "NOV 24, 2023 - IN-PERSON EVENT - LAHORE, PK",
 //     initiative: "star-project",
 //     slug: "activity-6",
@@ -354,7 +348,7 @@ export const contactChannels = [
     href: `mailto:${contactEmail}`,
   },
   {
-    image: "/icons/message-circle.svg",
+    image: "/icons/map-pin.svg",
     header: "Visit Us",
     subHeader: "Visit our office HQ.",
     text: "No 15/11b, YK Abass, Ore-Ofe Estate, Elewiodo, Ibadan.",
@@ -405,7 +399,7 @@ export const currentYear = new Date().getFullYear();
 
 export const homeBannerData = [
   {
-    image: "/images/banners/home-banner/home-banner-1.png",
+    imageTitle: "home-banner-1",
     title: "Sustained reproductive health and family well-being",
     picturePosition: "center right",
     wrapperClassName: "max-xl:bg-[rgba(5,83,118,0.45)]",
@@ -413,7 +407,7 @@ export const homeBannerData = [
       "At the Free Tribe Network, we promote reproductive wellness, and family well-being. We provide charitable services in the forms of programs, projects and research, to translate knowledge into perception, and perceptions into actions and behaviours.",
   },
   {
-    image: "/images/banners/home-banner/home-banner-2.png",
+    imageTitle: "home-banner-2",
     title: "Mastery",
     picturePosition: "center",
     wrapperClassName: "max-xl:bg-[rgba(5,83,118,0.45)]",
@@ -421,7 +415,7 @@ export const homeBannerData = [
       "A relentless pursuit of excellence by leveraging on critical experience, expertise, and scientific evidence, to tailor our initiatives into best practices.",
   },
   {
-    image: "/images/banners/home-banner/home-banner-3.png",
+    imageTitle: "home-banner-3",
     title: "Social Justice",
     picturePosition: "center",
     wrapperClassName: "max-xl:bg-[rgba(5,83,118,0.45)]",
@@ -429,7 +423,7 @@ export const homeBannerData = [
       "We believe that every individual should be treated with dignity and respect, and their fundamental human rights should be protected.",
   },
   {
-    image: "/images/banners/home-banner/home-banner-4.png",
+    imageTitle: "home-banner-4",
     title: "Equity",
     picturePosition: "center",
     wrapperClassName: "max-xl:bg-[rgba(5,83,118,0.45)]",
@@ -437,7 +431,7 @@ export const homeBannerData = [
       "We believe in a fair distribution of services and resources, and equal access to opportunities, irrespective of age, gender, race, education, ethnicity, religion, or personal beliefs.",
   },
   {
-    image: "/images/banners/home-banner/home-banner-5.png",
+    imageTitle: "home-banner-5",
     title: "Community",
     picturePosition: "center",
     wrapperClassName: "max-xl:bg-[rgba(5,83,118,0.45)]",
@@ -665,21 +659,21 @@ export const visionMissionData = [
     title: "Mission",
     content:
       "To improve reproductive health and family wellness, by providing support through charitable initiatives.",
-    icon: "/streamgrey.svg",
+    icon: "/icons/streamgrey.svg",
     className: "bg-secondary-50 text-secondary-500",
   },
   {
     title: "Vision",
     content:
       "A global community of people making lifelong decisions to improve and reinforce reproductive health and family well-being.",
-    icon: "/streampink.svg",
+    icon: "/icons/streampink.svg",
     className: "bg-primary-50 text-primary-500",
   },
   {
     title: "Purpose",
     content:
       "To help vulnerable persons navigate the burden and unmet needs of reproductive health and family well-being.",
-    icon: "/streamgrey.svg",
+    icon: "/icons/streamgrey.svg",
     className: "bg-secondary-50 text-secondary-500",
   },
 ];

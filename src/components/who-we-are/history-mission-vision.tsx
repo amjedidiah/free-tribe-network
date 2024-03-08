@@ -1,9 +1,13 @@
+"use client";
 import { visionMissionData } from "@/lib/data";
 import VisionMissionCard from "@/components/who-we-are/vision-mission-card";
 import Image from "next/image";
 import Link from "next/link";
+import useScrollToSection from "@/hooks/use-scroll-to-section";
 
 export default function HistoryMissionVision() {
+  useScrollToSection();
+
   return (
     <section className="py-10 lg:pt-28">
       <div className="container flex flex-col gap-8">
@@ -16,19 +20,13 @@ export default function HistoryMissionVision() {
               Titilope Oluwagbemi-Jacob (his beloved mother) who passed on due
               to complications and medical negligence following childbirth.
             </p>
-            <article className="relative h-80 w-full rounded">
-              <Image
-                src="/images/vision-mission.jpeg"
-                alt="history"
-                fill
-                sizes="100%"
-                style={{
-                  objectFit: "cover",
-                  objectPosition: "center",
-                }}
-                className="rounded"
-              />
-            </article>
+            <Image
+              src="/images/inspiration.png"
+              alt="history"
+              width={1920}
+              height={1080}
+              className="rounded shadow-ls"
+            />
             <p>
               The network aims to address prevailing issues affecting
               reproductive health and family health, and to provide sustainable

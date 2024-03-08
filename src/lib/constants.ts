@@ -1,5 +1,9 @@
 export const isDev = process.env.NODE_ENV === "development";
 
-export const domain = isDev
-  ? "https://localhost:3000"
-  : "https://www.freetribenetwork.org";
+export const domain = typeof window === "object" ? window.location.origin : "";
+
+export const DAILY_REVALIDATION = 60 * 60 * 24; // 24 hours
+
+export const HOURLY_REVALIDATION = 60 * 60; // 1 hour
+
+export const RESOURCES_PAGE_LIMIT = 4;
