@@ -1,9 +1,13 @@
+"use client";
 import { visionMissionData } from "@/lib/data";
 import VisionMissionCard from "@/components/who-we-are/vision-mission-card";
 import Image from "next/image";
 import Link from "next/link";
+import useScrollToSection from "@/hooks/use-scroll-to-section";
 
 export default function HistoryMissionVision() {
+  useScrollToSection();
+
   return (
     <section className="py-10 lg:pt-28">
       <div className="container flex flex-col gap-8">

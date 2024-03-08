@@ -1,11 +1,23 @@
 "use server";
 import { validate } from "deep-email-validator";
-import { isDev } from "@/lib/constants";
+import { RESOURCES_PAGE_LIMIT, isDev } from "@/lib/constants";
 import { JSDOM } from "jsdom";
 import truncateHtml from "truncate-html";
 import { cache } from "react";
-import { Post, PostData } from "@/lib/types";
+import {
+  FetchCategoriesByIdData,
+  FetchCategoriesByIdVars,
+  IContentImage,
+  Post,
+  PostData,
+  Resource,
+} from "@/lib/types";
 import { parse } from "rss-to-json";
+import { getApolloClient } from "@/lib/apollo-client";
+import {
+  GET_IMAGE_BY_TITLE,
+  GET_RESOURCES_BY_CATEGORY_ID,
+} from "@/lib/queries";
 
 export const validateEmailAPI = (email: string) =>
   validate({
@@ -74,5 +86,90 @@ export const fetchMediumPosts = cache(async () => {
   } catch (error) {
     console.error(error);
     return { posts: [], topPosts: [] };
+  }
+});
+
+const extractResourcesContent = (
+  {
+    node: {
+      excerpt,
+      id,
+      title,
+      modifiedGmt,
+      featuredImage,
+      resourcesFieldGroup,
+    },
+    cursor,
+  }: any,
+  hideDescription = false
+): Resource => ({
+  id,
+  cursor,
+  title,
+  description: hideDescription
+    ? ""
+    : truncateHtml(excerpt, 20, {
+        byWords: true,
+      }),
+  modifiedDate: new Date(modifiedGmt).toDateString(),
+  src: featuredImage?.node?.mediaItemUrl,
+  url: resourcesFieldGroup.file?.node?.link,
+  minsRead: resourcesFieldGroup.minsread,
+});
+
+export const fetchResourcesByCategoryId = cache(
+  async ({
+    id,
+    hideDescription = false,
+    before = "",
+    after = "",
+    hasOverflow,
+    first = !hasOverflow ? RESOURCES_PAGE_LIMIT : 0,
+    last,
+  }: FetchCategoriesByIdVars) => {
+    const apolloClient = getApolloClient();
+
+    try {
+      const resourcesData = await apolloClient.query({
+        query: GET_RESOURCES_BY_CATEGORY_ID,
+        variables: {
+          id,
+          env: process.env.NODE_ENV,
+          first,
+          last,
+          before,
+          after,
+        },
+      });
+
+      return {
+        ...resourcesData.data.category.posts.pageInfo,
+        title: resourcesData.data.category.name,
+        resourceList: resourcesData.data.category.posts.edges.map((item: any) =>
+          extractResourcesContent(item, hideDescription)
+        ),
+      } as FetchCategoriesByIdData;
+    } catch (error) {
+      console.error(error);
+      return {} as FetchCategoriesByIdData;
+    }
+  }
+);
+
+export const fetchImageByTitle = cache(async (title: string) => {
+  const apolloClient = getApolloClient();
+
+  try {
+    const imageData = await apolloClient.query({
+      query: GET_IMAGE_BY_TITLE,
+      variables: {
+        title,
+      },
+    });
+
+    return imageData.data.mediaItems.nodes[0] as IContentImage;
+  } catch (error) {
+    console.error(error);
+    return {} as IContentImage;
   }
 });

@@ -61,7 +61,7 @@ export default function Bot() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col lg:flex-row gap-8">
+        <div className="flex flex-col lg:flex-row gap-4 xl:gap-8">
           <div className="w-contain lg:w-[415px] relative">
             <div className="bg bg-[rgba(129,1,77,0.3)] w-11 h-full absolute top-0 left-0 z-[2] pointer-events-none" />
             <div className="bg bg-[rgba(129,1,77,0.3)] w-11 h-full absolute top-0 right-0 z-[2] pointer-events-none" />
