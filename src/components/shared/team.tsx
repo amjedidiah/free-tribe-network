@@ -27,7 +27,7 @@ export default function Team({
   return (
     <section className={cn("py-10 grid gap-8", className)} id={id}>
       <article className="container">
-        <div className="flex flex-row flex-wrap h2-gap justify-between items-center">
+        <div className="flex flex-row flex-wrap gap-2 lg:gap-4 justify-between items-center">
           <h2>{title}</h2>
           {shouldSeeMore && (
             <Link

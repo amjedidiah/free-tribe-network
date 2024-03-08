@@ -1,32 +1,16 @@
-"use client";
-
+import type { Metadata } from "next";
 import "@/styles/globals.css";
 import Nav from "@/components/layout/nav";
 import Footer from "@/components/layout/footer";
 import { PropsWithChildren } from "react";
 import { cn } from "@/lib/utils";
-import { ApolloProvider } from "@apollo/client";
-import { getApolloClient } from "@/lib/apollo-client";
 import WhatsappChat from "@/components/layout/whatsapp-chat";
 import manrope from "@/lib/font";
 
-// type Props = {
-//   searchParams: { [key: string]: string | string[] | undefined };
-// };
-// export async function generateMetadata({
-//   searchParams,
-// }: Props): Promise<Metadata> {
-//   return {
-//     title: "Home | Free Tribe Network",
-//     description: "Welcome to Free Tribe Network",
-//   };
-// }
-
-// export const metadata: Metadata = {
-//   title: "Home | Free Tribe Network",
-//   description: "Welcome to Free Tribe Network",
-// };
-const client = getApolloClient();
+export const metadata: Metadata = {
+  title: "Free Tribe Network",
+  description: "Welcome to Free Tribe Network",
+};
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
@@ -38,9 +22,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
         )}
       >
         <Nav />
-        <main>
-          <ApolloProvider client={client}>{children}</ApolloProvider>
-        </main>
+        <main>{children}</main>
         <Footer />
         <WhatsappChat />
       </body>

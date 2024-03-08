@@ -84,10 +84,6 @@
   a, button {
     @apply font-medium
   }
-  h2 {
-    font-size: 3rem;
-    font-weight: bold;
-  }
 }
 
 @layer components {
@@ -96,8 +92,15 @@
   }
 
   .border-ankara-1 {
-    border: 10px solid transparent;
+    border-style: solid;
+    border-color: transparent;
     border-image: url('/images/ankaras/ankara-1.png') 10 repeat;
+  }
+
+  .border-ankara-4 {
+    border-style: solid;
+    border-color: transparent;
+    border-image: url('/images/ankaras/ankara-4.png') 10 repeat;
   }
 
   .swiper-button-prev {
