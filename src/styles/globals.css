@@ -120,23 +120,23 @@
   }
 
   .bg-problem-1 {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 31.55%, rgba(0, 0, 0, 0.80) 69.19%), url('/images/the-problem/limited-education.png') lightgray 50% / cover no-repeat;
+    background: linear-gradient(180deg, rgba(0 0 0 / 0%) 31.55%, rgba(0 0 0 / 80%) 69.19%), url('/images/the-problem/limited-education.png') lightgray 50% / cover no-repeat;
   }
 
   .bg-problem-2 {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 31.55%, rgba(0, 0, 0, 0.80) 69.19%), url('/images/the-problem/data-fragmentation.png') lightgray 50% / cover no-repeat;
+    background: linear-gradient(180deg, rgba(0 0 0 / 0%) 31.55%, rgba(0 0 0 / 80%) 69.19%), url('/images/the-problem/data-fragmentation.png') lightgray 50% / cover no-repeat;
   }
 
   .bg-problem-3 {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 31.55%, rgba(0, 0, 0, 0.80) 69.19%), url('/images/the-problem/isolated-communities.png') lightgray 50% / cover no-repeat;
+    background: linear-gradient(180deg, rgba(0 0 0 / 0%) 31.55%, rgba(0 0 0 / 80%) 69.19%), url('/images/the-problem/isolated-communities.png') lightgray 50% / cover no-repeat;
   }
 
   .bg-problem-4 {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 31.55%, rgba(0, 0, 0, 0.80) 69.19%), url('/images/the-problem/health-inequality.png') lightgray 50% / cover no-repeat;
+    background: linear-gradient(180deg, rgba(0 0 0 / 0%) 31.55%, rgba(0 0 0 / 80%) 69.19%), url('/images/the-problem/health-inequality.png') lightgray 50% / cover no-repeat;
   }
 
   .bg-problem-5 {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 31.55%, rgba(0, 0, 0, 0.80) 69.19%), url('/images/the-problem/stigma-taboos.png') lightgray 50% / cover no-repeat;
+    background: linear-gradient(180deg, rgba(0 0 0 / 0%) 31.55%, rgba(0 0 0 / 80%) 69.19%), url('/images/the-problem/stigma-taboos.png') lightgray 50% / cover no-repeat;
   }
 }
 
