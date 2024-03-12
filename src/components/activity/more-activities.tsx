@@ -21,6 +21,7 @@ export default function MoreActivities({ isUpcoming }: Props) {
           <ActivityTabs
             initUrlSection={initUrlSection}
             isPrimary={isUpcoming}
+            shouldScroll={false}
           />
         </Suspense>
       </article>

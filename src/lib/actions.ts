@@ -11,10 +11,12 @@ import {
   Post,
   PostData,
   Resource,
+  IActivity,
 } from "@/lib/types";
 import { parse } from "rss-to-json";
 import { getApolloClient } from "@/lib/apollo-client";
 import {
+  GET_ACTIVITY_BY_SLUG,
   GET_IMAGE_BY_TITLE,
   GET_RESOURCES_BY_CATEGORY_ID,
 } from "@/lib/queries";
@@ -171,5 +173,59 @@ export const fetchImageByTitle = cache(async (title: string) => {
   } catch (error) {
     console.error(error);
     return {} as IContentImage;
+  }
+});
+
+function formatDateTime(dateObj: Date) {
+  // Extract components
+  const year = dateObj.getFullYear();
+  const month = dateObj.toLocaleString("en-US", { month: "long" });
+  const day = dateObj.getDate();
+  const weekday = dateObj.toLocaleString("en-US", { weekday: "long" });
+  const hours = dateObj.getHours() % 12 || 12; // 12-hour format
+  const minutes = dateObj.getMinutes().toString().padStart(2, "0");
+  const meridian = dateObj.getHours() >= 12 ? "pm" : "am";
+
+  const date = `${weekday} ${month} ${day} ${year}`;
+  const time = `${hours}:${minutes}${meridian}`;
+
+  // Format the date string
+  return {
+    dateTime: `${date} ${time}`,
+    date,
+    time,
+  };
+}
+
+const formatActivity = ({ categories, ...rest }: any): IActivity => {
+  const isUpcoming = categories.nodes.some((item: { name: string }) =>
+    item.name.includes("Upcoming")
+  );
+
+  return {
+    ...rest,
+    isUpcoming,
+    newsFieldGroup: {
+      ...rest.newsFieldGroup,
+      ...formatDateTime(new Date(rest.newsFieldGroup.dateTime)),
+    },
+  };
+};
+
+export const fetchActivityBySlug = cache(async (slug: string) => {
+  const apolloClient = getApolloClient();
+
+  try {
+    const activityData = await apolloClient.query({
+      query: GET_ACTIVITY_BY_SLUG,
+      variables: {
+        slug,
+      },
+    });
+    if (!activityData.data.activities.nodes.length) return;
+
+    return formatActivity(activityData.data.activities.nodes[0]);
+  } catch (error) {
+    console.error(error);
   }
 });

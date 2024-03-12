@@ -63,3 +63,35 @@ export const GET_IMAGE_BY_TITLE = gql`
     }
   }
 `;
+
+export const GET_ACTIVITY_BY_SLUG = gql`
+  query getActivityBySlug($slug: String!) {
+    activities(where: { name: $slug }) {
+      nodes {
+        title
+        content
+        excerpt
+        slug
+        categories {
+          nodes {
+            name
+          }
+        }
+        featuredImage {
+          node {
+            id
+            mediaItemUrl
+            title
+          }
+        }
+        newsFieldGroup {
+          dateTime
+          schedule
+          scheduleNotes
+          venue
+          venueNotes
+        }
+      }
+    }
+  }
+`;

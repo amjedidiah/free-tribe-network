@@ -64,3 +64,29 @@ export interface IContentImage {
   mediaItemUrl: string;
   title: string;
 }
+
+type NewsFieldGroup = {
+  dateTime: string;
+  date: string;
+  time: string;
+  schedule?: string;
+  scheduleNotes?: string;
+  venue: string;
+  venueNotes?: string;
+};
+
+type FeaturedImage = {
+  node: {
+    mediaItemUrl: string;
+  } | null;
+};
+
+export interface IActivity {
+  title: string;
+  content: string;
+  excerpt: string;
+  slug: string;
+  isUpcoming: boolean;
+  featuredImage: FeaturedImage;
+  newsFieldGroup: NewsFieldGroup;
+}
