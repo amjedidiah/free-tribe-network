@@ -1,6 +1,5 @@
 import { HTMLAttributes } from "react";
 import { cn } from "@/lib/utils";
-import { fetchResourcesByCategoryId } from "@/lib/actions";
 import { ResourcesIds } from "@/lib/types";
 import ResourcesListContainer from "@/components/resources/resources-list-container";
 
@@ -12,7 +11,7 @@ export type ResourcesListProps = {
   hideDescription?: boolean;
 } & HTMLAttributes<HTMLDivElement>;
 
-export default async function ResourcesList({
+export default function ResourcesList({
   className,
   hasOverflow = false,
   isSecondary = false,
@@ -20,16 +19,10 @@ export default async function ResourcesList({
   resourceId,
   hideDescription = false,
 }: ResourcesListProps) {
-  const fetchData = await fetchResourcesByCategoryId({
-    id: resourceId,
-    hideDescription,
-    hasOverflow,
-  });
   const props = {
     hasOverflow,
     isSecondary,
     hasBorder,
-    initData: fetchData,
     params: { id: resourceId, hideDescription },
   };
 

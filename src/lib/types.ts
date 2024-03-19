@@ -50,7 +50,7 @@ export type FetchCategoriesByIdVars = {
   hasOverflow?: boolean;
 };
 
-type PageInfo = {
+export type PageInfo = {
   hasPreviousPage: boolean;
   hasNextPage: boolean;
   startCursor: string;

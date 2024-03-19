@@ -9,3 +9,5 @@ export const HOURLY_REVALIDATION = 60 * 60; // 1 hour
 export const RESOURCES_PAGE_LIMIT = 4;
 
 export const ACTIVITIES_PAGE_LIMIT = 6;
+
+export const BLOG_PAGE_LIMIT = ACTIVITIES_PAGE_LIMIT;

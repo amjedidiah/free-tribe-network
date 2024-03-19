@@ -247,34 +247,36 @@ export const fetchActivityBySlug = cache(async (slug: string) => {
   }
 });
 
-export const fetchActivitiesByCategoryName = async ({
-  categoryName,
-  before = "",
-  after = "",
-  first = ACTIVITIES_PAGE_LIMIT,
-  last,
-}: fetchActivitiesByCategoryNameVars) => {
-  const apolloClient = getApolloClient();
+export const fetchActivitiesByCategoryName = cache(
+  async ({
+    categoryName,
+    before = "",
+    after = "",
+    first = ACTIVITIES_PAGE_LIMIT,
+    last,
+  }: fetchActivitiesByCategoryNameVars) => {
+    const apolloClient = getApolloClient();
 
-  try {
-    const activitiesData = await apolloClient.query({
-      query: GET_ACTIVITIES_BY_CATEGORY_NAME,
-      variables: {
-        categoryName,
-        env: process.env.NODE_ENV,
-        first,
-        last,
-        before,
-        after,
-      },
-    });
+    try {
+      const activitiesData = await apolloClient.query({
+        query: GET_ACTIVITIES_BY_CATEGORY_NAME,
+        variables: {
+          categoryName,
+          env: process.env.NODE_ENV,
+          first,
+          last,
+          before,
+          after,
+        },
+      });
 
-    return {
-      ...activitiesData.data.activities.pageInfo,
-      activityList: activitiesData.data.activities.edges.map(formatActivity),
-    } as fetchActivitiesByCategoryNameData;
-  } catch (error) {
-    console.error(error);
-    return {} as fetchActivitiesByCategoryNameData;
+      return {
+        ...activitiesData.data.activities.pageInfo,
+        activityList: activitiesData.data.activities.edges.map(formatActivity),
+      } as fetchActivitiesByCategoryNameData;
+    } catch (error) {
+      console.error(error);
+      return {} as fetchActivitiesByCategoryNameData;
+    }
   }
-};
+);

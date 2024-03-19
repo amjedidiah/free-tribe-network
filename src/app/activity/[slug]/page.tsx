@@ -4,6 +4,7 @@ import ActivityContentTop from "@/components/activity/activity-content-top";
 import MoreActivities from "@/components/activity/more-activities";
 import Banner from "@/components/shared/banner";
 import { fetchActivityBySlug } from "@/lib/actions";
+import { HOURLY_REVALIDATION } from "@/lib/constants";
 import { Fragment } from "react";
 
 type Props = {
@@ -11,6 +12,8 @@ type Props = {
     slug: string;
   };
 };
+
+export const revalidate = HOURLY_REVALIDATION;
 
 export default async function Page({ params: { slug } }: Props) {
   const activity = await fetchActivityBySlug(slug);

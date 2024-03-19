@@ -2,7 +2,7 @@ import PostCard from "@/components/news-events/post-card";
 import { Post } from "@/lib/types";
 
 type Props = {
-  list: Post[];
+  list?: Post[];
 };
 
 export default function BlogList({ list }: Props) {
