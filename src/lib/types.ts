@@ -50,11 +50,14 @@ export type FetchCategoriesByIdVars = {
   hasOverflow?: boolean;
 };
 
-export type FetchCategoriesByIdData = {
+type PageInfo = {
   hasPreviousPage: boolean;
   hasNextPage: boolean;
   startCursor: string;
   endCursor: string;
+};
+
+export type FetchCategoriesByIdData = PageInfo & {
   resourceList: Resource[];
   title: string;
 };
@@ -81,12 +84,41 @@ type FeaturedImage = {
   } | null;
 };
 
+type Category = {
+  name: string;
+  id: string;
+  slug: string;
+  parent?: {
+    node: {
+      slug: string;
+    };
+  };
+};
+
 export interface IActivity {
+  id: string;
   title: string;
   content: string;
   excerpt: string;
+  description: string | TrustedHTML;
   slug: string;
   isUpcoming: boolean;
+  cursor?: string;
+  categories: Category[];
   featuredImage: FeaturedImage;
   newsFieldGroup: NewsFieldGroup;
 }
+
+export type CategoryName = "recent-activities" | "upcoming-activities";
+
+export type fetchActivitiesByCategoryNameVars = {
+  categoryName: CategoryName;
+  before?: string;
+  after?: string;
+  first?: number;
+  last?: number;
+};
+
+export type fetchActivitiesByCategoryNameData = PageInfo & {
+  activityList: IActivity[];
+};

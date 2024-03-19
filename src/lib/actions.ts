@@ -1,6 +1,10 @@
 "use server";
 import { validate } from "deep-email-validator";
-import { RESOURCES_PAGE_LIMIT, isDev } from "@/lib/constants";
+import {
+  ACTIVITIES_PAGE_LIMIT,
+  RESOURCES_PAGE_LIMIT,
+  isDev,
+} from "@/lib/constants";
 import { JSDOM } from "jsdom";
 import truncateHtml from "truncate-html";
 import { cache } from "react";
@@ -12,10 +16,13 @@ import {
   PostData,
   Resource,
   IActivity,
+  fetchActivitiesByCategoryNameVars,
+  fetchActivitiesByCategoryNameData,
 } from "@/lib/types";
 import { parse } from "rss-to-json";
 import { getApolloClient } from "@/lib/apollo-client";
 import {
+  GET_ACTIVITIES_BY_CATEGORY_NAME,
   GET_ACTIVITY_BY_SLUG,
   GET_IMAGE_BY_TITLE,
   GET_RESOURCES_BY_CATEGORY_ID,
@@ -197,18 +204,26 @@ function formatDateTime(dateObj: Date) {
   };
 }
 
-const formatActivity = ({ categories, ...rest }: any): IActivity => {
-  const isUpcoming = categories.nodes.some((item: { name: string }) =>
-    item.name.includes("Upcoming")
+const formatActivity = ({
+  cursor,
+  node: { categories, ...rest },
+}: any): IActivity => {
+  const isUpcoming = categories.nodes.some((item: { slug: string }) =>
+    item.slug.includes("upcoming")
   );
 
   return {
     ...rest,
     isUpcoming,
+    cursor,
+    categories: categories.nodes,
     newsFieldGroup: {
       ...rest.newsFieldGroup,
       ...formatDateTime(new Date(rest.newsFieldGroup.dateTime)),
     },
+    description: truncateHtml(rest.excerpt, 10, {
+      byWords: true,
+    }),
   };
 };
 
@@ -220,12 +235,46 @@ export const fetchActivityBySlug = cache(async (slug: string) => {
       query: GET_ACTIVITY_BY_SLUG,
       variables: {
         slug,
+        env: process.env.NODE_ENV,
       },
     });
-    if (!activityData.data.activities.nodes.length) return;
+    if (!activityData.data.activities.edges.length) return;
 
-    return formatActivity(activityData.data.activities.nodes[0]);
+    return formatActivity(activityData.data.activities.edges[0]);
   } catch (error) {
     console.error(error);
+    return {} as IActivity;
   }
 });
+
+export const fetchActivitiesByCategoryName = async ({
+  categoryName,
+  before = "",
+  after = "",
+  first = ACTIVITIES_PAGE_LIMIT,
+  last,
+}: fetchActivitiesByCategoryNameVars) => {
+  const apolloClient = getApolloClient();
+
+  try {
+    const activitiesData = await apolloClient.query({
+      query: GET_ACTIVITIES_BY_CATEGORY_NAME,
+      variables: {
+        categoryName,
+        env: process.env.NODE_ENV,
+        first,
+        last,
+        before,
+        after,
+      },
+    });
+
+    return {
+      ...activitiesData.data.activities.pageInfo,
+      activityList: activitiesData.data.activities.edges.map(formatActivity),
+    } as fetchActivitiesByCategoryNameData;
+  } catch (error) {
+    console.error(error);
+    return {} as fetchActivitiesByCategoryNameData;
+  }
+};

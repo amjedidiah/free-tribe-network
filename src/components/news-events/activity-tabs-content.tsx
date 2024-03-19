@@ -50,7 +50,7 @@ export default function ActivityTabsContent({
         <div
           className={cn("grid gap-10", {
             "lg:grid-cols-3 sm:grid-cols-2": isBlog,
-            "md:grid-cols-2": !isBlog,
+            "lg:grid-cols-2": !isBlog,
           })}
         >
           {children}
