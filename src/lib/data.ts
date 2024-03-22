@@ -8,10 +8,10 @@ import {
   FaXTwitter,
   FaLinkedin,
 } from "react-icons/fa6";
-import asido from "../../public/images/partners/asido-foundation.png";
-import prettylittleladies from "../../public/images/partners/pretty-little-ladies.png";
-import chiin from "../../public/images/partners/chiin.png";
-import livewire from "../../public/images/partners/live-wire.png";
+import asido from "../../public/images/partners/asido-foundation.webp";
+import prettylittleladies from "../../public/images/partners/pretty-little-ladies.webp";
+import chiin from "../../public/images/partners/chiin.webp";
+import livewire from "../../public/images/partners/live-wire.webp";
 
 export const activityTabsData = [
   {
@@ -220,15 +220,15 @@ export const initiativeData = {
 `,
     images: [
       {
-        src: "/images/initiatives/star-project/star-project-1.jpg",
+        src: "/images/initiatives/star-project/star-project-1.webp",
         alt: "star-project-1",
       },
       {
-        src: "/images/initiatives/star-project/star-project-2.jpg",
+        src: "/images/initiatives/star-project/star-project-2.webp",
         alt: "star-project-2",
       },
       {
-        src: "/images/initiatives/star-project/star-project-3.jpeg",
+        src: "/images/initiatives/star-project/star-project-3.webp",
         alt: "star-project-3",
       },
     ],
@@ -238,22 +238,22 @@ export const initiativeData = {
   repromatters: {
     ...initiatives[1],
     content: `<div><p>A bi-monthly program utilizing real life stories, medical knowledge, public health expertise, and the wide reach of the social media space, to discuss important issues affecting reproductive health and family well-being. Topics covered will center around women’s health, men’s health, children and adolescent health and well-being.</p></div>`,
-    images: [{ src: "/images/repro.png", alt: "repro" }],
+    images: [{ src: "/images/repro.webp", alt: "repro" }],
   },
   "free-tribe-boost-camp": {
     ...initiatives[2],
     content: `<div><p>A bi-monthly capacity building program for staff and volunteers of the Free Tribe Network, set to improve corporate work skills, teach industry-relevant skills, and foster bonding amongst members of the Free Tribe Network.</p></div>`,
     images: [
       {
-        src: "/images/initiatives/boost-camp/boost-camp-1.jpg",
+        src: "/images/initiatives/boost-camp/boost-camp-1.webp",
         alt: "boost-camp-1",
       },
       {
-        src: "/images/initiatives/boost-camp/boost-camp-2.jpeg",
+        src: "/images/initiatives/boost-camp/boost-camp-2.webp",
         alt: "boost-camp-2",
       },
       {
-        src: "/images/initiatives/boost-camp/boost-camp-3.jpeg",
+        src: "/images/initiatives/boost-camp/boost-camp-3.webp",
         alt: "boost-camp-3",
       },
     ],
@@ -261,27 +261,27 @@ export const initiativeData = {
   "free-tribe-helpline": {
     ...initiatives[3],
     content: `<div><p>A social service for telephone support, access to information, advice, informed interventions, and referral to reproductive and family health professionals.</p></div>`,
-    images: [{ src: "/images/helpline.png", alt: "helpline" }],
+    images: [{ src: "/images/helpline.webp", alt: "helpline" }],
   },
   "free-tribe-clubs": {
     ...initiatives[4],
     content: `<div><p>These are safe spaces set to promote open conversations, improve social support, enhance monitoring and evaluation, and improve self-led initiatives and re-intervention tactics, to ensure sustainable improvements in reproductive and family health outcomes.</p></div>`,
-    images: [{ src: "/images/clubs.png", alt: "clubs" }],
+    images: [{ src: "/images/clubs.webp", alt: "clubs" }],
   },
   "rfh-advocacy": {
     ...initiatives[5],
     content: `<div><p>This includes rallies, campaigns, weekly advocacy messages (#TeachTuesday and #FactFriday), and media programs to promote and inspire positive health behaviours.</p></div>`,
     images: [
       {
-        src: "/images/initiatives/family-health/family-health-1.jpeg",
+        src: "/images/initiatives/family-health/family-health-1.webp",
         alt: "family-health-1",
       },
       {
-        src: "/images/initiatives/family-health/family-health-2.jpeg",
+        src: "/images/initiatives/family-health/family-health-2.webp",
         alt: "family-health-2",
       },
       {
-        src: "/images/initiatives/family-health/family-health-3.png",
+        src: "/images/initiatives/family-health/family-health-3.webp",
         alt: "family-health-3",
       },
     ],
@@ -328,7 +328,7 @@ export const socials = [
   {
     name: "facebook",
     Icon: FaFacebook,
-    href: "https://web.facebook.com/freetribenetwrk",
+    href: "https://facebook.com/freetribenetwrk",
   },
   {
     name: "instagram",
@@ -445,39 +445,39 @@ export const testimonials = [
   {
     testimony:
       "The advocacy programs by the Free Tribe has helped me understand the concept of child marriage better and to help other young women and girls like my daughter. Thank you Free Tribe!",
-    src: "/images/testimonials/testimonial-1.jpeg",
+    src: "/images/testimonials/testimonial-1.webp",
     name: "Mrs. Olakitan Abiola",
   },
   {
     testimony:
       "I love the ReproMatters program. Listening to the experiences of people and what they’ve been through gives a better perspective to the issues the non-profit is addressing",
-    src: "/images/testimonials/testimonial-2.jpeg",
+    src: "/images/testimonials/testimonial-2.webp",
     name: "Moses Plangkat",
   },
   {
     testimony:
       "As a beneficiary of the family planning resources offered by the non-profit, I can attest to the positive impact on our lives. It has empowered us to plan and nurture a healthier, happier family.",
-    src: "/images/testimonials/testimonial-3.jpeg",
+    src: "/images/testimonials/testimonial-3.webp",
     name: "Mrs. Blessing Omenka",
     title: "Head of Design, Layers",
   },
   {
     testimony:
       "As a young woman, the organization's youth-friendly health services allowed me to seek guidance without judgment. I feel empowered and informed about my reproductive health.",
-    src: "/images/testimonials/testimonial-4.jpeg",
+    src: "/images/testimonials/testimonial-4.webp",
     name: "Kwamina Obo",
   },
   {
     testimony:
       "Partnering with the Free Tribe Network has been a game changer. It has opened doors to a wealth of knowledge and support.",
-    src: "/images/testimonials/testimonial-5.jpeg",
+    src: "/images/testimonials/testimonial-5.webp",
     name: "Moyo Adedayo",
     title: "Founder, Her Power",
   },
   {
     testimony:
       "As an organization focused on empowering people via healthcare education, CHIIN's partnership with this non-profit has expanded our capacity to serve the community. Their shared commitment to improving reproductive health has resulted in a stronger, healthier population.",
-    src: "/images/testimonials/testimonial-6.jpeg",
+    src: "/images/testimonials/testimonial-6.webp",
     name: "Sayo Eweje",
     title:
       "Co-Managing Director, Critical Healthcare Information Integration Network (CHIIN)",
@@ -485,108 +485,108 @@ export const testimonials = [
   {
     testimony:
       "Members of the Free Tribe Network are the most passionate individuals I have met. They make enormous work look too easy with their collective efforts",
-    src: "/images/testimonials/testimonial-7.jpeg",
+    src: "/images/testimonials/testimonial-7.webp",
     name: " Dayhana Hernandez,",
     title: "Program Advisor, Girls First Fund, Domincan Republic.",
   },
   {
     testimony:
       "Our organization is proud to be in partnership with this non-profit. Their innovative programs and unwavering support have greatly enhanced our ability to address reproductive health challenges, ultimately improving the lives of those we serve",
-    src: "/images/testimonials/testimonial-8.jpeg",
+    src: "/images/testimonials/testimonial-8.webp",
     name: "Dr Gbonjubola Abiri",
     title: "CEO, RediMed Consulting",
   },
   {
     testimony:
       "It was a pleasure to work with the Free Tribe Network on the RepoMatters program. Their work to raise awareness is vital in changing harmful, cultural practices that affect women and girls",
-    src: "/images/testimonials/testimonial-9.jpeg",
+    src: "/images/testimonials/testimonial-9.webp",
     name: "Aziza Kibibi",
     title: "Founder, Pretty Little Ladies",
   },
   {
     testimony:
       "I enjoyed my time with the Free Tribe Network. There are so many good things to say about the network and the awesome work they do!  Most of all, their public relations is the best I have ever seen. They will leave an indelible mark in the sands of time.",
-    src: "/images/testimonials/testimonial-10.jpeg",
+    src: "/images/testimonials/testimonial-10.webp",
     name: "Pharm. Tobechuckwu Nneji ",
     title: "Pharmacist",
   },
   {
     testimony:
       "Through the Free Tribe Network’s initiatives, I have gained access to essential healthcare services, empowering me to make informed choices for my family's well-being. Grateful for the positive impact!",
-    src: "/images/testimonials/testimonial-11.jpeg",
+    src: "/images/testimonials/testimonial-11.webp",
     name: "Dr Muhammed Odedeji",
     title: "Medical Doctor",
   },
   {
     testimony:
       "The Free Tribe Network is out to inspire actions for sustained reproductive health and family well-being. This is very essential for mental health, as they provide safe spaces for discussions to make people feel supported and equipped to prioritize their family's well-being. I am proud to support the good work they do.",
-    src: "/images/testimonials/testimonial-12.jpeg",
+    src: "/images/testimonials/testimonial-12.webp",
     name: "Dr Jibril Abdulmalik",
     title: "Founder/CEO, Asido Foundation",
   },
   {
     testimony:
       "The Free Tribe Network is a group of young people doing great work, having those very important conversations that we often shy away from. I hope they continue to grow higher and higher.",
-    src: "/images/testimonials/testimonial-13.jpeg",
+    src: "/images/testimonials/testimonial-13.webp",
     name: "Dr Munirat Antoinette Lecky(Anto Lecky)",
   },
 ];
 
 export const bots = [
   {
-    src: "/images/bot/bot-1.png",
+    src: "/images/bot/bot-1.webp",
     name: "Dr Adebayo, Ayodeji Matthew",
     title: "Chairman, BOT",
     description: `<p>A public health physician, a seasoned researcher, and a senior lecturer in the Department of Community Medicine, University of Ibadan, Nigeria. He has published over 85 academic papers, and presented at several international and national conferences. He is a recipient of several grants, and was Principal Investigator for a World Bank funded project, targeting couples in Ibadan, Nigeria.</p>`,
   },
   {
-    src: "/images/bot/bot-2.png",
+    src: "/images/bot/bot-2.webp",
     name: "Rev Eweje, John",
     title: "Vice Chairman, BOT",
     description: `<p>A retired Project Manager with 30 years of experience at the Shell Petroleum Development Company of Nigeria. He holds a PhD in Strategy, Project and Programs management, and serves post-retirement as a missionary in Europe.`,
   },
   {
-    src: "/images/bot/bot-3.png",
+    src: "/images/bot/bot-3.webp",
     name: "Oluwagbemi-Jacob Tosin",
     title: "Secretary, BOT",
     description: `<p>A public health specialist and the Executive Director of the Free Tribe Network. With over 5 years invested in administrative planning, project and program management, research, monitoring and evaluation, he has efficiently managed over 20 non-profit projects and operations across Nigeria.</p>
 <p>His collaborations with the University College Hospital, Ibadan, and other other notable institutes reflect an especial interest and dedication to mental health, reproductive health and family well-being.</p>`,
   },
   {
-    src: "/images/bot/bot-4.png",
+    src: "/images/bot/bot-4.webp",
     name: "Prof. Obafemi, Frances Ngozi",
     title: "Member, BOT",
     description: `<p>A Professor of Monetary Economics with extensive publications, industrial policy drafting experience, and consultancy roles with the World Bank and United Nations Industrial Development Organization (UNIDO). She has served as a research fellow for the National Defence College, Abuja, and the National Institute for Policy & Strategic Studies (NIPSS), and is the co-founder of the Happy Home Club; a teaching/coaching establishment for single and married persons.</p>`,
   },
   {
-    src: "/images/bot/bot-5.png",
+    src: "/images/bot/bot-5.webp",
     name: "Dr Atoyebi, Aderonke O.",
     title: "Member, BOT",
     description: `<p>A senior registrar at the Department of Community Medicine, University College Hospital, Ibadan. She specialises in women’s health and gender based violence. She is a medical doctor certified in Economic Evaluation in Global Health, currently rounding off a Masters of Public Health. She has diverse experience, including research assistance for the World Maternal Anti-fibrinolytic Trial, survey supervision for the World Health Organization, and contributions to COVID-19 response efforts and reproductive health policy implementation in Nigeria.</p>`,
   },
   {
-    src: "/images/bot/bot-6.png",
+    src: "/images/bot/bot-6.webp",
     name: "Nwokafor, Obiora",
     title: "Member, BOT",
     description: `<p>A realtor, and the General Manger of Suncity Gardens Estates. He runs a social support community called ‘Boy’s lounge’ for boys aged 9 to 25 years, and has mentored and supported several young men across Nigeria.</p>
 <p>He coordinated a two-year project to manage pregnant women living with HIV/AIDS, to prevent Maternal-To-Child-Transmission during this period.</p>`,
   },
   {
-    src: "/images/bot/bot-7.png",
+    src: "/images/bot/bot-7.webp",
     name: "Madu, Ihuomachidire I.",
     title: "Member, BOT",
     description: `<p>The partnership Manager and Legal Advisor at Silicon Africa Technologies Ltd, and  Project Manager for Social Media Fest (SMFEST); a global social impact platform that exposes creatives to the advantages and leverages of social media and technology.</p>
 <p>She is a lawyer and human rights activist; a passionate advocate for youth development and financial literacy, inspiring young women into leadership and responsibility.</p>`,
   },
   {
-    src: "/images/bot/bot-8.png",
+    src: "/images/bot/bot-8.webp",
     name: "Fadayomi, Sefunmi G.",
     title: "Member, BOT",
     description: `<p>Excelled as the most outstanding student during her Masters at Eastern Kentucky University, USA. A public health specialist in Environmental and Occupational Health, currently working with Owens Corning to promote basic healthcare, education, and safe, efficient housing solutions.</p>
 <p>She worked as a scholarship officer with the Bethesda Child Support agency, to support disadvantaged children with free education in Nigeria.</p>`,
   },
   {
-    src: "/images/bot/bot-9.png",
+    src: "/images/bot/bot-9.webp",
     name: "Mfon, Andikan A.",
     title: "Member, BOT",
     description: `<p>A seasoned Analyst in Investment Banking at Afrinvest West Africa Limited. He is an Associate Chartered Accountant, with over 5 years of expertise in various financial areas, including equity and debt capital raise, mergers and acquisitions, business valuation, and financial due diligence.</p>`,
@@ -632,37 +632,37 @@ export const visionMissionData = [
 
 export const workFamily = [
   {
-    src: "/images/work-family/work-family-1.png",
+    src: "/images/work-family/work-family-1.webp",
     name: "Busayo Oyetubosun",
     title: "Admin",
   },
   {
-    src: "/images/work-family/work-family-2.png",
+    src: "/images/work-family/work-family-2.webp",
     name: "Mikka Erem",
     title: "Program Officer",
   },
   {
-    src: "/images/work-family/work-family-3.png",
+    src: "/images/work-family/work-family-3.webp",
     name: "Susan Kebu",
     title: "Project Associate",
   },
   {
-    src: "/images/work-family/work-family-4.png",
+    src: "/images/work-family/work-family-4.webp",
     name: "Tolu Oluwagbemi-Jacob",
     title: "Communications Officer",
   },
   {
-    src: "/images/work-family/work-family-5.png",
+    src: "/images/work-family/work-family-5.webp",
     name: "Uche Kennedy",
     title: "IT Lead",
   },
   {
-    src: "/images/work-family/work-family-6.png",
+    src: "/images/work-family/work-family-6.webp",
     name: "Oluwatobi Alawode",
     title: "Logistics Officer",
   },
   {
-    src: "/images/work-family/work-family-7.png",
+    src: "/images/work-family/work-family-7.webp",
     name: "Grace Vin-Otebele",
     title: "Monitoring & Evaluation Officer",
   },
@@ -703,31 +703,31 @@ export const problems = [
     title: "Limited Education",
     description:
       "A lack of comprehensive RH and FH education leaves individuals vulnerable to misinformation and prevents them from making informed decisions about their well-being.",
-    image: "/images/the-problem/limited-education.png",
+    image: "/images/the-problem/limited-education.webp",
   },
   {
     title: "Data Fragmentation ",
     description:
       "Without a centralized database of reproductive health (RH) and family health (FH) issues, interventions are often scattered and inefficient, leaving gaps in addressing critical needs.",
-    image: "/images/the-problem/data-fragmentation.png",
+    image: "/images/the-problem/data-fragmentation.webp",
   },
   {
     title: "Isolated Communities",
     description:
       "Many communities lack access to adequate reproductive and family health resources, leading to feelings of isolation and uncertainty about where to turn for support.",
-    image: "/images/the-problem/isolated-communities.png",
+    image: "/images/the-problem/isolated-communities.webp",
   },
   {
     title: "Health Inequality",
     description:
       "Disparities in access to reproductive and family health resources perpetuate inequalities, leaving marginalized populations at a disadvantage in maintaining their well-being.",
-    image: "/images/the-problem/health-inequality.png",
+    image: "/images/the-problem/health-inequality.webp",
   },
   {
     title: "Stigma and Taboos",
     description:
       "Cultural taboos and stigma surrounding reproductive and family health topics prevent open discussion and access to necessary support services, leading to shame and secrecy among affected individuals",
-    image: "/images/the-problem/stigma-taboos.png",
+    image: "/images/the-problem/stigma-taboos.webp",
   },
 ];
 

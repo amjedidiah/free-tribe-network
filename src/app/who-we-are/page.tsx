@@ -8,6 +8,9 @@ import Bot from "@/components/who-we-are/bot";
 import Team from "@/components/shared/team";
 import { workFamily } from "@/lib/data";
 import WorkWithUs from "@/components/who-we-are/work-with-us";
+import { HOURLY_REVALIDATION } from "@/lib/constants";
+
+export const revalidate = HOURLY_REVALIDATION;
 
 export default function WhoWeAre() {
   return (

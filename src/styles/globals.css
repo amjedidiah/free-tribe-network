@@ -94,13 +94,13 @@
   .border-ankara-1 {
     border-style: solid;
     border-color: transparent;
-    border-image: url('/images/ankaras/ankara-1.png') 10 repeat;
+    border-image: url('/images/ankaras/ankara-1.webp') 10 repeat;
   }
 
   .border-ankara-4 {
     border-style: solid;
     border-color: transparent;
-    border-image: url('/images/ankaras/ankara-4.png') 10 repeat;
+    border-image: url('/images/ankaras/ankara-4.webp') 10 repeat;
   }
 
   .swiper-button-prev {
@@ -120,23 +120,23 @@
   }
 
   .bg-problem-1 {
-    background: linear-gradient(180deg, rgba(0 0 0 / 0%) 31.55%, rgba(0 0 0 / 80%) 69.19%), url('/images/the-problem/limited-education.png') lightgray 50% / cover no-repeat;
+    background: linear-gradient(180deg, rgba(0 0 0 / 0%) 31.55%, rgba(0 0 0 / 80%) 69.19%), url('/images/the-problem/limited-education.webp') lightgray 50% / cover no-repeat;
   }
 
   .bg-problem-2 {
-    background: linear-gradient(180deg, rgba(0 0 0 / 0%) 31.55%, rgba(0 0 0 / 80%) 69.19%), url('/images/the-problem/data-fragmentation.png') lightgray 50% / cover no-repeat;
+    background: linear-gradient(180deg, rgba(0 0 0 / 0%) 31.55%, rgba(0 0 0 / 80%) 69.19%), url('/images/the-problem/data-fragmentation.webp') lightgray 50% / cover no-repeat;
   }
 
   .bg-problem-3 {
-    background: linear-gradient(180deg, rgba(0 0 0 / 0%) 31.55%, rgba(0 0 0 / 80%) 69.19%), url('/images/the-problem/isolated-communities.png') lightgray 50% / cover no-repeat;
+    background: linear-gradient(180deg, rgba(0 0 0 / 0%) 31.55%, rgba(0 0 0 / 80%) 69.19%), url('/images/the-problem/isolated-communities.webp') lightgray 50% / cover no-repeat;
   }
 
   .bg-problem-4 {
-    background: linear-gradient(180deg, rgba(0 0 0 / 0%) 31.55%, rgba(0 0 0 / 80%) 69.19%), url('/images/the-problem/health-inequality.png') lightgray 50% / cover no-repeat;
+    background: linear-gradient(180deg, rgba(0 0 0 / 0%) 31.55%, rgba(0 0 0 / 80%) 69.19%), url('/images/the-problem/health-inequality.webp') lightgray 50% / cover no-repeat;
   }
 
   .bg-problem-5 {
-    background: linear-gradient(180deg, rgba(0 0 0 / 0%) 31.55%, rgba(0 0 0 / 80%) 69.19%), url('/images/the-problem/stigma-taboos.png') lightgray 50% / cover no-repeat;
+    background: linear-gradient(180deg, rgba(0 0 0 / 0%) 31.55%, rgba(0 0 0 / 80%) 69.19%), url('/images/the-problem/stigma-taboos.webp') lightgray 50% / cover no-repeat;
   }
 }
 

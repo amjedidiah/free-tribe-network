@@ -21,7 +21,10 @@ export default async function Page({ params: { slug } }: Props) {
 
   return (
     <Fragment>
-      <Banner image={activity.featuredImage?.node?.mediaItemUrl} />
+      <Banner
+        image={activity.featuredImage?.node?.mediaItemUrl}
+        imageTitle="activity-banner"
+      />
       <section className="pt-10 flex flex-col gap-20">
         <ActivityContentTop {...activity} />
         <ActivityContentAbout {...activity} />

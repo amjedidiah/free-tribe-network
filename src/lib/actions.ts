@@ -72,7 +72,7 @@ const extractContentImage = (text: string) => {
 const formatPostsData = (postsData: PostData[]): Post[] =>
   postsData.map(({ category, title, content, published, link }) => ({
     image:
-      extractContentImage(content) || "/images/banners/who-we-are-banner.jpeg",
+      extractContentImage(content) || "/images/banners/who-we-are-banner.webp",
     initiatives: category,
     title,
     link,

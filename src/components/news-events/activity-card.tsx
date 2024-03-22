@@ -5,6 +5,7 @@ import SafeHTML from "@/components/shared/safe-html";
 import Link from "next/link";
 
 export default function ActivityCard({
+  slug,
   featuredImage,
   title,
   description,
@@ -17,7 +18,7 @@ export default function ActivityCard({
         <Image
           fill
           sizes="100%"
-          src={featuredImage?.node?.mediaItemUrl || "/images/activity.png"}
+          src={featuredImage?.node?.mediaItemUrl || "/images/activity.webp"}
           alt={title}
           style={{ objectPosition: "center", objectFit: "cover" }}
         />
@@ -27,7 +28,18 @@ export default function ActivityCard({
           {date} by {time} at {venue}
         </p>
         <div className="h5-gap">
-          <h5 className="align-self-start font-semibold">{title}</h5>
+          <Link
+            href={`/activity/${slug}`}
+            className="flex justify-between items-center"
+          >
+            <h5 className="align-self-start font-semibold">{title}</h5>
+            <Image
+              src="/icons/arrow-up-right.svg"
+              alt="arrow-up-right"
+              width={24}
+              height={24}
+            />
+          </Link>
           <div className="text-description">
             <SafeHTML htmlContent={description} />
           </div>

@@ -60,7 +60,7 @@ export default function Nav() {
               <ScrollLink to="contact-us" smooth>
                 <Button variant="outline">Contact Us</Button>
               </ScrollLink>
-              <Link href="donate">
+              <Link href="/donate">
                 <Button>Donate</Button>
               </Link>
             </div>

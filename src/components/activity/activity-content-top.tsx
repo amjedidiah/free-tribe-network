@@ -3,7 +3,7 @@ import Socials from "@/components/shared/socials";
 import Link from "next/link";
 import { volunteerNowLink } from "@/lib/data";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
+import ContentImage from "@/components/shared/content-image";
 import { IActivity } from "@/lib/types";
 import SafeHTML from "@/components/shared/safe-html";
 
@@ -18,9 +18,7 @@ export default function ActivityContentTop({
   newsFieldGroup: { dateTime },
   excerpt,
 }: Props) {
-  const imageUrl = isUpcoming
-    ? "/images/activity-ankara-2.png"
-    : "/images/activity-ankara-1.png";
+  const imageTitle = isUpcoming ? "activity-ankara-2" : "activity-ankara-1";
 
   return (
     <article className="container flex flex-col gap-8">
@@ -38,7 +36,7 @@ export default function ActivityContentTop({
         })}
       />
       <div className="h-72 relative">
-        <Image src={imageUrl} alt="Ankara activity" fill sizes="100%" />
+        <ContentImage title={imageTitle} fill sizes="100%" />
         {isUpcoming && (
           <div className="absolute left-0 right-0 h-full flex items-center justify-center gap-4 [&_a]:py-[0.625rem] [&_a]:px-[1.125rem] [&_a]:rounded-[0.5rem]">
             <Link href="/donate" className=" text-primary-400 bg-white">

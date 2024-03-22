@@ -21,7 +21,7 @@ export default function HistoryMissionVision() {
               to complications and medical negligence following childbirth.
             </p>
             <Image
-              src="/images/inspiration.png"
+              src="/images/inspiration.webp"
               alt="history"
               width={1920}
               height={1080}

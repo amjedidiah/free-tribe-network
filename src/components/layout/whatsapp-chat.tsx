@@ -11,9 +11,7 @@ export default function WhatsappChat() {
           target="_blank"
         >
           <div className="flex gap-2 lg:gap-4 items-center">
-            {/* <div className="bg-white text-secondary-900 p-3 lg:px-6 rounded-full shadow-md flex">
-              Chat <span className="hidden lg:block ms-2"> With Us</span>
-            </div> */}
+            <span className="hidden">WhatsApp Icon</span>
             <span className="shadow-md rounded-3xl relative w-12 h-12 lg:w-14 lg:h-14">
               <Image
                 src="/icons/whatsapp-icon.svg"

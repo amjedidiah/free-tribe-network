@@ -3,6 +3,9 @@ import { Fragment, Suspense } from "react";
 import Banner from "@/components/shared/banner";
 import { initiatives } from "@/lib/data";
 import Support from "@/components/shared/support";
+import { HOURLY_REVALIDATION } from "@/lib/constants";
+
+export const revalidate = HOURLY_REVALIDATION;
 
 export default function OurInitiatives() {
   return (

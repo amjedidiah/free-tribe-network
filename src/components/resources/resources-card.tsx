@@ -13,7 +13,7 @@ export default function ResourcesCard({
   modifiedDate,
   description,
   url,
-  src = "/images/bulletin.png",
+  src = "/images/bulletin.webp",
   className,
 }: ResourcesCardProps) {
   return (

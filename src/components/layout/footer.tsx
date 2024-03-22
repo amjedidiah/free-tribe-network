@@ -1,9 +1,9 @@
-import Image from "next/image";
 import ContactCard from "@/components/layout/contact-card";
 import SubscribeForm from "@/components/subscribe-form";
 import Link from "next/link";
 import { contactChannels, currentYear, routes } from "@/lib/data";
 import Socials from "@/components/shared/socials";
+import ContentImage from "@/components/shared/content-image";
 
 export default function Footer() {
   return (
@@ -26,9 +26,8 @@ export default function Footer() {
             <div className="flex flex-col gap-6">
               <Link href="/">
                 <div className="relative h-[60px] w-[60px]">
-                  <Image
-                    src="/images/free tribe white.png"
-                    alt="logo"
+                  <ContentImage
+                    title="free-tribe-white"
                     fill
                     sizes="100%"
                     style={{ objectFit: "cover", objectPosition: "center" }}
