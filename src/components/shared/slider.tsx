@@ -47,7 +47,7 @@ export default function Slider({
     api.on("select", () => setCurrent(api.selectedScrollSnap() + 1));
 
     // slide next on click
-    api.on("pointerDown", () => setClickCount((prev) => prev + 1));
+    api.on("pointerUp", () => setClickCount((prev) => prev + 1));
 
     if (shouldFit)
       api.on("scroll", () => {
