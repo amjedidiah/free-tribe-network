@@ -28,19 +28,17 @@ export default function PostCard({
       <div className="flex flex-col items-stretch gap-3">
         <div className="grid gap-3">
           <div className="h5-gap">
-            <div className="flex justify-between items-center">
-              <h5 className="text-gray-900">
-                <a href={link} target="_blank">
-                  {title}
-                </a>
-              </h5>
-              <Image
-                src="/icons/arrow-up-right.svg"
-                alt="arrow-up-right"
-                width={24}
-                height={24}
-              />
-            </div>
+            <a href={link} target="_blank">
+              <div className="flex justify-between items-center">
+                <h5 className="text-gray-900">{title}</h5>
+                <Image
+                  src="/icons/arrow-up-right.svg"
+                  alt="arrow-up-right"
+                  width={24}
+                  height={24}
+                />
+              </div>
+            </a>
             <div className="">
               <SafeHTML htmlContent={desc} />
             </div>
@@ -55,19 +53,11 @@ export default function PostCard({
                 {formatLinkLabel(item)}
               </Badge>
             ))}
-            {/* <span className="mr-3">{readTime}</span> */}
           </div>
         </div>
 
         <div className="flex gap-3 items-center">
-          {/* <Image
-            height={40}
-            width={40}
-            src={authorImage}
-            alt={author}
-          /> */}
           <div className="text-gray-900 text-sm">
-            {/* <p className="font-medium">{author}</p> */}
             <p className="text-gray-500 text-sm">{date}</p>
           </div>
         </div>

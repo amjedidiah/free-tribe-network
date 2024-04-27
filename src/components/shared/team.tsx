@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import Image from "next/image";
+import ContentImageClient from "@/components/shared/content-image-client";
 import Link from "next/link";
 import { HTMLAttributes } from "react";
 
@@ -49,9 +49,8 @@ export default function Team({
           {mates.map(({ name, src, title }) => (
             <div key={name} className="grid gap-4">
               <div className="lg:w-[288px] h-[296px] relative image-container">
-                <Image
-                  src={src}
-                  alt={name}
+                <ContentImageClient
+                  title={src}
                   fill
                   sizes="100%"
                   style={{ objectFit: "cover", objectPosition: "center" }}

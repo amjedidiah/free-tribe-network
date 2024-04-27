@@ -1,28 +1,27 @@
 import { defaultNewsEventSection } from "@/lib/data";
+import { IActivity } from "@/lib/types";
 import { useSearchParams } from "next/navigation";
 import { useMemo } from "react";
 
-type UseInitiativeDataProps<T> = Array<T & { initiative: string }>;
-
-export default function useInitiativeData<K>(
-  initInitiativeData: UseInitiativeDataProps<K>
+export default function useInitiativeData(
+  initInitiativeData?: IActivity[],
+  trigger = defaultNewsEventSection
 ) {
   const searchParams = useSearchParams();
   const urlInitiative = searchParams.get("initiative");
-  const urlSection = searchParams.get("section") || defaultNewsEventSection;
+  const urlSection = searchParams.get("section") || trigger;
   const allSearchParams = Array.from(searchParams.entries());
 
   const shouldShowRefreshButton = useMemo(() => {
-    if (allSearchParams.length === 1 && urlSection === defaultNewsEventSection)
-      return false;
+    if (allSearchParams.length === 1 && urlSection === trigger) return false;
     return true;
-  }, [allSearchParams.length, urlSection]);
+  }, [allSearchParams.length, trigger, urlSection]);
 
   const displayedData = useMemo(() => {
     if (!urlInitiative) return initInitiativeData;
 
-    return initInitiativeData.filter(
-      (activity) => activity.initiative === urlInitiative
+    return initInitiativeData?.filter((activity) =>
+      activity.categories.some((item) => item.slug === urlInitiative)
     );
   }, [initInitiativeData, urlInitiative]);
 

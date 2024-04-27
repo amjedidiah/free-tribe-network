@@ -8,7 +8,7 @@ export default function Tweets() {
         <div id="tweets" className="max-w-full">
           <a
             className="twitter-timeline"
-            data-height="344"
+            data-height="576"
             href="https://twitter.com/freetribenetwrk?ref_src=twsrc%5Etfw"
           >
             Tweets by freetribenetwrk

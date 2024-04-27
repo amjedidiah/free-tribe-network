@@ -1,3 +1,4 @@
+import ContentImage from "@/components/shared/content-image";
 import Image from "next/image";
 
 export default function HomeOurVision() {
@@ -13,7 +14,6 @@ export default function HomeOurVision() {
           </p>
         </div>
 
-        {/* SDGs */}
         <div className="grid sm:max-lg:grid-cols-3 lg:grid-cols-2 [&>div]:pt-4 [&>div]:px-4">
           <div className="flex flex-col max-lg:justify-between lg:flex-row lg:items-center gap-4 bg-[#f69fd2] lg:col-span-2">
             <div className="">
@@ -25,12 +25,7 @@ export default function HomeOurVision() {
               </h4>
             </div>
             <div className="flex lg:flex-1 justify-end">
-              <Image
-                src="/images/sdg/sdg-5.png"
-                alt="sdg 5"
-                width={420}
-                height={411}
-              />
+              <ContentImage title="sdg-5" width={420} height={411} />
             </div>
           </div>
           <div className="flex flex-col justify-between gap-4 bg-[#7daabe]">
@@ -43,12 +38,7 @@ export default function HomeOurVision() {
               </h4>
             </div>
             <div className="flex justify-end">
-              <Image
-                src="/images/sdg/sdg-10.png"
-                alt="sdg 10"
-                width={309}
-                height={241}
-              />
+              <ContentImage title="sdg-10" width={309} height={241} />
             </div>
           </div>
           <div className="grid items-center gap-4 bg-[#04436e]">
@@ -63,7 +53,7 @@ export default function HomeOurVision() {
             <div className="flex justify-end">
               <Image
                 src="/images/sdg/sdg-3.svg"
-                alt="sdg 3"
+                alt="sdg-3"
                 width={309}
                 height={241}
               />

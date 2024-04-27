@@ -1,22 +1,15 @@
 "use client";
 import { TabsContent } from "@/components/ui/tabs";
-import ActivityPagination from "@/components/news-events/activity-pagination";
-import { cn, formatLinkLabel } from "@/lib/utils";
+import { formatLinkLabel } from "@/lib/utils";
 import { PropsWithChildren } from "react";
 import { Badge } from "@/components/ui/badge";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 type ActivityTabsContentProps = PropsWithChildren & {
   trigger: string;
-  isBlog?: boolean;
 };
 
-export default function ActivityTabsContent({
-  children,
-  trigger,
-  isBlog = false,
-  ...rest
-}: ActivityTabsContentProps) {
+export default function ActivityTabsContent({ children, trigger }: ActivityTabsContentProps) {
   const searchParams = useSearchParams();
   const initiative = searchParams.get("initiative") || "";
   const router = useRouter();
@@ -46,17 +39,7 @@ export default function ActivityTabsContent({
           </Badge>
         </div>
       )}
-      <div className="flex flex-col gap-4 lg:gap-8">
-        <div
-          className={cn("grid gap-10", {
-            "lg:grid-cols-3 sm:grid-cols-2": isBlog,
-            "md:grid-cols-2": !isBlog,
-          })}
-        >
-          {children}
-        </div>
-        <ActivityPagination {...rest} />
-      </div>
+      {children}
     </TabsContent>
   );
 }

@@ -1,12 +1,12 @@
 import { Fragment } from "react";
 import ContentImage from "@/components/shared/content-image";
-import { HOURLY_REVALIDATION } from "@/lib/constants";
+import { MINUTELY_REVALIDATION } from "@/lib/constants";
 import ProjectReport from "@/components/resources/project-report";
 import ResourcesList from "@/components/resources/resources-list";
 import { ResourcesIds } from "@/lib/types";
 import Banner from "@/components/shared/banner";
 
-export const revalidate = HOURLY_REVALIDATION;
+export const revalidate = MINUTELY_REVALIDATION;
 
 const Resources = () => {
   return (
@@ -16,6 +16,7 @@ const Resources = () => {
         width={2880}
         height={1246}
         className="mt-20 min-w-full 2xl:hidden"
+        priority
       />
       <Banner imageTitle="resources-banner" className="max-2xl:hidden" />
       <ProjectReport />

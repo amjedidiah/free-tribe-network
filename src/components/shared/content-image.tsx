@@ -1,5 +1,5 @@
 import Image, { ImageProps } from "next/image";
-import { fetchImageByTitle } from "@/lib/actions";
+import { fetchImageByTitle } from "@/lib/actions/wordpress";
 
 type Props = {
   title: string;

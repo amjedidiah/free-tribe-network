@@ -4,6 +4,14 @@ import {
   InMemoryCache,
   NormalizedCacheObject,
 } from "@apollo/client";
+import { isDev } from "@/lib/constants";
+import { loadErrorMessages, loadDevMessages } from "@apollo/client/dev";
+
+if (isDev) {
+  // Adds messages only in a dev environment
+  loadDevMessages();
+  loadErrorMessages();
+}
 
 let client: ApolloClient<NormalizedCacheObject>;
 
@@ -28,5 +36,6 @@ export function _createApolloClient() {
       uri: process.env.NEXT_PUBLIC_WORDPRESS_GRAPHQL_ENDPOINT,
     }),
     cache: new InMemoryCache(),
+    connectToDevTools: isDev,
   });
 }

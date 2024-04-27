@@ -1,5 +1,5 @@
 import { testimonials } from "@/lib/data";
-import Image from "next/image";
+import ContentImageClient from "@/components/shared/content-image-client";
 import Slider from "@/components/shared/slider";
 import { CarouselItem } from "@/components/ui/carousel";
 
@@ -24,9 +24,8 @@ export default function Testimonials() {
                 <h5 className="text-description">{testimony}</h5>
                 <div className="flex flex-col items-center gap-4">
                   <div className="w-16 h-16 rounded-full relative">
-                    <Image
-                      src={src}
-                      alt={name}
+                    <ContentImageClient
+                      title={src}
                       className="rounded-full"
                       fill
                       style={{

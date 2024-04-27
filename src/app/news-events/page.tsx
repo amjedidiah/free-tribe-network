@@ -1,7 +1,10 @@
 import ActivityTabs from "@/components/news-events/activity-tabs";
 import Banner from "@/components/shared/banner";
+import { MINUTELY_REVALIDATION } from "@/lib/constants";
 import { defaultNewsEventSection } from "@/lib/data";
 import { Fragment, Suspense } from "react";
+
+export const revalidate = MINUTELY_REVALIDATION;
 
 export default function NewsEvents() {
   return (

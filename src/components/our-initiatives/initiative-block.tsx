@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+import ContentImageClient from "@/components/shared/content-image-client";
 import { CarouselItem } from "@/components/ui/carousel";
 import { useEffect, useState } from "react";
 import { fetchInitiativeData } from "@/lib/utils";
@@ -13,13 +13,9 @@ import SafeHTML from "@/components/shared/safe-html";
 
 type InitiativeBlockProps = (typeof initiatives)[number];
 
-type InitiativeDataImage = {
-  src: string;
-  alt: string;
-};
 export default function InitiativeBlock({ name, label }: InitiativeBlockProps) {
   const [content, setContent] = useState<TrustedHTML | string>();
-  const [images, setImages] = useState<InitiativeDataImage[]>([]);
+  const [images, setImages] = useState<string[]>([]);
   const { handleScroll } = useScrollToSection({
     initUrlSection: initiatives[0].name,
     shouldScroll: false,
@@ -57,12 +53,11 @@ export default function InitiativeBlock({ name, label }: InitiativeBlockProps) {
         <Slider shouldFit hasShadow>
           {images.map((i) => (
             <CarouselItem
-              key={i.alt}
+              key={i}
               className="h-[200px] sm:h-[300px] lg:h-[400px] relative"
             >
-              <Image
-                src={i.src}
-                alt={i.alt}
+              <ContentImageClient
+                title={i}
                 fill
                 sizes="100%"
                 style={{ objectFit: "cover", objectPosition: "center" }}

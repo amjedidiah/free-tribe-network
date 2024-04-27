@@ -1,4 +1,4 @@
-import Image from "next/image";
+import ContentImage from "@/components/shared/content-image";
 import { Button } from "@/components/ui/button";
 import { currentVacanciesLink, volunteerNowLink } from "@/lib/data";
 
@@ -6,9 +6,8 @@ export default function WorkWithUs() {
   return (
     <section className="relative z-[2] bg-secondary-500" id="work-with-us">
       <div className="hidden lg:block -z-[2] absolute inset-y-0 lg:-right-52 xl:-right-44 2xl:-right-20 h-full w-[calc(100vw/2)] xl:w-[calc(100vw/2-150px)] 2xl:w-[calc(100vw/2-300px)]">
-        <Image
-          src="/images/ankaras/ankara-3.png"
-          alt="ankara background"
+        <ContentImage
+          title="ankara-3"
           className="max-h-full"
           fill
           style={{ objectFit: "cover", objectPosition: "center" }}
@@ -17,9 +16,8 @@ export default function WorkWithUs() {
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-9 lg:gap-18 container pt-20 lg:pt-0">
         <div className="order-last lg:pt-40 max-lg:max-h-96 overflow-hidden">
-          <Image
-            src="/images/work-with-us.png"
-            alt="classroom"
+          <ContentImage
+            title="work-with-us"
             width={674}
             height={522}
             className="w-full max-w-full overflow-hidden"

@@ -1,5 +1,4 @@
 import {
-  amountToCents,
   formatAmount,
   getDonationCurrency,
   validateDonationAmount,
@@ -8,16 +7,15 @@ import {
 import { ChangeEvent, FormEvent, useEffect, useMemo, useState } from "react";
 import { useDebouncedCallback } from "use-debounce";
 import { CurrencyKeys, currencies } from "@/lib/data";
-import usePayStack from "@/hooks/use-paystack";
 import axios from "axios";
 import { getFEErrorMessage } from "@/lib/error";
+import { closePaymentModal, useFlutterwave } from "flutterwave-react-v3";
+import { handlePaymentPlanId } from "@/lib/actions/flutterwave";
 
 const INIT_AMOUNT = 1;
 const INIT_RATE = 1;
 const INIT_CURRENCY_LABEL = "" as CurrencyKeys;
-// TODO: Uncomment when Dollar donation is settled
-// const DOLLAR_CURRENCY_LABEL = CurrencyKeys.USD;
-const DOLLAR_CURRENCY_LABEL = "USD" as CurrencyKeys;
+const DOLLAR_CURRENCY_LABEL = CurrencyKeys.USD;
 const VALIDATION_WAIT_TIME = 1000;
 const RESPONSE_DISPLAY_TIME = 2500;
 
@@ -35,12 +33,32 @@ export default function useDonateForm() {
 
     return getDonationCurrency(currencyLabel);
   }, [currencyLabel]);
-  const initializePayment = usePayStack();
+  const [paymentPlanId, setPaymentPlanId] = useState<string>();
+
+  const initializePayment = useFlutterwave({
+    public_key: process.env.NEXT_PUBLIC_FLUTTERWAVE_PUBLIC_KEY!,
+    tx_ref: Date.now().toString(),
+    amount,
+    currency: currency?.label,
+    payment_options: "card,mobilemoney,ussd",
+    payment_plan: paymentPlanId,
+    customer: {
+      email,
+      phone_number: "",
+      name: "",
+    },
+    customizations: {
+      title: `FTN ${isReoccurring ? "Monthly" : "One-time"} Donation`,
+      description: "Donation to Free Tribe Network",
+      logo: "https://free-tribe-network.vercel.app/_next/image?url=%2Fimages%2Flogo.webp&w=128&q=75",
+    },
+  });
 
   const resetMessage = () =>
     setTimeout(() => setMessage(""), RESPONSE_DISPLAY_TIME);
 
   const onSuccess = () => {
+    closePaymentModal();
     setMessage(
       `Donation for ${currency?.sign}${formatAmount(amount)} successful`
     );
@@ -69,38 +87,6 @@ export default function useDonateForm() {
     setCurrencyLabel(e.currentTarget.value as CurrencyKeys);
   };
 
-  const handleSubscription = async () => {
-    // Attempt to fetch the plan
-    const { data } = await axios.get(
-      `/api/plans?amount=${amount}&currency=${currency?.label}`
-    );
-
-    // Create a plan with the amount and currency if the plan does not exist
-    let plan_code = data?.data?.plan_code;
-    if (!plan_code) {
-      const { data } = await axios.post("/api/plans", {
-        amount,
-        currency: currency?.label,
-      });
-
-      plan_code = data?.data?.plan_code;
-    }
-
-    // Subscribe to this plan
-    initializePayment({
-      onSuccess,
-      onClose: resetMessage,
-      config: {
-        email,
-        reference: new Date().getTime().toString(),
-        currency: currency?.label,
-        label: "FTN Monthly Donation",
-        plan: plan_code,
-        amount: 0,
-      },
-    });
-  };
-
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setHasError(false);
@@ -109,20 +95,18 @@ export default function useDonateForm() {
     try {
       // Handle subscription
       if (isReoccurring) {
-        await handleSubscription();
-        return;
+        const paymentPlanId = await await handlePaymentPlanId(
+          amount,
+          currency?.label as CurrencyKeys
+        );
+        if (paymentPlanId) setPaymentPlanId(paymentPlanId);
+        else
+          throw "Error making monthly donation. Please try one time donation";
       }
 
       initializePayment({
-        onSuccess,
+        callback: onSuccess,
         onClose: resetMessage,
-        config: {
-          amount: amountToCents(amount),
-          email,
-          reference: new Date().getTime().toString(),
-          currency: currency?.label,
-          label: "FTN One-time Donation",
-        },
       });
     } catch (error) {
       const errorMessage = getFEErrorMessage(error);

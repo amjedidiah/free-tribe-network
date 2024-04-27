@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+import ContentImageClient from "@/components/shared/content-image-client";
 import Link from "next/link";
 import { Link as ScrollLink } from "react-scroll";
 import { Button } from "@/components/ui/button";
@@ -27,7 +27,7 @@ export default function Nav() {
           )}
         >
           <Link href="/">
-            <Image src="/images/logo.webp" alt="logo" width={60} height={57} />
+            <ContentImageClient title="logo" width={60} height={57} />
           </Link>
           <div
             className={cn(
@@ -60,7 +60,7 @@ export default function Nav() {
               <ScrollLink to="contact-us" smooth>
                 <Button variant="outline">Contact Us</Button>
               </ScrollLink>
-              <Link href="donate">
+              <Link href="/donate">
                 <Button>Donate</Button>
               </Link>
             </div>

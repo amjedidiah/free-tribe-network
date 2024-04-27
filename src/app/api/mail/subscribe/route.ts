@@ -1,6 +1,18 @@
 import { NextRequest, NextResponse } from "next/server";
 import { HttpError, handleResponseError } from "@/lib/error";
-import { validateEmailAPI } from "@/lib/actions";
+import validate from "deep-email-validator";
+import { isDev } from "@/lib/constants";
+
+const validateEmailAPI = (email: string) =>
+  validate({
+    email,
+    validateDisposable: !isDev,
+    validateMx: true,
+    validateRegex: true,
+    validateSMTP: true,
+    validateTypo: false,
+  });
+
 const SibApiV3Sdk = require("sib-api-v3-typescript");
 
 // ContactAPI Instance

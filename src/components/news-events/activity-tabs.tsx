@@ -40,9 +40,11 @@ export default function ActivityTabs({ isPrimary = false, ...rest }: Props) {
       </TabsList>
       {activeSection && (
         <div id={activeSection}>
-          {activityTabsData.map(({ trigger, Component }) => (
-            <Component key={trigger} trigger={trigger} />
-          ))}
+          {activityTabsData
+            .filter((item) => item.trigger === activeSection)
+            .map(({ trigger, Component }) => (
+              <Component key={trigger} trigger={trigger} />
+            ))}
         </div>
       )}
     </Tabs>
