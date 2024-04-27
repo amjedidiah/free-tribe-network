@@ -1,13 +1,5 @@
 import Blog from "@/components/news-events/blog";
 import Activity from "@/components/news-events/activity";
-import {
-  FaInstagram,
-  FaMedium,
-  FaFacebook,
-  FaTiktok,
-  FaXTwitter,
-  FaLinkedin,
-} from "react-icons/fa6";
 import asido from "../../public/images/partners/asido-foundation.webp";
 import prettylittleladies from "../../public/images/partners/pretty-little-ladies.webp";
 import chiin from "../../public/images/partners/chiin.webp";
@@ -317,32 +309,26 @@ export const contactChannels = [
 export const socials = [
   {
     name: "x",
-    Icon: FaXTwitter,
     href: "https://x.com/freetribenetwrk",
   },
   {
     name: "linkedin",
-    Icon: FaLinkedin,
     href: "https://linkedin.com/company/freetribenetwork",
   },
   {
     name: "facebook",
-    Icon: FaFacebook,
     href: "https://facebook.com/freetribenetwrk",
   },
   {
     name: "instagram",
-    Icon: FaInstagram,
     href: "https://instagram.com/freetribenetwork",
   },
   {
     name: "tiktok",
-    Icon: FaTiktok,
     href: "https://tiktok.com/@freetribenetwork",
   },
   {
     name: "medium",
-    Icon: FaMedium,
     href: "https://medium.com/@freetribenetwork",
   },
 ];
@@ -403,7 +389,7 @@ export const donationFAQs = [
     id: "2",
     question: "How can I be sure my donation is safe?",
     answer:
-      "Our payment provider, <strong>PayStack</strong>, uses SSL encryption to protect your information and ensure that your donation is secure. Your card and personal data will be safe and secure.",
+      "Our payment provider, <strong>Flutterwave</strong>, uses SSL encryption to protect your information and ensure that your donation is secure. Your card and personal data will be safe and secure.",
   },
   {
     id: "3",
@@ -414,7 +400,7 @@ export const donationFAQs = [
     id: "4",
     question: "Will I get a receipt for my donation?",
     answer:
-      "Yes, you will be emailed a <strong>PayStack</strong> receipt for your donation.",
+      "Yes, you will be emailed a <strong>Flutterwave</strong> receipt for your donation.",
   },
   {
     id: "5",
@@ -733,7 +719,7 @@ export const problems = [
 
 export enum CurrencyKeys {
   NGN = "NGN",
-  // USD = "USD",
+  USD = "USD",
 }
 
 export const currencies = {
@@ -742,9 +728,9 @@ export const currencies = {
     sign: "₦",
     min: 100,
   },
-  // [CurrencyKeys.USD]: {
-  //   label: CurrencyKeys.USD,
-  //   sign: "$",
-  //   min: 1,
-  // },
+  [CurrencyKeys.USD]: {
+    label: CurrencyKeys.USD,
+    sign: "$",
+    min: 1,
+  },
 };

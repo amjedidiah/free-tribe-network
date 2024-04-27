@@ -22,7 +22,7 @@ export default function DonateForm() {
   } = useDonateForm();
 
   return (
-    <div className="flex flex-col gap-1 sm:gap-3 p-4 sm:p-8 lg:p-12 bg-white shadow-xl rounded-[0.5rem] lg:absolute top-1/2 lg:-translate-y-1/2 right-8 max-sm:w-[calc(100vw-2rem)]">
+    <div className="flex flex-col gap-1 sm:gap-3 p-4 sm:p-7 bg-white shadow-xl rounded-[0.5rem] lg:absolute top-1/2 lg:-translate-y-1/2 right-8 max-sm:w-[calc(100vw-2rem)]">
       <form className="flex flex-col gap-3 sm:gap-5" onSubmit={handleSubmit}>
         <div className="text-black flex items-center justify-between border border-[#ddd] rounded-[0.5rem] p-3 lg:p-4">
           <div className="flex gap-2 items-center text-lg flex-1">
@@ -73,7 +73,7 @@ export default function DonateForm() {
             ))}
           </select>
         </div>
-        <div className="grid max-lg:grid-cols-2 gap-4 lg:gap-7">
+        <div className="grid max-lg:grid-cols-2 gap-4 lg:gap-2">
           <div
             className={cn(
               "cursor-pointer p-3 lg:p-5 rounded-[0.5rem] border border-[#ddd] h5-gap items-start gap-1",

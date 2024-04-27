@@ -1,5 +1,5 @@
 "use client";
-import { fetchImageByTitle } from "@/lib/actions";
+import { fetchImageByTitle } from "@/lib/actions/wordpress";
 import { homeBannerData } from "@/lib/data";
 import { useCallback, useEffect, useState } from "react";
 import Banner from "@/components/shared/banner";

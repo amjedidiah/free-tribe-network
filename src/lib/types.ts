@@ -1,3 +1,5 @@
+import { CurrencyKeys } from "@/lib/data";
+
 export type PostData = {
   link: string;
   author: string;
@@ -121,4 +123,16 @@ export type fetchActivitiesByCategoryNameVars = {
 
 export type fetchActivitiesByCategoryNameData = PageInfo & {
   activityList: IActivity[];
+};
+
+export type FlwPaymentPlan = {
+  id: number;
+  name: string;
+  amount: number;
+  interval: string;
+  duration: number;
+  status: string;
+  currency: CurrencyKeys;
+  plan_token: string;
+  created_at: string;
 };

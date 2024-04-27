@@ -1,5 +1,5 @@
 import ProjectReportCard from "@/components/resources/project-report-card";
-import { fetchResourcesByCategoryId } from "@/lib/actions";
+import { fetchResourcesByCategoryId } from "@/lib/actions/wordpress";
 import { ResourcesIds } from "@/lib/types";
 import ShouldRender from "@/components/shared/should-render";
 

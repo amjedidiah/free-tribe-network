@@ -10,7 +10,7 @@ import Partners from "@/components/shared/partners";
 import Tweets from "@/components/home/tweets";
 import { bots } from "@/lib/data";
 import OurImpact from "@/components/shared/our-impact";
-import { fetchMediumPosts } from "@/lib/actions";
+import { fetchMediumPosts } from "@/lib/actions/medium";
 import { DAILY_REVALIDATION } from "@/lib/constants";
 
 // TODO: Cancel revalidation on this when post has become more than 3

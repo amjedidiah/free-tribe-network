@@ -47,7 +47,7 @@ export default function useScrollToSection(props?: UseScrollToSectionProps) {
 
   useEffect(() => {
     if (shouldScroll) handleScroll();
-  }, [activeSection, handleScroll, shouldScroll]);
+  }, [handleScroll, shouldScroll]);
 
   useEffect(() => {
     if (initUrlSection && !urlSection) handleSectionChange(initUrlSection);

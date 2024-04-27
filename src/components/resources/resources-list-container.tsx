@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import MyPagination from "@/components/shared/my-pagination";
 import useContentList, { UseContentListProps } from "@/hooks/use-content-list";
 import { FetchCategoriesByIdData, FetchCategoriesByIdVars } from "@/lib/types";
-import { fetchResourcesByCategoryId } from "@/lib/actions";
+import { fetchResourcesByCategoryId } from "@/lib/actions/wordpress";
 import { RESOURCES_PAGE_LIMIT } from "@/lib/constants";
 import { ResourcesListProps } from "@/components/resources/resources-list";
 import ShouldRender from "@/components/shared/should-render";

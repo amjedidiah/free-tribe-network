@@ -10,7 +10,7 @@ import {
   fetchActivitiesByCategoryNameData,
   fetchActivitiesByCategoryNameVars,
 } from "@/lib/types";
-import { fetchActivitiesByCategoryName } from "@/lib/actions";
+import { fetchActivitiesByCategoryName } from "@/lib/actions/wordpress";
 import MyPagination from "@/components/shared/my-pagination";
 import { ACTIVITIES_PAGE_LIMIT } from "@/lib/constants";
 import useContentList from "@/hooks/use-content-list";

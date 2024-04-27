@@ -2,7 +2,7 @@
 import ActivityTabsContent from "@/components/news-events/activity-tabs-content";
 import NoInitiativeData from "@/components/news-events/no-initiative-data";
 import BlogList from "@/components/shared/blog-list";
-import { fetchMediumPosts } from "@/lib/actions";
+import { fetchMediumPosts } from "@/lib/actions/medium";
 import { BLOG_PAGE_LIMIT } from "@/lib/constants";
 import { useMemo, useState } from "react";
 import useSWRImmutable from "swr/immutable";

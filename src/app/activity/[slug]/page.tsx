@@ -3,7 +3,7 @@ import ActivityContentAbout from "@/components/activity/activity-content-about";
 import ActivityContentTop from "@/components/activity/activity-content-top";
 import MoreActivities from "@/components/activity/more-activities";
 import Banner from "@/components/shared/banner";
-import { fetchActivityBySlug } from "@/lib/actions";
+import { fetchActivityBySlug } from "@/lib/actions/wordpress";
 import { HOURLY_REVALIDATION } from "@/lib/constants";
 import { Fragment } from "react";
 
