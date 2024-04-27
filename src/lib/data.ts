@@ -304,7 +304,7 @@ export const homeBannerData = [
   {
     image: "home-banner-2",
     title: "Mastery",
-    picturePosition: "center",
+    picturePosition: "center right",
     wrapperClassName: "max-xl:bg-[rgba(5,83,118,0.45)]",
     content:
       "A relentless pursuit of excellence by leveraging on critical experience, expertise, and scientific evidence, to tailor our initiatives into best practices.",
