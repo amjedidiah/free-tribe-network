@@ -68,6 +68,10 @@ export interface IContentImage {
   id: string;
   mediaItemUrl: string;
   title: string;
+  mediaDetails: {
+    height: number;
+    width: number;
+  };
 }
 
 type NewsFieldGroup = {

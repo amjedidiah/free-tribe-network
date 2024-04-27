@@ -1,7 +1,7 @@
 "use client";
 import { visionMissionData } from "@/lib/data";
 import VisionMissionCard from "@/components/who-we-are/vision-mission-card";
-import Image from "next/image";
+import ContentImageClient from "@/components/shared/content-image-client";
 import Link from "next/link";
 import useScrollToSection from "@/hooks/use-scroll-to-section";
 
@@ -20,9 +20,8 @@ export default function HistoryMissionVision() {
               Titilope Oluwagbemi-Jacob (his beloved mother) who passed on due
               to complications and medical negligence following childbirth.
             </p>
-            <Image
-              src="/images/inspiration.webp"
-              alt="history"
+            <ContentImageClient
+              title="inspiration"
               width={1920}
               height={1080}
               className="rounded shadow-ls"

@@ -59,6 +59,10 @@ export const GET_IMAGE_BY_TITLE = gql`
         id
         mediaItemUrl
         title
+        mediaDetails {
+          height
+          width
+        }
       }
     }
   }

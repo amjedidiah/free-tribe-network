@@ -1,7 +1,5 @@
 "use client";
-import { fetchImageByTitle } from "@/lib/actions/wordpress";
 import { homeBannerData } from "@/lib/data";
-import { useCallback, useEffect, useState } from "react";
 import Banner from "@/components/shared/banner";
 import Link from "next/link";
 import { Link as ScrollLink } from "react-scroll";
@@ -11,29 +9,11 @@ type HomeBannerSlideProps = (typeof homeBannerData)[number];
 
 export default function HomeBannerSlide({
   content,
-  imageTitle,
   ...rest
 }: HomeBannerSlideProps) {
-  const [image, setImage] = useState("");
-  const bannerProps = { ...rest, image };
-
-  const fetchImage = useCallback(
-    async () =>
-      fetchImageByTitle(imageTitle)
-        .then((data) => {
-          if (data.mediaItemUrl) setImage(data.mediaItemUrl);
-        })
-        .catch(console.error),
-    [imageTitle]
-  );
-
-  useEffect(() => {
-    if (imageTitle) fetchImage();
-  }, [fetchImage, imageTitle]);
-
   return (
     <CarouselItem className="relative">
-      <Banner {...bannerProps}>
+      <Banner {...rest}>
         <div className="flex flex-col gap-6">
           <p className="max-w-[41rem]">{content}</p>
 

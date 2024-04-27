@@ -32,8 +32,14 @@
 - [x] images taking long to load
 - [x] Donations with Flutterwave
 - [x] Clean up for PayStack in code and Vercel env variables
+
+- [x] 15mins caching
+- [x] gender equalities & reduced inequalities: mix of men and women
+- [x] updated site with google drive images
+- [x] linking all pictures to Wordpress
 - [ ] email service: switch to Mailchimp
-- [ ] gender equalities & reduced inequalities: mix of men and women
+- [ ] going back on the slide
+- [ ] Linking to sub section in News & Events don't work
 
 ## Pre Deployment
 

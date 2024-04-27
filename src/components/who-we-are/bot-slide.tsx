@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+import ContentImageClient from "@/components/shared/content-image-client";
 import { useSwiper, useSwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -15,7 +15,6 @@ type BotSlideProps = {
 };
 
 export default function BotSlide({
-  name,
   src,
   onSwipe,
   shouldSlideLeft,
@@ -37,15 +36,13 @@ export default function BotSlide({
   }, [shouldSlideRight, swiper]);
 
   return (
-    <Image
-      src={src}
-      alt={name}
+    <ContentImageClient
+      title={src}
       width={288}
       height={296}
       style={{ objectFit: "cover" }}
       className={cn("shadow-xl mx-auto", {
-        "border-ankara-1 border-[10px]": swiperSlide.isActive,
-        "scale-[85%]": !swiperSlide.isActive,
+        "scale-[75%]": !swiperSlide.isActive,
       })}
     />
   );

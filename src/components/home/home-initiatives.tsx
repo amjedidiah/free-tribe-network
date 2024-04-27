@@ -1,5 +1,5 @@
 import { topInitiativesData } from "@/lib/data";
-import Image from "next/image";
+import ContentImageClient from "@/components/shared/content-image-client";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import SafeHTML from "@/components/shared/safe-html";
@@ -25,9 +25,8 @@ export default function HomeInitiatives() {
               ({ name, label, content, images, ...rest }) => (
                 <div key={name} className="flex flex-col gap-5">
                   <div className="h-[244px] w-full relative mx-auto">
-                    <Image
-                      src={images[0].src}
-                      alt="name"
+                    <ContentImageClient
+                      title={images[0]}
                       fill
                       sizes="100%"
                       style={{ objectFit: "cover" }}
