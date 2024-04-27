@@ -38,11 +38,10 @@
 - [x] updated site with google drive images
 - [x] linking all pictures to Wordpress
 - [x] going back on the slide
-- [ ] email service: switch to Mailchimp
-- [ ] Linking to sub section in News & Events don't work
 
 ## Pre Deployment
 
+- [ ] email service: switch to Mailchimp
 - [ ] Configure `NEXT_PUBLIC_FLUTTERWAVE_PUBLIC_KEY` and `FLUTTERWAVE_SECRET_KEY` for prod
 
 ## Post Deployment
