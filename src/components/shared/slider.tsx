@@ -23,7 +23,7 @@ type SliderProps = {
 export default function Slider({
   children,
   shouldFit = false,
-  delay = 2000,
+  delay = 3000,
   hasShadow = false,
   dots = {
     activeClassName: "bg-primary-500",
@@ -47,7 +47,22 @@ export default function Slider({
     api.on("select", () => setCurrent(api.selectedScrollSnap() + 1));
 
     // slide next on click
-    api.on("pointerUp", () => setClickCount((prev) => prev + 1));
+    // api.on("pointerUp", () => setClickCount((prev) => prev + 1));
+    let kI = "";
+    api.on("pointerUp", () => {
+      if (kI === "down") setClickCount((prev) => prev + 1);
+    });
+    api.on("pointerDown", () => {
+      if (kI !== "down") {
+        kI = "down";
+      }
+    });
+    // api.on("settle", () => console.log("settle"));
+    api.on("slidesInView", () => {
+      if (kI !== "changed") {
+        kI = "changed";
+      }
+    });
 
     if (shouldFit)
       api.on("scroll", () => {
