@@ -1,12 +1,12 @@
 import { Fragment } from "react";
 import ContentImage from "@/components/shared/content-image";
-import { HOURLY_REVALIDATION } from "@/lib/constants";
+import { MINUTELY_REVALIDATION } from "@/lib/constants";
 import ProjectReport from "@/components/resources/project-report";
 import ResourcesList from "@/components/resources/resources-list";
 import { ResourcesIds } from "@/lib/types";
 import Banner from "@/components/shared/banner";
 
-export const revalidate = HOURLY_REVALIDATION;
+export const revalidate = MINUTELY_REVALIDATION;
 
 const Resources = () => {
   return (

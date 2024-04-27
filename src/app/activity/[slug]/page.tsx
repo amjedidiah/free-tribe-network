@@ -4,7 +4,7 @@ import ActivityContentTop from "@/components/activity/activity-content-top";
 import MoreActivities from "@/components/activity/more-activities";
 import Banner from "@/components/shared/banner";
 import { fetchActivityBySlug } from "@/lib/actions/wordpress";
-import { HOURLY_REVALIDATION } from "@/lib/constants";
+import { MINUTELY_REVALIDATION } from "@/lib/constants";
 import { Fragment } from "react";
 
 type Props = {
@@ -13,7 +13,7 @@ type Props = {
   };
 };
 
-export const revalidate = HOURLY_REVALIDATION;
+export const revalidate = MINUTELY_REVALIDATION;
 
 export default async function Page({ params: { slug } }: Props) {
   const activity = await fetchActivityBySlug(slug);

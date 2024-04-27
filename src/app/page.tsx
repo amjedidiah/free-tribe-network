@@ -11,10 +11,10 @@ import Tweets from "@/components/home/tweets";
 import { bots } from "@/lib/data";
 import OurImpact from "@/components/shared/our-impact";
 import { fetchMediumPosts } from "@/lib/actions/medium";
-import { DAILY_REVALIDATION } from "@/lib/constants";
+import { MINUTELY_REVALIDATION } from "@/lib/constants";
 
 // TODO: Cancel revalidation on this when post has become more than 3
-export const revalidate = DAILY_REVALIDATION;
+export const revalidate = MINUTELY_REVALIDATION;
 
 export default async function Home() {
   const mediumPosts = await fetchMediumPosts();
