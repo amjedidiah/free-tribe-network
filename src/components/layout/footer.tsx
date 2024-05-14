@@ -1,5 +1,5 @@
 import ContactCard from "@/components/layout/contact-card";
-import SubscribeForm from "@/components/subscribe-form";
+import SubscribeFormContainer from "@/components/subscribe-form-container";
 import Link from "next/link";
 import { contactChannels, currentYear, routes } from "@/lib/data";
 import Socials from "@/components/shared/socials";
@@ -46,7 +46,7 @@ export default function Footer() {
               </div>
             </div>
 
-            <SubscribeForm />
+            <SubscribeFormContainer />
           </div>
           <hr />
           <div className="flex flex-col lg:flex-row items-center justify-between gap-1">

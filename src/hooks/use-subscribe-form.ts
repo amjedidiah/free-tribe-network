@@ -1,33 +1,30 @@
-import { getFEErrorMessage } from "@/lib/error";
-import axios from "axios";
-import { ChangeEvent, FormEvent, useState } from "react";
+import { ChangeEvent, FormEventHandler, useEffect, useState } from "react";
+import { EmailFormFields, FormHooks } from "react-mailchimp-subscribe";
 
-export default function useSubscribeForm() {
+export default function useSubscribeForm({
+  status,
+  message: text,
+  subscribe,
+}: FormHooks<EmailFormFields>) {
   const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [hasError, setHasError] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [message, setMessage] = useState(text);
+  const hasError = status === "error";
+  const isLoading = status === "sending";
 
   const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) =>
     setEmail(e.currentTarget.value);
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    setIsLoading(true);
+  const handleSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault();
-    try {
-      const { data } = await axios.post("/api/mail/subscribe", { email });
 
-      setMessage(data?.message);
-      setHasError(false);
-    } catch (error) {
-      const errorMessage = getFEErrorMessage(error);
-      setMessage(errorMessage);
-      setHasError(true);
-    } finally {
-      setIsLoading(false);
-      setTimeout(() => setMessage(""), 3000);
-    }
+    subscribe({ EMAIL: email });
   };
+
+  useEffect(() => {
+    setMessage(text);
+
+    setTimeout(() => setMessage(""), 3000);
+  }, [text]);
 
   return {
     email,

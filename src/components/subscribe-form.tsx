@@ -1,9 +1,13 @@
 "use client";
+
 import { Button } from "@/components/ui/button";
 import useSubscribeForm from "@/hooks/use-subscribe-form";
 import { cn } from "@/lib/utils";
+import { Fragment, memo } from "react";
+import { EmailFormFields, FormHooks } from "react-mailchimp-subscribe";
+import ShouldRender from "@/components/shared/should-render";
 
-export default function SubscribeForm() {
+function SubscribeForm(props: FormHooks<EmailFormFields>) {
   const {
     email,
     handleEmailChange,
@@ -11,22 +15,10 @@ export default function SubscribeForm() {
     hasError,
     message,
     isLoading,
-  } = useSubscribeForm();
+  } = useSubscribeForm(props);
 
   return (
-    <div
-      id="mailing-list"
-      className="lg:w-[25rem] w-contain flex flex-col justify-between gap-4"
-    >
-      <div className="flex flex-col gap-1">
-        <h4>Subscribe to our mail</h4>
-        <p className="text-slate-300">
-          By registering, you permit the{" "}
-          <span className="font-bold">Free Tribe Network</span> to store and
-          collect your email address for the purpose of sending you our monthly
-          newsletter.
-        </p>
-      </div>
+    <Fragment>
       <form className="flex gap-4" onSubmit={handleSubmit}>
         <input
           className="rounded-md flex-grow text-black py-2 px-3 h-auto"
@@ -47,16 +39,17 @@ export default function SubscribeForm() {
           Subscribe
         </Button>
       </form>
-      {message && (
+      <ShouldRender condition={!!message}>
         <p
-          className={cn({
+          className={cn("text-white-500 text-xs -mt-2", {
             "text-primary-500": hasError,
-            "text-white-500": !hasError,
           })}
         >
-          {message}
+          {message as string}
         </p>
-      )}
-    </div>
+      </ShouldRender>
+    </Fragment>
   );
 }
+
+export default memo(SubscribeForm);
