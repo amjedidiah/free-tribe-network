@@ -38,10 +38,10 @@
 - [x] updated site with google drive images
 - [x] linking all pictures to Wordpress
 - [x] going back on the slide
+- [x] email service: switch to Mailchimp
 
 ## Pre Deployment
 
-- [ ] email service: switch to Mailchimp
 - [ ] Configure `NEXT_PUBLIC_FLUTTERWAVE_PUBLIC_KEY` and `FLUTTERWAVE_SECRET_KEY` for prod
 
 ## Post Deployment

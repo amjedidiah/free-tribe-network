@@ -12,10 +12,10 @@ function ContentImageClient({ title, ...rest }: Props) {
   const { data } = useSWRImmutable(title, fetchImageByTitle);
   if (!data) return null;
   if (!rest.width && !rest.fill) {
-    const ratio = data.mediaDetails.width / data.mediaDetails.height;
+    const ratio =
+      (data.mediaDetails?.width || 1) / (data.mediaDetails?.height || 1);
     rest.width = ratio * Number(rest.height);
   }
-  //   return <p>Hello</p>;
 
   return <Image src={data.mediaItemUrl} alt={title} {...rest} />;
 }
