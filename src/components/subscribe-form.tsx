@@ -19,7 +19,7 @@ function SubscribeForm(props: FormHooks<EmailFormFields>) {
 
   return (
     <Fragment>
-      <form className="flex gap-4" onSubmit={handleSubmit}>
+      <form className="flex max-sm:flex-wrap gap-4" onSubmit={handleSubmit}>
         <input
           className="rounded-md flex-grow text-black py-2 px-3 h-auto"
           type="email"
