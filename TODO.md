@@ -39,13 +39,21 @@
 - [x] linking all pictures to Wordpress
 - [x] going back on the slide
 - [x] email service: switch to Mailchimp
+- [x] Localization setup: <https://phrase.com/blog/posts/next-js-app-router-localization-next-intl>
 
-## Pre Deployment
-
+- [ ] Static Content Translation
+- [ ] Dynamic Content Translation
+- [ ] Localizing pathnames
+      - <https://next-intl-docs.vercel.app/docs/routing/middleware#localizing-pathnames>
+      - <https://next-intl-docs.vercel.app/docs/routing/navigation#localized-pathnames>
+- [ ] Search with Algolia
+- [ ] Configure metadata field and OG Images
+      - Localization for metadata and OG Images: <https://next-intl-docs.vercel.app/docs/environments/metadata-route-handlers>
 - [ ] Configure `NEXT_PUBLIC_FLUTTERWAVE_PUBLIC_KEY` and `FLUTTERWAVE_SECRET_KEY` for prod
 
-## Post Deployment
+## Improvements
 
-- [ ] Search with Algolia
-- [ ] Language selection
-- [ ] Configure metadata field and OG Images
+- [ ] Reduce client side JS
+      - Fetch translations server-side
+
+- [ ] CSS Localization for `rtl` languages: <https://phrase.com/blog/posts/how-do-i-use-a-css-file-for-site-localization/>

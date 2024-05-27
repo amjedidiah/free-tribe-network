@@ -1,4 +1,10 @@
 import { CurrencyKeys } from "@/lib/data";
+import enMessages from "@/locales/en.json";
+
+type Messages = typeof enMessages;
+declare global {
+  interface IntlMessages extends Messages {}
+}
 
 export type PostData = {
   link: string;
@@ -139,4 +145,20 @@ export type FlwPaymentPlan = {
   currency: CurrencyKeys;
   plan_token: string;
   created_at: string;
+};
+
+export enum LocaleCountry {
+  GB = "GB",
+  FR = "FR",
+}
+
+export enum Locale {
+  en = "en",
+  fr = "fr",
+}
+
+export type PropsWithLocaleParam = {
+  params: {
+    locale: Locale;
+  };
 };

@@ -2,7 +2,7 @@
 import { visionMissionData } from "@/lib/data";
 import VisionMissionCard from "@/components/who-we-are/vision-mission-card";
 import ContentImageClient from "@/components/shared/content-image-client";
-import Link from "next/link";
+import { Link } from "@/lib/i18n.config";
 import useScrollToSection from "@/hooks/use-scroll-to-section";
 
 export default function HistoryMissionVision() {

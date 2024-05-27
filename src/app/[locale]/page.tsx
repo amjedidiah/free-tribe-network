@@ -10,21 +10,22 @@ import Partners from "@/components/shared/partners";
 import Tweets from "@/components/home/tweets";
 import { bots } from "@/lib/data";
 import OurImpact from "@/components/shared/our-impact";
-import { fetchMediumPosts } from "@/lib/actions/medium";
 import { MINUTELY_REVALIDATION } from "@/lib/constants";
+import { PropsWithLocaleParam } from "@/lib/types";
+import { unstable_setRequestLocale } from "next-intl/server";
 
 // TODO: Cancel revalidation on this when post has become more than 3
 export const revalidate = MINUTELY_REVALIDATION;
 
-export default async function Home() {
-  const mediumPosts = await fetchMediumPosts();
+export default function Home({ params: { locale } }: PropsWithLocaleParam) {
+  unstable_setRequestLocale(locale);
 
   return (
     <Fragment>
       <HomeBanner />
       <OurImpact />
       <HomeOurVision />
-      <TopPosts {...mediumPosts} />
+      <TopPosts />
       <HomeInitiatives />
       <Testimonials />
       <Team

@@ -1,22 +1,29 @@
 "use client";
+
 import ContentImageClient from "@/components/shared/content-image-client";
-import Link from "next/link";
+import { Link } from "@/lib/i18n.config";
 import { Link as ScrollLink } from "react-scroll";
 import { Button } from "@/components/ui/button";
-import Menu from "@/components/layout/menu";
 import { Menu as Burger } from "lucide-react";
 import { routes } from "@/lib/data";
-import { useState } from "react";
+import { Suspense, memo, useState } from "react";
 import { cn } from "@/lib/utils";
-import { usePathname } from "next/navigation";
+import NavLink from "@/components/layout/nav-link";
+import LocaleSelector from "@/components/layout/locale-selector";
 
-export default function Nav() {
+function Nav() {
   const [isOpen, setIsOpen] = useState(false);
-  const pathname = usePathname();
 
   return (
     <header className="fixed w-full z-10 shadow">
-      <div></div>
+      <div className="border-b border-gray-100 bg-whitesmoke">
+        <div className="container pt-[10px] pb-[5px] justify-between flex items-center gap-10">
+          <form action=""></form>
+          <Suspense fallback={null}>
+            <LocaleSelector />
+          </Suspense>
+        </div>
+      </div>
       <nav className="bg-white border-b border-gray-100">
         <div
           className={cn(
@@ -40,21 +47,9 @@ export default function Nav() {
             )}
           >
             <ul className="flex flex-col lg:flex-row gap-x-6 gap-y-2 lg:items-center capitalize">
-              {routes.map((route) =>
-                route.links ? (
-                  <Menu key={route.label} {...route} />
-                ) : (
-                  <li
-                    key={route.label}
-                    className={cn("m-0 py-1 relative", {
-                      "text-primary-500 [&_a]:font-bold":
-                        route.href === pathname,
-                    })}
-                  >
-                    <Link href={route.href}>{route.label}</Link>
-                  </li>
-                )
-              )}
+              {routes.map((route) => (
+                <NavLink key={route.label} route={route} />
+              ))}
             </ul>
             <div className="flex gap-6 items-center">
               <ScrollLink to="contact-us" smooth>
@@ -78,3 +73,5 @@ export default function Nav() {
     </header>
   );
 }
+
+export default memo(Nav);

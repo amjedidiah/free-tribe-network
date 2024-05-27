@@ -3,12 +3,17 @@ import ContentImage from "@/components/shared/content-image";
 import { MINUTELY_REVALIDATION } from "@/lib/constants";
 import ProjectReport from "@/components/resources/project-report";
 import ResourcesList from "@/components/resources/resources-list";
-import { ResourcesIds } from "@/lib/types";
+import { PropsWithLocaleParam, ResourcesIds } from "@/lib/types";
 import Banner from "@/components/shared/banner";
+import { unstable_setRequestLocale } from "next-intl/server";
 
 export const revalidate = MINUTELY_REVALIDATION;
 
-const Resources = () => {
+export default function Resources({
+  params: { locale },
+}: PropsWithLocaleParam) {
+  unstable_setRequestLocale(locale);
+
   return (
     <Fragment>
       <ContentImage
@@ -48,6 +53,4 @@ const Resources = () => {
       />
     </Fragment>
   );
-};
-
-export default Resources;
+}

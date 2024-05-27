@@ -1,5 +1,5 @@
 import WhatWeDoCard from "@/components/who-we-are/what-we-do-card";
-import Link from "next/link";
+import { Link } from "@/lib/i18n.config";
 
 export default function WhatWeDo() {
   return (

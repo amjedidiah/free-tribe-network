@@ -1,8 +1,8 @@
-import Link from "next/link";
+import { Link } from "@/lib/i18n.config";
 
 export default function NotFound() {
   return (
-    <section className="mt-20 py-10 lg:py-14">
+    <section className="mt-36 py-10 lg:py-14">
       <article className="container text-center">
         <h1 className="font-extralight text-8xl sm:text-[10rem] md:text-[12rem] lg:text-[14rem]">
           404

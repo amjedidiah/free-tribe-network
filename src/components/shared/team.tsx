@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import ContentImageClient from "@/components/shared/content-image-client";
-import Link from "next/link";
+import { Link } from "@/lib/i18n.config";
 import { HTMLAttributes } from "react";
 
 type Mate = {

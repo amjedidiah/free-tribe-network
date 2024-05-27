@@ -13,13 +13,13 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { routes } from "@/lib/data";
 import { usePathname } from "next/navigation";
-import Link from "next/link";
+import { Link } from "@/lib/i18n.config";
 
 type MenuProps = (typeof routes)[number];
 
 export default function Menu({ label, links, href }: MenuProps) {
   const pathname = usePathname();
-  const isActive = href === pathname;
+  const isActive = pathname.includes(href);
 
   return (
     <NavigationMenu className="block max-lg:[&_*]:animate-none max-lg:[&>div]:static max-lg:[&_*]:justify-start max-lg:[&>div]:block max-lg:[&_div.absolute_*]:p-0 max-lg:[&_div.absolute_*]:border-none max-lg:[&_div.absolute_*]:shadow-none max-lg:[&_div.absolute_ul_li_*]:flex">

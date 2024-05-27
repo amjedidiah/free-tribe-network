@@ -1,23 +1,27 @@
-import NotFound from "@/app/not-found";
 import ActivityContentAbout from "@/components/activity/activity-content-about";
 import ActivityContentTop from "@/components/activity/activity-content-top";
 import MoreActivities from "@/components/activity/more-activities";
 import Banner from "@/components/shared/banner";
 import { fetchActivityBySlug } from "@/lib/actions/wordpress";
 import { MINUTELY_REVALIDATION } from "@/lib/constants";
+import { unstable_setRequestLocale } from "next-intl/server";
+import { notFound } from "next/navigation";
 import { Fragment } from "react";
 
 type Props = {
   params: {
     slug: string;
+    locale: string;
   };
 };
 
 export const revalidate = MINUTELY_REVALIDATION;
 
-export default async function Page({ params: { slug } }: Props) {
+export default async function Page({ params: { slug, locale } }: Props) {
   const activity = await fetchActivityBySlug(slug);
-  if (!activity) return <NotFound />;
+  unstable_setRequestLocale(locale);
+
+  if (!activity) return notFound();
 
   return (
     <Fragment>

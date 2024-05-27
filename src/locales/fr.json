@@ -1,0 +1,12 @@
+{
+    "Nav": {
+        "Home": "accueil",
+        "Resources": "ressources"
+    },
+    "Layout": {
+        "metaData": {
+            "title": "Réseau de tribu gratuit",
+            "description": "Bienvenue sur le réseau Free Tribe"
+        }
+    }
+}

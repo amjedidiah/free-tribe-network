@@ -1,0 +1,12 @@
+{
+    "Nav": {
+        "Home": "Home",
+        "Resources": "Resources"
+    },
+    "Layout": {
+        "metaData": {
+            "title": "Free Tribe Network",
+            "description": "Welcome to the Free Tribe Network"
+        }
+    }
+}

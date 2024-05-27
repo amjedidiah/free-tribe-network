@@ -112,17 +112,6 @@ const config = {
         "body-md-semibold": "'Maison Neue Extended'",
         "neue-montreal": "'Neue Montreal'",
       },
-      color: {
-        slate: {
-          50: "#E6EFF3",
-          500: "#065B82",
-        },
-        pink: {
-          50: "#FDE6F4",
-          500: "#EA028C",
-        },
-        white: "#ffffff",
-      },
       height: {
         "100": "28rem",
         "128": "32rem",

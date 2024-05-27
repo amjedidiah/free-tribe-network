@@ -1,14 +1,11 @@
 import BlogList from "@/components/shared/blog-list";
-import { Post } from "@/lib/types";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import { Link } from "@/lib/i18n.config";
+import { fetchMediumPosts } from "@/lib/actions/medium";
 
-type Props = {
-  posts: Post[];
-  topPosts: Post[];
-};
+export default async function TopPosts() {
+  const { posts, topPosts } = await fetchMediumPosts();
 
-export default function TopPosts({ posts, topPosts }: Props) {
   if (!posts.length) return null;
 
   return (

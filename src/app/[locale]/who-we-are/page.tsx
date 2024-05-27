@@ -9,10 +9,13 @@ import Team from "@/components/shared/team";
 import { workFamily } from "@/lib/data";
 import WorkWithUs from "@/components/who-we-are/work-with-us";
 import { MINUTELY_REVALIDATION } from "@/lib/constants";
+import { PropsWithLocaleParam } from "@/lib/types";
+import { unstable_setRequestLocale } from "next-intl/server";
 
 export const revalidate = MINUTELY_REVALIDATION;
 
-export default function WhoWeAre() {
+export default function WhoWeAre({ params: { locale } }: PropsWithLocaleParam) {
+  unstable_setRequestLocale(locale);
   return (
     <Fragment>
       <WhoWeAreBanner />

@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { IActivity } from "@/lib/types";
 import SafeHTML from "@/components/shared/safe-html";
-import Link from "next/link";
+import { Link } from "@/lib/i18n.config";
 
 export default function ActivityCard({
   slug,

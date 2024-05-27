@@ -4,7 +4,7 @@ import { CarouselItem } from "@/components/ui/carousel";
 import { useEffect, useState } from "react";
 import { fetchInitiativeData } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import { Link } from "@/lib/i18n.config";
 import { initiatives } from "@/lib/data";
 import { Element } from "react-scroll";
 import useScrollToSection from "@/hooks/use-scroll-to-section";

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { formatLinkLabel } from "@/lib/utils";
-import Link from "next/link";
+import { Link } from "@/lib/i18n.config";
 import { useSearchParams } from "next/navigation";
 
 type Props = {

@@ -1,6 +1,6 @@
 import ContactCard from "@/components/layout/contact-card";
 import SubscribeFormContainer from "@/components/subscribe-form-container";
-import Link from "next/link";
+import { Link } from "@/lib/i18n.config";
 import { contactChannels, currentYear, routes } from "@/lib/data";
 import Socials from "@/components/shared/socials";
 import ContentImage from "@/components/shared/content-image";

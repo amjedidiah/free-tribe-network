@@ -1,6 +1,6 @@
 import { topInitiativesData } from "@/lib/data";
 import ContentImageClient from "@/components/shared/content-image-client";
-import Link from "next/link";
+import { Link } from "@/lib/i18n.config";
 import { Button } from "@/components/ui/button";
 import SafeHTML from "@/components/shared/safe-html";
 
