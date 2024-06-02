@@ -8,8 +8,11 @@ import { bots } from "@/lib/data";
 import { useCallback, useState } from "react";
 import BotSlide from "@/components/who-we-are/bot-slide";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export default function Bot() {
+  const t = useTranslations("Who we are.BOT");
+
   const [bot, setBot] = useState(0);
   const handleSwipe = useCallback((count = 0) => setBot(count), []);
   const [shouldSlideLeft, setShouldSlideLeft] = useState(false);
@@ -35,7 +38,7 @@ export default function Bot() {
     <section className="py-10 lg:pt-14 lg:pb-16" id="bot">
       <article className="container grid gap-9">
         <div className="flex justify-between items-center">
-          <h2 className="text-black">Board of Trustees</h2>
+          <h2 className="text-black">{t('title')}</h2>
           <div className="flex-1 flex items-center gap-10 justify-end">
             <div
               className="w-12 h-12 relative shadow rounded-full"
@@ -102,10 +105,14 @@ export default function Bot() {
           </div>
           <div className="py-20 px-12 flex-1 flex flex-col gap-7 text-white bg-primary-900 lg:min-h-[508px] xl:min-h-[412px] 2xl:min-h-[364px]">
             <div>
-              <p className="font-bold lg:text-xl">{bots[bot].name}</p>
-              <p className="lg:text-lg">{bots[bot].title}</p>
+              <p className="font-bold lg:text-xl">
+                {t(`${bots[bot].name}.name` as any)}
+              </p>
+              <p className="lg:text-lg">
+                {t(`${bots[bot].name}.title` as any)}
+              </p>
             </div>
-            <SafeHTML htmlContent={bots[bot].description} />
+            <SafeHTML htmlContent={t.raw(`${bots[bot].name}.description` as any)} />
           </div>
         </div>
       </article>

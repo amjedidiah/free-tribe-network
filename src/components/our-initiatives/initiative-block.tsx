@@ -10,10 +10,12 @@ import { Element } from "react-scroll";
 import useScrollToSection from "@/hooks/use-scroll-to-section";
 import Slider from "@/components/shared/slider";
 import SafeHTML from "@/components/shared/safe-html";
+import { useTranslations } from "next-intl";
 
 type InitiativeBlockProps = (typeof initiatives)[number];
 
 export default function InitiativeBlock({ name, label }: InitiativeBlockProps) {
+  const t = useTranslations("Our initiative.initiatives")
   const [content, setContent] = useState<TrustedHTML | string>();
   const [images, setImages] = useState<string[]>([]);
   const { handleScroll } = useScrollToSection({
@@ -38,11 +40,11 @@ export default function InitiativeBlock({ name, label }: InitiativeBlockProps) {
       <div className="flex flex-col py-10 gap-6 lg:gap-8">
         <div className="flex flex-col gap-6">
           <div className="h2-gap">
-            <h2 className="text-black">{label}</h2>
+            <h2 className="text-black">{t(`${name}.label` as any)}</h2>
             {content && (
               <SafeHTML
                 className="flex flex-col gap-5 [&>div]:flex [&>div]:flex-col [&>div_p]:text-description [&_ul]:pl-8 [&_ul]:list-disc [&_ul]:list-outside [&_ul]:text-description"
-                htmlContent={content}
+                htmlContent={t.raw(`${name}.content` as any)}
               />
             )}
           </div>

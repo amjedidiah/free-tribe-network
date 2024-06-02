@@ -3,20 +3,16 @@ import ContentImageClient from "@/components/shared/content-image-client";
 import { Link } from "@/lib/i18n.config";
 import { Button } from "@/components/ui/button";
 import SafeHTML from "@/components/shared/safe-html";
+import { useTranslations } from "next-intl";
 
 export default function HomeInitiatives() {
+  const t = useTranslations("Home.Our initiatives");
   return (
     <section className="bg-secondary-600 py-10 lg:py-14 text-white">
       <article className="container grid gap-6 text-center justify-center [&_p]:max-w-3xl">
         <div className="h2-gap items-center">
-          <h2>Our Initiatives</h2>
-          <p>
-            At The Free Tribe Network, we offer a range of core programs and
-            services to support reproductive wellness, health seeking and
-            reporting behaviors, and improve reproductive health and family
-            well-being. Our mission is to empower individuals and communities to
-            make informed decisions about their reproductive health and rights.
-          </p>
+          <h2>{t("Heading.title")}</h2>
+          <p>{t("Heading.description")}</p>
         </div>
 
         <div className="grid gap-10">
@@ -36,7 +32,11 @@ export default function HomeInitiatives() {
                   <div className="h5-gap">
                     <h5 className="capitalize lg:min-h-16">{label}</h5>
                     <SafeHTML
-                      htmlContent={"summary" in rest ? rest.summary : content}
+                      htmlContent={
+                        "summary" in rest
+                          ? t(`initiatives.${name}.summary` as any)
+                          : t.raw(`initiatives.${name}.content` as any)
+                      }
                     />
                   </div>
                 </div>
@@ -45,7 +45,7 @@ export default function HomeInitiatives() {
           </div>
 
           <Link href="/our-initiatives" className="mx-auto">
-            <Button>See More</Button>
+            <Button>{t("See More")}</Button>
           </Link>
         </div>
       </article>

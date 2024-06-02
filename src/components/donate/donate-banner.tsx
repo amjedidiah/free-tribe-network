@@ -1,10 +1,12 @@
 import Banner from "@/components/shared/banner";
+import { useTranslations } from "next-intl";
 
 export default function DonateBanner() {
+  const t = useTranslations("Donate")
   return (
     <Banner
       imageTitle="donate-banner"
-      title="Help People Across the Globe"
+      title={t("Banner.title")}
       wrapperClassName="[&_.container]:relative [&_h1]:lg:max-w-lg [&_h1]:xl:max-w-xl"
       id="donate-banner"
     >
@@ -16,12 +18,11 @@ export default function DonateBanner() {
         </p> */}
         <div>
           <p className="lg:max-w-lg xl:max-w-xl mb-2">
-            Soon you&apos;ll be able to proceed to a secure payment page to
-            complete your donation.
+          {t("Banner.content")}
           </p>
           <p>
             <span className="bg-primary-100 text-primary font-semibold rounded py-1 px-2 text-sm">
-              Coming soon
+            {t("Banner.Coming soon")}
             </span>
           </p>
         </div>

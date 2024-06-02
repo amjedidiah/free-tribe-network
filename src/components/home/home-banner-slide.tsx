@@ -4,29 +4,31 @@ import Banner from "@/components/shared/banner";
 import { Link } from "@/lib/i18n.config";
 import { Link as ScrollLink } from "react-scroll";
 import { CarouselItem } from "@/components/ui/carousel";
+import { useTranslations } from "next-intl";
 
 type HomeBannerSlideProps = (typeof homeBannerData)[number];
 
 export default function HomeBannerSlide({
-  content,
   ...rest
 }: HomeBannerSlideProps) {
+  const t = useTranslations('Home.Banners')
+  
   return (
     <CarouselItem className="relative">
       <Banner {...rest}>
         <div className="flex flex-col gap-6">
-          <p className="max-w-[41rem]">{content}</p>
+          <p className="max-w-[41rem]">{t(`${rest.title}.content` as any)}</p>
 
           <div className="flex items-center gap-6 [&_a]:py-[0.625rem] [&_a]:px-[1.125rem] [&_a]:rounded-[0.5rem] [&_a]:shadow-md">
             <Link href="/donate" className=" bg-primary-400 text-white">
-              Support
+              {t('Support')}
             </Link>
             <ScrollLink
               to="mailing-list"
               smooth
               className="border border-white cursor-pointer"
             >
-              Join our mailing list
+             { t('Join')}
             </ScrollLink>
           </div>
         </div>

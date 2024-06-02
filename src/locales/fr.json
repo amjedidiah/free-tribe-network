@@ -1,12 +1,477 @@
 {
-    "Nav": {
-        "Home": "accueil",
-        "Resources": "ressources"
+  "Home": {
+    "Banners": {
+      "Community": {
+        "content": "Notre unité et nos efforts collectifs vers une vision commune favorisant notre croissance, notre force et notre impact durable.",
+        "title": "Communauté"
+      },
+      "Equity": {
+        "content": "Nous croyons en une répartition équitable des services et des ressources et en un accès égal aux opportunités, quels que soient l'âge, le sexe, la race, l'éducation, l'origine ethnique, la religion ou les convictions personnelles.",
+        "title": "Équité"
+      },
+      "Join": "Joignez-vous à notre liste d'envoi",
+      "Mastery": {
+        "content": "Une recherche incessante de l’excellence en tirant parti de l’expérience critique, de l’expertise et des preuves scientifiques pour adapter nos initiatives aux meilleures pratiques.",
+        "title": "La maîtrise"
+      },
+      "Social Justice": {
+        "content": "Nous pensons que chaque individu doit être traité avec dignité et respect, et que ses droits humains fondamentaux doivent être protégés.",
+        "title": "Justice sociale"
+      },
+      "Support": "Soutien",
+      "Sustained reproductive health and family well-being": {
+        "content": "Au Free Tribe Network, nous promouvons le bien-être reproductif et le bien-être familial. \nNous fournissons des services caritatifs sous la forme de programmes, de projets et de recherches, pour traduire les connaissances en perceptions et les perceptions en actions et comportements.",
+        "title": "Santé reproductive durable et bien-être familial"
+      }
     },
-    "Layout": {
-        "metaData": {
-            "title": "Réseau de tribu gratuit",
-            "description": "Bienvenue sur le réseau Free Tribe"
+    "Impact": {
+      "Heading": {
+        "description": "Laissez nos chiffres parler pour nous.",
+        "title": "Notre impact en chiffres"
+      },
+      "Stats": {
+        "Advocacy and Awareness Campaigns": "Campagnes de plaidoyer et de sensibilisation",
+        "Collaborations": "Collaborations",
+        "Community Project": "Projet communautaire",
+        "Students reached": "Étudiants atteints",
+        "Training Programs": "Des programmes de formation",
+        "Volunteering Hours": "Heures de bénévolat",
+        "Policy and Research activities": "Activités de politique et de recherche"
+      }
+    },
+    "Our initiatives": {
+      "Heading": {
+        "description": "Chez The Free Tribe Network, nous proposons une gamme de programmes et de services de base pour soutenir le bien-être reproductif, les comportements de recherche et de signalement de la santé, et améliorer la santé reproductive et le bien-être familial. \nNotre mission est de donner aux individus et aux communautés les moyens de prendre des décisions éclairées concernant leur santé et leurs droits reproductifs.",
+        "title": "Nos initiatives"
+      },
+      "See More": "Voir plus",
+      "initiatives": {
+        "free-tribe-boost-camp": {
+          "content": "<div><p>Un programme bimensuel de renforcement des capacités pour le personnel et les bénévoles du Free Tribe Network, destiné à améliorer les compétences professionnelles en entreprise, à enseigner des compétences pertinentes pour l'industrie et à favoriser les liens entre les membres du Free Tribe Network.</p \n></div>"
+        },
+        "repromatters": {
+          "content": "<div><p>Un programme bimensuel utilisant des histoires réelles, des connaissances médicales, une expertise en santé publique et la large portée des médias sociaux, pour discuter de questions importantes affectant la santé reproductive et le bien-être familial. \nLes sujets abordés porteront sur la santé des femmes, la santé des hommes, la santé et le bien-être des enfants et des adolescents.</p></div>"
+        },
+        "star-project": {
+          "summary": "Un projet de santé publique qui cherche à capturer et à réduire le témoignage de violence interparentale et la transmission intergénérationnelle de la violence aux adolescents."
         }
+      }
+    },
+    "Post": {
+      "Heading": {
+        "description": "Lisez quelques extraits de notre blog",
+        "title": "Articles de blog"
+      },
+      "See More": "Voir plus"
+    },
+    "Tweets": {
+      "link": "Tweets de freetribenetwork",
+      "title": "Restez en contact avec nos activités sur X"
+    },
+    "Vision": {
+      "Heading": {
+        "description": "Construire une communauté mondiale de personnes prenant des décisions tout au long de leur vie, afin d’améliorer leur bien-être reproductif et familial, conformément au programme de développement durable à l’horizon 2030.",
+        "title": "Notre vision"
+      },
+      "gender equality": "égalité des sexes",
+      "good health and well being": "bonne santé et bien-être",
+      "reduced inequalities": "inégalités réduites"
     }
+  },
+  "Layout": {
+    "Footer": {
+      "Copyright": "Réseau de tribu gratuit",
+      "Rights": "Tous droits réservés"
+    },
+    "Heading": {
+      "description": "Notre équipe amicale est toujours là pour discuter.",
+      "title": "Nous aimerions recevoir de vos nouvelles"
+    },
+    "Subscribe": {
+      "description": "En vous inscrivant, vous autorisez <b>Free Tribe Network</b> à stocker et à collecter votre adresse e-mail dans le but de vous envoyer notre newsletter mensuelle.",
+      "title": "Abonnez-vous à notre courrier"
+    },
+    "metaData": {
+      "description": "Bienvenue sur le réseau Free Tribe",
+      "title": "Réseau de tribu gratuit"
+    },
+    "Contact": {
+      "Call": {
+        "header": "Appelez-nous",
+        "subHeader": "Visitez notre siège social.",
+        "text": "Du lundi au vendredi de 8h à 17h."
+      },
+      "Chat": {
+        "header": "Discutez pour soutenir",
+        "subHeader": "Nous sommes là pour vous aider.",
+        "text": "bonjour@freetribenetwork.org"
+      },
+      "Home": "Maison",
+      "News & Events": "Nouvelles",
+      "Our Initiatives": "Nos initiatives",
+      "Resources": "Ressources",
+      "Visit": {
+        "header": "Rendez nous visite",
+        "subHeader": "Visitez notre siège social.",
+        "text": "No 15/11b, YK Abass, domaine Ore-Ofe, Elewiodo, Ibadan."
+      },
+      "Who we are": "Qui nous sommes"
+    }
+  },
+  "Nav": {
+    "Contact Us": "Contactez-nous",
+    "Donate": "Faire un don",
+    "Home": "Maison",
+    "News & Events": "Nouvelles",
+    "Our Initiatives": "Nos initiatives",
+    "Resources": "Ressources",
+    "Who we are": "Qui nous sommes",
+    "menu": {
+      "BOT": "BOT",
+      "Blog Posts": "Articles de blog",
+      "Free Tribe Boost-Camp": "Boost-Camp de tribu gratuit",
+      "Free Tribe Clubs": "Clubs de tribu gratuits",
+      "Free Tribe Helpline": "Ligne d'assistance gratuite pour la tribu",
+      "Mission & Vision": "Mission",
+      "Our History": "Notre histoire",
+      "RFH Advocacy": "Plaidoyer RFH",
+      "Recent Activities": "Activités récentes",
+      "ReproMatters": "Questions de reproduction",
+      "STAR project": "Projet ÉTOILE",
+      "Staff": "Personnel",
+      "Testimonials": "Témoignages",
+      "Upcoming Activities": "Activités à venir",
+      "What we do": "Ce que nous faisons",
+      "Work with us": "Travaille avec nous"
+    }
+  },
+  "News": {
+    "title": "Nouvelles et Evènements"
+  },
+  "Our initiative": {
+    "title": "Nos initiatives",
+    "initiatives": {
+      "free-tribe-boost-camp": {
+        "content": "<div><p>Un programme bimensuel de renforcement des capacités pour le personnel et les bénévoles du Free Tribe Network, destiné à améliorer les compétences professionnelles en entreprise, à enseigner des compétences pertinentes pour l'industrie et à favoriser les liens entre les membres du Free Tribe Network.</p \n></div>",
+        "label": "Boost-Camp de tribu gratuit"
+      },
+      "free-tribe-clubs": {
+        "content": "<div><p>Il s'agit d'espaces sûrs destinés à promouvoir des conversations ouvertes, à améliorer le soutien social, à renforcer le suivi et l'évaluation, ainsi qu'à améliorer les initiatives autonomes et les tactiques de réintervention, afin de garantir des améliorations durables des résultats en matière de santé reproductive et familiale.</ \np></div>",
+        "label": "Clubs de tribu gratuits"
+      },
+      "free-tribe-helpline": {
+        "content": "<div><p>Un service social pour l'assistance téléphonique, l'accès à l'information, aux conseils, aux interventions éclairées et à l'orientation vers des professionnels de la santé reproductive et familiale.</p></div>",
+        "label": "Ligne d'assistance gratuite pour la tribu"
+      },
+      "repromatters": {
+        "content": "<div><p>Un programme bimensuel utilisant des histoires réelles, des connaissances médicales, une expertise en santé publique et la large portée des médias sociaux, pour discuter de questions importantes affectant la santé reproductive et le bien-être familial. \nLes sujets abordés porteront sur la santé des femmes, la santé des hommes, la santé et le bien-être des enfants et des adolescents.</p></div>",
+        "label": "Questions de reproduction"
+      },
+      "rfh-advocacy": {
+        "content": "<div><p>Cela inclut les rassemblements, les campagnes, les messages de plaidoyer hebdomadaires (",
+        "label": "Plaidoyer pour la santé reproductive et familiale"
+      },
+      "star-project": {
+        "content": "<div> <p>Un projet de santé publique qui cherche à capturer et à réduire le nombre de témoins de violence interparentale et la transmission intergénérationnelle de la violence aux adolescents. \nLe projet vise à améliorer les structures institutionnelles de soutien au sein des écoles secondaires publiques, afin de décourager l'acceptation ou le recours à la violence dans les relations futures. \nIl combine un puissant mélange de programmes de recherche et de santé publique pour aborder la santé reproductive et le bien-être familial.</p></div><div className='h5-gap'><h4>Identifier le problème !</h4> \n<p> Nous avons observé que la violence conjugale (violence interparentale) avait un effet significatif sur le bien-être physique, mental et social des enfants et des adolescents. \nLes enfants témoins de ces comportements violents étaient susceptibles de présenter des difficultés dans les interactions sociales, d'endurer des tensions émotionnelles et d'autres défis psychologiques, ce qui se traduisait par plusieurs résultats négatifs tels que l'intimidation, des relations malsaines, une faible estime de soi, la toxicomanie et même des comportements criminels, avec des effets \npersistant jusqu’à l’âge adulte. \n</p> </div> <div className='h5-gap'> <h4>Notre approche !</h4> <p> Le projet Stand Against Recycled Violence (STAR) : une initiative pour contrer le recyclage intergénérationnel de la violence \n. \nNous avons combiné un puissant mélange de programmes de recherche et de santé publique pour lutter contre l'incidence de la violence interparentale, de l'intimidation (violence des pairs) et de la justification de la violence. \nLes stratégies du projet STAR nous aident à améliorer les structures de soutien institutionnelles au sein des écoles secondaires et à décourager l'acceptation et le recours à la violence dans les relations futures. \nOffres : <ul> <li>Enquête de base</li> <li>Formation des enseignants</li> <li>Formation des étudiants</li> <li>Club institutionnel de la tribu libre</li> <li>Comité de supervision institutionnelle< \n/li> <li>Surveillance",
+        "label": "Projet Stand Against Recycled Violence (STAR)"
+      }
+    }
+  },
+  "Partners": {
+    "Heading": {
+      "title": "Nos partenaires"
+    }
+  },
+  "Support": {
+    "Donate": "Faire un don",
+    "Heading": {
+      "description": "Rejoignez notre cause pour transformer les structures autour de la santé reproductive et du bien-être familial.",
+      "title": "Soutenez notre mission dès aujourd’hui !"
+    }
+  },
+  "Team": {
+    "Board of Trustees": "Conseil d'administration",
+    "Busayo": {
+      "name": "Busayo Oyetubosun",
+      "title": "Administrateur"
+    },
+    "Grace": {
+      "name": "Grace Vin-Otebele",
+      "title": "Surveillance"
+    },
+    "Mikka": {
+      "name": "Mikka Erem",
+      "title": "Agent de programme"
+    },
+    "Oluwatobi": {
+      "name": "Oluwatobi Alawode",
+      "title": "agent logistique"
+    },
+    "See More": "Voir plus",
+    "Susan": {
+      "name": "Susan Kebu",
+      "title": "Associé de projet"
+    },
+    "The Work Family": "La famille du travail",
+    "Tolu": {
+      "name": "Tolu Oluwagbemi-Jacob",
+      "title": "chargée de communication"
+    },
+    "Uche": {
+      "name": "Uché Kennedy",
+      "title": "Responsable informatique"
+    },
+    "Dr Adebayo": {
+      "name": "Dr Adebayo, Ayodeji Matthieu",
+      "title": "Président, BOT"
+    },
+    "Dr Atoyebi": {
+      "name": "Dr Adebayo, Ayodeji Matthieu",
+      "title": "Membre, BOT"
+    },
+    "Fadayomi": {
+      "name": "Fadayomi, Sefunmi G.",
+      "title": "Membre, BOT"
+    },
+    "Madu": {
+      "name": "Madu, Ihuomachidire I.",
+      "title": "Membre, BOT"
+    },
+    "Mfon": {
+      "name": "Mfon, Andikan A.",
+      "title": "Membre, BOT"
+    },
+    "Nwokafor": {
+      "name": "Nwokafor, Obiora",
+      "title": "Membre, BOT"
+    },
+    "Oluwagbemi-Jacob": {
+      "name": "Oluwagbemi-Jacob Tosin",
+      "title": "Secrétaire, BOT"
+    },
+    "Prof Obafemi": {
+      "name": "Professeur Obafemi, Frances Ngozi",
+      "title": "Membre, BOT"
+    },
+    "Rev Eweje": {
+      "name": "Dr Adebayo, Ayodeji Matthieu",
+      "title": "Président, BOT"
+    }
+  },
+  "Testimonials": {
+    "Aziza Kibibi": {
+      "name": "Aziza Kibibi",
+      "testimony": "Ce fut un plaisir de travailler avec le Free Tribe Network sur le programme RepoMatters. \nLeur travail de sensibilisation est essentiel pour changer les pratiques culturelles néfastes qui affectent les femmes et les filles.",
+      "title": "Fondatrice de Pretty Little Ladies"
+    },
+    "Dayhana Hernandez": {
+      "name": "Dayhana Hernández",
+      "testimony": "Les membres du Free Tribe Network sont les personnes les plus passionnées que j'ai rencontrées. \nIls font paraître un travail énorme trop facile grâce à leurs efforts collectifs",
+      "title": "Conseillère de programme, Girls First Fund, République dominicaine."
+    },
+    "Dr Gbonjubola Abiri": {
+      "name": "Dr Gbonjubola Abiri",
+      "testimony": "Notre organisation est fière d'être partenaire de cet organisme à but non lucratif. \nLeurs programmes innovants et leur soutien indéfectible ont considérablement amélioré notre capacité à relever les défis de la santé reproductive, améliorant ainsi la vie de ceux que nous servons.",
+      "title": "PDG, RediMed Conseil"
+    },
+    "Dr Jibril Abdulmalik": {
+      "name": "Dr Jibril Abdulmalik",
+      "testimony": "Le Free Tribe Network vise à inspirer des actions en faveur d’une santé reproductive et d’un bien-être familial durables. \nCeci est très essentiel pour la santé mentale, car ils offrent des espaces de discussion sûrs afin que les gens se sentent soutenus et équipés pour donner la priorité au bien-être de leur famille. \nJe suis fier de soutenir le bon travail qu’ils font.",
+      "title": "Fondateur/PDG, Fondation Asido"
+    },
+    "Dr Muhammed Odedeji": {
+      "name": "Dr Muhammed Odedeji",
+      "testimony": "Grâce aux initiatives du Free Tribe Network, j'ai eu accès à des services de santé essentiels, ce qui me permet de faire des choix éclairés pour le bien-être de ma famille. \nReconnaissant pour l’impact positif !",
+      "title": "Médecin"
+    },
+    "Dr Munirat Antoinette Lecky(Anto Lecky)": {
+      "name": "Dr Munirat Antoinette Lecky(Anto Lecky)",
+      "testimony": "Le Free Tribe Network est un groupe de jeunes qui font un excellent travail et qui ont des conversations très importantes que nous évitons souvent. \nJ'espère qu'ils continueront à croître de plus en plus haut."
+    },
+    "Kwamina Obo": {
+      "name": "Kwamina Obo",
+      "testimony": "En tant que jeune femme, les services de santé adaptés aux jeunes de l'organisation m'ont permis de demander conseil sans jugement. \nJe me sens autonome et informée sur ma santé reproductive."
+    },
+    "Moses Plangkat": {
+      "name": "Moïse Plangkat",
+      "testimony": "J'adore le programme ReproMatters. \nÉcouter les expériences des gens et ce qu’ils ont vécu donne une meilleure perspective aux problèmes auxquels l’association s’attaque."
+    },
+    "Moyo Adedayo": {
+      "name": "Moyo Adedayo",
+      "testimony": "En tant qu'organisation axée sur l'autonomisation des personnes via l'éducation en matière de santé, le partenariat de CHIIN avec cette organisation à but non lucratif a élargi notre capacité à servir la communauté. \nLeur engagement commun à améliorer la santé reproductive a abouti à une population plus forte et en meilleure santé.",
+      "title": "Fondatrice, son pouvoir"
+    },
+    "Mrs Blessing Omenka": {
+      "name": "Mme Bénédiction Omenka",
+      "testimony": "En tant que bénéficiaire des ressources de planification familiale offertes par l'organisation à but non lucratif, je peux attester de l'impact positif sur nos vies. \nCela nous a permis de planifier et d’entretenir une famille plus saine et plus heureuse.",
+      "title": "Responsable du design, Calques"
+    },
+    "Mrs Olakitan Abiola": {
+      "name": "Mme Olakitan Abiola",
+      "testimony": "Les programmes de plaidoyer de Free Tribe m'ont aidé à mieux comprendre le concept du mariage des enfants et à aider d'autres jeunes femmes et filles comme ma fille. \nMerci Tribu Libre !"
+    },
+    "Pharm Tobechuckwu Nneji": {
+      "name": "Pharm Tobechuckwu Nneji",
+      "testimony": "J'ai apprécié mon temps avec le Free Tribe Network. \nIl y a tellement de bonnes choses à dire sur le réseau et le travail formidable qu'il accomplit !  \nSurtout, leurs relations publiques sont les meilleures que j’ai jamais vues. \nIls laisseront une marque indélébile dans le sable du temps.",
+      "title": "Fondatrice de Pretty Little Ladies"
+    },
+    "Sayo Eweje": {
+      "name": "Sayo Eweje",
+      "testimony": "En tant qu'organisation axée sur l'autonomisation des personnes via l'éducation en matière de santé, le partenariat de CHIIN avec cette organisation à but non lucratif a élargi notre capacité à servir la communauté. \nLeur engagement commun à améliorer la santé reproductive a abouti à une population plus forte et en meilleure santé.",
+      "title": "Codirecteur général, Réseau d'intégration de l'information critique sur les soins de santé (CHIIN)"
+    }
+  },
+  "Who we are": {
+    "BOT": {
+      "Dr Adebayo": {
+        "description": "<p>Médecin de santé publique, chercheur chevronné et maître de conférences au Département de médecine communautaire de l'Université d'Ibadan, Nigéria. \nIl a publié plus de 85 articles universitaires et fait des présentations lors de plusieurs conférences internationales et nationales. \nIl est récipiendaire de plusieurs subventions et a été chercheur principal pour un projet financé par la Banque mondiale ciblant les couples à Ibadan, au Nigeria.</p>",
+        "name": "Dr Adebayo, Ayodeji Matthieu",
+        "title": "Président, BOT"
+      },
+      "Dr Atoyebi": {
+        "description": "<p>Un registraire principal au Département de médecine communautaire, University College Hospital, Ibadan. \nElle se spécialise dans la santé des femmes et la violence sexiste. \nElle est docteur en médecine certifiée en évaluation économique en santé mondiale et termine actuellement une maîtrise en santé publique. \nElle possède une expérience diversifiée, notamment en assistance à la recherche pour l'essai mondial sur les antifibrinolytiques maternels, en supervision d'enquêtes pour l'Organisation mondiale de la santé et en contributions aux efforts de réponse au COVID-19 et à la mise en œuvre de la politique de santé reproductive au Nigeria.</p>",
+        "name": "Dr Adebayo, Ayodeji Matthieu",
+        "title": "Membre, BOT"
+      },
+      "Fadayomi": {
+        "description": "<p>A excellé en tant qu'étudiante la plus remarquable lors de son master à l'Eastern Kentucky University, aux États-Unis. \nSpécialiste de la santé publique en santé environnementale et au travail, elle travaille actuellement avec Owens Corning pour promouvoir les soins de santé de base, l'éducation et des solutions de logement sûres et efficaces.</p> <p>Elle a travaillé comme agente de bourses pour l'agence Bethesda Child Support, pour \nsoutenir les enfants défavorisés en leur offrant une éducation gratuite au Nigeria.</p>",
+        "name": "Fadayomi, Sefunmi G.",
+        "title": "Membre, BOT"
+      },
+      "Madu": {
+        "description": "<p>Le responsable des partenariats et conseiller juridique chez Silicon Africa Technologies Ltd, et chef de projet pour le Social Media Fest (SMFEST) ; \nune plateforme mondiale à impact social qui expose les créatifs aux avantages et aux leviers des médias sociaux et de la technologie.</p> <p>Elle est avocate et militante des droits de l'homme ; \nune défenseure passionnée du développement des jeunes et de la littératie financière, inspirant les jeunes femmes vers le leadership et la responsabilité.</p>",
+        "name": "Madu, Ihuomachidire I.",
+        "title": "Membre, BOT"
+      },
+      "Mfon": {
+        "description": "<p>Un analyste chevronné en banque d'investissement chez Afrinvest West Africa Limited. \nIl est comptable agréé associé, avec plus de 5 ans d'expertise dans divers domaines financiers, notamment les levées de capitaux propres et par emprunt, les fusions et acquisitions, l'évaluation d'entreprises et la due diligence financière.</p>",
+        "name": "Mfon, Andikan A.",
+        "title": "Membre, BOT"
+      },
+      "Nwokafor": {
+        "description": "<p>Un agent immobilier et directeur général de Suncity Gardens Estates. \nIl dirige une communauté de soutien social appelée « Boy's lounge » pour les garçons âgés de 9 à 25 ans, et a encadré et soutenu plusieurs jeunes hommes à travers le Nigéria.</p> <p>Il a coordonné un projet de deux ans visant à prendre en charge les femmes enceintes vivant avec \nLe VIH/SIDA empêche la transmission de la mère à l'enfant pendant cette période.</p>",
+        "name": "Nwokafor, Obiora",
+        "title": "Membre, BOT"
+      },
+      "Oluwagbemi-Jacob": {
+        "description": "<p>Un spécialiste de la santé publique et directeur exécutif du Free Tribe Network. \nAvec plus de 5 années d'expérience dans la planification administrative, la gestion de projets et de programmes, la recherche, le suivi et l'évaluation, il a géré efficacement plus de 20 projets et opérations à but non lucratif à travers le Nigeria.</p> <p>Ses collaborations avec l'University College Hospital, \nIbadan et d'autres instituts notables reflètent un intérêt et un dévouement particuliers pour la santé mentale, la santé reproductive et le bien-être familial.</p>",
+        "name": "Oluwagbemi-Jacob Tosin",
+        "title": "Secrétaire, BOT"
+      },
+      "Prof Obafemi": {
+        "description": "<p>Professeur d'économie monétaire avec de nombreuses publications, une expérience en matière de rédaction de politiques industrielles et des rôles de consultant auprès de la Banque mondiale et de l'Organisation des Nations Unies pour le développement industriel (ONUDI). Elle a été chercheuse au National Defence College d'Abuja et au National Institute for Policy.",
+        "name": "Professeur Obafemi, Frances Ngozi",
+        "title": "Membre, BOT"
+      },
+      "Rev Eweje": {
+        "description": "<p>Un chef de projet à la retraite avec 30 ans d'expérience au sein de la Shell Petroleum Development Company du Nigeria. \nIl est titulaire d'un doctorat en stratégie, gestion de projets et de programmes et est missionnaire en Europe après sa retraite.</p>",
+        "name": "Dr Adebayo, Ayodeji Matthieu",
+        "title": "Président, BOT"
+      },
+      "title": "Conseil d'administration"
+    },
+    "Banner description": "Au Free Tribe Network, nous promouvons le bien-être reproductif, encourageons les comportements de recherche et de signalement de la santé, et menons des programmes, des projets et des recherches pour améliorer votre santé reproductive et votre bien-être familial.",
+    "Banner title": "Autonomiser les communautés",
+    "History": {
+      "content five": "En 2023, le réseau a lancé son premier projet pilote à Ibadan ; \nle projet Stand Against recyclé Violence et une ligne d'assistance sociale pour l'assistance téléphonique, l'accès à l'information et l'orientation vers des professionnels de la santé familiale.",
+      "content four": {
+        "link one": " Plaidoyer pour la santé reproductive/familiale",
+        "link two": " Questions de reproduction",
+        "sub one": "L'année même de son enregistrement, l'organisation s'est placée à l'avant-garde",
+        "sub three": " , qui ont vu des collaborations avec Critical Healthcare Information Integration Network (CHIIN), Girls First Fund, Precious Little Ladies et d'autres de Harvard et de l'Université de Stanford.",
+        "sub two": " avec des programmes comme"
+      },
+      "content one": "Le Free Tribe Network est un organisme de bienfaisance à but non lucratif fondé par Tosin Oluwagbemi-Jacob en 2022, en mémoire et en inspiration de feu Mme Titilope Oluwagbemi-Jacob (sa mère bien-aimée) décédée en raison de complications et de négligence médicale suite à l'accouchement.",
+      "content three": "Les pionniers de l'organisation à but non lucratif étaient des étudiants diplômés du Département de médecine communautaire de l'University College Hospital de l'Université d'Ibadan ; \ndes professionnels de la santé et des individus passionnés, qui ont mobilisé des ressources pour élaborer un plan et une structure pour le réseau. \nPour eux, FREE est l’acronyme de Family and Reproductive Health Emancipation and Empowerment.",
+      "content two": "Le réseau vise à résoudre les problèmes actuels affectant la santé reproductive et la santé familiale, et à apporter des solutions durables à ces problèmes. \nIl a été enregistré auprès de la Commission des affaires corporatives en 2023 et vise depuis à créer un monde dans lequel les individus ont besoin de connaissances, de ressources et de soutien pour une santé reproductive et un bien-être familial optimaux.",
+      "title": "Notre histoire"
+    },
+    "MissionVision": {
+      "Mission": {
+        "content": "Améliorer la santé reproductive et le bien-être familial, en apportant un soutien par le biais d'initiatives caritatives.",
+        "title": "Mission"
+      },
+      "Purpose": {
+        "content": "Aider les personnes vulnérables à faire face au fardeau et aux besoins non satisfaits en matière de santé reproductive et de bien-être familial.",
+        "title": "But"
+      },
+      "Vision": {
+        "content": "Une communauté mondiale de personnes prenant des décisions tout au long de leur vie pour améliorer et renforcer la santé reproductive et le bien-être familial.",
+        "title": "Vision"
+      }
+    },
+    "What we do": {
+      "Advocacy & Awareness campaigns": "Plaidoyer",
+      "Community projects": "Des projets de communauté",
+      "Policy & Research activities": "Politique",
+      "Social service helpline": "Ligne d'assistance du service social",
+      "Training programs": "Des programmes de formation",
+      "View Activities": "Voir les activités"
+    },
+    "Work with us": {
+      "Job Vacancies": "Offres d'emploi",
+      "Volunteer Now": "Devenez bénévole maintenant",
+      "content": "Chez Free Tribe Network, notre personnel et nos bénévoles sont motivés pour un changement positif dans le monde. \nNotre réseau d'experts, de stagiaires et de passionnés fait de son mieux pour garantir la santé, l'équité et la justice sociale pour tous. Nous recherchons des personnes talentueuses, motivées et passionnées pour faire partie de notre équipe. \nDonnez vie à votre rêve et inspirez les autres dès aujourd’hui.",
+      "title": "Travaille avec nous!"
+    }
+  },
+  "Donate": {
+    "Banner": {
+      "Coming soon": "À venir",
+      "content": "Vous pourrez bientôt accéder à une page de paiement sécurisée pour finaliser votre don.",
+      "title": "Aidez les gens du monde entier"
+    },
+    "FAQ": {
+      "donate": "Faire un don",
+      "questions": {
+        "1": {
+          "answer": "Votre don est utilisé pour soutenir des programmes, des projets et des recherches menés par le Free Tribe Network.",
+          "question": "Comment est utilisé mon don ?"
+        },
+        "2": {
+          "answer": "Notre fournisseur de paiement, <strong>Flutterwave</strong>, utilise le cryptage SSL pour protéger vos informations et garantir la sécurité de votre don. \nVotre carte et vos données personnelles seront en sécurité.",
+          "question": "Comment puis-je être sûr que mon don est sécurisé ?"
+        },
+        "3": {
+          "answer": "Oui, vous pouvez.",
+          "question": "Puis-je parrainer un intérêt spécifique ?"
+        },
+        "4": {
+          "answer": "Oui, vous recevrez par e-mail un reçu <strong>Flutterwave</strong> pour votre don.",
+          "question": "Vais-je recevoir un reçu pour mon don ?"
+        },
+        "5": {
+          "answer": "Vous pouvez nous appeler au <a href='tel: 2348153494508'> 234 (815) 3494 508</a> ou nous envoyer un e-mail à <a href='mailto:hello@freetribenetwork.org'>hello@freetribenetwork.org</ \nune>",
+          "question": "Comment puis-je contacter Free Tribe Network pour des informations supplémentaires ou des demandes de renseignements ?"
+        },
+        "6": {
+          "answer": "Vous pouvez vous impliquer en faisant du bénévolat, en faisant un don ou en sensibilisant à la santé et aux droits reproductifs.",
+          "question": "Comment puis-je m'impliquer ?"
+        }
+      },
+      "title": "Vous avez des questions ? \n<br></br> Nous avons des réponses !"
+    },
+    "Problems": {
+      "Data Fragmentation": {
+        "description": "Sans une base de données centralisée sur les problèmes de santé reproductive (SR) et de santé familiale (FH), les interventions sont souvent dispersées et inefficaces, laissant des lacunes dans la réponse aux besoins critiques.",
+        "title": "Fragmentation des données"
+      },
+      "Health Inequality": {
+        "description": "Les disparités dans l’accès aux ressources en matière de santé reproductive et familiale perpétuent les inégalités, désavantageant les populations marginalisées dans le maintien de leur bien-être.",
+        "title": "Inégalités en matière de santé"
+      },
+      "Isolated Communities": {
+        "description": "De nombreuses communautés n’ont pas accès à des ressources adéquates en matière de santé reproductive et familiale, ce qui entraîne un sentiment d’isolement et d’incertitude quant à savoir vers qui se tourner pour obtenir de l’aide.",
+        "title": "Communautés isolées"
+      },
+      "Limited Education": {
+        "description": "Le manque d’éducation complète en matière de SR et d’HF rend les individus vulnérables à la désinformation et les empêche de prendre des décisions éclairées concernant leur bien-être.",
+        "title": "Éducation limitée"
+      },
+      "Stigma and Taboos": {
+        "description": "Les tabous culturels et la stigmatisation entourant les sujets liés à la santé reproductive et familiale empêchent une discussion ouverte et l'accès aux services de soutien nécessaires, conduisant à la honte et au secret parmi les personnes concernées.",
+        "title": "Stigmatisation et tabous"
+      }
+    }
+  }
 }

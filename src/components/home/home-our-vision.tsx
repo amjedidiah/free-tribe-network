@@ -1,16 +1,16 @@
 import ContentImage from "@/components/shared/content-image";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 export default function HomeOurVision() {
+  const t = useTranslations('Home.Vision')
   return (
     <section className="bg-secondary-900 py-10">
       <article className="container grid lg:grid-cols-[1fr,625px] gap-10 items-center">
         <div className="h2-gap">
-          <h2 className="text-secondary-50">Our Vision</h2>
+          <h2 className="text-secondary-50">{t('Heading.title')}</h2>
           <p className="text-secondary-100 max-w-[35rem]">
-            To build a global community of people making lifelong decisions, to
-            improve their reproductive and family well-being, in line with the
-            2030 agenda for sustainable development.
+            {t('Heading.description')}
           </p>
         </div>
 
@@ -21,7 +21,7 @@ export default function HomeOurVision() {
                 SDG 5
               </span>
               <h4 className="text-primary-800 uppercase lg:max-w-[11.625rem]">
-                gender equality
+                {t('gender equality')}
               </h4>
             </div>
             <div className="flex lg:flex-1 justify-end">
@@ -34,7 +34,7 @@ export default function HomeOurVision() {
                 SDG 10
               </span>
               <h4 className="text-secondary-800 uppercase">
-                reduced inequalities
+                {t('reduced inequalities')}
               </h4>
             </div>
             <div className="flex justify-end">
@@ -47,7 +47,7 @@ export default function HomeOurVision() {
                 SDG 3
               </span>
               <h4 className="text-secondary-100 uppercase">
-                good health and well being
+                {t('good health and well being')}
               </h4>
             </div>
             <div className="flex justify-end">

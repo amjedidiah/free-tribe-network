@@ -1,8 +1,10 @@
 import ContentImage from "@/components/shared/content-image";
 import { Button } from "@/components/ui/button";
 import { currentVacanciesLink, volunteerNowLink } from "@/lib/data";
+import { useTranslations } from "next-intl";
 
 export default function WorkWithUs() {
+  const t = useTranslations("Who we are.Work with us");
   return (
     <section className="relative z-[2] bg-secondary-500" id="work-with-us">
       <div className="hidden lg:block -z-[2] absolute inset-y-0 lg:-right-52 xl:-right-44 2xl:-right-20 h-full w-[calc(100vw/2)] xl:w-[calc(100vw/2-150px)] 2xl:w-[calc(100vw/2-300px)]">
@@ -25,26 +27,19 @@ export default function WorkWithUs() {
         </div>
         <div className="text-white flex flex-col gap-7 justify-center">
           <div className="h2-gap">
-            <h2>Work With Us!</h2>
-            <p>
-              At Free Tribe Network, our staff and volunteers are driven for
-              positive world change. Our web of experts, interns, and
-              enthusiasts give their best to ensure health, equity, and social
-              justice for all.We seek individuals with talent, motivation, and
-              passion to become part of our team. Bring your dream to life and
-              inspire others today.
-            </p>
+            <h2>{t("title")}</h2>
+            <p>{t("content")}</p>
           </div>
           <div className="flex gap-6">
             <a href={volunteerNowLink} target="_blank">
               <Button className="bg-primary-500 hover:bg-primary-500 py-2 px-4 w-fit text-white">
-                Volunteer Now
+                {t("Volunteer Now")}
               </Button>
             </a>
 
             <a href={currentVacanciesLink} target="_blank">
               <Button className="bg-transparent hover:bg-transparent py-2 px-4 w-fit text-white border border-white">
-                Job Vacancies
+                {t("Job Vacancies")}
               </Button>
             </a>
           </div>

@@ -1,22 +1,19 @@
 import { contactChannels } from "@/lib/data";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 type ContactCardProps = (typeof contactChannels)[number];
 
-export default function ContactCard({
-  image,
-  header,
-  subHeader,
-  text,
-  href,
-}: ContactCardProps) {
+export default function ContactCard({ image, title, href }: ContactCardProps) {
+  const t = useTranslations("Layout.Contact");
+
   return (
     <div className="flex flex-col p-4 lg:p-6 gap-8 lg:gap-12 bg-[#E6EFF380] rounded-[0.625rem]">
       <div className="bg-secondary w-fit p-2 rounded-lg">
         <div className="relative w-6 h-6">
           <Image
             src={image}
-            alt={`${header}-icon`}
+            alt={`${title}-icon`}
             fill
             style={{ objectFit: "cover", objectPosition: "center" }}
             sizes="100%"
@@ -24,14 +21,14 @@ export default function ContactCard({
         </div>
       </div>
       <div className="h5-gap">
-        <h5>{header}</h5>
-        <p>{subHeader}</p>
+        <h5>{t(`${title}.header` as any)}</h5>
+        <p>{t(`${title}.subHeader` as any)}</p>
         {href ? (
           <a href={href} className="mt-2 text-primary">
-            {text}
+            {t(`${title}.text` as any)}
           </a>
         ) : (
-          <p className="mt-2 text-primary">{text}</p>
+          <p className="mt-2 text-primary">{t(`${title}.text` as any)}</p>
         )}
       </div>
     </div>

@@ -1,20 +1,21 @@
 "use client";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 import SubscribeForm from "@/components/subscribe-form";
+import { useTranslations } from "next-intl";
 
 export default function SubscribeFormContainer() {
+  const t = useTranslations("Layout.Subscribe");
   return (
     <div
       id="mailing-list"
       className="lg:w-[25rem] w-contain flex flex-col justify-between gap-4"
     >
       <div className="flex flex-col gap-1">
-        <h4>Subscribe to our mail</h4>
+        <h4>{t("title")}</h4>
         <p className="text-slate-300">
-          By registering, you permit the{" "}
-          <span className="font-bold">Free Tribe Network</span> to store and
-          collect your email address for the purpose of sending you our monthly
-          newsletter.
+          {t.rich("description", {
+             b: (chunks) => <b className="text-white">{chunks}</b>,
+          })}
         </p>
       </div>
       <MailchimpSubscribe

@@ -2,11 +2,11 @@ import { cn } from "@/lib/utils";
 import ContentImageClient from "@/components/shared/content-image-client";
 import { Link } from "@/lib/i18n.config";
 import { HTMLAttributes } from "react";
+import { useTranslations } from "next-intl";
 
 type Mate = {
   name: string;
   src: string;
-  title: string;
 };
 
 type TeamProps = {
@@ -24,17 +24,19 @@ export default function Team({
   className,
   matesContainerClassName,
 }: TeamProps) {
+  const t = useTranslations("Team");
+
   return (
     <section className={cn("py-10 grid gap-8", className)} id={id}>
       <article className="container">
         <div className="flex flex-row flex-wrap gap-2 lg:gap-4 justify-between items-center">
-          <h2>{title}</h2>
+          <h2>{t(title as any)}</h2>
           {shouldSeeMore && (
             <Link
               href="/who-we-are?section=bot"
               className="bg-primary-400 text-white py-[0.625rem] px-[1.125rem] rounded-[0.5rem] shadow-md"
             >
-              See More
+              {t("See More")}
             </Link>
           )}
         </div>
@@ -46,7 +48,7 @@ export default function Team({
             matesContainerClassName
           )}
         >
-          {mates.map(({ name, src, title }) => (
+          {mates.map(({ name, src }) => (
             <div key={name} className="grid gap-4">
               <div className="lg:w-[288px] h-[296px] relative image-container">
                 <ContentImageClient
@@ -58,8 +60,8 @@ export default function Team({
                 />
               </div>
               <div>
-                <p className="text-gray-900 text-xl font-medium">{name}</p>
-                <p className="text-secondary-500 text-lg">{title}</p>
+                <p className="text-gray-900 text-xl font-medium">{t(`${name}.name` as any)}</p>
+                <p className="text-secondary-500 text-lg">{t(`${name}.title` as any)}</p>
               </div>
             </div>
           ))}

@@ -1,8 +1,11 @@
 import ContentImage from "@/components/shared/content-image";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/lib/i18n.config";
+import { useTranslations } from "next-intl";
 
 export default function Support() {
+  const t = useTranslations("Support");
+
   return (
     <section className="relative z-[2] radial-primary">
       <div className="hidden lg:block -z-[2] absolute inset-y-0 lg:-left-52 xl:-left-44 2xl:-left-20 h-full w-[calc(100vw/2)] xl:w-[calc(100vw/2-150px)] 2xl:w-[calc(100vw/2-300px)]">
@@ -25,15 +28,12 @@ export default function Support() {
         </div>
         <div className="text-white flex flex-col gap-7">
           <div className="h2-gap max-w-md">
-            <h2>Support Our Mission Today!</h2>
-            <p>
-              Join our cause to transform structures around reproductive health
-              and family well-being.
-            </p>
+            <h2>{t("Heading.title")}</h2>
+            <p>{t("Heading.description")}</p>
           </div>
           <Link href="/donate">
             <Button className="bg-white hover:bg-white py-2 px-4 w-fit text-primary">
-              Donate
+              {t("Donate")}
             </Button>
           </Link>
         </div>

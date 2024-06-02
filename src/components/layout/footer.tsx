@@ -4,19 +4,22 @@ import { Link } from "@/lib/i18n.config";
 import { contactChannels, currentYear, routes } from "@/lib/data";
 import Socials from "@/components/shared/socials";
 import ContentImage from "@/components/shared/content-image";
+import { useTranslations } from "next-intl";
 
 export default function Footer() {
+  const t = useTranslations("Layout");
+
   return (
     <footer>
       <section className="container" id="contact-us">
         <article className="py-12 lg:py-24 h3-gap">
-          <h3 className=" text-black">We&apos;d love to hear from you</h3>
-          <p>Our friendly team is always here to chat.</p>
+          <h3 className=" text-black">{t('Heading.title')}</h3>
+          <p>{t('Heading.description')}</p>
         </article>
 
         <article className="pb-12 lg:pb-24 grid lg:grid-cols-3 gap-6">
           {contactChannels.map((i) => (
-            <ContactCard key={i.header} {...i} />
+            <ContactCard key={i.title} {...i} />
           ))}
         </article>
       </section>
@@ -38,7 +41,7 @@ export default function Footer() {
                 <ul className="flex flex-col lg:flex-row gap-4">
                   {routes.map(({ links, ...item }) => (
                     <li key={item.label}>
-                      <Link href={item.href}>{item.label}</Link>
+                      <Link href={item.href}>{t(`Contact.${item.label}` as any)}</Link>
                     </li>
                   ))}
                 </ul>
@@ -50,8 +53,8 @@ export default function Footer() {
           </div>
           <hr />
           <div className="flex flex-col lg:flex-row items-center justify-between gap-1">
-            <p>&copy; {currentYear} Free Tribe Network</p>
-            <p>All rights reserved</p>
+            <p>&copy; {currentYear} {t("Footer.Copyright")}</p>
+            <p>{t("Footer.Rights")}</p>
           </div>
         </div>
       </section>

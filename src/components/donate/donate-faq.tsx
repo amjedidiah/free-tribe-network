@@ -8,32 +8,35 @@ import {
 import { donationFAQs } from "@/lib/data";
 import { Link as ScrollLink } from "react-scroll";
 import SafeHTML from "@/components/shared/safe-html";
+import { useTranslations } from "next-intl";
 
 export default function DonateFAQ() {
+  const t = useTranslations("Donate.FAQ");
+
   return (
     <section className="bg-secondary-50 py-10 lg:py-16">
       <article className="container flex flex-col gap-8 lg:gap-10">
         <div className="flex flex-row flex-wrap h2-gap justify-between items-center text-center">
           <h2>
-            Got Questions?
-            <br />
-            We&apos;ve Got Answers!
+            {t.rich("title", {
+              br: () => <br />
+            })}
           </h2>
           <ScrollLink
             to="donate-banner"
             smooth
             className="bg-primary-400 text-white py-[0.625rem] px-[1.125rem] rounded-[0.5rem] shadow-md"
           >
-            Donate
+            {t("donate")}
           </ScrollLink>
         </div>
         <div className="max-w-5xl w-full mx-auto">
           <Accordion type="single" collapsible className="w-full">
             {donationFAQs.map((i) => (
               <AccordionItem key={i.id} value={i.id}>
-                <AccordionTrigger>{i.question}</AccordionTrigger>
+                <AccordionTrigger>{t(`questions.${i.id}.question` as any)}</AccordionTrigger>
                 <AccordionContent className="[&_a]:underline">
-                  <SafeHTML htmlContent={i.answer} />
+                  <SafeHTML htmlContent={t.raw(`questions.${i.id}.answer` as any)} />
                 </AccordionContent>
               </AccordionItem>
             ))}

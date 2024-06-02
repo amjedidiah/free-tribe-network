@@ -14,12 +14,14 @@ import { cn } from "@/lib/utils";
 import { routes } from "@/lib/data";
 import { usePathname } from "next/navigation";
 import { Link } from "@/lib/i18n.config";
+import { useTranslations } from "next-intl";
 
 type MenuProps = (typeof routes)[number];
 
 export default function Menu({ label, links, href }: MenuProps) {
   const pathname = usePathname();
   const isActive = pathname.includes(href);
+  const t = useTranslations("Nav");
 
   return (
     <NavigationMenu className="block max-lg:[&_*]:animate-none max-lg:[&>div]:static max-lg:[&_*]:justify-start max-lg:[&>div]:block max-lg:[&_div.absolute_*]:p-0 max-lg:[&_div.absolute_*]:border-none max-lg:[&_div.absolute_*]:shadow-none max-lg:[&_div.absolute_ul_li_*]:flex">
@@ -30,7 +32,7 @@ export default function Menu({ label, links, href }: MenuProps) {
               "text-primary-500 font-bold": isActive,
             })}
           >
-            {label}
+            {t(label as any)}
           </NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="p-5 space-y-2">
@@ -54,7 +56,7 @@ export default function Menu({ label, links, href }: MenuProps) {
                         width={24}
                         height={24}
                       />
-                      <span className="flex-1">{i.label}</span>
+                      <span className="flex-1">{t(`menu.${i.label}` as any)}</span>
                     </Link>
                   </NavigationMenuLink>
                 </li>

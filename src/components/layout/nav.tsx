@@ -10,9 +10,11 @@ import { Suspense, memo, useState } from "react";
 import { cn } from "@/lib/utils";
 import NavLink from "@/components/layout/nav-link";
 import LocaleSelector from "@/components/layout/locale-selector";
+import { useTranslations } from "next-intl";
 
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
+  const t = useTranslations("Nav");
 
   return (
     <header className="fixed w-full z-10 shadow">
@@ -53,10 +55,10 @@ function Nav() {
             </ul>
             <div className="flex gap-6 items-center">
               <ScrollLink to="contact-us" smooth>
-                <Button variant="outline">Contact Us</Button>
+                <Button variant="outline">{t("Contact Us")}</Button>
               </ScrollLink>
               <Link href="/donate">
-                <Button>Donate</Button>
+                <Button>{t("Donate")}</Button>
               </Link>
             </div>
           </div>
