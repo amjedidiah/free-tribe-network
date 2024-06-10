@@ -5,6 +5,7 @@ import useScrollToSection, {
 } from "@/hooks/use-scroll-to-section";
 import { activityTabsData } from "@/lib/data";
 import { cn, formatLinkLabel } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 
 type Props = UseScrollToSectionProps & {
   isPrimary?: boolean;
@@ -12,6 +13,7 @@ type Props = UseScrollToSectionProps & {
 
 export default function ActivityTabs({ isPrimary = false, ...rest }: Props) {
   const { handleSectionChange, activeSection } = useScrollToSection(rest);
+  const t = useTranslations("News.tabs")
 
   return (
     <Tabs
@@ -34,7 +36,7 @@ export default function ActivityTabs({ isPrimary = false, ...rest }: Props) {
             key={trigger}
             value={trigger}
           >
-            {formatLinkLabel(trigger)}
+            {t(`${trigger}` as any)}
           </TabsTrigger>
         ))}
       </TabsList>

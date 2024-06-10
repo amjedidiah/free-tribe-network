@@ -146,7 +146,14 @@
     }
   },
   "News": {
-    "title": "Nouvelles et Evènements"
+    "title": "Nouvelles et Evènements",
+    "empty": "Pas encore de {title} pour cette sélection",
+    "refresh": "Rafraîchir",
+    "tabs": {
+      "blog-posts": "Articles de blog",
+      "recent-activities": "Activités récentes",
+      "upcoming-activities": "Activités à venir"
+    }
   },
   "Our initiative": {
     "title": "Nos initiatives",

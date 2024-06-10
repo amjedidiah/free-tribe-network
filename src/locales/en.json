@@ -413,7 +413,15 @@
         }
     },
     "News": {
-        "title": "News and Events"
+        "title": "News and Events",
+        "tabs": {
+            "recent-activities": "Recent Activities",
+            "upcoming-activities": "Upcoming Activities",
+            "blog-posts": "Blog Posts"
+
+        },
+        "empty": "No {title} for this selection yet",
+        "refresh": "Refresh"
     },
     "Donate": {
         "Banner": {
