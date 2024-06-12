@@ -18,7 +18,7 @@ export default function HomeInitiatives() {
         <div className="grid gap-10">
           <div className="grid lg:grid-cols-3 gap-8">
             {topInitiativesData.map(
-              ({ name, label, content, images, ...rest }) => (
+              ({ name, content, images, ...rest }) => (
                 <div key={name} className="flex flex-col gap-5">
                   <div className="h-[244px] w-full relative mx-auto">
                     <ContentImageClient
