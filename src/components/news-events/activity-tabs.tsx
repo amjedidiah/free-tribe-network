@@ -4,7 +4,7 @@ import useScrollToSection, {
   UseScrollToSectionProps,
 } from "@/hooks/use-scroll-to-section";
 import { activityTabsData } from "@/lib/data";
-import { cn, formatLinkLabel } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 
 type Props = UseScrollToSectionProps & {

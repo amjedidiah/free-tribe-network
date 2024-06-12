@@ -130,12 +130,15 @@
             "See More": "See More",
             "initiatives": {
                 "star-project": {
+                    "label": "Stand Against Recycled Violence (STAR) Project",
                     "summary": "A public health project that seeks to capture and reduce the witnessing of inter-parental violence, and the inter-generational transmission of violence to adolescents."
                 },
                 "repromatters": {
+                    "label": "ReproMatters",
                     "content": "<div><p>A bi-monthly program utilizing real life stories, medical knowledge, public health expertise, and the wide reach of the social media space, to discuss important issues affecting reproductive health and family well-being. Topics covered will center around women’s health, men’s health, children and adolescent health and well-being.</p></div>"
                 },
                 "free-tribe-boost-camp": {
+                    "label": "Free Tribe Boost-Camp",
                     "content": "<div><p>A bi-monthly capacity building program for staff and volunteers of the Free Tribe Network, set to improve corporate work skills, teach industry-relevant skills, and foster bonding amongst members of the Free Tribe Network.</p></div>"
                 }
             }
