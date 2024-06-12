@@ -238,7 +238,7 @@ export const initiativeData = {
 };
 
 export const contactNumber = "+2348153494508";
-export const contactEmail = "hello@freetribenetwork.org";
+export const contactEmail = "freetribenetwork@gmail.com";
 
 export const contactChannels = [
   {
@@ -348,7 +348,7 @@ export const donationFAQs = [
     question:
       "How do I contact Free Tribe Network for ​additional information or inquiries ?",
     answer:
-      "You can call us on <a href='tel:+2348153494508'>+234 (815) 3494 508</a> or email us at <a href='mailto:hello@freetribenetwork.org'>hello@freetribenetwork.org</a>",
+      "You can call us on <a href='tel:+2348153494508'>+234 (815) 3494 508</a> or email us at <a href='mailto:freetribenetwork@gmail.com'>freetribenetwork@gmail.com</a>",
   },
   {
     id: "6",
