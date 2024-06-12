@@ -449,28 +449,28 @@ export const testimonials = [
   {
     testimony:
       "I enjoyed my time with the Free Tribe Network. There are so many good things to say about the network and the awesome work they do!  Most of all, their public relations is the best I have ever seen. They will leave an indelible mark in the sands of time.",
-    src: "testimonial-1p",
+    src: "testimonial-10",
     name: "Pharm. Tobechuckwu Nneji ",
     title: "Pharmacist",
   },
   {
     testimony:
       "Through the Free Tribe Network’s initiatives, I have gained access to essential healthcare services, empowering me to make informed choices for my family's well-being. Grateful for the positive impact!",
-    src: "testimonial-1p",
+    src: "testimonial-11",
     name: "Dr Muhammed Odedeji",
     title: "Medical Doctor",
   },
   {
     testimony:
       "The Free Tribe Network is out to inspire actions for sustained reproductive health and family well-being. This is very essential for mental health, as they provide safe spaces for discussions to make people feel supported and equipped to prioritize their family's well-being. I am proud to support the good work they do.",
-    src: "testimonial-1p",
+    src: "testimonial-12",
     name: "Dr Jibril Abdulmalik",
     title: "Founder/CEO, Asido Foundation",
   },
   {
     testimony:
       "The Free Tribe Network is a group of young people doing great work, having those very important conversations that we often shy away from. I hope they continue to grow higher and higher.",
-    src: "testimonial-1p",
+    src: "testimonial-13",
     name: "Dr Munirat Antoinette Lecky(Anto Lecky)",
   },
 ];
