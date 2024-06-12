@@ -406,19 +406,19 @@ export const testimonials = [
     name: "Aziza Kibibi",
   },
   {
-    src: "testimonial-1p",
+    src: "testimonial-10",
     name: "Pharm Tobechuckwu Nneji",
   },
   {
-    src: "testimonial-1p",
+    src: "testimonial-11",
     name: "Dr Muhammed Odedeji",
   },
   {
-    src: "testimonial-1p",
+    src: "testimonial-12",
     name: "Dr Jibril Abdulmalik",
   },
   {
-    src: "testimonial-1p",
+    src: "testimonial-13",
     name: "Dr Munirat Antoinette Lecky(Anto Lecky)",
   },
 ];
@@ -442,7 +442,7 @@ export const bots = [
   },
   {
     src: "bot-5",
-    name: "Dr Atoyebi"
+    name: "Dr Atoyebi",
   },
   {
     src: "bot-6",
