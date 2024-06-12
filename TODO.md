@@ -42,10 +42,10 @@
 - [x] Localization setup: <https://phrase.com/blog/posts/next-js-app-router-localization-next-intl>
 
 - [ ] Static Content Translation
-- [ ] Dynamic Content Translation
 - [ ] Localizing pathnames
       - <https://next-intl-docs.vercel.app/docs/routing/middleware#localizing-pathnames>
       - <https://next-intl-docs.vercel.app/docs/routing/navigation#localized-pathnames>
+- [ ] Dynamic Content Translation
 - [ ] Search with Algolia
 - [ ] Configure metadata field and OG Images
       - Localization for metadata and OG Images: <https://next-intl-docs.vercel.app/docs/environments/metadata-route-handlers>

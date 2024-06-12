@@ -2,3 +2,4 @@
 exclude_paths:
   - "**.md"
   - "src/components/shared/safe-html.tsx"
+  - "package-lock.json"
