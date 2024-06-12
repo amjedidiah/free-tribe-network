@@ -14,12 +14,14 @@ import { fetchActivitiesByCategoryName } from "@/lib/actions/wordpress";
 import MyPagination from "@/components/shared/my-pagination";
 import { ACTIVITIES_PAGE_LIMIT } from "@/lib/constants";
 import useContentList from "@/hooks/use-content-list";
+import { useTranslations } from "next-intl";
 
 type Props = {
   trigger: string;
 };
 
 export default function Activity({ trigger }: Props) {
+  const t = useTranslations("News")
   const params: fetchActivitiesByCategoryNameVars = useMemo(
     () => ({ categoryName: trigger as CategoryName }),
     [trigger]
@@ -51,7 +53,7 @@ export default function Activity({ trigger }: Props) {
           {displayedData?.map((event) => (
             <ActivityCard key={event.slug} {...event} />
           ))}
-          <FetchingLoader isFetching={isLoading} title="activities" />
+          <FetchingLoader isFetching={isLoading} title={t("activities")} />
 
           {!displayedData?.length && !isLoading && (
             <NoInitiativeData

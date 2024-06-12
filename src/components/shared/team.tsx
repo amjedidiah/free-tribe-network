@@ -61,7 +61,7 @@ export default function Team({
               </div>
               <div>
                 <p className="text-gray-900 text-xl font-medium">{t(`${name}.name` as any)}</p>
-                <p className="text-secondary-500 text-lg">{t(`${name}.title` as any)}</p>
+                <p className="text-secondary-500 text-lg capitalize">{t(`${name}.title` as any)}</p>
               </div>
             </div>
           ))}

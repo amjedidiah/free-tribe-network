@@ -104,7 +104,7 @@
       "Chat": {
         "header": "Discutez pour soutenir",
         "subHeader": "Nous sommes là pour vous aider.",
-        "text": "bonjour@freetribenetwork.org"
+        "text": "hello@freetribenetwork.org"
       },
       "Home": "Maison",
       "News & Events": "Nouvelles",
@@ -153,7 +153,10 @@
       "blog-posts": "Articles de blog",
       "recent-activities": "Activités récentes",
       "upcoming-activities": "Activités à venir"
-    }
+    },
+    "activities": "activités",
+    "blog posts": "articles de blog",
+    "fetching": "Aller chercher"
   },
   "Our initiative": {
     "title": "Nos initiatives",
@@ -181,7 +184,8 @@
       "star-project": {
         "content": "<div> <p>Un projet de santé publique qui cherche à capturer et à réduire le nombre de témoins de violence interparentale et la transmission intergénérationnelle de la violence aux adolescents. \nLe projet vise à améliorer les structures institutionnelles de soutien au sein des écoles secondaires publiques, afin de décourager l'acceptation ou le recours à la violence dans les relations futures. \nIl combine un puissant mélange de programmes de recherche et de santé publique pour aborder la santé reproductive et le bien-être familial.</p></div><div className='h5-gap'><h4>Identifier le problème !</h4> \n<p> Nous avons observé que la violence conjugale (violence interparentale) avait un effet significatif sur le bien-être physique, mental et social des enfants et des adolescents. \nLes enfants témoins de ces comportements violents étaient susceptibles de présenter des difficultés dans les interactions sociales, d'endurer des tensions émotionnelles et d'autres défis psychologiques, ce qui se traduisait par plusieurs résultats négatifs tels que l'intimidation, des relations malsaines, une faible estime de soi, la toxicomanie et même des comportements criminels, avec des effets \npersistant jusqu’à l’âge adulte. \n</p> </div> <div className='h5-gap'> <h4>Notre approche !</h4> <p> Le projet Stand Against Recycled Violence (STAR) : une initiative pour contrer le recyclage intergénérationnel de la violence \n. \nNous avons combiné un puissant mélange de programmes de recherche et de santé publique pour lutter contre l'incidence de la violence interparentale, de l'intimidation (violence des pairs) et de la justification de la violence. \nLes stratégies du projet STAR nous aident à améliorer les structures de soutien institutionnelles au sein des écoles secondaires et à décourager l'acceptation et le recours à la violence dans les relations futures. \nOffres : <ul> <li>Enquête de base</li> <li>Formation des enseignants</li> <li>Formation des étudiants</li> <li>Club institutionnel de la tribu libre</li> <li>Comité de supervision institutionnelle< \n/li> <li>Surveillance",
         "label": "Projet Stand Against Recycled Violence (STAR)"
-      }
+      },
+      "View Activities": "Voir les activités"
     }
   },
   "Partners": {
@@ -413,7 +417,8 @@
       "Policy & Research activities": "Politique",
       "Social service helpline": "Ligne d'assistance du service social",
       "Training programs": "Des programmes de formation",
-      "View Activities": "Voir les activités"
+      "View Activities": "Voir les activités",
+      "title": "Ce que nous faisons"
     },
     "Work with us": {
       "Job Vacancies": "Offres d'emploi",
@@ -478,7 +483,8 @@
       "Stigma and Taboos": {
         "description": "Les tabous culturels et la stigmatisation entourant les sujets liés à la santé reproductive et familiale empêchent une discussion ouverte et l'accès aux services de soutien nécessaires, conduisant à la honte et au secret parmi les personnes concernées.",
         "title": "Stigmatisation et tabous"
-      }
+      },
+      "title": "Le problème"
     }
   }
 }

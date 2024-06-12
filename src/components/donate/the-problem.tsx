@@ -8,7 +8,7 @@ export default function TheProblem() {
   return (
     <section className="py-10 lg:pt-12 lg:pb-20 overflow-y-hidden">
       <article className="container h2-gap">
-        <h2>The Problem</h2>
+        <h2>{t("title")}</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6">
           {problems.map(({ title }, i) => (
             <div

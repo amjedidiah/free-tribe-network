@@ -7,7 +7,7 @@ export default function WhatWeDo() {
   return (
     <section className="py-10 lg:py-14" id="what-we-do">
       <article className="container grid gap-8">
-        <h2 className="text-black">What We Do</h2>
+        <h2 className="text-black">{t("title")}</h2>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-6 lg:grid-rows-2">
           <WhatWeDoCard
             title={t("Advocacy & Awareness campaigns")}

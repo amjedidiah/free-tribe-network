@@ -321,6 +321,7 @@
             }
         },
         "What we do": {
+            "title": "What We Do",
             "Advocacy & Awareness campaigns": "Advocacy & Awareness campaigns",
             "Community projects": "Community projects",
             "Policy & Research activities": "Policy & Research activities",
@@ -409,7 +410,8 @@
             "rfh-advocacy": {
                 "label": "Reproductive and Family health advocacy",
                 "content": "<div><p>This includes rallies, campaigns, weekly advocacy messages (#TeachTuesday and #FactFriday), and media programs to promote and inspire positive health behaviours.</p></div>"
-            }
+            },
+            "View Activities": "View Activities"
         }
     },
     "News": {
@@ -418,10 +420,12 @@
             "recent-activities": "Recent Activities",
             "upcoming-activities": "Upcoming Activities",
             "blog-posts": "Blog Posts"
-
         },
         "empty": "No {title} for this selection yet",
-        "refresh": "Refresh"
+        "refresh": "Refresh",
+        "fetching": "Fetching",
+        "blog posts": "blog posts",
+        "activities": "activities"
     },
     "Donate": {
         "Banner": {
@@ -430,6 +434,7 @@
             "Coming soon": "Coming soon"
         },
         "Problems": {
+            "title": "The Problem",
             "Limited Education": {
                 "title": "Limited Education",
                 "description": "A lack of comprehensive RH and FH education leaves individuals vulnerable to misinformation and prevents them from making informed decisions about their well-being."

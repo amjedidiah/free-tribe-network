@@ -15,7 +15,7 @@ export default function HomeBannerSlide({
   
   return (
     <CarouselItem className="relative">
-      <Banner {...rest}>
+      <Banner {...rest} title={t(`${rest.title}.title` as any)}>
         <div className="flex flex-col gap-6">
           <p className="max-w-[41rem]">{t(`${rest.title}.content` as any)}</p>
 

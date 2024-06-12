@@ -49,7 +49,7 @@ export default function InitiativeBlock({ name, label }: InitiativeBlockProps) {
             )}
           </div>
           <Link href={`/news-events?initiative=${name}`}>
-            <Button className="w-fit">View Activities</Button>
+            <Button className="w-fit">{t("View Activities")}</Button>
           </Link>
         </div>
         <Slider shouldFit hasShadow>

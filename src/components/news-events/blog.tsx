@@ -8,6 +8,7 @@ import { useMemo, useState } from "react";
 import useSWRImmutable from "swr/immutable";
 import MyPagination from "@/components/shared/my-pagination";
 import FetchingLoader from "@/components/shared/fetching-loader";
+import { useTranslations } from "next-intl";
 
 type Props = {
   trigger: string;
@@ -16,6 +17,7 @@ type Props = {
 export default function Blog({ trigger }: Props) {
   const { data, isLoading } = useSWRImmutable("/api/medium", fetchMediumPosts);
   const [start, setStart] = useState(0);
+  const t = useTranslations("News")
   const posts = useMemo(
     () => data?.posts.slice(start, start + BLOG_PAGE_LIMIT),
     [data?.posts, start]
@@ -29,7 +31,7 @@ export default function Blog({ trigger }: Props) {
         <div className="grid gap-10 lg:grid-cols-3 sm:grid-cols-2">
           <BlogList list={posts} />
 
-          <FetchingLoader isFetching={isLoading} title="blog posts" />
+          <FetchingLoader isFetching={isLoading} title={t("blog posts")} />
 
           {!posts?.length && !isLoading && (
             <NoInitiativeData shouldShowRefreshButton={false} />
