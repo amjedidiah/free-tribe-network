@@ -4,12 +4,16 @@ import { formatLinkLabel } from "@/lib/utils";
 import { PropsWithChildren } from "react";
 import { Badge } from "@/components/ui/badge";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import ShouldRender from "../shared/should-render";
 
-type ActivityTabsContentProps = PropsWithChildren & {
+export default function ActivityTabsContent({
+  children,
+  trigger,
+  isBlog = false,
+}: PropsWithChildren<{
   trigger: string;
-};
-
-export default function ActivityTabsContent({ children, trigger }: ActivityTabsContentProps) {
+  isBlog?: boolean;
+}>) {
   const searchParams = useSearchParams();
   const initiative = searchParams.get("initiative") || "";
   const router = useRouter();
@@ -26,7 +30,7 @@ export default function ActivityTabsContent({ children, trigger }: ActivityTabsC
 
   return (
     <TabsContent key={trigger} value={trigger} className="grid gap-2">
-      {initiative && (
+      <ShouldRender condition={!!initiative && !isBlog}>
         <div className="flex justify-end">
           <Badge className="flex gap-2 items-center text-sm font-bold uppercase opacity-80 hover:bg-primary hover:opacity-100 hover:shadow-md">
             <span>{formatLinkLabel(initiative)}</span>{" "}
@@ -38,7 +42,7 @@ export default function ActivityTabsContent({ children, trigger }: ActivityTabsC
             </span>
           </Badge>
         </div>
-      )}
+      </ShouldRender>
       {children}
     </TabsContent>
   );

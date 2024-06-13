@@ -2,7 +2,7 @@
 
 import { useCallback, useMemo } from "react";
 import ReactFlagsSelect from "react-flags-select";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useParams } from "next/navigation";
 import { LocaleCountry } from "@/lib/types";
 import { localeLabels, usePathname, useRouter } from "@/lib/i18n.config";
 import { useLocale } from "next-intl";
@@ -12,15 +12,22 @@ export default function LocaleSelector() {
   const locale = useLocale();
   const pathname = usePathname();
   const router = useRouter();
+  const params = useParams();
 
   const changeLocale = useCallback(
     (code: string) => {
       const newLocale = localeLabels[code as LocaleCountry];
-      const newUrl = `${pathname}?${searchParams.toString()}`;
+      const newUrl = `${pathname}?${searchParams.toString()}` as any;
 
-      router.replace(newUrl, { locale: newLocale });
+      router.replace(
+        {
+          pathname: newUrl,
+          params,
+        },
+        { locale: newLocale, scroll: false }
+      );
     },
-    [pathname, router, searchParams]
+    [params, pathname, router, searchParams]
   );
 
   const selected = useMemo(

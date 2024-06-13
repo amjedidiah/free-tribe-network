@@ -8,12 +8,16 @@ import { useTranslations } from "next-intl";
 
 export default function HistoryMissionVision() {
   const t = useTranslations("Who we are.History");
+  const tMenu = useTranslations("Nav.menu");
   useScrollToSection();
 
   return (
     <section className="py-10 lg:pt-28">
       <div className="container flex flex-col gap-8">
-        <article className="h2-gap" id="our-history">
+        <article
+          className="h2-gap"
+          id={tMenu("Our History").toLowerCase().replaceAll(" ", "-")}
+        >
           <h2 className="text-black">{t("title")}</h2>
           <div className="text-description flex flex-col gap-3 [&_a]:underline">
             <p>{t("content one")}</p>
@@ -41,7 +45,10 @@ export default function HistoryMissionVision() {
         </article>
         <article
           className="grid sm:grid-cols-3 gap-8 lg:gap-16"
-          id="mission-vision"
+          id={tMenu("Mission & Vision")
+            .toLowerCase()
+            .replaceAll("& ", "")
+            .replaceAll(" ", "-")}
         >
           {visionMissionData.map((card, index) => (
             <VisionMissionCard {...card} key={card.title + index} />

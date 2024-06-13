@@ -11,13 +11,14 @@ import FetchingLoader from "@/components/shared/fetching-loader";
 import { useTranslations } from "next-intl";
 
 type Props = {
+  translatedTrigger: string;
   trigger: string;
 };
 
-export default function Blog({ trigger }: Props) {
+export default function Blog({ translatedTrigger, trigger }: Props) {
   const { data, isLoading } = useSWRImmutable("/api/medium", fetchMediumPosts);
   const [start, setStart] = useState(0);
-  const t = useTranslations("News")
+  const t = useTranslations("News");
   const posts = useMemo(
     () => data?.posts.slice(start, start + BLOG_PAGE_LIMIT),
     [data?.posts, start]
@@ -26,7 +27,7 @@ export default function Blog({ trigger }: Props) {
   const handleFetchPrev = () => setStart((prev) => prev - BLOG_PAGE_LIMIT);
 
   return (
-    <ActivityTabsContent trigger={trigger}>
+    <ActivityTabsContent trigger={translatedTrigger} isBlog>
       <div className="flex flex-col gap-4 lg:gap-8">
         <div className="grid gap-10 lg:grid-cols-3 sm:grid-cols-2">
           <BlogList list={posts} />
@@ -34,7 +35,10 @@ export default function Blog({ trigger }: Props) {
           <FetchingLoader isFetching={isLoading} title={t("blog posts")} />
 
           {!posts?.length && !isLoading && (
-            <NoInitiativeData shouldShowRefreshButton={false} />
+            <NoInitiativeData
+              shouldShowRefreshButton={false}
+              trigger={trigger}
+            />
           )}
         </div>
         <MyPagination

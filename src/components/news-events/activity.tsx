@@ -1,7 +1,7 @@
 "use client";
 import ActivityCard from "@/components/news-events/activity-card";
 import ActivityTabsContent from "@/components/news-events/activity-tabs-content";
-import useInitiativeEvent from "@/hooks/use-initiative-data";
+import useInitiativeData from "@/hooks/use-initiative-data";
 import { useMemo } from "react";
 import FetchingLoader from "@/components/shared/fetching-loader";
 import NoInitiativeData from "@/components/news-events/no-initiative-data";
@@ -17,11 +17,12 @@ import useContentList from "@/hooks/use-content-list";
 import { useTranslations } from "next-intl";
 
 type Props = {
+  translatedTrigger: string;
   trigger: string;
 };
 
-export default function Activity({ trigger }: Props) {
-  const t = useTranslations("News")
+export default function Activity({ trigger, translatedTrigger }: Props) {
+  const t = useTranslations("News");
   const params: fetchActivitiesByCategoryNameVars = useMemo(
     () => ({ categoryName: trigger as CategoryName }),
     [trigger]
@@ -41,13 +42,11 @@ export default function Activity({ trigger }: Props) {
     fetchAction: fetchActivitiesByCategoryName,
     limit: ACTIVITIES_PAGE_LIMIT,
   });
-  const { displayedData, shouldShowRefreshButton } = useInitiativeEvent(
-    activityList,
-    trigger
-  );
+  const { displayedData, shouldShowRefreshButton } =
+    useInitiativeData(activityList);
 
   return (
-    <ActivityTabsContent trigger={trigger}>
+    <ActivityTabsContent trigger={translatedTrigger}>
       <div className="flex flex-col gap-4 lg:gap-8">
         <div className="grid gap-10 lg:grid-cols-2">
           {displayedData?.map((event) => (
@@ -58,6 +57,7 @@ export default function Activity({ trigger }: Props) {
           {!displayedData?.length && !isLoading && (
             <NoInitiativeData
               shouldShowRefreshButton={shouldShowRefreshButton}
+              trigger={trigger}
             />
           )}
         </div>

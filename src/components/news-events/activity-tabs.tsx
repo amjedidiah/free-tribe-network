@@ -6,6 +6,7 @@ import useScrollToSection, {
 import { activityTabsData } from "@/lib/data";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
+import { useCallback } from "react";
 
 type Props = UseScrollToSectionProps & {
   isPrimary?: boolean;
@@ -13,7 +14,14 @@ type Props = UseScrollToSectionProps & {
 
 export default function ActivityTabs({ isPrimary = false, ...rest }: Props) {
   const { handleSectionChange, activeSection } = useScrollToSection(rest);
-  const t = useTranslations("News.tabs")
+  const t = useTranslations("News.tabs");
+  const getTranslatedTrigger = useCallback(
+    (trigger: string) =>
+      t(`${trigger}` as any)
+        .replaceAll(" ", "-")
+        .toLowerCase(),
+    [t]
+  );
 
   return (
     <Tabs
@@ -30,22 +38,32 @@ export default function ActivityTabs({ isPrimary = false, ...rest }: Props) {
           }
         )}
       >
-        {activityTabsData.map(({ trigger }) => (
-          <TabsTrigger
-            className="py-2 px-10 lg:py-4 lg:px-20 font-semibold capitalize"
-            key={trigger}
-            value={trigger}
-          >
-            {t(`${trigger}` as any)}
-          </TabsTrigger>
-        ))}
+        {activityTabsData.map(({ trigger }) => {
+          const translatedTrigger = getTranslatedTrigger(trigger);
+
+          return (
+            <TabsTrigger
+              className="py-2 px-10 lg:py-4 lg:px-20 font-semibold capitalize"
+              key={translatedTrigger}
+              value={translatedTrigger}
+            >
+              {t(`${trigger}` as any)}
+            </TabsTrigger>
+          );
+        })}
       </TabsList>
       {activeSection && (
         <div id={activeSection}>
           {activityTabsData
-            .filter((item) => item.trigger === activeSection)
+            .filter(
+              (item) => getTranslatedTrigger(item.trigger) === activeSection
+            )
             .map(({ trigger, Component }) => (
-              <Component key={trigger} trigger={trigger} />
+              <Component
+                key={trigger}
+                translatedTrigger={getTranslatedTrigger(trigger)}
+                trigger={trigger}
+              />
             ))}
         </div>
       )}

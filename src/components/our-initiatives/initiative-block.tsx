@@ -14,8 +14,8 @@ import { useTranslations } from "next-intl";
 
 type InitiativeBlockProps = (typeof initiatives)[number];
 
-export default function InitiativeBlock({ name, label }: InitiativeBlockProps) {
-  const t = useTranslations("Our initiative.initiatives")
+export default function InitiativeBlock({ name }: InitiativeBlockProps) {
+  const t = useTranslations("Our initiative.initiatives");
   const [content, setContent] = useState<TrustedHTML | string>();
   const [images, setImages] = useState<string[]>([]);
   const { handleScroll } = useScrollToSection({
@@ -36,7 +36,7 @@ export default function InitiativeBlock({ name, label }: InitiativeBlockProps) {
   }, [handleScroll, name]);
 
   return (
-    <Element name={name} id={name}>
+    <Element name={name} id={t(`${name}.id` as any)}>
       <div className="flex flex-col py-10 gap-6 lg:gap-8">
         <div className="flex flex-col gap-6">
           <div className="h2-gap">
@@ -48,7 +48,7 @@ export default function InitiativeBlock({ name, label }: InitiativeBlockProps) {
               />
             )}
           </div>
-          <Link href={`/news-events?initiative=${name}`}>
+          <Link href={`/news-events?initiative=${name}` as any}>
             <Button className="w-fit">{t("View Activities")}</Button>
           </Link>
         </div>

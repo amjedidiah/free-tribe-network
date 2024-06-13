@@ -1,5 +1,6 @@
-import { useRouter, useSearchParams } from "next/navigation";
-import { useCallback, useEffect, useState } from "react";
+import { useRouter } from "@/lib/i18n.config";
+import { useSearchParams } from "next/navigation";
+import { useCallback, useEffect } from "react";
 import { scroller } from "react-scroll";
 
 export type UseScrollToSectionProps = {
@@ -11,16 +12,15 @@ export default function useScrollToSection(props?: UseScrollToSectionProps) {
   const { initUrlSection, shouldScroll = true } = props || {};
   const searchParams = useSearchParams();
   const router = useRouter();
-  const urlSection = searchParams.get("section");
-  const [activeSection, setActiveSection] = useState("");
+  const activeSection = searchParams.get("section")?.toLowerCase();
 
   const handleSectionChange = useCallback(
     (id: string) => {
       const updatedSearchParams = new URLSearchParams(searchParams);
-      updatedSearchParams.set("section", id);
-      const href = `?${updatedSearchParams.toString()}`;
+      updatedSearchParams.set("section", id.toLowerCase().replaceAll(" ", "-"));
 
-      router.push(href, {
+      const href = `?${updatedSearchParams.toString()}`;
+      router.push(href as any, {
         scroll: false,
       });
     },
@@ -33,25 +33,21 @@ export default function useScrollToSection(props?: UseScrollToSectionProps) {
         () =>
           scroller.scrollTo(activeSection, {
             smooth: true,
-            offset: -220,
+            offset: -200,
 
             isDynamic: true,
           }),
-        0
+        200
       );
   }, [activeSection]);
-
-  useEffect(() => {
-    if (urlSection) setActiveSection(urlSection);
-  }, [urlSection]);
 
   useEffect(() => {
     if (shouldScroll) handleScroll();
   }, [handleScroll, shouldScroll]);
 
   useEffect(() => {
-    if (initUrlSection && !urlSection) handleSectionChange(initUrlSection);
-  }, [handleSectionChange, initUrlSection, urlSection]);
+    if (initUrlSection && !activeSection) handleSectionChange(initUrlSection);
+  }, [handleSectionChange, initUrlSection, activeSection]);
 
   return { handleSectionChange, activeSection, handleScroll };
 }

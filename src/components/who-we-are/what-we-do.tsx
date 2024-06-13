@@ -4,8 +4,13 @@ import { useTranslations } from "next-intl";
 
 export default function WhatWeDo() {
   const t = useTranslations("Who we are.What we do");
+  const tMenu = useTranslations("Nav.menu");
+
   return (
-    <section className="py-10 lg:py-14" id="what-we-do">
+    <section
+      className="py-10 lg:py-14"
+      id={tMenu("What we do").toLowerCase().replaceAll(" ", "-")}
+    >
       <article className="container grid gap-8">
         <h2 className="text-black">{t("title")}</h2>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-6 lg:grid-rows-2">

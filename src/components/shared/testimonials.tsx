@@ -8,7 +8,7 @@ export default function Testimonials() {
   const t = useTranslations('Testimonials')
 
   return (
-    <section className="py-10 pb-20 lg:py-24 lg:pb-32" id="testimonials">
+    <section className="py-10 pb-20 lg:py-24 lg:pb-32" id={t("id")}>
       <article className="container">
         <Slider
           dots={{
@@ -24,7 +24,9 @@ export default function Testimonials() {
               className="relative flex flex-col justify-end"
             >
               <div className="grid text-center gap-8">
-                <h5 className="text-description">{t(`${name}.testimony` as any)}</h5>
+                <h5 className="text-description">
+                  {t(`${name}.testimony` as any)}
+                </h5>
                 <div className="flex flex-col items-center gap-4">
                   <div className="w-16 h-16 rounded-full relative">
                     <ContentImageClient
@@ -39,9 +41,13 @@ export default function Testimonials() {
                     />
                   </div>
                   <div>
-                    <p className="text-gray-900 text-lg font-medium">{t(`${name}.name` as any)}</p>
+                    <p className="text-gray-900 text-lg font-medium">
+                      {t(`${name}.name` as any)}
+                    </p>
                     {"title" in rest && (
-                      <p className="text-gray-500">{t(`${name}.title` as any)}</p>
+                      <p className="text-gray-500">
+                        {t(`${name}.title` as any)}
+                      </p>
                     )}
                   </div>
                 </div>

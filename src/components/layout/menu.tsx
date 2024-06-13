@@ -49,14 +49,16 @@ export default function Menu({ label, links, href }: MenuProps) {
                     asChild
                     active={isActive}
                   >
-                    <Link href={`${href}?section=${i.href}`}>
+                    <Link href={`${href}?section=${i.href}` as any}>
                       <Image
                         src={i.icon}
                         alt={i.label}
                         width={24}
                         height={24}
                       />
-                      <span className="flex-1">{t(`menu.${i.label}` as any)}</span>
+                      <span className="flex-1">
+                        {t(`menu.${i.label}` as any)}
+                      </span>
                     </Link>
                   </NavigationMenuLink>
                 </li>

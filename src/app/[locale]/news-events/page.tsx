@@ -19,7 +19,7 @@ export default async function NewsEvents({ params: { locale } }: PropsWithLocale
         <article className="container">
           <Suspense fallback={null}>
             <ActivityTabs
-              initUrlSection={defaultNewsEventSection}
+              initUrlSection={t(`tabs.${defaultNewsEventSection}` as any)}
               shouldScroll={false}
             />
           </Suspense>

@@ -5,8 +5,13 @@ import { useTranslations } from "next-intl";
 
 export default function WorkWithUs() {
   const t = useTranslations("Who we are.Work with us");
+  const tMenu = useTranslations("Nav.menu");
+
   return (
-    <section className="relative z-[2] bg-secondary-500" id="work-with-us">
+    <section
+      className="relative z-[2] bg-secondary-500"
+      id={tMenu("Work with us").toLowerCase().replaceAll(" ", "-")}
+    >
       <div className="hidden lg:block -z-[2] absolute inset-y-0 lg:-right-52 xl:-right-44 2xl:-right-20 h-full w-[calc(100vw/2)] xl:w-[calc(100vw/2-150px)] 2xl:w-[calc(100vw/2-300px)]">
         <ContentImage
           title="ankara-3"

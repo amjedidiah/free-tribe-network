@@ -12,6 +12,7 @@ import { useTranslations } from "next-intl";
 
 export default function Bot() {
   const t = useTranslations("Who we are.BOT");
+  const tMenu = useTranslations("Nav.menu");
 
   const [bot, setBot] = useState(0);
   const handleSwipe = useCallback((count = 0) => setBot(count), []);
@@ -35,10 +36,13 @@ export default function Bot() {
   }, []);
 
   return (
-    <section className="py-10 lg:pt-14 lg:pb-16" id="bot">
+    <section
+      className="py-10 lg:pt-14 lg:pb-16"
+      id={tMenu("BOT").toLowerCase()}
+    >
       <article className="container grid gap-9">
         <div className="flex justify-between items-center">
-          <h2 className="text-black">{t('title')}</h2>
+          <h2 className="text-black">{t("title")}</h2>
           <div className="flex-1 flex items-center gap-10 justify-end">
             <div
               className="w-12 h-12 relative shadow rounded-full"
@@ -112,7 +116,9 @@ export default function Bot() {
                 {t(`${bots[bot].name}.title` as any)}
               </p>
             </div>
-            <SafeHTML htmlContent={t.raw(`${bots[bot].name}.description` as any)} />
+            <SafeHTML
+              htmlContent={t.raw(`${bots[bot].name}.description` as any)}
+            />
           </div>
         </div>
       </article>

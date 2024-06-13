@@ -149,6 +149,7 @@
         }
     },
     "Testimonials": {
+        "id": "testimonials",
         "Mrs Olakitan Abiola": {
             "testimony": "The advocacy programs by the Free Tribe has helped me understand the concept of child marriage better and to help other young women and girls like my daughter. Thank you Free Tribe!",
             "name": "Mrs Olakitan Abiola"
@@ -220,8 +221,8 @@
             "title": "Chairman, BOT"
         },
         "Rev Eweje": {
-            "name": "Dr Adebayo, Ayodeji Matthew",
-            "title": "Chairman, BOT"
+            "name": "Rev Eweje, John",
+            "title": "Vice Chairman, BOT"
         },
         "Oluwagbemi-Jacob": {
             "name": "Oluwagbemi-Jacob Tosin",
@@ -232,7 +233,7 @@
             "title": "Member, BOT"
         },
         "Dr Atoyebi": {
-            "name": "Dr Adebayo, Ayodeji Matthew",
+            "name": "Dr Atoyebi, Aderonke O.",
             "title": "Member, BOT"
         },
         "Nwokafor": {
@@ -391,26 +392,32 @@
         "title": "Our Initiatives",
         "initiatives": {
             "star-project": {
+                "id": "star-project",
                 "label": "Stand Against Recycled Violence (STAR) project",
                 "content": "<div> <p>A public health project that seeks to capture and reduce the witnessing of inter-parental violence, and the intergenerational transmission of violence to adolescents. The project aims to improve institutional supportive structures within public secondary schools, to discourage the acceptance or use of violence in future relationships. It combines a powerful blend of research and public health programs to address reproductive health and family well-being.</p></div><div className='h5-gap'><h4>Identifying the Issue!</h4><p> We observed that Intimate Partner Violence (Inter-parental Violence) had a significant effect on the physical, mental, and social well-being of children and adolescents. Children witnessing these violent behaviours were prone to exhibit difficulties in social interactions, endured emotional strain, and other psychological challenges, building into several negative outcomes such as bullying, unhealthy relationships, low self-esteem, substance abuse, and even criminal behaviours, with effects persisting through adulthood. </p> </div> <div className='h5-gap'> <h4>Our Approach!</h4> <p> The Stand Against Recycled Violence (STAR) Project: an initiative to counter the intergenerational recycling of violence. We combined a powerful blend of research and public health programs, to address the incidence of inter-parental violence, bullying (peer violence), and violence justification. The strategies of the STAR project help us to improve institutional supportive structures within secondary schools, and to discourage the acceptance and use of violence in future relationships. Offerings: <ul> <li>Baseline survey</li> <li>Teacher training</li> <li>Student training</li> <li>Free Tribe Institutional Club</li> <li>Institutional Supervising committee</li> <li>Monitoring &amp; Evaluation</li></ul></p> </div>"
             },
             "repromatters": {
+                "id": "repromatters",
                 "label": "ReproMatters",
                 "content": "<div><p>A bi-monthly program utilizing real life stories, medical knowledge, public health expertise, and the wide reach of the social media space, to discuss important issues affecting reproductive health and family well-being. Topics covered will center around women’s health, men’s health, children and adolescent health and well-being.</p></div>"
             },
             "free-tribe-boost-camp": {
+                "id": "free-tribe-boost-camp",
                 "label": "Free Tribe Boost-Camp",
                 "content": "<div><p>A bi-monthly capacity building program for staff and volunteers of the Free Tribe Network, set to improve corporate work skills, teach industry-relevant skills, and foster bonding amongst members of the Free Tribe Network.</p></div>"
             },
             "free-tribe-helpline": {
+                "id": "free-tribe-helpline",
                 "label": "Free Tribe Helpline",
                 "content": "<div><p>A social service for telephone support, access to information, advice, informed interventions, and referral to reproductive and family health professionals.</p></div>"
             },
             "free-tribe-clubs": {
+                "id": "free-tribe-clubs",
                 "label": "Free Tribe Clubs",
                 "content": "<div><p>These are safe spaces set to promote open conversations, improve social support, enhance monitoring and evaluation, and improve self-led initiatives and re-intervention tactics, to ensure sustainable improvements in reproductive and family health outcomes.</p></div>"
             },
             "rfh-advocacy": {
+                "id": "rfh-advocacy",
                 "label": "Reproductive and Family health advocacy",
                 "content": "<div><p>This includes rallies, campaigns, weekly advocacy messages (#TeachTuesday and #FactFriday), and media programs to promote and inspire positive health behaviours.</p></div>"
             },
@@ -422,7 +429,8 @@
         "tabs": {
             "recent-activities": "Recent Activities",
             "upcoming-activities": "Upcoming Activities",
-            "blog-posts": "Blog Posts"
+            "blog-posts": "Blog Posts",
+            "more-activities": "More Activities"
         },
         "empty": "No {title} for this selection yet",
         "refresh": "Refresh",
@@ -488,6 +496,12 @@
                     "answer": "You can get involved by volunteering, donating, or spreading awareness about reproductive health and rights."
                 }
             }
+        }
+    },
+    "Activity": {
+        "Actions": {
+            "Donate": "Donate",
+            "Volunteer": "Volunteer Now"
         }
     }
 }

@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import ContentImage from "@/components/shared/content-image";
 import { IActivity } from "@/lib/types";
 import SafeHTML from "@/components/shared/safe-html";
+import { useTranslations } from "next-intl";
 
 type Props = Pick<
   IActivity,
@@ -19,6 +20,7 @@ export default function ActivityContentTop({
   excerpt,
 }: Props) {
   const imageTitle = isUpcoming ? "activity-ankara-2" : "activity-ankara-1";
+  const t = useTranslations("Activity.Actions");
 
   return (
     <article className="container flex flex-col gap-8">
@@ -40,11 +42,11 @@ export default function ActivityContentTop({
         {isUpcoming && (
           <div className="absolute left-0 right-0 h-full flex items-center justify-center gap-4 [&_a]:py-[0.625rem] [&_a]:px-[1.125rem] [&_a]:rounded-[0.5rem]">
             <Link href="/donate" className=" text-primary-400 bg-white">
-              Donate
+              {t("Donate")}
             </Link>
             <a href={volunteerNowLink} target="_blank">
               <Button className="bg-transparent hover:bg-transparent border-white border-2 py-2 px-4 w-fit text-white">
-                Volunteer Now
+                {t("Volunteer")}
               </Button>
             </a>
           </div>

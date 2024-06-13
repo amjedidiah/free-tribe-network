@@ -154,8 +154,9 @@
     "refresh": "Rafraîchir",
     "tabs": {
       "blog-posts": "Articles de blog",
-      "recent-activities": "Activités récentes",
-      "upcoming-activities": "Activités à venir"
+      "recent-activities": "Activites recentes",
+      "upcoming-activities": "Activites a venir",
+      "more-activities": "Plus d'activités"
     },
     "activities": "activités",
     "blog posts": "articles de blog",
@@ -165,26 +166,32 @@
     "title": "Nos initiatives",
     "initiatives": {
       "free-tribe-boost-camp": {
+        "id": "boost-camp-de-free-tribe",
         "content": "<div><p>Un programme bimensuel de renforcement des capacités pour le personnel et les bénévoles du Free Tribe Network, destiné à améliorer les compétences professionnelles en entreprise, à enseigner des compétences pertinentes pour l'industrie et à favoriser les liens entre les membres du Free Tribe Network.</p \n></div>",
         "label": "Boost-Camp de Free Tribe"
       },
       "free-tribe-clubs": {
+        "id": "clubs-de-free-tribe",
         "content": "<div><p>Il s'agit d'espaces sûrs destinés à promouvoir des conversations ouvertes, à améliorer le soutien social, à renforcer le suivi et l'évaluation, ainsi qu'à améliorer les initiatives autonomes et les tactiques de réintervention, afin de garantir des améliorations durables des résultats en matière de santé reproductive et familiale.</ \np></div>",
         "label": "Clubs de Free Tribe"
       },
       "free-tribe-helpline": {
+        "id": "ligne-dassistance-la-free-tribe",
         "content": "<div><p>Un service social pour l'assistance téléphonique, l'accès à l'information, aux conseils, aux interventions éclairées et à l'orientation vers des professionnels de la santé reproductive et familiale.</p></div>",
         "label": "Ligne d'assistance la Free Tribe"
       },
       "repromatters": {
+        "id": "questions-de-reproduction",
         "content": "<div><p>Un programme bimensuel utilisant des histoires réelles, des connaissances médicales, une expertise en santé publique et la large portée des médias sociaux, pour discuter de questions importantes affectant la santé reproductive et le bien-être familial. \nLes sujets abordés porteront sur la santé des femmes, la santé des hommes, la santé et le bien-être des enfants et des adolescents.</p></div>",
         "label": "Questions de reproduction"
       },
       "rfh-advocacy": {
+        "id": "plaidoyer-rfh",
         "content": "<div><p>Cela inclut les rassemblements, les campagnes, les messages de plaidoyer hebdomadaires (",
         "label": "Plaidoyer RFH"
       },
       "star-project": {
+        "id": "projet-star",
         "content": "<div> <p>Un projet de santé publique qui cherche à capturer et à réduire le nombre de témoins de violence interparentale et la transmission intergénérationnelle de la violence aux adolescents. \nLe projet vise à améliorer les structures institutionnelles de soutien au sein des écoles secondaires publiques, afin de décourager l'acceptation ou le recours à la violence dans les relations futures. \nIl combine un puissant mélange de programmes de recherche et de santé publique pour aborder la santé reproductive et le bien-être familial.</p></div><div className='h5-gap'><h4>Identifier le problème !</h4> \n<p> Nous avons observé que la violence conjugale (violence interparentale) avait un effet significatif sur le bien-être physique, mental et social des enfants et des adolescents. \nLes enfants témoins de ces comportements violents étaient susceptibles de présenter des difficultés dans les interactions sociales, d'endurer des tensions émotionnelles et d'autres défis psychologiques, ce qui se traduisait par plusieurs résultats négatifs tels que l'intimidation, des relations malsaines, une faible estime de soi, la toxicomanie et même des comportements criminels, avec des effets \npersistant jusqu’à l’âge adulte. \n</p> </div> <div className='h5-gap'> <h4>Notre approche !</h4> <p> Le projet Stand Against Recycled Violence (STAR) : une initiative pour contrer le recyclage intergénérationnel de la violence \n. \nNous avons combiné un puissant mélange de programmes de recherche et de santé publique pour lutter contre l'incidence de la violence interparentale, de l'intimidation (violence des pairs) et de la justification de la violence. \nLes stratégies du projet STAR nous aident à améliorer les structures de soutien institutionnelles au sein des écoles secondaires et à décourager l'acceptation et le recours à la violence dans les relations futures. \nOffres : <ul> <li>Enquête de base</li> <li>Formation des enseignants</li> <li>Formation des étudiants</li> <li>Club institutionnel de la Free Tribe</li> <li>Comité de supervision institutionnelle< \n/li> <li>Surveillance",
         "label": "Projet Stand contre la violence recyclée (STAR)"
       },
@@ -240,7 +247,7 @@
       "title": "Président, BOT"
     },
     "Dr Atoyebi": {
-      "name": "Dr Adebayo, Ayodeji Matthieu",
+      "name": "Dr Atoyebi, Aderonke O.",
       "title": "Membre, BOT"
     },
     "Fadayomi": {
@@ -268,8 +275,8 @@
       "title": "Membre, BOT"
     },
     "Rev Eweje": {
-      "name": "Dr Adebayo, Ayodeji Matthieu",
-      "title": "Président, BOT"
+      "name": "Révérend Eweje, John",
+      "title": "Vice-président, BOT"
     }
   },
   "Testimonials": {
@@ -333,7 +340,8 @@
       "name": "Sayo Eweje",
       "testimony": "En tant qu'organisation axée sur l'autonomisation des personnes via l'éducation en matière de santé, le partenariat de CHIIN avec cette organisation à but non lucratif a élargi notre capacité à servir la communauté. \nLeur engagement commun à améliorer la santé reproductive a abouti à une population plus forte et en meilleure santé.",
       "title": "Codirecteur général, Réseau d'intégration de l'information critique sur les soins de santé (CHIIN)"
-    }
+    },
+    "id": "temoignages"
   },
   "Who we are": {
     "BOT": {
@@ -488,6 +496,12 @@
         "title": "Stigmatisation et tabous"
       },
       "title": "Le problème"
+    }
+  },
+  "Activity": {
+    "Actions": {
+      "Donate": "Faire un don",
+      "Volunteer": "Devenez bénévole maintenant"
     }
   }
 }

@@ -24,8 +24,7 @@ function NavLink({ route }: Props) {
           (!desiredPath && route.href === "/"),
       })}
     >
-      {/* <Link href={route.href}>{route.label}</Link> */}
-      <Link href={route.href}>{t(route.label as any)}</Link>
+      <Link href={route.href as any}>{t(route.label as any)}</Link>
     </li>
   );
 }

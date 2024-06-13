@@ -48,7 +48,7 @@ export default function Footer({ minimal = false }) {
                   <ul className="flex flex-col lg:flex-row gap-4">
                     {routes.map(({ links, ...item }) => (
                       <li key={item.label}>
-                        <Link href={item.href}>
+                        <Link href={item.href as any}>
                           {t(`Contact.${item.label}` as any)}
                         </Link>
                       </li>
