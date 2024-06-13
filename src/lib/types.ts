@@ -150,11 +150,13 @@ export type FlwPaymentPlan = {
 export enum LocaleCountry {
   GB = "GB",
   FR = "FR",
+  NL = "NL",
 }
 
 export enum Locale {
   en = "en",
   fr = "fr",
+  nl = "nl",
 }
 
 export type PropsWithLocaleParam = {

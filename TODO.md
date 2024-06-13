@@ -41,10 +41,11 @@
 - [x] email service: switch to Mailchimp
 - [x] Localization setup: <https://phrase.com/blog/posts/next-js-app-router-localization-next-intl>
 
-- [ ] Static Content Translation
-- [ ] Localizing pathnames
+- [x] Static Content Translation
+- [x] Localizing pathnames
       - <https://next-intl-docs.vercel.app/docs/routing/middleware#localizing-pathnames>
       - <https://next-intl-docs.vercel.app/docs/routing/navigation#localized-pathnames>
+- [x] Dutch translation
 - [ ] Dynamic Content Translation
 - [ ] Search with Algolia
 - [ ] Configure metadata field and OG Images

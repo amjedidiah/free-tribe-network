@@ -1,7 +1,7 @@
 "use client";
 
 import ContentImageClient from "@/components/shared/content-image-client";
-import { Link } from "@/lib/i18n.config";
+import { Link, usePathname } from "@/lib/i18n.config";
 import { Link as ScrollLink } from "react-scroll";
 import { Button } from "@/components/ui/button";
 import { Menu as Burger } from "lucide-react";
@@ -11,10 +11,13 @@ import { cn } from "@/lib/utils";
 import NavLink from "@/components/layout/nav-link";
 import LocaleSelector from "@/components/layout/locale-selector";
 import { useTranslations } from "next-intl";
+import ShouldRender from "@/components/shared/should-render";
 
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
   const t = useTranslations("Nav");
+  const pathname = usePathname();
+  const isResourcesPage = pathname === "/resources";
 
   return (
     <header className="fixed w-full z-10 shadow">
@@ -54,9 +57,16 @@ function Nav() {
               ))}
             </ul>
             <div className="flex gap-6 items-center">
-              <ScrollLink to="contact-us" smooth>
-                <Button variant="outline">{t("Contact Us")}</Button>
-              </ScrollLink>
+              <ShouldRender condition={!isResourcesPage}>
+                <ScrollLink to="contact-us" smooth>
+                  <Button variant="outline">{t("Contact Us")}</Button>
+                </ScrollLink>
+              </ShouldRender>
+              <ShouldRender condition={isResourcesPage}>
+                <a href="https://wa.me/+2348153494508">
+                  <Button variant="outline">{t("Contact Us")}</Button>
+                </a>
+              </ShouldRender>
               <Link href="/donate">
                 <Button>{t("Donate")}</Button>
               </Link>
