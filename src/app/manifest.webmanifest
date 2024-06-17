@@ -1,0 +1,53 @@
+{
+    "name": "Free Tribe Network",
+    "short_name": "Free Tribe",
+    "start_url": "/",
+    "display": "standalone",
+    "description": "Promoting reproductive wellness, and family well-being. We provide charitable services in the forms of programs, projects and research, to translate knowledge into perception, and perceptions into actions and behaviours.",
+    "lang": "en",
+    "dir": "auto",
+    "theme_color": "#ee35a3",
+    "background_color": "#ffffff",
+    "orientation": "any",
+    "icons": [
+        {
+            "src": "https://freetribenetwork.com/wp-content/uploads/2024/06/manifest-icon-512.maskable.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "https://freetribenetwork.com/wp-content/uploads/2024/06/manifest-icon-192.maskable.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        }
+    ],
+    "prefer_related_applications": false,
+    "shortcuts": [
+        {
+            "name": "Donate",
+            "url": "/donate"
+        },
+        {
+            "name": "Home",
+            "url": "/"
+        },
+        {
+            "name": "News & Events",
+            "url": "/news-events"
+        },
+        {
+            "name": "Our Initiatives",
+            "url": "/our-initiatives"
+        },
+        {
+            "name": "Resources",
+            "url": "/resources"
+        },
+        {
+            "name": "Who We Are",
+            "url": "/who-we-are"
+        }
+    ]
+}

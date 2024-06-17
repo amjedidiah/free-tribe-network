@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.freetribenetwork.org</loc>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://acme.com/en" />
+    <xhtml:link
+      rel="alternate"
+      hreflang="fr"
+      href="https://acme.com/fr" />
+    <xhtml:link
+      rel="alternate"
+      hreflang="nl"
+      href="https://acme.com/nl" />
+    <lastmod>2024-06-17T10:29:33+00:00</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://www.freetribenetwork.org/resources</loc>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://acme.com/en/resources" />
+    <xhtml:link
+      rel="alternate"
+      hreflang="fr"
+      href="https://www.freetribenetwork.org/fr/ressources" />
+    <xhtml:link
+      rel="alternate"
+      hreflang="nl"
+      href="https://www.freetribenetwork.org/nl/bronnen" />
+    <lastmod>2024-06-17T10:29:33+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.freetribenetwork.org/donate</loc>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://www.freetribenetwork.org/en/donate" />
+    <xhtml:link
+      rel="alternate"
+      hreflang="fr"
+      href="https://www.freetribenetwork.org/fr/faire-un-don" />
+    <xhtml:link
+      rel="alternate"
+      hreflang="nl"
+      href="https://www.freetribenetwork.org/nl/doneer" />
+    <lastmod>2024-06-17T10:29:33+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.freetribenetwork.org/our-initiatives</loc>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://www.freetribenetwork.org/en/our-initiatives" />
+    <xhtml:link
+      rel="alternate"
+      hreflang="fr"
+      href="https://www.freetribenetwork.org/fr/nos-initiatives" />
+    <xhtml:link
+      rel="alternate"
+      hreflang="nl"
+      href="https://www.freetribenetwork.org/nl/onze-initiatieven" />
+    <lastmod>2024-06-17T10:29:33+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.freetribenetwork.org/who-we-are</loc>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://www.freetribenetwork.org/en/who-we-are" />
+    <xhtml:link
+      rel="alternate"
+      hreflang="fr"
+      href="https://www.freetribenetwork.org/fr/qui-nous-sommes" />
+    <xhtml:link
+      rel="alternate"
+      hreflang="nl"
+      href="https://www.freetribenetwork.org/nl/wie-we-zijn" />
+    <lastmod>2024-06-17T10:29:33+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.freetribenetwork.org/news-events</loc>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://www.freetribenetwork.org/en/news-events" />
+    <xhtml:link
+      rel="alternate"
+      hreflang="fr"
+      href="https://www.freetribenetwork.org/fr/nouvelles" />
+    <xhtml:link
+      rel="alternate"
+      hreflang="nl"
+      href="https://www.freetribenetwork.org/nl/nieuws" />
+    <lastmod>2024-06-17T10:29:33+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+</urlset>
