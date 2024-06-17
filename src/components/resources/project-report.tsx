@@ -1,12 +1,16 @@
 import ProjectReportCard from "@/components/resources/project-report-card";
 import { fetchResourcesByCategoryId } from "@/lib/actions/wordpress";
-import { ResourcesIds } from "@/lib/types";
 import ShouldRender from "@/components/shared/should-render";
+import { getLocale, getTranslations } from "next-intl/server";
+import { getKeyResource } from "@/lib/utils";
 
 export default async function ProjectReport() {
+  const locale = await getLocale();
+  const keyResource = getKeyResource(locale);
   const { resourceList, title } = await fetchResourcesByCategoryId({
-    id: ResourcesIds.ProjectActivityReport,
+    id: keyResource.ProjectActivityReport,
   });
+  const t = await getTranslations("Loading");
 
   return (
     <section className="py-10 lg:py-16 border-ankara-1 border-b-[20px]">
@@ -15,7 +19,10 @@ export default async function ProjectReport() {
         <ShouldRender condition={Boolean(!resourceList.length)}>
           <article className="col-span-full text-center grid gap-3 p-8">
             <h5>
-              No <span className="font-medium">{title}</span> yet
+              {t.rich("Empty Resources", {
+                span: (chunks) => <span className="font-medium">{chunks}</span>,
+                title,
+              })}
             </h5>
           </article>
         </ShouldRender>

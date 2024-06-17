@@ -9,6 +9,7 @@ import { RESOURCES_PAGE_LIMIT } from "@/lib/constants";
 import { ResourcesListProps } from "@/components/resources/resources-list";
 import ShouldRender from "@/components/shared/should-render";
 import FetchingLoader from "@/components/shared/fetching-loader";
+import { useTranslations } from "next-intl";
 
 type Props = Pick<
   ResourcesListProps,
@@ -38,6 +39,7 @@ export default function ResourcesListContainer({
     fetchAction: fetchResourcesByCategoryId,
     limit: RESOURCES_PAGE_LIMIT,
   });
+  const t = useTranslations("Loading");
 
   return (
     <div
@@ -50,7 +52,10 @@ export default function ResourcesListContainer({
       <ShouldRender condition={Boolean(!resourceList?.length) && !isLoading}>
         <article className="col-span-full text-center grid gap-3 p-8">
           <h5>
-            No <span className="font-medium">{title}</span> yet
+            {t.rich("Empty Resources", {
+              span: (chunks) => <span className="font-medium">{chunks}</span>,
+              title,
+            })}
           </h5>
         </article>
       </ShouldRender>

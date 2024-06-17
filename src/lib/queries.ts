@@ -99,6 +99,7 @@ export const GET_ACTIVITY_BY_SLUG = gql`
             scheduleNotes
             venue
             venueNotes
+            sharedid
           }
         }
       }
@@ -108,6 +109,7 @@ export const GET_ACTIVITY_BY_SLUG = gql`
 
 export const GET_ACTIVITIES_BY_CATEGORY_NAME = gql`
   query getActivitiesByCategoryName(
+    $language: LanguageCodeFilterEnum!
     $categoryName: String!
     $env: String!
     $first: Int
@@ -116,7 +118,7 @@ export const GET_ACTIVITIES_BY_CATEGORY_NAME = gql`
     $after: String
   ) {
     activities(
-      where: { categoryName: $categoryName, tag: $env }
+      where: { categoryName: $categoryName, tag: $env, language: $language }
       first: $first
       last: $last
       before: $before

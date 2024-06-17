@@ -1,507 +1,521 @@
 {
-    "Activity": {
-        "Actions": {
-            "Donate": "Doneer",
-            "Volunteer": "Doe nu vrijwilligerswerk"
-        }
+  "Activity": {
+    "Actions": {
+      "Donate": "Doneer",
+      "Volunteer": "Doe nu vrijwilligerswerk"
     },
-    "Donate": {
-        "Banner": {
-            "Coming soon": "Binnenkort beschikbaar",
-            "content": "Binnenkort kunt u doorgaan naar een beveiligde betaalpagina om uw donatie af te ronden.",
-            "title": "Help mensen over de hele wereld"
-        },
-        "FAQ": {
-            "donate": "Doneer",
-            "questions": {
-                "1": {
-                    "answer": "Jouw donatie wordt gebruikt ter ondersteuning van programma’s, projecten en onderzoek uitgevoerd door het Free Tribe Network.",
-                    "question": "Hoe wordt mijn donatie gebruikt?"
-                },
-                "2": {
-                    "answer": "Onze betalingsprovider, <strong>Flutterwave</strong>, gebruikt SSL-codering om uw gegevens te beschermen en ervoor te zorgen dat uw donatie veilig is. \nUw kaart en persoonlijke gegevens zijn veilig.",
-                    "question": "Hoe weet ik zeker dat mijn donatie veilig is?"
-                },
-                "3": {
-                    "answer": "Ja, dat kan.",
-                    "question": "Kan ik een specifieke interesse sponsoren?"
-                },
-                "4": {
-                    "answer": "Ja, u ontvangt per e-mail een <strong>Flutterwave</strong> ontvangstbewijs voor uw donatie.",
-                    "question": "Krijg ik een ontvangstbewijs voor mijn donatie?"
-                },
-                "5": {
-                    "answer": "U kunt ons bellen op <a href='tel: 2348153494508'> 234 (815) 3494 508</a> of een e-mail sturen naar <a href='mailto:freetribenetwork@gmail.com'>freetribenetwork@gmail.com</a>",
-                    "question": "Hoe kan ik contact opnemen met Free Tribe Network voor aanvullende informatie of vragen?"
-                },
-                "6": {
-                    "answer": "U kunt meedoen door vrijwilligerswerk te doen, te doneren of het bewustzijn over reproductieve gezondheid en rechten te verspreiden.",
-                    "question": "Hoe kan ik meedoen?"
-                }
-            },
-            "title": "Heeft u vragen? \n<br></br> Wij hebben antwoorden!"
-        },
-        "Problems": {
-            "Data Fragmentation": {
-                "description": "Zonder een gecentraliseerde database van kwesties op het gebied van de reproductieve gezondheid (RH) en de gezinsgezondheid (FH), zijn interventies vaak verspreid en inefficiënt, waardoor er gaten ontstaan ​​in de aanpak van kritieke behoeften.",
-                "title": "Gegevensfragmentatie"
-            },
-            "Health Inequality": {
-                "description": "De ongelijkheid in de toegang tot reproductieve en gezinsgezondheidsvoorzieningen bestendigt de ongelijkheid, waardoor gemarginaliseerde bevolkingsgroepen in een nadelige positie terechtkomen wat betreft het behoud van hun welzijn.",
-                "title": "Ongelijkheid op gezondheidsgebied"
-            },
-            "Isolated Communities": {
-                "description": "Veel gemeenschappen hebben geen toegang tot adequate reproductieve en gezinsgezondheidsvoorzieningen, wat leidt tot gevoelens van isolement en onzekerheid over waar ze terecht kunnen voor ondersteuning.",
-                "title": "Geïsoleerde gemeenschappen"
-            },
-            "Limited Education": {
-                "description": "Een gebrek aan alomvattende RH- en FH-educatie maakt individuen kwetsbaar voor verkeerde informatie en verhindert hen om weloverwogen beslissingen te nemen over hun welzijn.",
-                "title": "Beperkt onderwijs"
-            },
-            "Stigma and Taboos": {
-                "description": "Culturele taboes en stigma rond onderwerpen op het gebied van reproductieve gezondheid en gezinsgezondheid verhinderen een open discussie en toegang tot noodzakelijke ondersteunende diensten, wat leidt tot schaamte en geheimhouding onder de getroffen individuen",
-                "title": "Stigma en taboes"
-            },
-            "title": "Het probleem"
-        }
+    "Conjunctions": {
+      "at": "bij",
+      "by": "door"
     },
-    "Home": {
-        "Banners": {
-            "Community": {
-                "content": "Onze eenheid en collectieve inspanningen voor een gedeelde visie die onze groei, kracht en duurzame impact bevordert.",
-                "title": "Gemeenschap"
-            },
-            "Equity": {
-                "content": "Wij geloven in een eerlijke verdeling van diensten en middelen, en gelijke toegang tot kansen, ongeacht leeftijd, geslacht, ras, opleiding, etniciteit, religie of persoonlijke overtuigingen.",
-                "title": "Eigen vermogen"
-            },
-            "Join": "kom bij onze maillijst",
-            "Mastery": {
-                "content": "Een meedogenloos streven naar uitmuntendheid door gebruik te maken van kritische ervaring, expertise en wetenschappelijk bewijs, om onze initiatieven af ​​te stemmen op de beste praktijken.",
-                "title": "Meesterschap"
-            },
-            "Social Justice": {
-                "content": "Wij zijn van mening dat ieder individu met waardigheid en respect moet worden behandeld, en dat zijn fundamentele mensenrechten moeten worden beschermd.",
-                "title": "Sociale gerechtigheid"
-            },
-            "Support": "Steun",
-            "Sustained reproductive health and family well-being": {
-                "content": "Bij het Free Tribe Network bevorderen we reproductief welzijn en gezinswelzijn. \nWij bieden liefdadigheidsdiensten in de vorm van programma's, projecten en onderzoek, om kennis te vertalen in perceptie, en percepties in acties en gedrag.",
-                "title": "Duurzame reproductieve gezondheid en gezinswelzijn"
-            }
-        },
-        "Impact": {
-            "Heading": {
-                "description": "Laat onze cijfers voor ons spreken.",
-                "title": "Onze impact in cijfers"
-            },
-            "Stats": {
-                "Advocacy and Awareness Campaigns": "Belangenbehartigings- en bewustmakingscampagnes",
-                "Collaborations": "Samenwerkingen",
-                "Community Project": "Gemeenschapsproject",
-                "Policy and Research activities": "Beleids- en onderzoeksactiviteiten",
-                "Students reached": "Studenten bereikt",
-                "Training Programs": "Training programmas",
-                "Volunteering Hours": "Vrijwilligerswerk uren"
-            }
-        },
-        "Our initiatives": {
-            "Heading": {
-                "description": "Bij The Free Tribe Network bieden we een reeks kernprogramma's en diensten ter ondersteuning van reproductief welzijn, gedrag bij het zoeken naar en rapporteren van gezondheid, en ter verbetering van de reproductieve gezondheid en het gezinswelzijn. \nOnze missie is om individuen en gemeenschappen in staat te stellen weloverwogen beslissingen te nemen over hun reproductieve gezondheid en rechten.",
-                "title": "Onze initiatieven"
-            },
-            "See More": "Bekijk meer",
-            "initiatives": {
-                "free-tribe-boost-camp": {
-                    "content": "<div><p>Een tweemaandelijks programma voor capaciteitsopbouw voor medewerkers en vrijwilligers van het Free Tribe Network, bedoeld om de werkvaardigheden van bedrijven te verbeteren, brancherelevante vaardigheden aan te leren en de band tussen de leden van het Free Tribe Network te bevorderen.</p> \n</div>",
-                    "label": "Boostkamp van Free Tribe Network"
-                },
-                "repromatters": {
-                    "content": "<div><p>Een tweemaandelijks programma dat gebruik maakt van verhalen uit het echte leven, medische kennis, expertise op het gebied van de volksgezondheid en het brede bereik van de sociale media, om belangrijke kwesties te bespreken die van invloed zijn op de reproductieve gezondheid en het welzijn van het gezin. \nDe behandelde onderwerpen zullen zich richten op de gezondheid van vrouwen, de gezondheid van mannen, de gezondheid en het welzijn van kinderen en adolescenten.</p></div>",
-                    "label": "ReproMatters"
-                },
-                "star-project": {
-                    "label": "Stand tegen gerecycleerd geweld (STAR)-project",
-                    "summary": "Een volksgezondheidsproject dat tot doel heeft het getuige zijn van geweld tussen ouders en de intergenerationele overdracht van geweld op adolescenten vast te leggen en te verminderen."
-                }
-            }
-        },
-        "Post": {
-            "Heading": {
-                "description": "Lees enkele fragmenten uit onze blog",
-                "title": "Blogartikelen"
-            },
-            "See More": "Bekijk meer"
-        },
-        "Tweets": {
-            "link": "Tweets van freetribenetwork",
-            "title": "Blijf op de hoogte van onze activiteiten op X"
-        },
-        "Vision": {
-            "Heading": {
-                "description": "Het opbouwen van een mondiale gemeenschap van mensen die levenslange beslissingen nemen, om hun reproductieve welzijn en gezinswelzijn te verbeteren, in lijn met de Agenda 2030 voor duurzame ontwikkeling.",
-                "title": "Onze visie"
-            },
-            "gender equality": "geslachtsgelijkheid",
-            "good health and well being": "een goede gezondheid en welzijn",
-            "reduced inequalities": "verminderde ongelijkheid"
-        }
-    },
-    "Layout": {
-        "Contact": {
-            "Call": {
-                "header": "Bel ons",
-                "subHeader": "Bezoek ons ​​hoofdkantoor.",
-                "text": "Ma-vrij van 8.00 tot 17.00 uur."
-            },
-            "Chat": {
-                "header": "Chat om te ondersteunen",
-                "subHeader": "We zijn hier om te helpen.",
-                "text": "freetribenetwork@gmail.com"
-            },
-            "Home": "Thuis",
-            "News & Events": "Nieuws",
-            "Our Initiatives": "Onze initiatieven",
-            "Resources": "Bronnen",
-            "Visit": {
-                "header": "Bezoek ons",
-                "subHeader": "Bezoek ons ​​hoofdkantoor.",
-                "text": "Nr. 15/11b, YK Abass, Ore-Ofe Estate, Elewiodo, Ibadan."
-            },
-            "Who we are": "Wie we zijn"
-        },
-        "Footer": {
-            "Copyright": "Free Tribe Network",
-            "Rights": "Alle rechten voorbehouden"
-        },
-        "Heading": {
-            "description": "Ons vriendelijke team staat altijd klaar voor een praatje.",
-            "title": "We zouden graag van je horen"
-        },
-        "Subscribe": {
-            "description": "Door u te registreren geeft u toestemming aan het <b>Free Tribe Network</b> om uw e-mailadres op te slaan en te verzamelen met als doel u onze maandelijkse nieuwsbrief te sturen.",
-            "title": "Abonneer u op onze mail"
-        },
-        "metaData": {
-            "description": "Welkom bij het Free Tribe-netwerk",
-            "title": "Free Tribe Network"
-        }
-    },
-    "Nav": {
-        "Contact Us": "Neem contact met ons op",
-        "Donate": "Doneer",
-        "Home": "Thuis",
-        "News & Events": "Nieuws",
-        "Our Initiatives": "Onze initiatieven",
-        "Resources": "Bronnen",
-        "Who we are": "Wie we zijn",
-        "menu": {
-            "BOT": "BOT",
-            "Blog Posts": "Blog berichten",
-            "Free Tribe Boost-Camp": "boostkamp van Free Tribe",
-            "Free Tribe Clubs": "Free Tribe-clubs",
-            "Free Tribe Helpline": "Free Tribe-hulplijn",
-            "Mission & Vision": "Missie",
-            "Our History": "Onze geschiedenis",
-            "RFH Advocacy": "RFH-belangenbehartiging",
-            "Recent Activities": "Recente activiteiten",
-            "ReproMatters": "ReproMatters",
-            "STAR project": "STAR-project",
-            "Staff": "Personeel",
-            "Testimonials": "Getuigenissen",
-            "Upcoming Activities": "Aankomende activiteiten",
-            "What we do": "Wat we doen",
-            "Work with us": "Werk met ons"
-        }
-    },
-    "News": {
-        "activities": "activiteiten",
-        "blog posts": "Blog berichten",
-        "empty": "Nog geen {title} voor deze selectie",
-        "fetching": "Ophalen",
-        "refresh": "Vernieuwen",
-        "tabs": {
-            "blog-posts": "Blog berichten",
-            "more-activities": "Meer activiteiten",
-            "recent-activities": "Recente activiteiten",
-            "upcoming-activities": "Aankomende activiteiten"
-        },
-        "title": "nieuws en evenementen"
-    },
-    "Our initiative": {
-        "initiatives": {
-            "View Activities": "Bekijk activiteiten",
-            "free-tribe-boost-camp": {
-                "content": "<div><p>Een tweemaandelijks programma voor capaciteitsopbouw voor medewerkers en vrijwilligers van het Free Tribe Network, bedoeld om de werkvaardigheden van bedrijven te verbeteren, brancherelevante vaardigheden aan te leren en de band tussen de leden van het Free Tribe Network te bevorderen.</p> \n</div>",
-                "id": "boostkamp-van-free-tribe",
-                "label": "boostkamp van Free Tribe"
-            },
-            "free-tribe-clubs": {
-                "content": "<div><p>Dit zijn veilige ruimtes die zijn ingericht om open gesprekken te bevorderen, de sociale steun te verbeteren, de monitoring en evaluatie te verbeteren, en zelfgeleide initiatieven en herinterventietactieken te verbeteren, om duurzame verbeteringen in de reproductieve en gezinsgezondheidsresultaten te garanderen.</div></div>",
-                "id": "free-tribe-clubs",
-                "label": "Free Tribe-clubs"
-            },
-            "free-tribe-helpline": {
-                "content": "<div><p>Een sociale dienst voor telefonische ondersteuning, toegang tot informatie, advies, geïnformeerde interventies en verwijzing naar professionals op het gebied van de reproductieve en gezinsgezondheid.</p></div>",
-                "id": "free-tribe-hulplijn",
-                "label": "Free Tribe-hulplijn"
-            },
-            "repromatters": {
-                "content": "<div><p>Een tweemaandelijks programma dat gebruik maakt van verhalen uit het echte leven, medische kennis, expertise op het gebied van de volksgezondheid en het brede bereik van de sociale media, om belangrijke kwesties te bespreken die van invloed zijn op de reproductieve gezondheid en het welzijn van het gezin. \nDe behandelde onderwerpen zullen zich richten op de gezondheid van vrouwen, de gezondheid van mannen, de gezondheid en het welzijn van kinderen en adolescenten.</p></div>",
-                "id": "reprozaken",
-                "label": "ReproMatters"
-            },
-            "rfh-advocacy": {
-                "content": "<div><p>Dit omvat bijeenkomsten, campagnes en wekelijkse belangenbehartigingsberichten",
-                "id": "rfh-belangenbehartiging",
-                "label": "Belangenbehartiging op het gebied van reproductieve en gezinsgezondheid"
-            },
-            "star-project": {
-                "content": "<div> <p>Een volksgezondheidsproject dat tot doel heeft het getuige zijn van geweld tussen ouders en de intergenerationele overdracht van geweld op adolescenten vast te leggen en te verminderen. \nHet project heeft tot doel de institutionele ondersteunende structuren binnen openbare middelbare scholen te verbeteren, om de acceptatie of het gebruik van geweld in toekomstige relaties te ontmoedigen. \nHet combineert een krachtige mix van onderzoek en volksgezondheidsprogramma's om reproductieve gezondheid en gezinswelzijn aan te pakken.</p></div><div className='h5-gap'><h4>Het probleem identificeren!</h4> \n<p> We hebben vastgesteld dat geweld tussen partners (tussen ouders) een significant effect heeft op het fysieke, mentale en sociale welzijn van kinderen en adolescenten. \nKinderen die getuige waren van dit gewelddadige gedrag hadden de neiging om problemen te vertonen in sociale interacties, emotionele spanningen en andere psychologische uitdagingen te doorstaan, wat leidde tot verschillende negatieve gevolgen, zoals pesten, ongezonde relaties, een laag zelfbeeld, middelenmisbruik en zelfs crimineel gedrag, met alle gevolgen van dien. \nvolhouden tot in de volwassenheid. \n</p> </div> <div className='h5-gap'> <h4>Onze aanpak!</h4> <p> Het Stand Against Recycled Violence (STAR) Project: een initiatief om de intergenerationele recycling van geweld tegen te gaan \n. \nWe hebben een krachtige mix van onderzoek en volksgezondheidsprogramma's gecombineerd om de incidentie van geweld tussen ouders, pesten (peer-geweld) en de rechtvaardiging van geweld aan te pakken. \nDe strategieën van het STAR-project helpen ons de institutionele ondersteunende structuren binnen middelbare scholen te verbeteren en de acceptatie en het gebruik van geweld in toekomstige relaties te ontmoedigen. \nAanbod: <ul> <li>Basislijnonderzoek</li> <li>Lerarenopleiding</li> <li>Studentenopleiding</li> <li>Free Tribe Institutional Club</li> <li>Institutionele toezichtcommissie</li> <li>Toezicht",
-                "id": "ster-project",
-                "label": "Stand Against Recycled Violence (STAR)-project"
-            }
-        },
-        "title": "Onze initiatieven"
-    },
-    "Partners": {
-        "Heading": {
-            "title": "Onze partners"
-        }
-    },
-    "Support": {
-        "Donate": "Doneer",
-        "Heading": {
-            "description": "Sluit u aan bij onze zaak om structuren rond reproductieve gezondheid en gezinswelzijn te transformeren.",
-            "title": "Steun vandaag nog onze missie!"
-        }
-    },
-    "Team": {
-        "Board of Trustees": "Raad van Toezicht",
-        "Busayo": {
-            "name": "Busayo Oyetubosun",
-            "title": "beheerder"
-        },
-        "Dr Adebayo": {
-            "name": "Dr. Adebayo, Ayodeji Matthew",
-            "title": "Voorzitter, BOT"
-        },
-        "Dr Atoyebi": {
-            "name": "Dr. Atoyebi, Aderonke O.",
-            "title": "Lid, BOT"
-        },
-        "Fadayomi": {
-            "name": "Fadayomi, Sefunmi G.",
-            "title": "Lid, BOT"
-        },
-        "Grace": {
-            "name": "Grace Vin-Otebele",
-            "title": "Toezicht houden"
-        },
-        "Madu": {
-            "name": "Madu, Ihuomachidire I.",
-            "title": "Lid, BOT"
-        },
-        "Mfon": {
-            "name": "Mfon, Andikan A.",
-            "title": "Lid, BOT"
-        },
-        "Mikka": {
-            "name": "Mikka Erem",
-            "title": "Programmamedewerker"
-        },
-        "Nwokafor": {
-            "name": "Nwokafor, Obiora",
-            "title": "Lid, BOT"
-        },
-        "Oluwagbemi-Jacob": {
-            "name": "Oluwagbemi-Jacob Tosin",
-            "title": "Secretaris, BOT"
-        },
-        "Oluwatobi": {
-            "name": "Oluwatobi Alawode",
-            "title": "Logistiek Officier"
-        },
-        "Prof Obafemi": {
-            "name": "Prof. Obafemi, Frances Ngozi",
-            "title": "Lid, BOT"
-        },
-        "Rev Eweje": {
-            "name": "Ds Eweje, John",
-            "title": "Vice-voorzitter, BOT"
-        },
-        "See More": "Bekijk meer",
-        "Susan": {
-            "name": "Susan Kebu",
-            "title": "Projectmedewerker"
-        },
-        "The Work Family": "De werkfamilie",
-        "Tolu": {
-            "name": "Tolu Oluwagbemi-Jacob",
-            "title": "Communications Officer"
-        },
-        "Uche": {
-            "name": "Uche Kennedy",
-            "title": "IT-leider"
-        }
-    },
-    "Testimonials": {
-        "Aziza Kibibi": {
-            "name": "Aziza Kibibi",
-            "testimony": "Het was een genoegen om met het Free Tribe Network aan het RepoMatters-programma te werken. \nHun werk om het bewustzijn te vergroten is van cruciaal belang bij het veranderen van schadelijke, culturele praktijken die vrouwen en meisjes treffen",
-            "title": "Oprichter, Pretty Little Ladies"
-        },
-        "Dayhana Hernandez": {
-            "name": "Dayhana Hernández",
-            "testimony": "Leden van het Free Tribe Network zijn de meest gepassioneerde individuen die ik heb ontmoet. \nZe laten enorm werk er te gemakkelijk uitzien met hun collectieve inspanningen",
-            "title": "Programmaadviseur, Girls First Fund, Dominicaanse Republiek."
-        },
-        "Dr Gbonjubola Abiri": {
-            "name": "Dr. Gbonjubola Abiri",
-            "testimony": "Onze organisatie is er trots op samen te werken met deze non-profitorganisatie. \nHun innovatieve programma’s en niet-aflatende steun hebben ons vermogen om uitdagingen op het gebied van de reproductieve gezondheid aan te pakken enorm vergroot, waardoor uiteindelijk de levens zijn verbeterd van degenen die we dienen",
-            "title": "CEO, RediMed Consulting"
-        },
-        "Dr Jibril Abdulmalik": {
-            "name": "Dr. Jibril Abdulmalik",
-            "testimony": "Het Free Tribe Network wil acties inspireren voor duurzame reproductieve gezondheid en gezinswelzijn. \nDit is zeer essentieel voor de geestelijke gezondheid, omdat ze veilige ruimtes bieden voor discussies, zodat mensen zich gesteund en toegerust voelen om prioriteit te geven aan het welzijn van hun gezin. \nIk ben er trots op dat ik het goede werk dat zij doen, kan ondersteunen.",
-            "title": "Oprichter/CEO, Asido Foundation"
-        },
-        "Dr Muhammed Odedeji": {
-            "name": "Dr. Muhammed Odedeji",
-            "testimony": "Via de initiatieven van het Free Tribe Network heb ik toegang gekregen tot essentiële gezondheidszorgdiensten, waardoor ik weloverwogen keuzes kan maken voor het welzijn van mijn gezin. \nDankbaar voor de positieve impact!",
-            "title": "Arts"
-        },
-        "Dr Munirat Antoinette Lecky(Anto Lecky)": {
-            "name": "Dr. Munirat Antoinette Lecky (Anto Lecky)",
-            "testimony": "Het Free Tribe Network is een groep jonge mensen die geweldig werk doen en die zeer belangrijke gesprekken voeren waar we vaak voor terugdeinzen. \nIk hoop dat ze steeds hoger en hoger blijven groeien."
-        },
-        "Kwamina Obo": {
-            "name": "Kwamina Obo",
-            "testimony": "Als jonge vrouw kon ik dankzij de jeugdvriendelijke gezondheidsdiensten van de organisatie zonder oordeel begeleiding zoeken. \nIk voel mij bevoegd en geïnformeerd over mijn reproductieve gezondheid."
-        },
-        "Moses Plangkat": {
-            "name": "Mozes Plangkat",
-            "testimony": "Ik ben dol op het ReproMatters-programma. \nLuisteren naar de ervaringen van mensen en wat ze hebben meegemaakt geeft een beter perspectief op de problemen die de non-profitorganisatie aanpakt"
-        },
-        "Moyo Adedayo": {
-            "name": "Moyo Adedayo",
-            "testimony": "Als organisatie die zich richt op het empoweren van mensen via gezondheidszorgeducatie, heeft de samenwerking van CHIIN met deze non-profitorganisatie onze capaciteit om de gemeenschap te dienen uitgebreid. \nHun gedeelde inzet voor het verbeteren van de reproductieve gezondheid heeft geresulteerd in een sterkere, gezondere bevolking.",
-            "title": "Oprichter, haar kracht"
-        },
-        "Mrs Blessing Omenka": {
-            "name": "Mevrouw Blessing Omenka",
-            "testimony": "Als begunstigde van de middelen voor gezinsplanning die door de non-profitorganisatie worden aangeboden, kan ik getuigen van de positieve impact op ons leven. \nHet heeft ons in staat gesteld een gezonder en gelukkiger gezin te plannen en te koesteren.",
-            "title": "Hoofd ontwerp, lagen"
-        },
-        "Mrs Olakitan Abiola": {
-            "name": "Mevrouw Olakitan Abiola",
-            "testimony": "De belangenbehartigingsprogramma's van de Free Tribe hebben mij geholpen het concept van kinderhuwelijken beter te begrijpen en andere jonge vrouwen en meisjes, zoals mijn dochter, te helpen. \nBedankt Vrije Stam!"
-        },
-        "Pharm Tobechuckwu Nneji": {
-            "name": "Pharm Tobechuckwu Nneji",
-            "testimony": "Ik heb genoten van mijn tijd bij het Free Tribe Network. \nEr zijn zoveel goede dingen te zeggen over het netwerk en het geweldige werk dat ze doen!  \nBovenal is hun public relations de beste die ik ooit heb gezien. \nZe zullen een onuitwisbare stempel achterlaten in het zand van de tijd.",
-            "title": "Oprichter, Pretty Little Ladies"
-        },
-        "Sayo Eweje": {
-            "name": "Sayo Eweje",
-            "testimony": "Als organisatie die zich richt op het empoweren van mensen via gezondheidszorgeducatie, heeft de samenwerking van CHIIN met deze non-profitorganisatie onze capaciteit om de gemeenschap te dienen uitgebreid. \nHun gedeelde inzet voor het verbeteren van de reproductieve gezondheid heeft geresulteerd in een sterkere, gezondere bevolking.",
-            "title": "Mededirecteur van het Critical Healthcare Information Integration Network (CHIIN)"
-        },
-        "id": "getuigenissen"
-    },
-    "Who we are": {
-        "BOT": {
-            "Dr Adebayo": {
-                "description": "<p>Een volksgezondheidsarts, een doorgewinterde onderzoeker en hoofddocent bij de afdeling Community Medicine, Universiteit van Ibadan, Nigeria. \nHij heeft meer dan 85 wetenschappelijke artikelen gepubliceerd en gepresenteerd op verschillende internationale en nationale conferenties. \nHij ontving verschillende subsidies en was hoofdonderzoeker voor een door de Wereldbank gefinancierd project, gericht op stellen in Ibadan, Nigeria.</p>",
-                "name": "Dr. Adebayo, Ayodeji Matthew",
-                "title": "Voorzitter, BOT"
-            },
-            "Dr Atoyebi": {
-                "description": "<p>Een senior registrar bij de afdeling gemeenschapsgeneeskunde, University College Hospital, Ibadan. \nZe is gespecialiseerd in de gezondheid van vrouwen en gendergerelateerd geweld. \nZe is een arts, gecertificeerd in Economic Evaluation in Global Health en rondt momenteel een Masters of Public Health af. \nZe heeft diverse ervaring, waaronder onderzoeksondersteuning voor de World Maternal Anti-fibrinolytic Trial, toezicht op enquêtes voor de Wereldgezondheidsorganisatie en bijdragen aan de inspanningen om COVID-19 te bestrijden en de implementatie van het reproductieve gezondheidszorgbeleid in Nigeria.</p>",
-                "name": "Dr. Adebayo, Ayodeji Matthew",
-                "title": "Lid, BOT"
-            },
-            "Fadayomi": {
-                "description": "<p>Blonde uit als de meest uitmuntende studente tijdens haar Masters aan de Eastern Kentucky University, VS. \nEen volksgezondheidsspecialist op het gebied van milieu en gezondheid op het werk, die momenteel samenwerkt met Owens Corning om basisgezondheidszorg, onderwijs en veilige, efficiënte huisvestingsoplossingen te bevorderen.</p> <p>Ze werkte als beursmedewerker bij het Bethesda Child Support Agency om \nsteun kansarme kinderen met gratis onderwijs in Nigeria.</p>",
-                "name": "Fadayomi, Sefunmi G.",
-                "title": "Lid, BOT"
-            },
-            "Madu": {
-                "description": "<p>De partnerschapsmanager en juridisch adviseur bij Silicon Africa Technologies Ltd, en projectmanager voor Social Media Fest (SMFEST); \neen mondiaal platform voor sociale impact dat creatieven blootstelt aan de voordelen en mogelijkheden van sociale media en technologie.</p> <p>Ze is advocaat en mensenrechtenactivist; \neen gepassioneerd pleitbezorger voor de ontwikkeling van jongeren en financiële geletterdheid, die jonge vrouwen inspireert tot leiderschap en verantwoordelijkheid.</p>",
-                "name": "Madu, Ihuomachidire I.",
-                "title": "Lid, BOT"
-            },
-            "Mfon": {
-                "description": "<p>Een doorgewinterde analist in investment banking bij Afrinvest West Africa Limited. \nHij is een Associate Chartered Accountant, met meer dan vijf jaar expertise op verschillende financiële gebieden, waaronder kapitaalverhoging van eigen en vreemd vermogen, fusies en overnames, bedrijfswaardering en financiële due diligence.</p>",
-                "name": "Mfon, Andikan A.",
-                "title": "Lid, BOT"
-            },
-            "Nwokafor": {
-                "description": "<p>Een makelaar en de algemene manager van Suncity Gardens Estates. \nHij runt een sociale ondersteuningsgemeenschap genaamd 'Boy's lounge' voor jongens van 9 tot 25 jaar, en heeft verschillende jonge mannen in heel Nigeria begeleid en ondersteund.</p> <p>Hij coördineerde een tweejarig project om zwangere vrouwen met \nHIV/AIDS voorkomt de overdracht van moeder op kind tijdens deze periode.</p>",
-                "name": "Nwokafor, Obiora",
-                "title": "Lid, BOT"
-            },
-            "Oluwagbemi-Jacob": {
-                "description": "<p>Een specialist op het gebied van de volksgezondheid en de uitvoerend directeur van het Free Tribe Network. \nMet meer dan 5 jaar geïnvesteerd in administratieve planning, project- en programmabeheer, onderzoek, monitoring en evaluatie, heeft hij op efficiënte wijze meer dan 20 non-profitprojecten en -activiteiten in heel Nigeria beheerd.</p> <p>Zijn samenwerkingen met het University College Hospital, \nIbadan en andere opmerkelijke instituten weerspiegelen een bijzondere belangstelling en toewijding voor geestelijke gezondheid, reproductieve gezondheid en gezinswelzijn.</p>",
-                "name": "Oluwagbemi-Jacob Tosin",
-                "title": "Secretaris, BOT"
-            },
-            "Prof Obafemi": {
-                "description": "<p>Een hoogleraar monetaire economie met uitgebreide publicaties, ervaring met het opstellen van industriebeleid en adviesrollen bij de Wereldbank en de Industriële Ontwikkelingsorganisatie van de Verenigde Naties (UNIDO). \nZe heeft gediend als research fellow voor het National Defense College, Abuja, en het National Institute for Policy",
-                "name": "Prof. Obafemi, Frances Ngozi",
-                "title": "Lid, BOT"
-            },
-            "Rev Eweje": {
-                "description": "<p>Een gepensioneerde projectmanager met 30 jaar ervaring bij de Shell Petroleum Development Company uit Nigeria. \nHij heeft een doctoraat in strategie-, project- en programmamanagement en is na zijn pensionering zendeling in Europa.</p>",
-                "name": "Dr. Adebayo, Ayodeji Matthew",
-                "title": "Voorzitter, BOT"
-            },
-            "title": "Raad van Toezicht"
-        },
-        "Banner description": "Bij het Free Tribe Network bevorderen we reproductief welzijn, moedigen we het zoeken naar en rapporteren van gezondheid aan, en voeren we programma's, projecten en onderzoeken uit om uw reproductieve gezondheid en gezinswelzijn te verbeteren.",
-        "Banner title": "Gemeenschappen versterken",
-        "History": {
-            "content five": "In 2023 lanceerde het netwerk zijn eerste proefproject in Ibadan; \nhet Stand Against recycling Violence-project, en een hulplijn van de sociale dienst voor telefonische ondersteuning, toegang tot informatie en verwijzing naar gezinsgezondheidsprofessionals.",
-            "content four": {
-                "link one": "Belangenbehartiging op het gebied van reproductieve/gezinsgezondheid",
-                "link two": "ReproMatters",
-                "sub one": "Binnen hetzelfde jaar na de registratie nam de organisatie het voortouw",
-                "sub three": ", die samenwerkingen hebben gezien met Critical Healthcare Information Integration Network (CHIIN), Girls First Fund, Precious Little Ladies en anderen van Harvard en Stanford University.",
-                "sub two": "met programma's als"
-            },
-            "content one": "Het Free Tribe Network is een non-profit liefdadigheidsinstelling opgericht door Tosin Oluwagbemi-Jacob in 2022, ter nagedachtenis en inspiratie aan wijlen mevrouw Titilope Oluwagbemi-Jacob (zijn geliefde moeder) die overleed als gevolg van complicaties en medische nalatigheid na de bevalling.",
-            "content three": "Pioniers van de non-profitorganisatie waren afgestudeerde studenten van de afdeling Community Medicine, University College Hospital, University of Ibadan; \nmedische professionals en gepassioneerde individuen, die de middelen bijeenbrachten om een ​​plan en structuur voor het netwerk uit te stippelen. \nVoor hen is FREE een acroniem voor Family and Reproductive Health Emancipation and Empowerment.",
-            "content two": "Het netwerk heeft tot doel de heersende problemen aan te pakken die van invloed zijn op de reproductieve gezondheid en de gezondheid van het gezin, en duurzame oplossingen voor deze problemen te bieden. \nHet werd in 2023 geregistreerd bij de Corporate Affairs Commission en is sindsdien van plan een wereld te creëren waarin individuen kennis, middelen en ondersteuning nodig hebben voor een optimale reproductieve gezondheid en gezinswelzijn.",
-            "title": "Onze geschiedenis"
-        },
-        "MissionVision": {
-            "Mission": {
-                "content": "Om de reproductieve gezondheid en het gezinswelzijn te verbeteren, door ondersteuning te bieden via liefdadigheidsinitiatieven.",
-                "title": "Missie"
-            },
-            "Purpose": {
-                "content": "Kwetsbare personen helpen omgaan met de lasten en onvervulde behoeften van reproductieve gezondheid en gezinswelzijn.",
-                "title": "Doel"
-            },
-            "Vision": {
-                "content": "Een mondiale gemeenschap van mensen die levenslange beslissingen nemen om de reproductieve gezondheid en het gezinswelzijn te verbeteren en te versterken.",
-                "title": "Visie"
-            }
-        },
-        "What we do": {
-            "Advocacy & Awareness campaigns": "Belangenbehartiging",
-            "Community projects": "Gemeenschapsprojecten",
-            "Policy & Research activities": "Beleid",
-            "Social service helpline": "Hulplijn sociale dienst",
-            "Training programs": "Training programmas",
-            "View Activities": "Bekijk activiteiten",
-            "title": "Wat we doen"
-        },
-        "Work with us": {
-            "Job Vacancies": "Vacatures",
-            "Volunteer Now": "Doe nu vrijwilligerswerk",
-            "content": "Bij Free Tribe Network zijn onze medewerkers en vrijwilligers gedreven voor positieve wereldverandering. \nOns web van experts, stagiaires en enthousiastelingen doen hun best om gezondheid, gelijkheid en sociale rechtvaardigheid voor iedereen te garanderen. We zoeken individuen met talent, motivatie en passie om deel uit te maken van ons team. \nBreng uw droom tot leven en inspireer vandaag nog anderen.",
-            "title": "Werk met ons!"
-        }
+    "Titles": {
+      "About": "Over dit evenement",
+      "Date": "Datum",
+      "Time": "Tijd",
+      "Venue": "Locatie",
+      "Schedule": "Schema"
     }
+  },
+  "Donate": {
+    "Banner": {
+      "Coming soon": "Binnenkort beschikbaar",
+      "content": "Binnenkort kunt u doorgaan naar een beveiligde betaalpagina om uw donatie af te ronden.",
+      "title": "Help mensen over de hele wereld"
+    },
+    "FAQ": {
+      "donate": "Doneer",
+      "questions": {
+        "1": {
+          "answer": "Jouw donatie wordt gebruikt ter ondersteuning van programma’s, projecten en onderzoek uitgevoerd door het Free Tribe Network.",
+          "question": "Hoe wordt mijn donatie gebruikt?"
+        },
+        "2": {
+          "answer": "Onze betalingsprovider, <strong>Flutterwave</strong>, gebruikt SSL-codering om uw gegevens te beschermen en ervoor te zorgen dat uw donatie veilig is. \nUw kaart en persoonlijke gegevens zijn veilig.",
+          "question": "Hoe weet ik zeker dat mijn donatie veilig is?"
+        },
+        "3": {
+          "answer": "Ja, dat kan.",
+          "question": "Kan ik een specifieke interesse sponsoren?"
+        },
+        "4": {
+          "answer": "Ja, u ontvangt per e-mail een <strong>Flutterwave</strong> ontvangstbewijs voor uw donatie.",
+          "question": "Krijg ik een ontvangstbewijs voor mijn donatie?"
+        },
+        "5": {
+          "answer": "U kunt ons bellen op <a href='tel: 2348153494508'> 234 (815) 3494 508</a> of een e-mail sturen naar <a href='mailto:freetribenetwork@gmail.com'>freetribenetwork@gmail.com</a>",
+          "question": "Hoe kan ik contact opnemen met Free Tribe Network voor aanvullende informatie of vragen?"
+        },
+        "6": {
+          "answer": "U kunt meedoen door vrijwilligerswerk te doen, te doneren of het bewustzijn over reproductieve gezondheid en rechten te verspreiden.",
+          "question": "Hoe kan ik meedoen?"
+        }
+      },
+      "title": "Heeft u vragen? \n<br></br> Wij hebben antwoorden!"
+    },
+    "Problems": {
+      "Data Fragmentation": {
+        "description": "Zonder een gecentraliseerde database van kwesties op het gebied van de reproductieve gezondheid (RH) en de gezinsgezondheid (FH), zijn interventies vaak verspreid en inefficiënt, waardoor er gaten ontstaan ​​in de aanpak van kritieke behoeften.",
+        "title": "Gegevensfragmentatie"
+      },
+      "Health Inequality": {
+        "description": "De ongelijkheid in de toegang tot reproductieve en gezinsgezondheidsvoorzieningen bestendigt de ongelijkheid, waardoor gemarginaliseerde bevolkingsgroepen in een nadelige positie terechtkomen wat betreft het behoud van hun welzijn.",
+        "title": "Ongelijkheid op gezondheidsgebied"
+      },
+      "Isolated Communities": {
+        "description": "Veel gemeenschappen hebben geen toegang tot adequate reproductieve en gezinsgezondheidsvoorzieningen, wat leidt tot gevoelens van isolement en onzekerheid over waar ze terecht kunnen voor ondersteuning.",
+        "title": "Geïsoleerde gemeenschappen"
+      },
+      "Limited Education": {
+        "description": "Een gebrek aan alomvattende RH- en FH-educatie maakt individuen kwetsbaar voor verkeerde informatie en verhindert hen om weloverwogen beslissingen te nemen over hun welzijn.",
+        "title": "Beperkt onderwijs"
+      },
+      "Stigma and Taboos": {
+        "description": "Culturele taboes en stigma rond onderwerpen op het gebied van reproductieve gezondheid en gezinsgezondheid verhinderen een open discussie en toegang tot noodzakelijke ondersteunende diensten, wat leidt tot schaamte en geheimhouding onder de getroffen individuen",
+        "title": "Stigma en taboes"
+      },
+      "title": "Het probleem"
+    }
+  },
+  "Home": {
+    "Banners": {
+      "Community": {
+        "content": "Onze eenheid en collectieve inspanningen voor een gedeelde visie die onze groei, kracht en duurzame impact bevordert.",
+        "title": "Gemeenschap"
+      },
+      "Equity": {
+        "content": "Wij geloven in een eerlijke verdeling van diensten en middelen, en gelijke toegang tot kansen, ongeacht leeftijd, geslacht, ras, opleiding, etniciteit, religie of persoonlijke overtuigingen.",
+        "title": "Eigen vermogen"
+      },
+      "Join": "kom bij onze maillijst",
+      "Mastery": {
+        "content": "Een meedogenloos streven naar uitmuntendheid door gebruik te maken van kritische ervaring, expertise en wetenschappelijk bewijs, om onze initiatieven af ​​te stemmen op de beste praktijken.",
+        "title": "Meesterschap"
+      },
+      "Social Justice": {
+        "content": "Wij zijn van mening dat ieder individu met waardigheid en respect moet worden behandeld, en dat zijn fundamentele mensenrechten moeten worden beschermd.",
+        "title": "Sociale gerechtigheid"
+      },
+      "Support": "Steun",
+      "Sustained reproductive health and family well-being": {
+        "content": "Bij het Free Tribe Network bevorderen we reproductief welzijn en gezinswelzijn. \nWij bieden liefdadigheidsdiensten in de vorm van programma's, projecten en onderzoek, om kennis te vertalen in perceptie, en percepties in acties en gedrag.",
+        "title": "Duurzame reproductieve gezondheid en gezinswelzijn"
+      }
+    },
+    "Impact": {
+      "Heading": {
+        "description": "Laat onze cijfers voor ons spreken.",
+        "title": "Onze impact in cijfers"
+      },
+      "Stats": {
+        "Advocacy and Awareness Campaigns": "Belangenbehartigings- en bewustmakingscampagnes",
+        "Collaborations": "Samenwerkingen",
+        "Community Project": "Gemeenschapsproject",
+        "Policy and Research activities": "Beleids- en onderzoeksactiviteiten",
+        "Students reached": "Studenten bereikt",
+        "Training Programs": "Training programmas",
+        "Volunteering Hours": "Vrijwilligerswerk uren"
+      }
+    },
+    "Our initiatives": {
+      "Heading": {
+        "description": "Bij The Free Tribe Network bieden we een reeks kernprogramma's en diensten ter ondersteuning van reproductief welzijn, gedrag bij het zoeken naar en rapporteren van gezondheid, en ter verbetering van de reproductieve gezondheid en het gezinswelzijn. \nOnze missie is om individuen en gemeenschappen in staat te stellen weloverwogen beslissingen te nemen over hun reproductieve gezondheid en rechten.",
+        "title": "Onze initiatieven"
+      },
+      "See More": "Bekijk meer",
+      "initiatives": {
+        "free-tribe-boost-camp": {
+          "content": "<div><p>Een tweemaandelijks programma voor capaciteitsopbouw voor medewerkers en vrijwilligers van het Free Tribe Network, bedoeld om de werkvaardigheden van bedrijven te verbeteren, brancherelevante vaardigheden aan te leren en de band tussen de leden van het Free Tribe Network te bevorderen.</p> \n</div>",
+          "label": "Boostkamp van Free Tribe Network"
+        },
+        "repromatters": {
+          "content": "<div><p>Een tweemaandelijks programma dat gebruik maakt van verhalen uit het echte leven, medische kennis, expertise op het gebied van de volksgezondheid en het brede bereik van de sociale media, om belangrijke kwesties te bespreken die van invloed zijn op de reproductieve gezondheid en het welzijn van het gezin. \nDe behandelde onderwerpen zullen zich richten op de gezondheid van vrouwen, de gezondheid van mannen, de gezondheid en het welzijn van kinderen en adolescenten.</p></div>",
+          "label": "ReproMatters"
+        },
+        "star-project": {
+          "label": "Stand tegen gerecycleerd geweld (STAR)-project",
+          "summary": "Een volksgezondheidsproject dat tot doel heeft het getuige zijn van geweld tussen ouders en de intergenerationele overdracht van geweld op adolescenten vast te leggen en te verminderen."
+        }
+      }
+    },
+    "Post": {
+      "Heading": {
+        "description": "Lees enkele fragmenten uit onze blog",
+        "title": "Blogartikelen"
+      },
+      "See More": "Bekijk meer"
+    },
+    "Tweets": {
+      "link": "Tweets van freetribenetwork",
+      "title": "Blijf op de hoogte van onze activiteiten op X"
+    },
+    "Vision": {
+      "Heading": {
+        "description": "Het opbouwen van een mondiale gemeenschap van mensen die levenslange beslissingen nemen, om hun reproductieve welzijn en gezinswelzijn te verbeteren, in lijn met de Agenda 2030 voor duurzame ontwikkeling.",
+        "title": "Onze visie"
+      },
+      "gender equality": "geslachtsgelijkheid",
+      "good health and well being": "een goede gezondheid en welzijn",
+      "reduced inequalities": "verminderde ongelijkheid"
+    }
+  },
+  "Layout": {
+    "Contact": {
+      "Call": {
+        "header": "Bel ons",
+        "subHeader": "Bezoek ons ​​hoofdkantoor.",
+        "text": "Ma-vrij van 8.00 tot 17.00 uur."
+      },
+      "Chat": {
+        "header": "Chat om te ondersteunen",
+        "subHeader": "We zijn hier om te helpen.",
+        "text": "freetribenetwork@gmail.com"
+      },
+      "Home": "Thuis",
+      "News & Events": "Nieuws",
+      "Our Initiatives": "Onze initiatieven",
+      "Resources": "Bronnen",
+      "Visit": {
+        "header": "Bezoek ons",
+        "subHeader": "Bezoek ons ​​hoofdkantoor.",
+        "text": "Nr. 15/11b, YK Abass, Ore-Ofe Estate, Elewiodo, Ibadan."
+      },
+      "Who we are": "Wie we zijn"
+    },
+    "Footer": {
+      "Copyright": "Free Tribe Network",
+      "Rights": "Alle rechten voorbehouden"
+    },
+    "Heading": {
+      "description": "Ons vriendelijke team staat altijd klaar voor een praatje.",
+      "title": "We zouden graag van je horen"
+    },
+    "Subscribe": {
+      "description": "Door u te registreren geeft u toestemming aan het <b>Free Tribe Network</b> om uw e-mailadres op te slaan en te verzamelen met als doel u onze maandelijkse nieuwsbrief te sturen.",
+      "title": "Abonneer u op onze mail"
+    },
+    "metaData": {
+      "description": "Welkom bij het Free Tribe-netwerk",
+      "title": "Free Tribe Network"
+    }
+  },
+  "Nav": {
+    "Contact Us": "Neem contact met ons op",
+    "Donate": "Doneer",
+    "Home": "Thuis",
+    "News & Events": "Nieuws",
+    "Our Initiatives": "Onze initiatieven",
+    "Resources": "Bronnen",
+    "Who we are": "Wie we zijn",
+    "menu": {
+      "BOT": "BOT",
+      "Blog Posts": "Blog berichten",
+      "Free Tribe Boost-Camp": "boostkamp van Free Tribe",
+      "Free Tribe Clubs": "Free Tribe-clubs",
+      "Free Tribe Helpline": "Free Tribe-hulplijn",
+      "Mission & Vision": "Missie",
+      "Our History": "Onze geschiedenis",
+      "RFH Advocacy": "RFH-belangenbehartiging",
+      "Recent Activities": "Recente activiteiten",
+      "ReproMatters": "ReproMatters",
+      "STAR project": "STAR-project",
+      "Staff": "Personeel",
+      "Testimonials": "Getuigenissen",
+      "Upcoming Activities": "Aankomende activiteiten",
+      "What we do": "Wat we doen",
+      "Work with us": "Werk met ons"
+    }
+  },
+  "News": {
+    "activities": "activiteiten",
+    "blog posts": "Blog berichten",
+    "empty": "Nog geen {title} voor deze selectie",
+    "fetching": "Ophalen",
+    "refresh": "Vernieuwen",
+    "tabs": {
+      "blog-posts": "Blog berichten",
+      "more-activities": "Meer activiteiten",
+      "recent-activities": "Recente activiteiten",
+      "upcoming-activities": "Aankomende activiteiten"
+    },
+    "title": "nieuws en evenementen"
+  },
+  "Our initiative": {
+    "initiatives": {
+      "View Activities": "Bekijk activiteiten",
+      "free-tribe-boost-camp": {
+        "content": "<div><p>Een tweemaandelijks programma voor capaciteitsopbouw voor medewerkers en vrijwilligers van het Free Tribe Network, bedoeld om de werkvaardigheden van bedrijven te verbeteren, brancherelevante vaardigheden aan te leren en de band tussen de leden van het Free Tribe Network te bevorderen.</p> \n</div>",
+        "id": "boostkamp-van-free-tribe",
+        "label": "boostkamp van Free Tribe"
+      },
+      "free-tribe-clubs": {
+        "content": "<div><p>Dit zijn veilige ruimtes die zijn ingericht om open gesprekken te bevorderen, de sociale steun te verbeteren, de monitoring en evaluatie te verbeteren, en zelfgeleide initiatieven en herinterventietactieken te verbeteren, om duurzame verbeteringen in de reproductieve en gezinsgezondheidsresultaten te garanderen.</div></div>",
+        "id": "free-tribe-clubs",
+        "label": "Free Tribe-clubs"
+      },
+      "free-tribe-helpline": {
+        "content": "<div><p>Een sociale dienst voor telefonische ondersteuning, toegang tot informatie, advies, geïnformeerde interventies en verwijzing naar professionals op het gebied van de reproductieve en gezinsgezondheid.</p></div>",
+        "id": "free-tribe-hulplijn",
+        "label": "Free Tribe-hulplijn"
+      },
+      "repromatters": {
+        "content": "<div><p>Een tweemaandelijks programma dat gebruik maakt van verhalen uit het echte leven, medische kennis, expertise op het gebied van de volksgezondheid en het brede bereik van de sociale media, om belangrijke kwesties te bespreken die van invloed zijn op de reproductieve gezondheid en het welzijn van het gezin. \nDe behandelde onderwerpen zullen zich richten op de gezondheid van vrouwen, de gezondheid van mannen, de gezondheid en het welzijn van kinderen en adolescenten.</p></div>",
+        "id": "reprozaken",
+        "label": "ReproMatters"
+      },
+      "rfh-advocacy": {
+        "content": "<div><p>Dit omvat bijeenkomsten, campagnes en wekelijkse belangenbehartigingsberichten",
+        "id": "rfh-belangenbehartiging",
+        "label": "Belangenbehartiging op het gebied van reproductieve en gezinsgezondheid"
+      },
+      "star-project": {
+        "content": "<div> <p>Een volksgezondheidsproject dat tot doel heeft het getuige zijn van geweld tussen ouders en de intergenerationele overdracht van geweld op adolescenten vast te leggen en te verminderen. \nHet project heeft tot doel de institutionele ondersteunende structuren binnen openbare middelbare scholen te verbeteren, om de acceptatie of het gebruik van geweld in toekomstige relaties te ontmoedigen. \nHet combineert een krachtige mix van onderzoek en volksgezondheidsprogramma's om reproductieve gezondheid en gezinswelzijn aan te pakken.</p></div><div className='h5-gap'><h4>Het probleem identificeren!</h4> \n<p> We hebben vastgesteld dat geweld tussen partners (tussen ouders) een significant effect heeft op het fysieke, mentale en sociale welzijn van kinderen en adolescenten. \nKinderen die getuige waren van dit gewelddadige gedrag hadden de neiging om problemen te vertonen in sociale interacties, emotionele spanningen en andere psychologische uitdagingen te doorstaan, wat leidde tot verschillende negatieve gevolgen, zoals pesten, ongezonde relaties, een laag zelfbeeld, middelenmisbruik en zelfs crimineel gedrag, met alle gevolgen van dien. \nvolhouden tot in de volwassenheid. \n</p> </div> <div className='h5-gap'> <h4>Onze aanpak!</h4> <p> Het Stand Against Recycled Violence (STAR) Project: een initiatief om de intergenerationele recycling van geweld tegen te gaan \n. \nWe hebben een krachtige mix van onderzoek en volksgezondheidsprogramma's gecombineerd om de incidentie van geweld tussen ouders, pesten (peer-geweld) en de rechtvaardiging van geweld aan te pakken. \nDe strategieën van het STAR-project helpen ons de institutionele ondersteunende structuren binnen middelbare scholen te verbeteren en de acceptatie en het gebruik van geweld in toekomstige relaties te ontmoedigen. \nAanbod: <ul> <li>Basislijnonderzoek</li> <li>Lerarenopleiding</li> <li>Studentenopleiding</li> <li>Free Tribe Institutional Club</li> <li>Institutionele toezichtcommissie</li> <li>Toezicht",
+        "id": "ster-project",
+        "label": "Stand Against Recycled Violence (STAR)-project"
+      }
+    },
+    "title": "Onze initiatieven"
+  },
+  "Partners": {
+    "Heading": {
+      "title": "Onze partners"
+    }
+  },
+  "Support": {
+    "Donate": "Doneer",
+    "Heading": {
+      "description": "Sluit u aan bij onze zaak om structuren rond reproductieve gezondheid en gezinswelzijn te transformeren.",
+      "title": "Steun vandaag nog onze missie!"
+    }
+  },
+  "Team": {
+    "Board of Trustees": "Raad van Toezicht",
+    "Busayo": {
+      "name": "Busayo Oyetubosun",
+      "title": "beheerder"
+    },
+    "Dr Adebayo": {
+      "name": "Dr. Adebayo, Ayodeji Matthew",
+      "title": "Voorzitter, BOT"
+    },
+    "Dr Atoyebi": {
+      "name": "Dr. Atoyebi, Aderonke O.",
+      "title": "Lid, BOT"
+    },
+    "Fadayomi": {
+      "name": "Fadayomi, Sefunmi G.",
+      "title": "Lid, BOT"
+    },
+    "Grace": {
+      "name": "Grace Vin-Otebele",
+      "title": "Toezicht houden"
+    },
+    "Madu": {
+      "name": "Madu, Ihuomachidire I.",
+      "title": "Lid, BOT"
+    },
+    "Mfon": {
+      "name": "Mfon, Andikan A.",
+      "title": "Lid, BOT"
+    },
+    "Mikka": {
+      "name": "Mikka Erem",
+      "title": "Programmamedewerker"
+    },
+    "Nwokafor": {
+      "name": "Nwokafor, Obiora",
+      "title": "Lid, BOT"
+    },
+    "Oluwagbemi-Jacob": {
+      "name": "Oluwagbemi-Jacob Tosin",
+      "title": "Secretaris, BOT"
+    },
+    "Oluwatobi": {
+      "name": "Oluwatobi Alawode",
+      "title": "Logistiek Officier"
+    },
+    "Prof Obafemi": {
+      "name": "Prof. Obafemi, Frances Ngozi",
+      "title": "Lid, BOT"
+    },
+    "Rev Eweje": {
+      "name": "Ds Eweje, John",
+      "title": "Vice-voorzitter, BOT"
+    },
+    "See More": "Bekijk meer",
+    "Susan": {
+      "name": "Susan Kebu",
+      "title": "Projectmedewerker"
+    },
+    "The Work Family": "De werkfamilie",
+    "Tolu": {
+      "name": "Tolu Oluwagbemi-Jacob",
+      "title": "Communications Officer"
+    },
+    "Uche": {
+      "name": "Uche Kennedy",
+      "title": "IT-leider"
+    }
+  },
+  "Testimonials": {
+    "Aziza Kibibi": {
+      "name": "Aziza Kibibi",
+      "testimony": "Het was een genoegen om met het Free Tribe Network aan het RepoMatters-programma te werken. \nHun werk om het bewustzijn te vergroten is van cruciaal belang bij het veranderen van schadelijke, culturele praktijken die vrouwen en meisjes treffen",
+      "title": "Oprichter, Pretty Little Ladies"
+    },
+    "Dayhana Hernandez": {
+      "name": "Dayhana Hernández",
+      "testimony": "Leden van het Free Tribe Network zijn de meest gepassioneerde individuen die ik heb ontmoet. \nZe laten enorm werk er te gemakkelijk uitzien met hun collectieve inspanningen",
+      "title": "Programmaadviseur, Girls First Fund, Dominicaanse Republiek."
+    },
+    "Dr Gbonjubola Abiri": {
+      "name": "Dr. Gbonjubola Abiri",
+      "testimony": "Onze organisatie is er trots op samen te werken met deze non-profitorganisatie. \nHun innovatieve programma’s en niet-aflatende steun hebben ons vermogen om uitdagingen op het gebied van de reproductieve gezondheid aan te pakken enorm vergroot, waardoor uiteindelijk de levens zijn verbeterd van degenen die we dienen",
+      "title": "CEO, RediMed Consulting"
+    },
+    "Dr Jibril Abdulmalik": {
+      "name": "Dr. Jibril Abdulmalik",
+      "testimony": "Het Free Tribe Network wil acties inspireren voor duurzame reproductieve gezondheid en gezinswelzijn. \nDit is zeer essentieel voor de geestelijke gezondheid, omdat ze veilige ruimtes bieden voor discussies, zodat mensen zich gesteund en toegerust voelen om prioriteit te geven aan het welzijn van hun gezin. \nIk ben er trots op dat ik het goede werk dat zij doen, kan ondersteunen.",
+      "title": "Oprichter/CEO, Asido Foundation"
+    },
+    "Dr Muhammed Odedeji": {
+      "name": "Dr. Muhammed Odedeji",
+      "testimony": "Via de initiatieven van het Free Tribe Network heb ik toegang gekregen tot essentiële gezondheidszorgdiensten, waardoor ik weloverwogen keuzes kan maken voor het welzijn van mijn gezin. \nDankbaar voor de positieve impact!",
+      "title": "Arts"
+    },
+    "Dr Munirat Antoinette Lecky(Anto Lecky)": {
+      "name": "Dr. Munirat Antoinette Lecky (Anto Lecky)",
+      "testimony": "Het Free Tribe Network is een groep jonge mensen die geweldig werk doen en die zeer belangrijke gesprekken voeren waar we vaak voor terugdeinzen. \nIk hoop dat ze steeds hoger en hoger blijven groeien."
+    },
+    "Kwamina Obo": {
+      "name": "Kwamina Obo",
+      "testimony": "Als jonge vrouw kon ik dankzij de jeugdvriendelijke gezondheidsdiensten van de organisatie zonder oordeel begeleiding zoeken. \nIk voel mij bevoegd en geïnformeerd over mijn reproductieve gezondheid."
+    },
+    "Moses Plangkat": {
+      "name": "Mozes Plangkat",
+      "testimony": "Ik ben dol op het ReproMatters-programma. \nLuisteren naar de ervaringen van mensen en wat ze hebben meegemaakt geeft een beter perspectief op de problemen die de non-profitorganisatie aanpakt"
+    },
+    "Moyo Adedayo": {
+      "name": "Moyo Adedayo",
+      "testimony": "Als organisatie die zich richt op het empoweren van mensen via gezondheidszorgeducatie, heeft de samenwerking van CHIIN met deze non-profitorganisatie onze capaciteit om de gemeenschap te dienen uitgebreid. \nHun gedeelde inzet voor het verbeteren van de reproductieve gezondheid heeft geresulteerd in een sterkere, gezondere bevolking.",
+      "title": "Oprichter, haar kracht"
+    },
+    "Mrs Blessing Omenka": {
+      "name": "Mevrouw Blessing Omenka",
+      "testimony": "Als begunstigde van de middelen voor gezinsplanning die door de non-profitorganisatie worden aangeboden, kan ik getuigen van de positieve impact op ons leven. \nHet heeft ons in staat gesteld een gezonder en gelukkiger gezin te plannen en te koesteren.",
+      "title": "Hoofd ontwerp, lagen"
+    },
+    "Mrs Olakitan Abiola": {
+      "name": "Mevrouw Olakitan Abiola",
+      "testimony": "De belangenbehartigingsprogramma's van de Free Tribe hebben mij geholpen het concept van kinderhuwelijken beter te begrijpen en andere jonge vrouwen en meisjes, zoals mijn dochter, te helpen. \nBedankt Vrije Stam!"
+    },
+    "Pharm Tobechuckwu Nneji": {
+      "name": "Pharm Tobechuckwu Nneji",
+      "testimony": "Ik heb genoten van mijn tijd bij het Free Tribe Network. \nEr zijn zoveel goede dingen te zeggen over het netwerk en het geweldige werk dat ze doen!  \nBovenal is hun public relations de beste die ik ooit heb gezien. \nZe zullen een onuitwisbare stempel achterlaten in het zand van de tijd.",
+      "title": "Oprichter, Pretty Little Ladies"
+    },
+    "Sayo Eweje": {
+      "name": "Sayo Eweje",
+      "testimony": "Als organisatie die zich richt op het empoweren van mensen via gezondheidszorgeducatie, heeft de samenwerking van CHIIN met deze non-profitorganisatie onze capaciteit om de gemeenschap te dienen uitgebreid. \nHun gedeelde inzet voor het verbeteren van de reproductieve gezondheid heeft geresulteerd in een sterkere, gezondere bevolking.",
+      "title": "Mededirecteur van het Critical Healthcare Information Integration Network (CHIIN)"
+    },
+    "id": "getuigenissen"
+  },
+  "Who we are": {
+    "BOT": {
+      "Dr Adebayo": {
+        "description": "<p>Een volksgezondheidsarts, een doorgewinterde onderzoeker en hoofddocent bij de afdeling Community Medicine, Universiteit van Ibadan, Nigeria. \nHij heeft meer dan 85 wetenschappelijke artikelen gepubliceerd en gepresenteerd op verschillende internationale en nationale conferenties. \nHij ontving verschillende subsidies en was hoofdonderzoeker voor een door de Wereldbank gefinancierd project, gericht op stellen in Ibadan, Nigeria.</p>",
+        "name": "Dr. Adebayo, Ayodeji Matthew",
+        "title": "Voorzitter, BOT"
+      },
+      "Dr Atoyebi": {
+        "description": "<p>Een senior registrar bij de afdeling gemeenschapsgeneeskunde, University College Hospital, Ibadan. \nZe is gespecialiseerd in de gezondheid van vrouwen en gendergerelateerd geweld. \nZe is een arts, gecertificeerd in Economic Evaluation in Global Health en rondt momenteel een Masters of Public Health af. \nZe heeft diverse ervaring, waaronder onderzoeksondersteuning voor de World Maternal Anti-fibrinolytic Trial, toezicht op enquêtes voor de Wereldgezondheidsorganisatie en bijdragen aan de inspanningen om COVID-19 te bestrijden en de implementatie van het reproductieve gezondheidszorgbeleid in Nigeria.</p>",
+        "name": "Dr. Adebayo, Ayodeji Matthew",
+        "title": "Lid, BOT"
+      },
+      "Fadayomi": {
+        "description": "<p>Blonde uit als de meest uitmuntende studente tijdens haar Masters aan de Eastern Kentucky University, VS. \nEen volksgezondheidsspecialist op het gebied van milieu en gezondheid op het werk, die momenteel samenwerkt met Owens Corning om basisgezondheidszorg, onderwijs en veilige, efficiënte huisvestingsoplossingen te bevorderen.</p> <p>Ze werkte als beursmedewerker bij het Bethesda Child Support Agency om \nsteun kansarme kinderen met gratis onderwijs in Nigeria.</p>",
+        "name": "Fadayomi, Sefunmi G.",
+        "title": "Lid, BOT"
+      },
+      "Madu": {
+        "description": "<p>De partnerschapsmanager en juridisch adviseur bij Silicon Africa Technologies Ltd, en projectmanager voor Social Media Fest (SMFEST); \neen mondiaal platform voor sociale impact dat creatieven blootstelt aan de voordelen en mogelijkheden van sociale media en technologie.</p> <p>Ze is advocaat en mensenrechtenactivist; \neen gepassioneerd pleitbezorger voor de ontwikkeling van jongeren en financiële geletterdheid, die jonge vrouwen inspireert tot leiderschap en verantwoordelijkheid.</p>",
+        "name": "Madu, Ihuomachidire I.",
+        "title": "Lid, BOT"
+      },
+      "Mfon": {
+        "description": "<p>Een doorgewinterde analist in investment banking bij Afrinvest West Africa Limited. \nHij is een Associate Chartered Accountant, met meer dan vijf jaar expertise op verschillende financiële gebieden, waaronder kapitaalverhoging van eigen en vreemd vermogen, fusies en overnames, bedrijfswaardering en financiële due diligence.</p>",
+        "name": "Mfon, Andikan A.",
+        "title": "Lid, BOT"
+      },
+      "Nwokafor": {
+        "description": "<p>Een makelaar en de algemene manager van Suncity Gardens Estates. \nHij runt een sociale ondersteuningsgemeenschap genaamd 'Boy's lounge' voor jongens van 9 tot 25 jaar, en heeft verschillende jonge mannen in heel Nigeria begeleid en ondersteund.</p> <p>Hij coördineerde een tweejarig project om zwangere vrouwen met \nHIV/AIDS voorkomt de overdracht van moeder op kind tijdens deze periode.</p>",
+        "name": "Nwokafor, Obiora",
+        "title": "Lid, BOT"
+      },
+      "Oluwagbemi-Jacob": {
+        "description": "<p>Een specialist op het gebied van de volksgezondheid en de uitvoerend directeur van het Free Tribe Network. \nMet meer dan 5 jaar geïnvesteerd in administratieve planning, project- en programmabeheer, onderzoek, monitoring en evaluatie, heeft hij op efficiënte wijze meer dan 20 non-profitprojecten en -activiteiten in heel Nigeria beheerd.</p> <p>Zijn samenwerkingen met het University College Hospital, \nIbadan en andere opmerkelijke instituten weerspiegelen een bijzondere belangstelling en toewijding voor geestelijke gezondheid, reproductieve gezondheid en gezinswelzijn.</p>",
+        "name": "Oluwagbemi-Jacob Tosin",
+        "title": "Secretaris, BOT"
+      },
+      "Prof Obafemi": {
+        "description": "<p>Een hoogleraar monetaire economie met uitgebreide publicaties, ervaring met het opstellen van industriebeleid en adviesrollen bij de Wereldbank en de Industriële Ontwikkelingsorganisatie van de Verenigde Naties (UNIDO). \nZe heeft gediend als research fellow voor het National Defense College, Abuja, en het National Institute for Policy",
+        "name": "Prof. Obafemi, Frances Ngozi",
+        "title": "Lid, BOT"
+      },
+      "Rev Eweje": {
+        "description": "<p>Een gepensioneerde projectmanager met 30 jaar ervaring bij de Shell Petroleum Development Company uit Nigeria. \nHij heeft een doctoraat in strategie-, project- en programmamanagement en is na zijn pensionering zendeling in Europa.</p>",
+        "name": "Dr. Adebayo, Ayodeji Matthew",
+        "title": "Voorzitter, BOT"
+      },
+      "title": "Raad van Toezicht"
+    },
+    "Banner description": "Bij het Free Tribe Network bevorderen we reproductief welzijn, moedigen we het zoeken naar en rapporteren van gezondheid aan, en voeren we programma's, projecten en onderzoeken uit om uw reproductieve gezondheid en gezinswelzijn te verbeteren.",
+    "Banner title": "Gemeenschappen versterken",
+    "History": {
+      "content five": "In 2023 lanceerde het netwerk zijn eerste proefproject in Ibadan; \nhet Stand Against recycling Violence-project, en een hulplijn van de sociale dienst voor telefonische ondersteuning, toegang tot informatie en verwijzing naar gezinsgezondheidsprofessionals.",
+      "content four": {
+        "link one": "Belangenbehartiging op het gebied van reproductieve/gezinsgezondheid",
+        "link two": "ReproMatters",
+        "sub one": "Binnen hetzelfde jaar na de registratie nam de organisatie het voortouw",
+        "sub three": ", die samenwerkingen hebben gezien met Critical Healthcare Information Integration Network (CHIIN), Girls First Fund, Precious Little Ladies en anderen van Harvard en Stanford University.",
+        "sub two": "met programma's als"
+      },
+      "content one": "Het Free Tribe Network is een non-profit liefdadigheidsinstelling opgericht door Tosin Oluwagbemi-Jacob in 2022, ter nagedachtenis en inspiratie aan wijlen mevrouw Titilope Oluwagbemi-Jacob (zijn geliefde moeder) die overleed als gevolg van complicaties en medische nalatigheid na de bevalling.",
+      "content three": "Pioniers van de non-profitorganisatie waren afgestudeerde studenten van de afdeling Community Medicine, University College Hospital, University of Ibadan; \nmedische professionals en gepassioneerde individuen, die de middelen bijeenbrachten om een ​​plan en structuur voor het netwerk uit te stippelen. \nVoor hen is FREE een acroniem voor Family and Reproductive Health Emancipation and Empowerment.",
+      "content two": "Het netwerk heeft tot doel de heersende problemen aan te pakken die van invloed zijn op de reproductieve gezondheid en de gezondheid van het gezin, en duurzame oplossingen voor deze problemen te bieden. \nHet werd in 2023 geregistreerd bij de Corporate Affairs Commission en is sindsdien van plan een wereld te creëren waarin individuen kennis, middelen en ondersteuning nodig hebben voor een optimale reproductieve gezondheid en gezinswelzijn.",
+      "title": "Onze geschiedenis"
+    },
+    "MissionVision": {
+      "Mission": {
+        "content": "Om de reproductieve gezondheid en het gezinswelzijn te verbeteren, door ondersteuning te bieden via liefdadigheidsinitiatieven.",
+        "title": "Missie"
+      },
+      "Purpose": {
+        "content": "Kwetsbare personen helpen omgaan met de lasten en onvervulde behoeften van reproductieve gezondheid en gezinswelzijn.",
+        "title": "Doel"
+      },
+      "Vision": {
+        "content": "Een mondiale gemeenschap van mensen die levenslange beslissingen nemen om de reproductieve gezondheid en het gezinswelzijn te verbeteren en te versterken.",
+        "title": "Visie"
+      }
+    },
+    "What we do": {
+      "Advocacy & Awareness campaigns": "Belangenbehartiging",
+      "Community projects": "Gemeenschapsprojecten",
+      "Policy & Research activities": "Beleid",
+      "Social service helpline": "Hulplijn sociale dienst",
+      "Training programs": "Training programmas",
+      "View Activities": "Bekijk activiteiten",
+      "title": "Wat we doen"
+    },
+    "Work with us": {
+      "Job Vacancies": "Vacatures",
+      "Volunteer Now": "Doe nu vrijwilligerswerk",
+      "content": "Bij Free Tribe Network zijn onze medewerkers en vrijwilligers gedreven voor positieve wereldverandering. \nOns web van experts, stagiaires en enthousiastelingen doen hun best om gezondheid, gelijkheid en sociale rechtvaardigheid voor iedereen te garanderen. We zoeken individuen met talent, motivatie en passie om deel uit te maken van ons team. \nBreng uw droom tot leven en inspireer vandaag nog anderen.",
+      "title": "Werk met ons!"
+    }
+  },
+  "Loading": {
+    "Empty Resources": "Nog geen <span>{title}</span>"
+  }
 }

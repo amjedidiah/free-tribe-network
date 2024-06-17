@@ -1,6 +1,7 @@
 import { type ClassValue, clsx } from "clsx"
 import { twMerge } from "tailwind-merge"
 import { CurrencyKeys, currencies, initiativeData } from "@/lib/data";
+import { ResourcesIdsEN, ResourcesIdsFR, ResourcesIdsNL } from "./types";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -36,3 +37,10 @@ export const validateDonationAmount = (
   amount: number | string,
   currencyLabel: CurrencyKeys
 ) => Number(amount) >= (getDonationCurrency(currencyLabel)?.min || 0);
+
+export const getPurifiedSlug = (slug: string, locale: string) =>
+  slug.replaceAll(`-${locale}`, "");
+
+export const getKeyResource = (locale: string) =>
+  ({ en: ResourcesIdsEN, fr: ResourcesIdsFR, nl: ResourcesIdsNL }[locale] ||
+  ResourcesIdsEN);

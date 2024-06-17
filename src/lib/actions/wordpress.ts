@@ -11,6 +11,7 @@ import {
   IActivity,
   fetchActivitiesByCategoryNameVars,
   fetchActivitiesByCategoryNameData,
+  Locale,
 } from "@/lib/types";
 import { getApolloClient } from "@/lib/apollo-client";
 import {
@@ -19,6 +20,7 @@ import {
   GET_IMAGE_BY_TITLE,
   GET_RESOURCES_BY_CATEGORY_ID,
 } from "@/lib/queries";
+import { getLocale } from "next-intl/server";
 
 const extractResourcesContent = (
   {
@@ -32,7 +34,8 @@ const extractResourcesContent = (
     },
     cursor,
   }: any,
-  hideDescription = false
+  hideDescription = false,
+  locales: string
 ): Resource => ({
   id,
   cursor,
@@ -42,7 +45,7 @@ const extractResourcesContent = (
     : truncateHtml(excerpt, 20, {
         byWords: true,
       }),
-  modifiedDate: new Date(modifiedGmt).toDateString(),
+  modifiedDate: new Date(modifiedGmt).toLocaleDateString(locales),
   src: featuredImage?.node?.mediaItemUrl,
   url: resourcesFieldGroup.file?.node?.link,
   minsRead: resourcesFieldGroup.minsread,
@@ -59,13 +62,17 @@ export const fetchResourcesByCategoryId = cache(
     last,
   }: FetchCategoriesByIdVars) => {
     const apolloClient = getApolloClient();
+    const locale = await getLocale();
+    const locales = `${locale}-${locale.toUpperCase()}`;
 
     try {
       const resourcesData = await apolloClient.query({
         query: GET_RESOURCES_BY_CATEGORY_ID,
         variables: {
           id,
-          env: process.env.NODE_ENV,
+          env: `${process.env.NODE_ENV}${
+            locale !== Locale.en ? "-" + locale : ""
+          }`,
           first,
           last,
           before,
@@ -77,7 +84,7 @@ export const fetchResourcesByCategoryId = cache(
         ...resourcesData.data.category.posts.pageInfo,
         title: resourcesData.data.category.name,
         resourceList: resourcesData.data.category.posts.edges.map((item: any) =>
-          extractResourcesContent(item, hideDescription)
+          extractResourcesContent(item, hideDescription, locales)
         ),
       } as FetchCategoriesByIdData;
     } catch (error) {
@@ -105,12 +112,17 @@ export const fetchImageByTitle = cache(async (title: string) => {
   }
 });
 
-function formatDateTime(dateObj: Date) {
+function formatDateTime(dateObj: Date, locale: string) {
+  const locales =
+    {
+      en: "en-GB",
+    }[locale] || `${locale}-${locale.toUpperCase()}`;
+
   // Extract components
   const year = dateObj.getFullYear();
-  const month = dateObj.toLocaleString("en-US", { month: "long" });
+  const month = dateObj.toLocaleString(locales, { month: "long" });
   const day = dateObj.getDate();
-  const weekday = dateObj.toLocaleString("en-US", { weekday: "long" });
+  const weekday = dateObj.toLocaleString(locales, { weekday: "long" });
   const hours = dateObj.getHours() % 12 || 12; // 12-hour format
   const minutes = dateObj.getMinutes().toString().padStart(2, "0");
   const meridian = dateObj.getHours() >= 12 ? "pm" : "am";
@@ -126,10 +138,10 @@ function formatDateTime(dateObj: Date) {
   };
 }
 
-const formatActivity = ({
-  cursor,
-  node: { categories, ...rest },
-}: any): IActivity => {
+const formatActivity = (
+  { cursor, node: { categories, ...rest } }: any,
+  locale: string
+): Promise<IActivity> => {
   const isUpcoming = categories.nodes.some((item: { slug: string }) =>
     item.slug.includes("upcoming")
   );
@@ -141,7 +153,7 @@ const formatActivity = ({
     categories: categories.nodes,
     newsFieldGroup: {
       ...rest.newsFieldGroup,
-      ...formatDateTime(new Date(rest.newsFieldGroup.dateTime)),
+      ...formatDateTime(new Date(rest.newsFieldGroup.dateTime), locale),
     },
     description: truncateHtml(rest.excerpt, 10, {
       byWords: true,
@@ -151,6 +163,7 @@ const formatActivity = ({
 
 export const fetchActivityBySlug = cache(async (slug: string) => {
   const apolloClient = getApolloClient();
+  const locale = await getLocale();
 
   try {
     const activityData = await apolloClient.query({
@@ -162,10 +175,13 @@ export const fetchActivityBySlug = cache(async (slug: string) => {
     });
     if (!activityData.data.activities.edges.length) return;
 
-    return formatActivity(activityData.data.activities.edges[0]);
+    const formattedActivity = formatActivity(
+      activityData.data.activities.edges[0],
+      locale
+    );
+    return formattedActivity;
   } catch (error) {
     console.error(error);
-    return {} as IActivity;
   }
 });
 
@@ -178,13 +194,19 @@ export const fetchActivitiesByCategoryName = cache(
     last,
   }: fetchActivitiesByCategoryNameVars) => {
     const apolloClient = getApolloClient();
+    const locale = await getLocale();
 
     try {
       const activitiesData = await apolloClient.query({
         query: GET_ACTIVITIES_BY_CATEGORY_NAME,
         variables: {
-          categoryName,
-          env: process.env.NODE_ENV,
+          language: locale.toUpperCase(),
+          categoryName: `${categoryName}${
+            locale !== Locale.en ? "-" + locale : ""
+          }`,
+          env: `${process.env.NODE_ENV}${
+            locale !== Locale.en ? "-" + locale : ""
+          }`,
           first,
           last,
           before,
@@ -194,7 +216,9 @@ export const fetchActivitiesByCategoryName = cache(
 
       return {
         ...activitiesData.data.activities.pageInfo,
-        activityList: activitiesData.data.activities.edges.map(formatActivity),
+        activityList: activitiesData.data.activities.edges.map((item: any) =>
+          formatActivity(item, locale)
+        ),
       } as fetchActivitiesByCategoryNameData;
     } catch (error) {
       console.error(error);

@@ -502,6 +502,20 @@
     "Actions": {
       "Donate": "Faire un don",
       "Volunteer": "Devenez bénévole maintenant"
+    },
+    "Conjunctions": {
+      "at": "à",
+      "by": "par"
+    },
+    "Titles": {
+      "About": "À propos de cet événement",
+      "Date": "Date",
+      "Time": "Temps",
+      "Venue": "Lieu",
+      "Schedule": "Calendrier"
     }
+  },
+  "Loading": {
+    "Empty Resources": "Pas encore de <span>{title}</span>"
   }
 }

@@ -3,9 +3,10 @@ import ContentImage from "@/components/shared/content-image";
 import { MINUTELY_REVALIDATION } from "@/lib/constants";
 import ProjectReport from "@/components/resources/project-report";
 import ResourcesList from "@/components/resources/resources-list";
-import { PropsWithLocaleParam, ResourcesIds } from "@/lib/types";
+import { PropsWithLocaleParam } from "@/lib/types";
 import Banner from "@/components/shared/banner";
 import { unstable_setRequestLocale } from "next-intl/server";
+import { getKeyResource } from "@/lib/utils";
 
 export const revalidate = MINUTELY_REVALIDATION;
 
@@ -13,6 +14,7 @@ export default function Resources({
   params: { locale },
 }: PropsWithLocaleParam) {
   unstable_setRequestLocale(locale);
+  const keyResource = getKeyResource(locale);
 
   return (
     <Fragment>
@@ -29,13 +31,13 @@ export default function Resources({
         className="lg:py-16"
         hasOverflow
         isSecondary
-        resourceId={ResourcesIds.Bulletins}
+        resourceId={keyResource.Bulletins}
         hideDescription
       />
       <ResourcesList
         className="lg:py-24"
         hasBorder
-        resourceId={ResourcesIds.Researches}
+        resourceId={keyResource.Researches}
       />
       <div className="border-ankara-1 border-b-[20px] relative top-7 rotate-[-3deg]" />
       <div className="border-ankara-1 border-b-[20px] relative top-2 rotate-[3deg]" />
@@ -43,13 +45,13 @@ export default function Resources({
         className="lg:py-20 border-ankara-4 border-b-[20px]"
         hasBorder
         isSecondary
-        resourceId={ResourcesIds.AnnualReports}
+        resourceId={keyResource.AnnualReports}
       />
       <ResourcesList
         className="lg:py-16"
         hasBorder
         hasOverflow
-        resourceId={ResourcesIds.SpecialPublications}
+        resourceId={keyResource.SpecialPublications}
       />
     </Fragment>
   );

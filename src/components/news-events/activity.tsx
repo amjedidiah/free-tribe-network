@@ -24,7 +24,9 @@ type Props = {
 export default function Activity({ trigger, translatedTrigger }: Props) {
   const t = useTranslations("News");
   const params: fetchActivitiesByCategoryNameVars = useMemo(
-    () => ({ categoryName: trigger as CategoryName }),
+    () => ({
+      categoryName: trigger as CategoryName,
+    }),
     [trigger]
   );
   const {

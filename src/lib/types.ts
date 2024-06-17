@@ -40,12 +40,30 @@ export type Resource = {
   minsRead: number;
 };
 
-export enum ResourcesIds {
+export type ResourcesIds = ResourcesIdsEN | ResourcesIdsFR | ResourcesIdsNL;
+
+export enum ResourcesIdsEN {
   AnnualReports = "dGVybTo3",
   Bulletins = "dGVybTo1",
   Researches = "dGVybTo2",
   SpecialPublications = "dGVybTo4",
   ProjectActivityReport = "dGVybToxMA==",
+}
+
+export enum ResourcesIdsFR {
+  AnnualReports = "dGVybToxMTA=",
+  Bulletins = "dGVybToxMDE=",
+  Researches = "dGVybToxMDY=",
+  SpecialPublications = "dGVybToxMTY=",
+  ProjectActivityReport = "dGVybTo5Mg==",
+}
+
+export enum ResourcesIdsNL {
+  AnnualReports = "dGVybToxMTI=",
+  Bulletins = "dGVybToxMDM=",
+  Researches = "dGVybToxMDg=",
+  SpecialPublications = "dGVybToxMTQ=",
+  ProjectActivityReport = "dGVybTo5NA==",
 }
 
 export type FetchCategoriesByIdVars = {
@@ -84,6 +102,7 @@ type NewsFieldGroup = {
   dateTime: string;
   date: string;
   time: string;
+  sharedid: string;
   schedule?: string;
   scheduleNotes?: string;
   venue: string;

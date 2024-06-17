@@ -4,9 +4,9 @@ import { IActivity } from "@/lib/types";
 import SafeHTML from "@/components/shared/safe-html";
 import { Link, usePathname, useRouter } from "@/lib/i18n.config";
 import { useCallback } from "react";
-import { useSearchParams } from "next/navigation";
-import { useTranslations } from "next-intl";
-import { formatLinkLabel } from "@/lib/utils";
+import { useParams, useSearchParams } from "next/navigation";
+import { useLocale, useTranslations } from "next-intl";
+import { formatLinkLabel, getPurifiedSlug } from "@/lib/utils";
 
 export default function ActivityCard({
   slug,
@@ -20,6 +20,9 @@ export default function ActivityCard({
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const t = useTranslations("Our initiative.initiatives");
+  const tActivity = useTranslations("Activity.Conjunctions");
+  const locale = useLocale();
+  const params = useParams();
 
   const handleInitiativeSelect = useCallback(
     (slug: string) => {
@@ -27,11 +30,17 @@ export default function ActivityCard({
       const value = t(`${slug}.id` as any);
       updatedParams.set("initiative", value);
 
-      router.push(`${pathname}?${updatedParams.toString()}` as any, {
-        scroll: false,
-      });
+      router.push(
+        {
+          pathname: `${pathname}?${updatedParams.toString()}` as any,
+          params,
+        },
+        {
+          scroll: false,
+        }
+      );
     },
-    [pathname, router, searchParams, t]
+    [params, pathname, router, searchParams, t]
   );
 
   return (
@@ -47,7 +56,7 @@ export default function ActivityCard({
       </div>
       <div className="flex flex-col gap-3 justify-between max-sm:w-full sm:h-full">
         <p className="text-xs py-1 text-[rgba(140,140,140,0.80)] uppercase">
-          {date} by {time} at {venue}
+          {date} {tActivity("by")} {time} {tActivity("at")} {venue}
         </p>
         <div className="h5-gap">
           <Link
@@ -71,17 +80,19 @@ export default function ActivityCard({
         </div>
         <div className="flex flex-wrap gap-2 items-center">
           {categories.map((item) => {
-            return item.parent?.node.slug === "initiatives" ? (
+            const purifiedSlug = getPurifiedSlug(item.slug, locale);
+
+            return item.parent?.node.slug.includes("initiatives") ? (
               <div
                 key={item.slug}
-                onClick={() => handleInitiativeSelect(item.slug)}
+                onClick={() => handleInitiativeSelect(purifiedSlug)}
                 className="bg-primary-50 w-fit p-1 rounded-2xl cursor-pointer"
               >
                 <Badge
                   variant="outline"
                   className="text-xs border-none rounded-2xl flex items-center py-[2px] px-2 w-fit text-primary-700 uppercase bg-white h-fit"
                 >
-                  {formatLinkLabel(t(`${item.slug}.id` as any))}
+                  {formatLinkLabel(t(`${purifiedSlug}.id` as any))}
                 </Badge>
               </div>
             ) : (
