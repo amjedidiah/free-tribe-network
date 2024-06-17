@@ -25,7 +25,7 @@ export default function PostCard({
           quality={100}
         />
       </div>
-      <div className="flex flex-col items-stretch gap-3">
+      <div className="flex flex-col items-stretch justify-between flex-1 gap-3">
         <div className="grid gap-3">
           <div className="h5-gap">
             <a href={link} target="_blank">

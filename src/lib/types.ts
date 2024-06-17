@@ -17,6 +17,7 @@ export type PostData = {
   category: string[];
   title: string;
   content: string;
+  description: string;
   published: number;
 };
 

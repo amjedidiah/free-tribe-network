@@ -4,7 +4,7 @@ import { formatLinkLabel } from "@/lib/utils";
 import { PropsWithChildren } from "react";
 import { Badge } from "@/components/ui/badge";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import ShouldRender from "../shared/should-render";
+import ShouldRender from "@/components/shared/should-render";
 
 export default function ActivityTabsContent({
   children,
