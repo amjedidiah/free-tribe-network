@@ -46,10 +46,10 @@
       - <https://next-intl-docs.vercel.app/docs/routing/middleware#localizing-pathnames>
       - <https://next-intl-docs.vercel.app/docs/routing/navigation#localized-pathnames>
 - [x] Dutch translation
-- [ ] Dynamic Content Translation
-- [ ] Search with Algolia
-- [ ] Configure metadata field and OG Images
+- [x] Dynamic Content Translation
+- [x] Configure metadata field and OG Images
       - Localization for metadata and OG Images: <https://next-intl-docs.vercel.app/docs/environments/metadata-route-handlers>
+- [ ] Search with Algolia
 - [ ] Configure `NEXT_PUBLIC_FLUTTERWAVE_PUBLIC_KEY` and `FLUTTERWAVE_SECRET_KEY` for prod
 
 ## Improvements

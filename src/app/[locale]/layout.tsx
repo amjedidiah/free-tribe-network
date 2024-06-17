@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, ResolvingMetadata, Viewport } from "next";
 import "@/styles/globals.css";
 import Nav from "@/components/layout/nav";
 import Footer from "@/components/layout/footer";
@@ -16,19 +16,39 @@ import { locales } from "@/lib/i18n.config";
 import { PropsWithLocaleParam } from "@/lib/types";
 import { isRtlLang } from "rtl-detect";
 
-export async function generateMetadata({
-  params: { locale },
-}: PropsWithLocaleParam): Promise<Metadata> {
+export async function generateMetadata(
+  { params: { locale } }: PropsWithLocaleParam,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
   const t = await getTranslations({
     locale,
-    namespace: "Layout.metaData",
+    namespace: "Layout.metaData.default",
   });
+  const previousImages = (await parent).openGraph?.images || [];
+  const description = t("description");
+
+  const graph = {
+    images: [
+      "https://freetribenetwork.com/wp-content/uploads/2024/06/home.png",
+      ...previousImages,
+    ],
+    description,
+  };
 
   return {
-    title: t("title"),
-    description: t("description"),
+    title: {
+      template: "%s | Free Tribe Network",
+      default: "Free Tribe Network",
+    },
+    description,
+    openGraph: graph,
+    twitter: graph,
   };
 }
+
+export const viewport: Viewport = {
+  themeColor: "#ee35a3",
+};
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -54,8 +74,8 @@ export default async function RootLayout({
           <Nav />
           <main>{children}</main>
           <Footer />
-          <WhatsappChat />
         </NextIntlClientProvider>
+        <WhatsappChat />
       </body>
     </html>
   );

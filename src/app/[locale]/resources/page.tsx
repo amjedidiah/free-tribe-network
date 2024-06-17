@@ -7,8 +7,18 @@ import { PropsWithLocaleParam } from "@/lib/types";
 import Banner from "@/components/shared/banner";
 import { unstable_setRequestLocale } from "next-intl/server";
 import { getKeyResource } from "@/lib/utils";
+import { getMetadata } from "@/lib/actions/metadata";
 
 export const revalidate = MINUTELY_REVALIDATION;
+
+export const generateMetadata = ({
+  params: { locale },
+}: PropsWithLocaleParam) =>
+  getMetadata(
+    locale,
+    "https://freetribenetwork.com/wp-content/uploads/2024/03/resource-banner.webp",
+    "Layout.metaData.resources"
+  );
 
 export default function Resources({
   params: { locale },

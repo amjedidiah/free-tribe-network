@@ -12,8 +12,18 @@ import { MINUTELY_REVALIDATION } from "@/lib/constants";
 import { PropsWithLocaleParam } from "@/lib/types";
 import { unstable_setRequestLocale } from "next-intl/server";
 import { useTranslations } from "next-intl";
+import { getMetadata } from "@/lib/actions/metadata";
 
 export const revalidate = MINUTELY_REVALIDATION;
+
+export const generateMetadata = ({
+  params: { locale },
+}: PropsWithLocaleParam) =>
+  getMetadata(
+    locale,
+    "https://freetribenetwork.com/wp-content/uploads/2024/04/inspiration-scaled.webp",
+    "Layout.metaData.who we are"
+  );
 
 export default function WhoWeAre({ params: { locale } }: PropsWithLocaleParam) {
   unstable_setRequestLocale(locale);

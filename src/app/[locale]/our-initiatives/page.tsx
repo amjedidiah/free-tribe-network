@@ -7,8 +7,18 @@ import { MINUTELY_REVALIDATION } from "@/lib/constants";
 import { unstable_setRequestLocale } from "next-intl/server";
 import { PropsWithLocaleParam } from "@/lib/types";
 import { useTranslations } from "next-intl";
+import { getMetadata } from "@/lib/actions/metadata";
 
 export const revalidate = MINUTELY_REVALIDATION;
+
+export const generateMetadata = ({
+  params: { locale },
+}: PropsWithLocaleParam) =>
+  getMetadata(
+    locale,
+    "https://freetribenetwork.com/wp-content/uploads/2024/03/our-initiatives-banner-scaled.webp",
+    "Layout.metaData.our initiatives"
+  );
 
 export default function OurInitiatives({
   params: { locale },
