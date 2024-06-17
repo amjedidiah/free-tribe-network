@@ -34,7 +34,7 @@ export default function Footer({ minimal = false }) {
           <ShouldRender condition={!minimal}>
             <div className="flex flex-col lg:flex-row justify-between gap-10">
               <div className="flex flex-col gap-6">
-                <Link href="/">
+                <Link href="/" aria-label="homepage">
                   <div className="relative h-[60px] w-[60px]">
                     <ContentImageClient
                       title="free-tribe-white"

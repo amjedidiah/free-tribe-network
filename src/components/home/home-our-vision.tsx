@@ -8,9 +8,9 @@ export default function HomeOurVision() {
     <section className="bg-secondary-900 py-10">
       <article className="container grid lg:grid-cols-[1fr,625px] gap-10 items-center">
         <div className="h2-gap">
-          <h2 className="text-secondary-50">{t('Heading.title')}</h2>
+          <h2 className="text-secondary-50">{t("Heading.title")}</h2>
           <p className="text-secondary-100 max-w-[35rem]">
-            {t('Heading.description')}
+            {t("Heading.description")}
           </p>
         </div>
 
@@ -20,9 +20,9 @@ export default function HomeOurVision() {
               <span className="bg-primary-900 py-[2px] px-1 text-primary-100">
                 SDG 5
               </span>
-              <h4 className="text-primary-800 uppercase lg:max-w-[11.625rem]">
-                {t('gender equality')}
-              </h4>
+              <h3 className="text-2xl lg:text-3xl text-primary-800 uppercase lg:max-w-[11.625rem]">
+                {t("gender equality")}
+              </h3>
             </div>
             <div className="flex lg:flex-1 justify-end">
               <ContentImage title="sdg-5" width={420} height={411} />
@@ -33,9 +33,9 @@ export default function HomeOurVision() {
               <span className="bg-secondary-800 py-[2px] px-1 text-secondary-100 ">
                 SDG 10
               </span>
-              <h4 className="text-secondary-800 uppercase">
-                {t('reduced inequalities')}
-              </h4>
+              <h3 className="text-2xl lg:text-3xl text-secondary-800 uppercase">
+                {t("reduced inequalities")}
+              </h3>
             </div>
             <div className="flex justify-end">
               <ContentImage title="sdg-10" width={309} height={241} />
@@ -46,9 +46,9 @@ export default function HomeOurVision() {
               <span className="bg-secondary-900 py-[2px] px-1 text-secondary-100 ">
                 SDG 3
               </span>
-              <h4 className="text-secondary-100 uppercase">
-                {t('good health and well being')}
-              </h4>
+              <h3 className="text-2xl lg:text-3xl text-secondary-100 uppercase">
+                {t("good health and well being")}
+              </h3>
             </div>
             <div className="flex justify-end">
               <Image

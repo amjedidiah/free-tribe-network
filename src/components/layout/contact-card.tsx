@@ -21,7 +21,9 @@ export default function ContactCard({ image, title, href }: ContactCardProps) {
         </div>
       </div>
       <div className="h5-gap">
-        <h5>{t(`${title}.header` as any)}</h5>
+        <h3 className="text-xl lg:text-2xl font-light">
+          {t(`${title}.header` as any)}
+        </h3>
         <p>{t(`${title}.subHeader` as any)}</p>
         {href ? (
           <a href={href} className="mt-2 text-primary">

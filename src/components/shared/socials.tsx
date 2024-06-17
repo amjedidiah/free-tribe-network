@@ -40,6 +40,7 @@ function SocialItem({ href, name }: { href: string; name: string }) {
       href={href}
       className="w-5 h-5 lg:w-6 lg:h-6 relative flex items-center"
       key={name}
+      aria-label={`Social media page on ${name}`}
     >
       <span className="hidden">{name}</span>
       <CustomIcon icon={Icon} />

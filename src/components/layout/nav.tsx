@@ -58,7 +58,7 @@ function Nav() {
             </ul>
             <div className="flex gap-6 items-center">
               <ShouldRender condition={!isResourcesPage}>
-                <ScrollLink to="contact-us" smooth>
+                <ScrollLink to="contact-us" href="" smooth>
                   <Button variant="outline">{t("Contact Us")}</Button>
                 </ScrollLink>
               </ShouldRender>
@@ -77,6 +77,7 @@ function Nav() {
             className="lg:hidden col-start-3 row-start-1"
             variant="outline"
             onClick={() => setIsOpen((prev) => !prev)}
+            aria-label="menu button"
           >
             <Burger />
           </Button>

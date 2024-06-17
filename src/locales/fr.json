@@ -44,7 +44,7 @@
         "description": "Chez le Free Tribe Network, nous proposons une gamme de programmes et de services de base pour soutenir le bien-être reproductif, les comportements de recherche et de signalement de la santé, et améliorer la santé reproductive et le bien-être familial. \nNotre mission est de donner aux individus et aux communautés les moyens de prendre des décisions éclairées concernant leur santé et leurs droits reproductifs.",
         "title": "Nos initiatives"
       },
-      "See More": "Voir plus",
+      "See More": "Plus d'initiatives",
       "initiatives": {
         "free-tribe-boost-camp": {
           "content": "<div><p>Un programme bimensuel de renforcement des capacités pour le personnel et les bénévoles du Free Tribe Network, destiné à améliorer les compétences professionnelles en entreprise, à enseigner des compétences pertinentes pour l'industrie et à favoriser les liens entre les membres du Free Tribe Network.</p \n></div>",
@@ -65,7 +65,7 @@
         "description": "Lisez quelques extraits de notre blog",
         "title": "Articles de blog"
       },
-      "See More": "Voir plus"
+      "See More": "Plus d'articles"
     },
     "Tweets": {
       "link": "Tweets de freetribenetwork",
@@ -95,8 +95,29 @@
       "title": "Abonnez-vous à notre courrier"
     },
     "metaData": {
-      "description": "Bienvenue sur le Free Tribe Network",
-      "title": "Free Tribe Network"
+      "default": {
+        "description": "Bienvenue sur le Free Tribe Network"
+      },
+      "donate": {
+        "description": "Aidez les gens du monde entier",
+        "title": "Faire un don"
+      },
+      "news": {
+        "description": "Restez au courant de tout ce qui se passe sur le Free Tribe Network",
+        "title": "Nouvelles"
+      },
+      "our initiatives": {
+        "description": "6 initiatives pour promouvoir le bien-être et le bien-être familial au sein du Free Tribe Network",
+        "title": "Nos initiatives"
+      },
+      "resources": {
+        "description": "Rapports de projets/activités, bulletins, recherches, rapports annuels et publications spéciales du Free Tribe Network",
+        "title": "Ressources"
+      },
+      "who we are": {
+        "description": "En savoir plus sur le Free Tribe Network",
+        "title": "Qui nous sommes"
+      }
     },
     "Contact": {
       "Call": {
@@ -228,7 +249,7 @@
       "name": "Oluwatobi Alawode",
       "title": "agent logistique"
     },
-    "See More": "Voir plus",
+    "See More": "Plus de détails",
     "Susan": {
       "name": "Susan Kebu",
       "title": "Associé de projet"

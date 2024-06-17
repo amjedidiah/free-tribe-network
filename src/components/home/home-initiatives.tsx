@@ -17,31 +17,31 @@ export default function HomeInitiatives() {
 
         <div className="grid gap-10">
           <div className="grid lg:grid-cols-3 gap-8">
-            {topInitiativesData.map(
-              ({ name, content, images, ...rest }) => (
-                <div key={name} className="flex flex-col gap-5">
-                  <div className="h-[244px] w-full relative mx-auto">
-                    <ContentImageClient
-                      title={images[0]}
-                      fill
-                      sizes="100%"
-                      style={{ objectFit: "cover" }}
-                      className="shadow-xl"
-                    />
-                  </div>
-                  <div className="h5-gap">
-                    <h5 className="capitalize lg:min-h-16">{t(`initiatives.${name}.label` as any)}</h5>
-                    <SafeHTML
-                      htmlContent={
-                        "summary" in rest
-                          ? t(`initiatives.${name}.summary` as any)
-                          : t.raw(`initiatives.${name}.content` as any)
-                      }
-                    />
-                  </div>
+            {topInitiativesData.map(({ name, content, images, ...rest }) => (
+              <div key={name} className="flex flex-col gap-5">
+                <div className="h-[244px] w-full relative mx-auto">
+                  <ContentImageClient
+                    title={images[0]}
+                    fill
+                    sizes="100%"
+                    style={{ objectFit: "cover" }}
+                    className="shadow-xl"
+                  />
                 </div>
-              )
-            )}
+                <div className="h5-gap">
+                  <h2 className="text-xl lg:text-2xl font-light capitalize lg:min-h-16">
+                    {t(`initiatives.${name}.label` as any)}
+                  </h2>
+                  <SafeHTML
+                    htmlContent={
+                      "summary" in rest
+                        ? t(`initiatives.${name}.summary` as any)
+                        : t.raw(`initiatives.${name}.content` as any)
+                    }
+                  />
+                </div>
+              </div>
+            ))}
           </div>
 
           <Link href="/our-initiatives" className="mx-auto">

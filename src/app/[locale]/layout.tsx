@@ -43,6 +43,16 @@ export async function generateMetadata(
     description,
     openGraph: graph,
     twitter: graph,
+
+    metadataBase: new URL("https://www.freetribenetwork.org"),
+    alternates: {
+      canonical: "/",
+      languages: {
+        en: "/en",
+        fr: "/fr",
+        nl: "/nl",
+      },
+    },
   };
 }
 
@@ -74,8 +84,8 @@ export default async function RootLayout({
           <Nav />
           <main>{children}</main>
           <Footer />
+          <WhatsappChat />
         </NextIntlClientProvider>
-        <WhatsappChat />
       </body>
     </html>
   );

@@ -28,8 +28,29 @@
     },
     "Layout": {
         "metaData": {
-            "title": "Free Tribe Network",
-            "description": "Welcome to the Free Tribe Network"
+            "default": {
+                "description": "Welcome to the Free Tribe Network"
+            },
+            "donate": {
+                "title": "Donate",
+                "description": "Help People Across the Globe"
+            },
+            "news": {
+                "title": "News & Events",
+                "description": "Stay up-to-date with all that's happening at the Free Tribe Network"
+            },
+            "our initiatives": {
+                "title": "Our Initiatives",
+                "description": "6 Initiatives to promote wellness, and family well-being at the Free Tribe Network"
+            },
+            "resources": {
+                "title": "Resources",
+                "description": "Project/Activity reports, bulletins, researches, annual reports and special publications from the Free Tribe Network"
+            },
+            "who we are": {
+                "title": "Who We Are",
+                "description": "Learn more about the Free Tribe Network"
+            }
         },
         "Heading": {
             "title": "We'd love to hear from you",
@@ -120,14 +141,14 @@
                 "title": "Blog Articles",
                 "description": "Read some excerpts from our blog"
             },
-            "See More": "See More"
+            "See More": "More Articles"
         },
         "Our initiatives": {
             "Heading": {
                 "title": "Our Initiatives",
                 "description": " At The Free Tribe Network, we offer a range of core programs and services to support reproductive wellness, health seeking and reporting behaviors, and improve reproductive health and family well-being. Our mission is to empower individuals and communities to make informed decisions about their reproductive health and rights."
             },
-            "See More": "See More",
+            "See More": "More Initiatives",
             "initiatives": {
                 "star-project": {
                     "label": "Stand Against Recycled Violence (STAR) Project",
@@ -215,7 +236,7 @@
     "Team": {
         "Board of Trustees": "Board of Trustees",
         "The Work Family": "The Work Family",
-        "See More": "See More",
+        "See More": "More Details",
         "Dr Adebayo": {
             "name": "Dr Adebayo, Ayodeji Matthew",
             "title": "Chairman, BOT"

@@ -30,7 +30,7 @@ export default function PostCard({
           <div className="h5-gap">
             <a href={link} target="_blank">
               <div className="flex justify-between items-center">
-                <h5 className="text-gray-900">{title}</h5>
+                <h3 className="text-xl lg:text-2xl text-gray-900">{title}</h3>
                 <Image
                   src="/icons/arrow-up-right.svg"
                   alt="arrow-up-right"

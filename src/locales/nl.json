@@ -121,7 +121,7 @@
         "description": "Bij The Free Tribe Network bieden we een reeks kernprogramma's en diensten ter ondersteuning van reproductief welzijn, gedrag bij het zoeken naar en rapporteren van gezondheid, en ter verbetering van de reproductieve gezondheid en het gezinswelzijn. \nOnze missie is om individuen en gemeenschappen in staat te stellen weloverwogen beslissingen te nemen over hun reproductieve gezondheid en rechten.",
         "title": "Onze initiatieven"
       },
-      "See More": "Bekijk meer",
+      "See More": "Meer initiatieven",
       "initiatives": {
         "free-tribe-boost-camp": {
           "content": "<div><p>Een tweemaandelijks programma voor capaciteitsopbouw voor medewerkers en vrijwilligers van het Free Tribe Network, bedoeld om de werkvaardigheden van bedrijven te verbeteren, brancherelevante vaardigheden aan te leren en de band tussen de leden van het Free Tribe Network te bevorderen.</p> \n</div>",
@@ -142,7 +142,7 @@
         "description": "Lees enkele fragmenten uit onze blog",
         "title": "Blogartikelen"
       },
-      "See More": "Bekijk meer"
+      "See More": "Meer artikelen"
     },
     "Tweets": {
       "link": "Tweets van freetribenetwork",
@@ -194,8 +194,29 @@
       "title": "Abonneer u op onze mail"
     },
     "metaData": {
-      "description": "Welkom bij het Free Tribe-netwerk",
-      "title": "Free Tribe Network"
+      "default": {
+        "description": "Welkom bij het Free Tribe-netwerk"
+      },
+      "donate": {
+        "description": "Help mensen over de hele wereld",
+        "title": "Doneer"
+      },
+      "news": {
+        "description": "Blijf op de hoogte van alles wat er gebeurt op het Free Tribe Network",
+        "title": "Nieuws"
+      },
+      "our initiatives": {
+        "description": "6 Initiatieven om welzijn en gezinswelzijn te bevorderen bij het Free Tribe Network",
+        "title": "Onze initiatieven"
+      },
+      "resources": {
+        "description": "Project-/activiteitenrapporten, bulletins, onderzoeken, jaarverslagen en speciale publicaties van het Free Tribe Network",
+        "title": "Bronnen"
+      },
+      "who we are": {
+        "description": "Meer informatie over het Free Tribe-netwerk",
+        "title": "Wie we zijn"
+      }
     }
   },
   "Nav": {
@@ -341,7 +362,7 @@
       "name": "Ds Eweje, John",
       "title": "Vice-voorzitter, BOT"
     },
-    "See More": "Bekijk meer",
+    "See More": "Meer details",
     "Susan": {
       "name": "Susan Kebu",
       "title": "Projectmedewerker"

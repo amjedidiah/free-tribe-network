@@ -24,9 +24,9 @@ export default function Testimonials() {
               className="relative flex flex-col justify-end"
             >
               <div className="grid text-center gap-8">
-                <h5 className="text-description">
+                <h3 className="text-description text-xl lg:text-2xl font-light">
                   {t(`${name}.testimony` as any)}
-                </h5>
+                </h3>
                 <div className="flex flex-col items-center gap-4">
                   <div className="w-16 h-16 rounded-full relative">
                     <ContentImageClient

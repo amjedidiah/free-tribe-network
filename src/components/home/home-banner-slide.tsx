@@ -21,14 +21,15 @@ export default function HomeBannerSlide({
 
           <div className="flex items-center gap-6 [&_a]:py-[0.625rem] [&_a]:px-[1.125rem] [&_a]:rounded-[0.5rem] [&_a]:shadow-md">
             <Link href="/donate" className=" bg-primary-400 text-white">
-              {t('Support')}
+              {t("Support")}
             </Link>
             <ScrollLink
               to="mailing-list"
               smooth
               className="border border-white cursor-pointer"
+              href=""
             >
-             { t('Join')}
+              {t("Join")}
             </ScrollLink>
           </div>
         </div>
