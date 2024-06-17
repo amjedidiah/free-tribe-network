@@ -54,7 +54,7 @@
 
 ## Improvements
 
-- [ ] Reduce client side JS
-      - Fetch translations server-side
+- Reduce client side JS
+  - Fetch translations server-side
 
-- [ ] CSS Localization for `rtl` languages: <https://phrase.com/blog/posts/how-do-i-use-a-css-file-for-site-localization/>
+- CSS Localization for `rtl` languages: <https://phrase.com/blog/posts/how-do-i-use-a-css-file-for-site-localization/>

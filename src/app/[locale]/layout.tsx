@@ -27,11 +27,16 @@ export async function generateMetadata(
   const previousImages = (await parent).openGraph?.images || [];
   const description = t("description");
 
+  const image =
+    {
+      en: "https://freetribenetwork.com/wp-content/uploads/2024/06/Screenshot-2024-06-17-at-14.34.19.png",
+      fr: "https://freetribenetwork.com/wp-content/uploads/2024/06/Screenshot-2024-06-17-at-14.34.11.png",
+      nl: "https://freetribenetwork.com/wp-content/uploads/2024/06/Screenshot-2024-06-17-at-14.34.04.png",
+    }[locale] ||
+    "https://freetribenetwork.com/wp-content/uploads/2024/06/Screenshot-2024-06-17-at-14.34.19.png";
+
   const graph = {
-    images: [
-      "https://freetribenetwork.com/wp-content/uploads/2024/06/home.png",
-      ...previousImages,
-    ],
+    images: [image, ...previousImages],
     description,
   };
 

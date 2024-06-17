@@ -7,12 +7,16 @@ import Testimonials from "@/components/shared/testimonials";
 import Support from "@/components/shared/support";
 import Team from "@/components/shared/team";
 import Partners from "@/components/shared/partners";
-import Tweets from "@/components/home/tweets";
+import dynamic from "next/dynamic";
 import { bots } from "@/lib/data";
 import OurImpact from "@/components/shared/our-impact";
 import { MINUTELY_REVALIDATION } from "@/lib/constants";
 import { PropsWithLocaleParam } from "@/lib/types";
 import { unstable_setRequestLocale } from "next-intl/server";
+
+const Tweets = dynamic(() => import("../../components/home/tweets"), {
+  ssr: false,
+});
 
 // TODO: Cancel revalidation on this when post has become more than 3
 export const revalidate = MINUTELY_REVALIDATION;
