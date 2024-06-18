@@ -5,6 +5,7 @@ import { Link, usePathname } from "@/lib/i18n.config";
 import { Link as ScrollLink } from "react-scroll";
 import { Button } from "@/components/ui/button";
 import { Menu as Burger } from "lucide-react";
+// import Search from '../search-box'
 import { routes } from "@/lib/data";
 import { Suspense, memo, useState } from "react";
 import { cn } from "@/lib/utils";
@@ -23,6 +24,7 @@ function Nav() {
     <header className="fixed w-full z-10 shadow">
       <div className="border-b border-gray-100 bg-whitesmoke">
         <div className="container pt-[10px] pb-[5px] justify-between flex items-center gap-10">
+          {/* <Search/> */}
           <form action=""></form>
           <Suspense fallback={null}>
             <LocaleSelector />
