@@ -1,17 +1,9 @@
-import { HTMLAttributes } from "react";
 import { cn } from "@/lib/utils";
-import { ResourcesIds } from "@/lib/types";
+import { ResourcesListProps } from "@/lib/types";
 import ResourcesListContainer from "@/components/resources/resources-list-container";
+import { fetchResourcesByCategoryId } from "@/lib/actions/wordpress";
 
-export type ResourcesListProps = {
-  hasOverflow?: boolean;
-  isSecondary?: boolean;
-  hasBorder?: boolean;
-  resourceId: ResourcesIds;
-  hideDescription?: boolean;
-} & HTMLAttributes<HTMLDivElement>;
-
-export default function ResourcesList({
+export default async function ResourcesList({
   className,
   hasOverflow = false,
   isSecondary = false,
@@ -19,11 +11,18 @@ export default function ResourcesList({
   resourceId,
   hideDescription = false,
 }: ResourcesListProps) {
+  const params = {
+    id: resourceId,
+    hideDescription,
+  };
+  const data = await fetchResourcesByCategoryId(params);
+
   const props = {
     hasOverflow,
     isSecondary,
     hasBorder,
-    params: { id: resourceId, hideDescription },
+    params,
+    initData: data,
   };
 
   return (

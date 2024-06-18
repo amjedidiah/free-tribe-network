@@ -1,15 +1,12 @@
-"use client";
 import { visionMissionData } from "@/lib/data";
 import VisionMissionCard from "@/components/who-we-are/vision-mission-card";
-import ContentImageClient from "@/components/shared/content-image-client";
+import ContentImage from "@/components/shared/content-image";
 import { Link } from "@/lib/i18n.config";
-import useScrollToSection from "@/hooks/use-scroll-to-section";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
-export default function HistoryMissionVision() {
-  const t = useTranslations("Who we are.History");
-  const tMenu = useTranslations("Nav.menu");
-  useScrollToSection();
+export default async function HistoryMissionVision() {
+  const t = await getTranslations("Who we are.History");
+  const tMenu = await getTranslations("Nav.menu");
 
   return (
     <section className="py-10 lg:pt-28">
@@ -21,7 +18,7 @@ export default function HistoryMissionVision() {
           <h2 className="text-black">{t("title")}</h2>
           <div className="text-description flex flex-col gap-3 [&_a]:underline">
             <p>{t("content one")}</p>
-            <ContentImageClient
+            <ContentImage
               title="inspiration"
               width={1920}
               height={1080}

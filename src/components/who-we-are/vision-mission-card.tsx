@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
 type VisionMissionCardProps = {
   title: string;
@@ -8,12 +8,12 @@ type VisionMissionCardProps = {
   className: string;
 };
 
-export default function VisionMissionCard({
+export default async function VisionMissionCard({
   title,
   icon,
   className,
 }: VisionMissionCardProps) {
-  const t = useTranslations("Who we are.MissionVision");
+  const t = await getTranslations("Who we are.MissionVision");
 
   return (
     <div className={`${className} flex flex-col gap-4 p-4 rounded`}>

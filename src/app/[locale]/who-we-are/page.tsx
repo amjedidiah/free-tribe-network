@@ -13,6 +13,7 @@ import { PropsWithLocaleParam } from "@/lib/types";
 import { unstable_setRequestLocale } from "next-intl/server";
 import { useTranslations } from "next-intl";
 import { getMetadata } from "@/lib/actions/metadata";
+import ScrollToSection from "@/components/shared/scroll-to-section";
 
 export const revalidate = MINUTELY_REVALIDATION;
 
@@ -31,6 +32,7 @@ export default function WhoWeAre({ params: { locale } }: PropsWithLocaleParam) {
 
   return (
     <Fragment>
+      <ScrollToSection />
       <WhoWeAreBanner />
       <Suspense fallback={null}>
         <HistoryMissionVision />

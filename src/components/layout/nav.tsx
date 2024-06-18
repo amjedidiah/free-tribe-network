@@ -12,6 +12,7 @@ import NavLink from "@/components/layout/nav-link";
 import LocaleSelector from "@/components/layout/locale-selector";
 import { useTranslations } from "next-intl";
 import ShouldRender from "@/components/shared/should-render";
+import Search from "@/components/layout/search/search";
 
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +24,7 @@ function Nav() {
     <header className="fixed w-full z-10 shadow">
       <div className="border-b border-gray-100 bg-whitesmoke">
         <div className="container pt-[10px] pb-[5px] justify-between flex items-center gap-10">
-          <form action=""></form>
+          <Search />
           <Suspense fallback={null}>
             <LocaleSelector />
           </Suspense>

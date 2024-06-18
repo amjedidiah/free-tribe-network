@@ -8,6 +8,7 @@ import Banner from "@/components/shared/banner";
 import { unstable_setRequestLocale } from "next-intl/server";
 import { getKeyResource } from "@/lib/utils";
 import { getMetadata } from "@/lib/actions/metadata";
+import ScrollToSection from "@/components/shared/scroll-to-section";
 
 export const revalidate = MINUTELY_REVALIDATION;
 
@@ -63,6 +64,7 @@ export default function Resources({
         hasOverflow
         resourceId={keyResource.SpecialPublications}
       />
+      <ScrollToSection shouldScroll={true} />
     </Fragment>
   );
 }

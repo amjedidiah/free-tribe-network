@@ -44,3 +44,6 @@ export const getPurifiedSlug = (slug: string, locale: string) =>
 export const getKeyResource = (locale: string) =>
   ({ en: ResourcesIdsEN, fr: ResourcesIdsFR, nl: ResourcesIdsNL }[locale] ||
   ResourcesIdsEN);
+
+export const getIdFromCategoryTitle = (category: string) =>
+  category?.replaceAll(/[^A-Za-z]/g, "").toLowerCase();
