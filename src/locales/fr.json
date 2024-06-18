@@ -167,6 +167,9 @@
       "Upcoming Activities": "Activités à venir",
       "What we do": "Ce que nous faisons",
       "Work with us": "Travaille avec nous"
+    },
+    "Search": {
+      "placeholder": "Rechercher des ressources et des activités..."
     }
   },
   "News": {

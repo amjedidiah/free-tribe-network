@@ -10,7 +10,7 @@ import { AutocompleteItemHeader } from "./auto-complete-item-header";
 import { getIdFromCategoryTitle } from "@/lib/utils";
 import { AutocompleteQuerySuggestionsHit } from "@algolia/autocomplete-plugin-query-suggestions/dist/esm/types";
 import { getAlgoliaResults } from "@algolia/autocomplete-js";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 type WordPressPostType = "post" | "activity";
 
@@ -42,6 +42,7 @@ export default function Search() {
   const locale = useLocale();
   const taxonomiesLanguage =
     { en: "English", fr: "Français", nl: "Nederlands" }[locale] || "English";
+  const t = useTranslations("Nav.Search");
 
   const getRecentSearchesPlugin = useLazyRef(() =>
     createLocalStorageRecentSearchesPlugin({
@@ -117,7 +118,7 @@ export default function Search() {
   return (
     <Autocomplete
       openOnFocus={true}
-      placeholder="Search resources and activities..."
+      placeholder={t("placeholder")}
       defaultActiveItemId={0}
       getSources={() => [
         {
