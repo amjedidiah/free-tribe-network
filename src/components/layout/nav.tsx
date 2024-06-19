@@ -36,7 +36,7 @@ function Nav() {
             {
               "grid-rows-[auto,auto]": isOpen,
             },
-            "container grid lg:grid-rows-1 grid-cols-[auto,auto] justify-between items-center py-3"
+            "container grid xl:grid-rows-1 grid-cols-[auto,auto] justify-between items-center py-3"
           )}
         >
           <Link href="/">
@@ -49,10 +49,10 @@ function Nav() {
                 "flex flex-col border-t border-slate-600 col-start-1 col-end-4 pt-4 pb-2 mt-4":
                   isOpen,
               },
-              "lg:flex lg:flex-row lg:border-none lg:items-center lg:py-0 lg:mt-0 gap-x-20 gap-y-5 lg:justify-end lg:col-start-2"
+              "xl:flex xl:flex-row xl:border-none xl:items-center xl:py-0 xl:mt-0 gap-x-20 gap-y-5 xl:justify-end xl:col-start-2"
             )}
           >
-            <ul className="flex flex-col lg:flex-row gap-x-6 gap-y-2 lg:items-center capitalize">
+            <ul className="flex flex-col xl:flex-row gap-x-6 gap-y-2 xl:items-center capitalize">
               {routes.map((route) => (
                 <NavLink key={route.label} route={route} />
               ))}
@@ -75,7 +75,7 @@ function Nav() {
           </div>
 
           <Button
-            className="lg:hidden col-start-3 row-start-1"
+            className="xl:hidden col-start-3 row-start-1"
             variant="outline"
             onClick={() => setIsOpen((prev) => !prev)}
             aria-label="menu button"
