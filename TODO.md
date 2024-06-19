@@ -51,11 +51,11 @@
       - Localization for metadata and OG Images: <https://next-intl-docs.vercel.app/docs/environments/metadata-route-handlers>
 - [x] Reduce client side JS
   - Fetch translations server-side
+- [x] Highlighting on nav menu for other languages asides english
+- [x] header image is squeezed on nav for other languages asides english
+- [x] twitter content fix
 - [ ] Search with Algolia
 - [ ] Configure `NEXT_PUBLIC_FLUTTERWAVE_PUBLIC_KEY` and `FLUTTERWAVE_SECRET_KEY` for prod
-
-- [ ] Highlighting on nav menu for other languages asides english
-- [ ] header image is squeezed on nav for other languages asides english
 
 ## Improvements
 

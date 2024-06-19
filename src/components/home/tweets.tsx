@@ -1,9 +1,23 @@
+"use client";
 import { useLocale, useTranslations } from "next-intl";
-import { memo } from "react";
+import { memo, useEffect } from "react";
 
 function Tweets() {
   const t = useTranslations("Home.Tweets");
   const locale = useLocale();
+
+  useEffect(() => {
+    // Create and add the script tag when the component mounts
+    const script = document.createElement("script");
+    script.src = "https://platform.twitter.com/widgets.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    // Return a cleanup function to remove the script when unmounting
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []); // Empty dependency array ensures the effect runs only on mount/unmount
 
   return (
     <section className="py-10 lg:pt-20 max-w-full">
@@ -19,7 +33,6 @@ function Tweets() {
           >
             {t("link")}
           </a>
-          <script async src="https://platform.twitter.com/widgets.js" />
         </div>
       </article>
     </section>
