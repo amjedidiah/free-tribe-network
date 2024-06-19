@@ -1,11 +1,11 @@
 import { testimonials } from "@/lib/data";
-import ContentImageClient from "@/components/shared/content-image-client";
+import ContentImage from "@/components/shared/content-image";
 import Slider from "@/components/shared/slider";
 import { CarouselItem } from "@/components/ui/carousel";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
-export default function Testimonials() {
-  const t = useTranslations('Testimonials')
+export default async function Testimonials() {
+  const t = await getTranslations("Testimonials");
 
   return (
     <section className="py-10 pb-20 lg:py-24 lg:pb-32" id={t("id")}>
@@ -29,7 +29,7 @@ export default function Testimonials() {
                 </h3>
                 <div className="flex flex-col items-center gap-4">
                   <div className="w-16 h-16 rounded-full relative">
-                    <ContentImageClient
+                    <ContentImage
                       title={src}
                       className="rounded-full"
                       fill

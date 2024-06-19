@@ -6,7 +6,7 @@ import { createLocalStorageRecentSearchesPlugin } from "@algolia/autocomplete-pl
 import { AutocompleteItem } from "@/components/layout/search/auto-complete-item";
 import { ClockIcon, TrashIcon } from "lucide-react";
 import AutocompleteItemAction from "@/components/layout/search/auto-complete-item-action";
-import { AutocompleteItemHeader } from "./auto-complete-item-header";
+import { AutocompleteItemHeader } from "@/components/layout/search/auto-complete-item-header";
 import { getIdFromCategoryTitle } from "@/lib/utils";
 import { AutocompleteQuerySuggestionsHit } from "@algolia/autocomplete-plugin-query-suggestions/dist/esm/types";
 import { getAlgoliaResults } from "@algolia/autocomplete-js";

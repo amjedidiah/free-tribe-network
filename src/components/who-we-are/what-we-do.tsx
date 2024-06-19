@@ -1,10 +1,10 @@
 import WhatWeDoCard from "@/components/who-we-are/what-we-do-card";
 import { Link } from "@/lib/i18n.config";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
-export default function WhatWeDo() {
-  const t = useTranslations("Who we are.What we do");
-  const tMenu = useTranslations("Nav.menu");
+export default async function WhatWeDo() {
+  const t = await getTranslations("Who we are.What we do");
+  const tMenu = await getTranslations("Nav.menu");
 
   return (
     <section
