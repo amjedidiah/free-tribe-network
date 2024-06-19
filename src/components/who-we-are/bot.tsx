@@ -41,7 +41,7 @@ export default function Bot() {
           <h2 className="text-black">{t("title")}</h2>
           <div className="flex-1 flex items-center gap-10 justify-end">
             <div
-              className="w-12 h-12 relative shadow rounded-full"
+              className="w-12 h-12 relative shadow rounded-full cursor-pointer"
               onClick={handleShouldSlideLeft}
             >
               <Image
@@ -52,7 +52,7 @@ export default function Bot() {
               />
             </div>
             <div
-              className="w-12 h-12 relative shadow rounded-full"
+              className="w-12 h-12 relative shadow rounded-full cursor-pointer"
               onClick={handleShouldSlideRight}
             >
               <Image

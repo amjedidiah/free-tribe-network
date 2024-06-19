@@ -18,7 +18,7 @@ export default async function Testimonials() {
           }}
           contentClassName="max-sm:max-w-[calc(100vw-2rem)]"
         >
-          {testimonials.map(({ name, src, ...rest }) => (
+          {testimonials.map(({ name, src }) => (
             <CarouselItem
               key={name}
               className="relative flex flex-col justify-end"
@@ -44,11 +44,7 @@ export default async function Testimonials() {
                     <p className="text-gray-900 text-lg font-medium">
                       {t(`${name}.name` as any)}
                     </p>
-                    {"title" in rest && (
-                      <p className="text-gray-500">
-                        {t(`${name}.title` as any)}
-                      </p>
-                    )}
+                    <p className="text-gray-500">{t(`${name}.title` as any)}</p>
                   </div>
                 </div>
               </div>

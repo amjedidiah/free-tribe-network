@@ -176,11 +176,13 @@
     "id": "testimonials",
     "Mrs Olakitan Abiola": {
       "testimony": "The advocacy programs by the Free Tribe has helped me understand the concept of child marriage better and to help other young women and girls like my daughter. Thank you Free Tribe!",
-      "name": "Mrs Olakitan Abiola"
+      "name": "Mrs Olakitan Abiola",
+      "title": "."
     },
     "Moses Plangkat": {
       "testimony": "I love the ReproMatters program. Listening to the experiences of people and what they’ve been through gives a better perspective to the issues the non-profit is addressing",
-      "name": "Moses Plangkat"
+      "name": "Moses Plangkat",
+      "title": "."
     },
     "Mrs Blessing Omenka": {
       "testimony": "As a beneficiary of the family planning resources offered by the non-profit, I can attest to the positive impact on our lives. It has empowered us to plan and nurture a healthier, happier family.",
@@ -189,7 +191,8 @@
     },
     "Kwamina Obo": {
       "testimony": "As a young woman, the organization's youth-friendly health services allowed me to seek guidance without judgment. I feel empowered and informed about my reproductive health.",
-      "name": "Kwamina Obo"
+      "name": "Kwamina Obo",
+      "title": "."
     },
     "Sayo Eweje": {
       "testimony": "As an organization focused on empowering people via healthcare education, CHIIN's partnership with this non-profit has expanded our capacity to serve the community. Their shared commitment to improving reproductive health has resulted in a stronger, healthier population.",
@@ -204,7 +207,7 @@
     "Dayhana Hernandez": {
       "testimony": "Members of the Free Tribe Network are the most passionate individuals I have met. They make enormous work look too easy with their collective efforts",
       "name": "Dayhana Hernandez",
-      "title": "Program Advisor, Girls First Fund, Domincan Republic."
+      "title": "Program Advisor, Girls First Fund, Dominican Republic."
     },
     "Dr Gbonjubola Abiri": {
       "testimony": "Our organization is proud to be in partnership with this non-profit. Their innovative programs and unwavering support have greatly enhanced our ability to address reproductive health challenges, ultimately improving the lives of those we serve",
@@ -219,7 +222,7 @@
     "Pharm Tobechuckwu Nneji": {
       "testimony": "I enjoyed my time with the Free Tribe Network. There are so many good things to say about the network and the awesome work they do!  Most of all, their public relations is the best I have ever seen. They will leave an indelible mark in the sands of time.",
       "name": "Pharm Tobechuckwu Nneji",
-      "title": "Founder, Pretty Little Ladies"
+      "title": "Sub-Pharmacist"
     },
     "Dr Muhammed Odedeji": {
       "testimony": "Through the Free Tribe Network’s initiatives, I have gained access to essential healthcare services, empowering me to make informed choices for my family's well-being. Grateful for the positive impact!",
@@ -233,7 +236,8 @@
     },
     "Dr Munirat Antoinette Lecky(Anto Lecky)": {
       "testimony": "The Free Tribe Network is a group of young people doing great work, having those very important conversations that we often shy away from. I hope they continue to grow higher and higher.",
-      "name": "Dr Munirat Antoinette Lecky(Anto Lecky)"
+      "name": "Dr Munirat Antoinette Lecky(Anto Lecky)",
+      "title": "Medical Doctor"
     }
   },
   "Team": {
