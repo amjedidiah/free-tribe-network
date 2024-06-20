@@ -1,36 +1,30 @@
 [
   {
-    "id": "star-project",
     "title": "Stand Against Recycled Violence (STAR) project",
     "content": "A public health project that seeks to capture and reduce the witnessing of inter-parental violence, and the intergenerational transmission of violence to adolescents. The project aims to improve institutional supportive structures within public secondary schools, to discourage the acceptance or use of violence in future relationships. It combines a powerful blend of research and public health programs to address reproductive health and family well-being. Identifying the Issue! We observed that Intimate Partner Violence (Inter-parental Violence) had a significant effect on the physical, mental, and social well-being of children and adolescents. Children witnessing these violent behaviours were prone to exhibit difficulties in social interactions, endured emotional strain, and other psychological challenges, building into several negative outcomes such as bullying, unhealthy relationships, low self-esteem, substance abuse, and even criminal behaviours, with effects persisting through adulthood.",
     "link": "https://www.freetribenetwork.org/en/our-initiatives?section=star-project"
   },
   {
-    "id": "repromatters",
     "title": "ReproMatters",
     "content": "A bi-monthly program utilizing real life stories, medical knowledge, public health expertise, and the wide reach of the social media space, to discuss important issues affecting reproductive health and family well-being. Topics covered will center around women’s health, men’s health, children and adolescent health and well-being.",
     "link": "https://www.freetribenetwork.org/en/our-initiatives?section=repromatters"
   },
   {
-    "id": "free-tribe-boost-camp",
     "title": "Free Tribe Boost-Camp",
     "content": "A bi-monthly capacity building program for staff and volunteers of the Free Tribe Network, set to improve corporate work skills, teach industry-relevant skills, and foster bonding amongst members of the Free Tribe Network.",
     "link": "https://www.freetribenetwork.org/en/our-initiatives?section=free-tribe-boost-camp"
   },
   {
-    "id": "free-tribe-helpline",
     "title": "Free Tribe Helpline",
     "content": "A social service for telephone support, access to information, advice, informed interventions, and referral to reproductive and family health professionals.",
     "link": "https://www.freetribenetwork.org/en/our-initiatives?section=free-tribe-helpline"
   },
   {
-    "id": "free-tribe-clubs",
     "title": "Free Tribe Clubs",
     "content": "These are safe spaces set to promote open conversations, improve social support, enhance monitoring and evaluation, and improve self-led initiatives and re-intervention tactics, to ensure sustainable improvements in reproductive and family health outcomes.",
     "link": "https://www.freetribenetwork.org/en/our-initiatives?section=free-tribe-clubs"
   },
   {
-    "id": "rfh-advocacy",
     "title": "Reproductive and Family health advocacy",
     "content": "This includes rallies, campaigns, weekly advocacy messages (#TeachTuesday and #FactFriday), and media programs to promote and inspire positive health behaviours.",
     "link": "https://www.freetribenetwork.org/en/our-initiatives?section=rfh-advocacy"
@@ -38,80 +32,21 @@
   {
     "title": "Work With Us",
     "content": "At Free Tribe Network, our staff and volunteers are driven for positive world change. Our web of experts, interns, and enthusiasts give their best to ensure health, equity, and social justice for all.We seek individuals with talent, motivation, and passion to become part of our team. Bring your dream to life and inspire others today.",
-    "link": "https://localhost:3000/en/who-we-are?section=work-with-us"
-  },
-  {
-    "title": "The Work Family",
-    "content": {
-      "Dr Adebayo": {
-        "name": "Dr Adebayo, Ayodeji Matthew",
-        "title": "Chairman, BOT"
-      },
-      "Rev Eweje": {
-        "name": "Rev Eweje, John",
-        "title": "Vice Chairman, BOT"
-      },
-      "Oluwagbemi-Jacob": {
-        "name": "Oluwagbemi-Jacob Tosin",
-        "title": "Secretary, BOT"
-      },
-      "Prof Obafemi": {
-        "name": "Prof. Obafemi, Frances Ngozi",
-        "title": "Member, BOT"
-      },
-      "Dr Atoyebi": {
-        "name": "Dr Atoyebi, Aderonke O.",
-        "title": "Member, BOT"
-      },
-      "Nwokafor": {
-        "name": "Nwokafor, Obiora",
-        "title": "Member, BOT"
-      },
-      "Madu": {
-        "name": "Madu, Ihuomachidire I.",
-        "title": "Member, BOT"
-      },
-      "Fadayomi": {
-        "name": "Fadayomi, Sefunmi G.",
-        "title": "Member, BOT"
-      },
-      "Mfon": {
-        "name": "Mfon, Andikan A.",
-        "title": "Member, BOT"
-      },
-      "Busayo": {
-        "name": "Busayo Oyetubosun",
-        "title": "Admin"
-      },
-      "Mikka": {
-        "name": "Mikka Erem",
-        "title": "Program Officer"
-      },
-      "Susan": {
-        "name": "Susan Kebu",
-        "title": "Project Associate"
-      },
-      "Tolu": {
-        "name": "Tolu Oluwagbemi-Jacob",
-        "title": "Communications Officer"
-      },
-      "Uche": {
-        "name": "Uche Kennedy",
-        "title": "IT Lead"
-      },
-      "Oluwatobi": {
-        "name": "Oluwatobi Alawode",
-        "title": "Logistics Officer"
-      },
-      "Grace": {
-        "name": "Grace Vin-Otebele",
-        "title": "Monitoring & Evaluation Officer"
-      }
-    }
+    "link": "https://www.freetribenetwork.org/en/who-we-are?section=work-with-us"
   },
   {
     "title": "Our History",
     "content": "The Free Tribe Network is a non-profit charity founded by Tosin Oluwagbemi-Jacob in 2022, in memory and inspiration of late Mrs. Titilope Oluwagbemi-Jacob (his beloved mother) who passed on due to complications and medical negligence following childbirth. The network aims to address prevailing issues affecting reproductive health and family health, and to provide sustainable solutions to these problems. It was registered with the Corporate Affairs Commission in 2023, and has since set to create a world where individuals have needed knowledge, resource, and support, for optimal reproductive health and family well-being. Pioneers of the non-profit were graduates students of the Department of Community Medicine, University College Hospital, University of Ibadan; medical professionals, and passionate individuals, who pulled resources to course a plan and structure for the network. To them, FREE is an acronym for Family and Reproductive Health Emancipation and Empowerment. Within the same year of its registration, the organization took the forefront of Reproductive/family health advocacy with programs like ReproMatters , which have seen collaborations with Critical Healthcare Information Integration Network (CHIIN), Girls First Fund, Precious Little Ladies, and others from Harvard and Stanford University. In 2023, the network launched its first pilot project in Ibadan; the Stand Against recycled Violence project, and a social service helpline for telephone support, access to information and referral to family health professionals.",
-    "link": "https://localhost:3000/en/who-we-are?section=our-history"
+    "link": "https://www.freetribenetwork.org/en/who-we-are?section=our-history"
+  },
+  {
+    "title": "Testimonial",
+    "content": "Mrs Olakitan Abiola, Moses Plangkat, Mrs. Blessing Omenka, Kwamina Obo, Sayo Eweje, Moyo Adedayo, Dayhana Hernandez, Dr Gbonjubola Abiri, Aziza Kibibi, Pharm Tobechuckwu Nneji, Dr Muhammed Odedeji, Dr Jibril Abdulmalik, Dr Munirat Antoinette Lecky(Anto Lecky)",
+    "link": "https://www.freetribenetwork.org/en/who-we-are?section=testimonials"
+  },
+  {
+    "title": "Board of Trustees",
+    "content": "Dr Adebayo, Ayodeji Matthew, Rev Eweje, John, Oluwagbemi-Jacob Tosin, Prof. Obafemi, Frances Ngozi, Dr Atoyebi, Aderonke O., Nwokafor, Obiora, Madu, Ihuomachidire I., Fadayomi, Sefunmi G., Mfon, Andikan A., Busayo Oyetubosun, Mikka Erem, Susan Kebu, Tolu Oluwagbemi-Jacob, Uche Kennedy, Oluwatobi Alawode, Grace Vin-Otebele",
+    "link": "https://www.freetribenetwork.org/en/who-we-are?section=bot"
   }
 ]
