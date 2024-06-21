@@ -1,12 +1,18 @@
+"use client";
 import { stats } from "@/lib/data";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import useScrollToSection from "@/hooks/use-scroll-to-section";
 
 export default function OurImpact() {
   const t = useTranslations("Home.Impact");
+  useScrollToSection();
 
   return (
-    <section className="py-10 lg:pt-10 lg:pb-20">
+    <section
+      className="py-10 lg:pt-10 lg:pb-20"
+      id={t("Heading.title").toLowerCase().replaceAll(" ", "-")}
+    >
       <article className="container grid gap-20">
         <div className="h2-gap lg:items-center lg:text-center">
           <h2>{t("Heading.title")}</h2>

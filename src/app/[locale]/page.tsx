@@ -12,7 +12,7 @@ import { bots } from "@/lib/data";
 import OurImpact from "@/components/shared/our-impact";
 import { MINUTELY_REVALIDATION } from "@/lib/constants";
 import { PropsWithLocaleParam } from "@/lib/types";
-import { unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 
 const Tweets = dynamic(() => import("../../components/home/tweets"), {
   ssr: false,
@@ -21,8 +21,11 @@ const Tweets = dynamic(() => import("../../components/home/tweets"), {
 // TODO: Cancel revalidation on this when post has become more than 3
 export const revalidate = MINUTELY_REVALIDATION;
 
-export default function Home({ params: { locale } }: PropsWithLocaleParam) {
+export default async function Home({
+  params: { locale },
+}: PropsWithLocaleParam) {
   unstable_setRequestLocale(locale);
+  const t = await getTranslations("Team");
 
   return (
     <Fragment>
@@ -35,6 +38,7 @@ export default function Home({ params: { locale } }: PropsWithLocaleParam) {
       <Team
         title="Board of Trustees"
         mates={bots}
+        id={t("Board of Trustees").toLowerCase().replaceAll(" ", "-")}
         className="lg:py-24 bg-snow"
         matesContainerClassName="max-lg:flex-wrap lg:flex lg:overflow-auto lg:min-w-[100vw] lg:pr-32 2xl:pr-[30%] lg:pb-5"
         shouldSeeMore

@@ -3,9 +3,13 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 export default function HomeOurVision() {
-  const t = useTranslations('Home.Vision')
+  const t = useTranslations("Home.Vision");
+
   return (
-    <section className="bg-secondary-900 py-10">
+    <section
+      className="bg-secondary-900 py-10"
+      id={t("Heading.title").toLowerCase().replaceAll(" ", "-")}
+    >
       <article className="container grid lg:grid-cols-[1fr,625px] gap-10 items-center">
         <div className="h2-gap">
           <h2 className="text-secondary-50">{t("Heading.title")}</h2>
