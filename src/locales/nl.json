@@ -97,13 +97,13 @@
       },
       "Support": "Steun",
       "Sustained reproductive health and family well-being": {
-        "content": "Bij het Free Tribe Network bevorderen we reproductief welzijn en gezinswelzijn. \nWij bieden liefdadigheidsdiensten in de vorm van programma's, projecten en onderzoek, om kennis te vertalen in perceptie, en percepties in acties en gedrag.",
+        "content": "Bij het Free Tribe Network bevorderen we reproductief welzijn en gezinswelzijn. \nSwipe om onze kernwaarden te zien. \n->",
         "title": "Duurzame reproductieve gezondheid en gezinswelzijn"
       }
     },
     "Impact": {
       "Heading": {
-        "description": "Laat onze cijfers voor ons spreken.",
+        "description": "Sinds 2023...",
         "title": "Onze impact in cijfers"
       },
       "Stats": {
@@ -161,9 +161,9 @@
   "Layout": {
     "Contact": {
       "Call": {
-        "header": "Bel ons",
-        "subHeader": "Bezoek ons ​​hoofdkantoor.",
-        "text": "Ma-vrij van 8.00 tot 17.00 uur."
+        "header": "Neem contact met ons op",
+        "subHeader": "Ma-vrij van 9.00 tot 17.00 uur.",
+        "text": "+2348153494508"
       },
       "Chat": {
         "header": "Chat voor ondersteuning",
@@ -193,7 +193,7 @@
       "title": "We zouden graag van je horen"
     },
     "Subscribe": {
-      "description": "Door u te registreren geeft u toestemming aan het <b>Free Tribe Network</b> om uw e-mailadres te verzamelen en op te slaan met als doel u onze maandelijkse nieuwsbrief te sturen.",
+      "description": "Door u te registreren, geeft u het <b>Free Tribe Network</b> toestemming om uw e-mailadres te verzamelen en op te slaan met als doel u onze maandelijkse nieuwsbrief te sturen.<a>FTN-gegevensvertrouwelijkheid</a>",
       "title": "Abonneer u op onze mail"
     },
     "metaData": {
@@ -337,7 +337,7 @@
       "title": "Toezicht houden"
     },
     "Madu": {
-      "name": "Ihuoma, Chidire Madu",
+      "name": "Madu, Ihuoma Chidire",
       "title": "Juridisch adviseur, BOT"
     },
     "Mfon": {
@@ -371,7 +371,7 @@
     "See More": "Meer details",
     "Susan": {
       "name": "Kebu, Susan",
-      "title": "Projectmedewerker"
+      "title": "Programma coördinator"
     },
     "The Work Family": "De werkfamilie",
     "Tolu": {
@@ -384,11 +384,11 @@
     },
     "Tunji": {
       "name": "Oyetunji, Ayoola",
-      "title": "Personeel"
+      "title": "Onderzoeks- en ontwikkelingsfunctionaris"
     },
     "Kome": {
-      "name": "Okah-Ave, Enakome",
-      "title": "Personeel"
+      "name": "Avae, Enakome Okah",
+      "title": "Programmamedewerker, (Onderzoek en projecten)"
     }
   },
   "Testimonials": {
@@ -478,7 +478,7 @@
       },
       "Madu": {
         "description": "<p>De partnerschapsmanager en juridisch adviseur bij Silicon Africa Technologies Ltd, en projectmanager voor Social Media Fest (SMFEST); \neen mondiaal platform voor sociale impact dat creatieven blootstelt aan de voordelen en mogelijkheden van sociale media en technologie.</p> <p>Ze is advocaat en mensenrechtenactivist; \neen gepassioneerd pleitbezorger voor de ontwikkeling van jongeren en financiële geletterdheid, die jonge vrouwen inspireert tot leiderschap en verantwoordelijkheid.</p>",
-        "name": "Ihuoma, Chidire Madu",
+        "name": "Madu, Ihuoma Chidire",
         "title": "Juridisch adviseur, BOT"
       },
       "Mfon": {

@@ -76,14 +76,14 @@
         "text": "No 15/11b, YK Abass, Ore-Ofe Estate, Elewiodo, Ibadan."
       },
       "Call": {
-        "header": "Call us",
-        "subHeader": "Visit our office HQ.",
-        "text": "Mon-Fri from 8am to 5pm."
+        "header": "Contact us",
+        "subHeader": "Mon-Fri from 9am to 5pm.",
+        "text": "+2348153494508"
       }
     },
     "Subscribe": {
       "title": "Subscribe to our mail",
-      "description": "By registering, you permit the <b>Free Tribe Network</b> to collect and store your email address for the purpose of sending you our monthly newsletter."
+      "description": "By registering, you permit the <b>Free Tribe Network</b> to collect and store your email address for the purpose of sending you our monthly newsletter.<a>FTN Data Confidentiality</a>"
     },
     "Footer": {
       "Copyright": "Free Tribe Network",
@@ -99,7 +99,7 @@
       "Join": "Join our mailing list",
       "Sustained reproductive health and family well-being": {
         "title": "Sustained reproductive health and family well-being",
-        "content": "At the Free Tribe Network, we promote reproductive wellness, and family well-being. We provide charitable services in the forms of programs, projects and research, to translate knowledge into perception, and perceptions into actions and behaviours."
+        "content": "At the Free Tribe Network, we promote reproductive wellness, and family well-being. Swipe to see our core values. ->"
       },
       "Mastery": {
         "title": "Mastery",
@@ -121,7 +121,7 @@
     "Impact": {
       "Heading": {
         "title": "Our Impact In Numbers",
-        "description": "Let our numbers speak for us."
+        "description": "Since 2023..."
       },
       "Stats": {
         "Advocacy and Awareness Campaigns": "Advocacy and Awareness Campaigns",
@@ -272,7 +272,7 @@
       "title": "Member, BOT"
     },
     "Madu": {
-      "name": "Ihuoma, Chidire Madu",
+      "name": "Madu, Ihuoma Chidire",
       "title": "Legal Advisor, BOT"
     },
     "Fadayomi": {
@@ -293,7 +293,7 @@
     },
     "Susan": {
       "name": "Kebu, Susan",
-      "title": "Project Associate"
+      "title": "Program Coordinator"
     },
     "Tolu": {
       "name": "Oluwagbemi-Jacob, Tolu",
@@ -313,11 +313,11 @@
     },
     "Tunji": {
       "name": "Oyetunji, Ayoola",
-      "title": "Staff"
+      "title": "Research and Development Officer"
     },
     "Kome": {
-      "name": "Okah-Ave, Enakome",
-      "title": "Staff"
+      "name": "Avae, Enakome Okah",
+      "title": "Program Officer, (Research and projects)"
     }
   },
   "Support": {
@@ -405,7 +405,7 @@
         "description": "<p>A realtor, and the General Manger of Suncity Gardens Estates. He runs a social support community called ‘Boy’s lounge’ for boys aged 9 to 25 years, and has mentored and supported several young men across Nigeria.</p> <p>He coordinated a two-year project to manage pregnant women living with HIV/AIDS prevent Maternal-To-Child-Transmission during this period.</p>"
       },
       "Madu": {
-        "name": "Ihuoma, Chidire Madu",
+        "name": "Madu, Ihuoma Chidire",
         "title": "Legal Advisor, BOT",
         "description": "<p>The partnership Manager and Legal Advisor at Silicon Africa Technologies Ltd, and  Project Manager for Social Media Fest (SMFEST); a global social impact platform that exposes creatives to the advantages and leverages of social media and technology.</p> <p>She is a lawyer and human rights activist; a passionate advocate for youth develop and financial literacy, inspiring young women into leadership and responsibility.</p>"
       },

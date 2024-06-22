@@ -2,24 +2,25 @@
 
 ## Changelog
 
-- added new staff members: Kome and Tunji
-- Updated `Subscribe` description text
-- Updated `Chat for Support` text
-- Sharper white logo in footer
-- fixed issue with dropdown menu disappearing after clicking an item on it
-- homepage slider delay increased from 3seconds to 15seconds
-- Titles for female BOT members
-- Changed `Madu, Ihuomachidire I.` to `Ihuoma Chidire Madu`
-- fixed inconsistencies in team member names and titles
-- fixed inconsistencies in bot names and titles
-- Added Terms and conditions, Privacy policy and Cookie policy in pdf with internal document linking
+- count up for numbers in `Our Impact` session
+- added link to google maps for HQ address
+- added link to call us and updated call hours
+- added link to FTN data confidentiality
+- fixed madu's surname
+- updated susan's title
+- updated kome's name and title
+- updated tunji's title and picture
+- fixed whatsapp icon alignment
+- removed chat for support contact card
+- rearranged bottom footer link: terms and conditions, etc
+- increased side spacing by double on pc
 
 ## Current
 
+- [ ] fix: instant swipe of first home page slider slide
 - [ ] Search with Algolia
 - [ ] Configure `NEXT_PUBLIC_FLUTTERWAVE_PUBLIC_KEY` and `FLUTTERWAVE_SECRET_KEY` for prod
 
 ## Pending
 
-- [ ] Text on FTN data confidentiality to be added to the Subscribe section
 - [ ] Introductory video

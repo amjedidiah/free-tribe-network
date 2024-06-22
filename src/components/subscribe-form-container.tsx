@@ -15,6 +15,14 @@ export default function SubscribeFormContainer() {
         <p className="text-slate-300">
           {t.rich("description", {
             b: (chunks) => <b className="text-white">{chunks}</b>,
+            a: (chunks) => (
+              <a
+                href="https://freetribenetwork.com/wp-content/uploads/2024/06/DATA-CONFIDENTIALITY-FOR-MAILING-LIST.pdf"
+                className="text-white block underline"
+              >
+                {chunks}
+              </a>
+            ),
           })}
         </p>
       </div>

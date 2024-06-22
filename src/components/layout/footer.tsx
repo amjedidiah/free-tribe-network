@@ -22,7 +22,7 @@ export default function Footer({ minimal = false }) {
             <p>{t("Heading.description")}</p>
           </article>
 
-          <article className="pb-12 lg:pb-24 grid lg:grid-cols-3 gap-6">
+          <article className="pb-12 lg:pb-24 grid lg:grid-cols-2 gap-6">
             {contactChannels.map((i) => (
               <ContactCard key={i.title} {...i} />
             ))}
@@ -64,12 +64,14 @@ export default function Footer({ minimal = false }) {
           </ShouldRender>
           <div className="flex flex-col lg:flex-row items-center justify-between gap-1">
             <div className="flex items-center gap-2 capitalize">
-              <a href="https://freetribenetwork.com/wp-content/uploads/2024/06/PRIVACY-POLICY.pdf">
-                {t("Footer.Privacy")}
-              </a>
               <a href="https://freetribenetwork.com/wp-content/uploads/2024/06/TERMS-AND-CONDITIONS.pdf">
                 {t("Footer.Terms")}
-              </a>
+              </a>{" "}
+              |
+              <a href="https://freetribenetwork.com/wp-content/uploads/2024/06/PRIVACY-POLICY.pdf">
+                {t("Footer.Privacy")}
+              </a>{" "}
+              |
               <a href="https://freetribenetwork.com/wp-content/uploads/2024/06/COOKIE-POLICY.pdf">
                 {t("Footer.Cookie")}
               </a>

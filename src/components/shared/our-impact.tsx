@@ -1,6 +1,7 @@
 import { stats } from "@/lib/data";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import CountUpValue from "@/components/home/count-up-value";
 
 export default function OurImpact() {
   const t = useTranslations("Home.Impact");
@@ -28,7 +29,14 @@ export default function OurImpact() {
                 />
               </div>
               <div className="h3-gap">
-                <h3 className="text-secondary-500">{value}</h3>
+                <h3 className="text-secondary-500">
+                  <CountUpValue
+                    end={value}
+                    duration={5}
+                    separator=","
+                    suffix={value > 1 ? "+" : ""}
+                  />
+                </h3>
                 <p className="max-w-44">{t(`Stats.${title}` as any)}</p>
               </div>
             </div>

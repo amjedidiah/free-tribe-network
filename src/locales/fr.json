@@ -20,13 +20,13 @@
       },
       "Support": "Soutien",
       "Sustained reproductive health and family well-being": {
-        "content": "Au Free Tribe Network, nous promouvons le bien-être reproductif et le bien-être familial. \nNous fournissons des services caritatifs sous la forme de programmes, de projets et de recherches, pour traduire les connaissances en perceptions et les perceptions en actions et comportements.",
+        "content": "Au Free Tribe Network, nous promouvons le bien-être reproductif et le bien-être familial. \nFaites glisser votre doigt pour voir nos valeurs fondamentales. \n->",
         "title": "Santé reproductive durable et bien-être familial"
       }
     },
     "Impact": {
       "Heading": {
-        "description": "Laissez nos chiffres parler pour nous.",
+        "description": "Depuis 2023...",
         "title": "Notre impact en chiffres"
       },
       "Stats": {
@@ -94,7 +94,7 @@
       "title": "Nous aimerions recevoir de vos nouvelles"
     },
     "Subscribe": {
-      "description": "En vous inscrivant, vous autorisez le <b>Free Tribe Network</b> à collecter et stocker votre adresse e-mail dans le but de vous envoyer notre newsletter mensuelle.",
+      "description": "En vous inscrivant, vous autorisez le <b>Free Tribe Network</b> à collecter et stocker votre adresse e-mail dans le but de vous envoyer notre newsletter mensuelle.<a>Confidentialité des données FTN</a>",
       "title": "Abonnez-vous à notre courrier"
     },
     "metaData": {
@@ -124,9 +124,9 @@
     },
     "Contact": {
       "Call": {
-        "header": "Appelez-nous",
-        "subHeader": "Visitez notre siège social.",
-        "text": "Du lundi au vendredi de 8h à 17h."
+        "header": "Contactez-nous",
+        "subHeader": "Du lundi au vendredi de 9h à 17h.",
+        "text": "+2348153494508"
       },
       "Chat": {
         "header": "Discutez pour obtenir de l'aide",
@@ -258,7 +258,7 @@
     "See More": "Plus de détails",
     "Susan": {
       "name": "Kebu, Susan",
-      "title": "Associé de projet"
+      "title": "Coordonnateur de programme"
     },
     "The Work Family": "La famille du travail",
     "Tolu": {
@@ -282,7 +282,7 @@
       "title": "Membre, BOT"
     },
     "Madu": {
-      "name": "Ihuoma, Chidire Madu",
+      "name": "Madu, Ihuoma Chidire",
       "title": "Conseiller juridique, BOT"
     },
     "Mfon": {
@@ -307,11 +307,11 @@
     },
     "Tunji": {
       "name": "Oyetunji, Ayoola",
-      "title": "Personnel"
+      "title": "Chargée de Recherche et Développement"
     },
     "Kome": {
-      "name": "Okah-Ave, Enakome",
-      "title": "Personnel"
+      "name": "Avae, Enakome Okah",
+      "title": "Agent de programme, (Recherche et projets)"
     }
   },
   "Testimonials": {
@@ -401,7 +401,7 @@
       },
       "Madu": {
         "description": "<p>Le responsable des partenariats et conseiller juridique chez Silicon Africa Technologies Ltd, et chef de projet pour le Social Media Fest (SMFEST) ; \nune plateforme mondiale à impact social qui expose les créatifs aux avantages et aux leviers des médias sociaux et de la technologie.</p> <p>Elle est avocate et militante des droits de l'homme ; \nune défenseure passionnée du développement des jeunes et de la littératie financière, inspirant les jeunes femmes vers le leadership et la responsabilité.</p>",
-        "name": "Ihuoma, Chidire Madu",
+        "name": "Madu, Ihuoma Chidire",
         "title": "Conseiller juridique, BOT"
       },
       "Mfon": {
