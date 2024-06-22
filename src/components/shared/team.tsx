@@ -55,7 +55,7 @@ export default async function Team({
                   title={src}
                   fill
                   sizes="100%"
-                  style={{ objectFit: "cover", objectPosition: "center" }}
+                  style={{ objectFit: "cover", objectPosition: "top center" }}
                   className="shadow-xl"
                 />
               </div>

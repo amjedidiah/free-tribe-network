@@ -11,7 +11,7 @@ export default function SubscribeFormContainer() {
       className="lg:w-[25rem] w-contain flex flex-col justify-between gap-4"
     >
       <div className="flex flex-col gap-1">
-        <h3 className="text-2xl lg:text-3xl">{t("title")}</h3>
+        <h3 className="text-2xl lg:text-3xl text-slate-300">{t("title")}</h3>
         <p className="text-slate-300">
           {t.rich("description", {
             b: (chunks) => <b className="text-white">{chunks}</b>,

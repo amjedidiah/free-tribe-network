@@ -6,19 +6,27 @@ import { Link as ScrollLink } from "react-scroll";
 import { Button } from "@/components/ui/button";
 import { Menu as Burger } from "lucide-react";
 import { routes } from "@/lib/data";
-import { Suspense, memo, useState } from "react";
+import { Suspense, memo, useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import NavLink from "@/components/layout/nav-link";
 import LocaleSelector from "@/components/layout/locale-selector";
 import { useTranslations } from "next-intl";
 import ShouldRender from "@/components/shared/should-render";
 import Search from "@/components/layout/search/search";
+import { useSearchParams } from "next/navigation";
 
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
   const t = useTranslations("Nav");
   const pathname = usePathname();
   const isResourcesPage = pathname === "/resources";
+  const searchParams = useSearchParams();
+  const section = searchParams.get("section");
+
+  useEffect(
+    () => setIsOpen((prev) => (prev ? false : prev)),
+    [pathname, section]
+  );
 
   return (
     <header className="fixed w-full z-10 shadow">

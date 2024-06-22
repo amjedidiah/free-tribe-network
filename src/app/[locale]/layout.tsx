@@ -2,7 +2,7 @@ import type { Metadata, ResolvingMetadata, Viewport } from "next";
 import "@/styles/globals.css";
 import Nav from "@/components/layout/nav";
 import Footer from "@/components/layout/footer";
-import { PropsWithChildren } from "react";
+import { PropsWithChildren, Suspense } from "react";
 import { cn } from "@/lib/utils";
 import WhatsappChat from "@/components/layout/whatsapp-chat";
 import manrope from "@/lib/font";
@@ -86,7 +86,9 @@ export default async function RootLayout({
         )}
       >
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <Nav />
+          <Suspense>
+            <Nav />
+          </Suspense>
           <main>{children}</main>
           <Footer />
           <WhatsappChat />

@@ -63,10 +63,23 @@ export default function Footer({ minimal = false }) {
             <hr />
           </ShouldRender>
           <div className="flex flex-col lg:flex-row items-center justify-between gap-1">
-            <p>
-              &copy; {currentYear} {t("Footer.Copyright")}
+            <div className="flex items-center gap-2 capitalize">
+              <a href="https://freetribenetwork.com/wp-content/uploads/2024/06/PRIVACY-POLICY.pdf">
+                {t("Footer.Privacy")}
+              </a>
+              <a href="https://freetribenetwork.com/wp-content/uploads/2024/06/TERMS-AND-CONDITIONS.pdf">
+                {t("Footer.Terms")}
+              </a>
+              <a href="https://freetribenetwork.com/wp-content/uploads/2024/06/COOKIE-POLICY.pdf">
+                {t("Footer.Cookie")}
+              </a>
+            </div>
+            <p className="text-slate-300">
+              <span>
+                &copy; {currentYear} {t("Footer.Copyright")}
+              </span>
+              . <span>{t("Footer.Rights")}</span>
             </p>
-            <p>{t("Footer.Rights")}</p>
           </div>
         </div>
       </section>

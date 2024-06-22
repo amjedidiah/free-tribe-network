@@ -516,6 +516,14 @@ export const workFamily = [
     src: "work-family-7",
     name: "Grace",
   },
+  {
+    src: "work-family-8",
+    name: "Kome",
+  },
+  {
+    src: "work-family-9",
+    name: "Tunji",
+  },
 ];
 
 export const volunteerNowLink = "https://forms.gle/nFKWiE5SEvCPsyJ26";

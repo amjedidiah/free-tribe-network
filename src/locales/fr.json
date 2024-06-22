@@ -84,14 +84,17 @@
   "Layout": {
     "Footer": {
       "Copyright": "Free Tribe Network",
-      "Rights": "Tous droits réservés"
+      "Rights": "Tous droits réservés",
+      "Privacy": "politique de confidentialité",
+      "Terms": "Termes et conditions",
+      "Cookie": "Politique en matière de cookies"
     },
     "Heading": {
       "description": "Notre équipe amicale est toujours là pour discuter.",
       "title": "Nous aimerions recevoir de vos nouvelles"
     },
     "Subscribe": {
-      "description": "En vous inscrivant, vous autorisez <b>Free Tribe Network</b> à stocker et à collecter votre adresse e-mail dans le but de vous envoyer notre newsletter mensuelle.",
+      "description": "En vous inscrivant, vous autorisez le <b>Free Tribe Network</b> à collecter et stocker votre adresse e-mail dans le but de vous envoyer notre newsletter mensuelle.",
       "title": "Abonnez-vous à notre courrier"
     },
     "metaData": {
@@ -126,8 +129,8 @@
         "text": "Du lundi au vendredi de 8h à 17h."
       },
       "Chat": {
-        "header": "Discutez pour soutenir",
-        "subHeader": "Nous sommes là pour vous aider.",
+        "header": "Discutez pour obtenir de l'aide",
+        "subHeader": "Nous sommes là pour vous aider. \nAvez-vous des questions sur ce que nous faisons ou souhaitez-vous travailler avec nous ?",
         "text": "freetribenetwork@gmail.com"
       },
       "Home": "Maison",
@@ -237,50 +240,50 @@
   "Team": {
     "Board of Trustees": "Conseil d'administration",
     "Busayo": {
-      "name": "Busayo Oyetubosun",
+      "name": "Oyetubosun, Busayo",
       "title": "Administrateur"
     },
     "Grace": {
-      "name": "Grace Vin-Otebele",
+      "name": "Vin-Otebele, Grace",
       "title": "Surveillance"
     },
     "Mikka": {
-      "name": "Mikka Erem",
+      "name": "Erem, Mikka",
       "title": "Agent de programme"
     },
     "Oluwatobi": {
-      "name": "Oluwatobi Alawode",
+      "name": "Alawode, Oluwatobi",
       "title": "agent logistique"
     },
     "See More": "Plus de détails",
     "Susan": {
-      "name": "Susan Kebu",
+      "name": "Kebu, Susan",
       "title": "Associé de projet"
     },
     "The Work Family": "La famille du travail",
     "Tolu": {
-      "name": "Tolu Oluwagbemi-Jacob",
+      "name": "Oluwagbemi-Jacob, Tolu",
       "title": "chargée de communication"
     },
     "Uche": {
-      "name": "Uché Kennedy",
+      "name": "Kennedy, Uché",
       "title": "Responsable informatique"
     },
     "Dr Adebayo": {
-      "name": "Dr Adebayo, Ayodeji Matthieu",
+      "name": "Dr. Adebayo, Ayodeji Matthew",
       "title": "Président, BOT"
     },
     "Dr Atoyebi": {
-      "name": "Dr Atoyebi, Aderonke O.",
-      "title": "Membre, BOT"
+      "name": "Dr. Atoyebi, Aderonke O.",
+      "title": "Président du programme, BOT"
     },
     "Fadayomi": {
       "name": "Fadayomi, Sefunmi G.",
       "title": "Membre, BOT"
     },
     "Madu": {
-      "name": "Madu, Ihuomachidire I.",
-      "title": "Membre, BOT"
+      "name": "Ihuoma, Chidire Madu",
+      "title": "Conseiller juridique, BOT"
     },
     "Mfon": {
       "name": "Mfon, Andikan A.",
@@ -291,16 +294,24 @@
       "title": "Membre, BOT"
     },
     "Oluwagbemi-Jacob": {
-      "name": "Oluwagbemi-Jacob Tosin",
+      "name": "Oluwagbemi-Jacob, Tosin",
       "title": "Secrétaire, BOT"
     },
     "Prof Obafemi": {
       "name": "Professeur Obafemi, Frances Ngozi",
-      "title": "Membre, BOT"
+      "title": "Conseiller économique, BOT"
     },
     "Rev Eweje": {
       "name": "Révérend Eweje, John",
       "title": "Vice-président, BOT"
+    },
+    "Tunji": {
+      "name": "Oyetunji, Ayoola",
+      "title": "Personnel"
+    },
+    "Kome": {
+      "name": "Okah-Ave, Enakome",
+      "title": "Personnel"
     }
   },
   "Testimonials": {
@@ -375,13 +386,13 @@
     "BOT": {
       "Dr Adebayo": {
         "description": "<p>Médecin de santé publique, chercheur chevronné et maître de conférences au Département de médecine communautaire de l'Université d'Ibadan, Nigéria. \nIl a publié plus de 85 articles universitaires et fait des présentations lors de plusieurs conférences internationales et nationales. \nIl est récipiendaire de plusieurs subventions et a été chercheur principal pour un projet financé par la Banque mondiale ciblant les couples à Ibadan, au Nigeria.</p>",
-        "name": "Dr Adebayo, Ayodeji Matthieu",
+        "name": "Dr. Adebayo, Ayodeji Matthieu",
         "title": "Président, BOT"
       },
       "Dr Atoyebi": {
         "description": "<p>Un registraire principal au Département de médecine communautaire, University College Hospital, Ibadan. \nElle se spécialise dans la santé des femmes et la violence sexiste. \nElle est docteur en médecine certifiée en évaluation économique en santé mondiale et termine actuellement une maîtrise en santé publique. \nElle possède une expérience diversifiée, notamment en assistance à la recherche pour l'essai mondial sur les antifibrinolytiques maternels, en supervision d'enquêtes pour l'Organisation mondiale de la santé et en contributions aux efforts de réponse au COVID-19 et à la mise en œuvre de la politique de santé reproductive au Nigeria.</p>",
-        "name": "Dr Adebayo, Ayodeji Matthieu",
-        "title": "Membre, BOT"
+        "name": "Dr Atoyebi, Aderonke O.",
+        "title": "Président du programme, BOT"
       },
       "Fadayomi": {
         "description": "<p>A excellé en tant qu'étudiante la plus remarquable lors de son master à l'Eastern Kentucky University, aux États-Unis. \nSpécialiste de la santé publique en santé environnementale et au travail, elle travaille actuellement avec Owens Corning pour promouvoir les soins de santé de base, l'éducation et des solutions de logement sûres et efficaces.</p> <p>Elle a travaillé comme agente de bourses pour l'agence Bethesda Child Support, pour \nsoutenir les enfants défavorisés en leur offrant une éducation gratuite au Nigeria.</p>",
@@ -390,8 +401,8 @@
       },
       "Madu": {
         "description": "<p>Le responsable des partenariats et conseiller juridique chez Silicon Africa Technologies Ltd, et chef de projet pour le Social Media Fest (SMFEST) ; \nune plateforme mondiale à impact social qui expose les créatifs aux avantages et aux leviers des médias sociaux et de la technologie.</p> <p>Elle est avocate et militante des droits de l'homme ; \nune défenseure passionnée du développement des jeunes et de la littératie financière, inspirant les jeunes femmes vers le leadership et la responsabilité.</p>",
-        "name": "Madu, Ihuomachidire I.",
-        "title": "Membre, BOT"
+        "name": "Ihuoma, Chidire Madu",
+        "title": "Conseiller juridique, BOT"
       },
       "Mfon": {
         "description": "<p>Un analyste chevronné en banque d'investissement chez Afrinvest West Africa Limited. \nIl est comptable agréé associé, avec plus de 5 ans d'expertise dans divers domaines financiers, notamment les levées de capitaux propres et par emprunt, les fusions et acquisitions, l'évaluation d'entreprises et la due diligence financière.</p>",
@@ -405,18 +416,18 @@
       },
       "Oluwagbemi-Jacob": {
         "description": "<p>Un spécialiste de la santé publique et directeur exécutif du Free Tribe Network. \nAvec plus de 5 années d'expérience dans la planification administrative, la gestion de projets et de programmes, la recherche, le suivi et l'évaluation, il a géré efficacement plus de 20 projets et opérations à but non lucratif à travers le Nigeria.</p> <p>Ses collaborations avec l'University College Hospital, \nIbadan et d'autres instituts notables reflètent un intérêt et un dévouement particuliers pour la santé mentale, la santé reproductive et le bien-être familial.</p>",
-        "name": "Oluwagbemi-Jacob Tosin",
+        "name": "Oluwagbemi-Jacob, Tosin",
         "title": "Secrétaire, BOT"
       },
       "Prof Obafemi": {
         "description": "<p>Professeur d'économie monétaire avec de nombreuses publications, une expérience en matière de rédaction de politiques industrielles et des rôles de consultant auprès de la Banque mondiale et de l'Organisation des Nations Unies pour le développement industriel (ONUDI). Elle a été chercheuse au National Defence College d'Abuja et au National Institute for Policy.",
         "name": "Professeur Obafemi, Frances Ngozi",
-        "title": "Membre, BOT"
+        "title": "Conseiller économique, BOT"
       },
       "Rev Eweje": {
         "description": "<p>Un chef de projet à la retraite avec 30 ans d'expérience au sein de la Shell Petroleum Development Company du Nigeria. \nIl est titulaire d'un doctorat en stratégie, gestion de projets et de programmes et est missionnaire en Europe après sa retraite.</p>",
-        "name": "Dr Adebayo, Ayodeji Matthieu",
-        "title": "Président, BOT"
+        "name": "Révérend Eweje, John",
+        "title": "Vice-président, BOT"
       },
       "title": "Conseil d'administration"
     },

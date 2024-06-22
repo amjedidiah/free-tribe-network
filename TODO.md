@@ -1,62 +1,25 @@
 # TODO
 
-## Now
+## Changelog
 
-- [x] Setup `volunteerNowLink`
-- [x] Setup `currentVacanciesLink`
-- [x] sayo on testimonials: use correct picture
-- [x] favicon in white background
-- [x] our initiatives on homepage: title should have the same height
-- [x] home slider: tap to slide
-- [x] testimonials: tap to slide
-- [x] our partners: livewire, add their logo
-- [x] make bot and testimonials slide height of the longest slide
-- [x] Problem and stats design: Tosin and Wisdom
-- [x] Monthly donations
-- [x] use axios for FE fetch so as to avoid using `error: any` in code
-- [x] clicking on header link should make it active
-- [x] update picture in our history with picture collage of Tosin's mum: Tosin
-- [x] clean up unused images
-- [x] bot slider in who we are active should be bigger
-- [x] Resources data: Fetch and show with pagination
-      - [x] show resources on prod / dev by tag: process.env.NODE_ENV
-      - [x] fetch resources to show by `categoryId`
-      - [x] pagination
-      - [x] caching
-      - [x] no resources found
-- [x] Activities Single Page: Fetch and show single activity
-- [x] not found route design
-- [x] Activities: Fetch and show with pagination
-- [x] Blog: show with pagination
-- [x] Upload content images to WordPress and render with `ContentImage` component
-- [x] images taking long to load
-- [x] Donations with Flutterwave
-- [x] Clean up for PayStack in code and Vercel env variables
+- added new staff members: Kome and Tunji
+- Updated `Subscribe` description text
+- Updated `Chat for Support` text
+- Sharper white logo in footer
+- fixed issue with dropdown menu disappearing after clicking an item on it
+- homepage slider delay increased from 3seconds to 15seconds
+- Titles for female BOT members
+- Changed `Madu, Ihuomachidire I.` to `Ihuoma Chidire Madu`
+- fixed inconsistencies in team member names and titles
+- fixed inconsistencies in bot names and titles
+- Added Terms and conditions, Privacy policy and Cookie policy in pdf with internal document linking
 
-- [x] 15mins caching
-- [x] gender equalities & reduced inequalities: mix of men and women
-- [x] updated site with google drive images
-- [x] linking all pictures to Wordpress
-- [x] going back on the slide
-- [x] email service: switch to Mailchimp
-- [x] Localization setup: <https://phrase.com/blog/posts/next-js-app-router-localization-next-intl>
+## Current
 
-- [x] Static Content Translation
-- [x] Localizing pathnames
-      - <https://next-intl-docs.vercel.app/docs/routing/middleware#localizing-pathnames>
-      - <https://next-intl-docs.vercel.app/docs/routing/navigation#localized-pathnames>
-- [x] Dutch translation
-- [x] Dynamic Content Translation
-- [x] Configure metadata field and OG Images
-      - Localization for metadata and OG Images: <https://next-intl-docs.vercel.app/docs/environments/metadata-route-handlers>
-- [x] Reduce client side JS
-  - Fetch translations server-side
-- [x] Highlighting on nav menu for other languages asides english
-- [x] header image is squeezed on nav for other languages asides english
-- [x] twitter content fix
 - [ ] Search with Algolia
 - [ ] Configure `NEXT_PUBLIC_FLUTTERWAVE_PUBLIC_KEY` and `FLUTTERWAVE_SECRET_KEY` for prod
 
-## Improvements
+## Pending
 
-- CSS Localization for `rtl` languages: <https://phrase.com/blog/posts/how-do-i-use-a-css-file-for-site-localization/>
+- [ ] Text on FTN data confidentiality to be added to the Subscribe section
+- [ ] Introductory video

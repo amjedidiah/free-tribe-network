@@ -166,8 +166,8 @@
         "text": "Ma-vrij van 8.00 tot 17.00 uur."
       },
       "Chat": {
-        "header": "Chat om te ondersteunen",
-        "subHeader": "We zijn hier om te helpen.",
+        "header": "Chat voor ondersteuning",
+        "subHeader": "We zijn hier om te helpen. \nHeb je vragen over wat wij doen, of wil je bij ons werken?",
         "text": "freetribenetwork@gmail.com"
       },
       "Home": "Thuis",
@@ -183,14 +183,17 @@
     },
     "Footer": {
       "Copyright": "Free Tribe Network",
-      "Rights": "Alle rechten voorbehouden"
+      "Rights": "Alle rechten voorbehouden",
+      "Privacy": "Privacybeleid",
+      "Terms": "Voorwaarden",
+      "Cookie": "Cookie beleid"
     },
     "Heading": {
       "description": "Ons vriendelijke team staat altijd klaar voor een praatje.",
       "title": "We zouden graag van je horen"
     },
     "Subscribe": {
-      "description": "Door u te registreren geeft u toestemming aan het <b>Free Tribe Network</b> om uw e-mailadres op te slaan en te verzamelen met als doel u onze maandelijkse nieuwsbrief te sturen.",
+      "description": "Door u te registreren geeft u toestemming aan het <b>Free Tribe Network</b> om uw e-mailadres te verzamelen en op te slaan met als doel u onze maandelijkse nieuwsbrief te sturen.",
       "title": "Abonneer u op onze mail"
     },
     "metaData": {
@@ -314,7 +317,7 @@
   "Team": {
     "Board of Trustees": "Raad van Toezicht",
     "Busayo": {
-      "name": "Busayo Oyetubosun",
+      "name": "Oyetubosun, Busayo",
       "title": "beheerder"
     },
     "Dr Adebayo": {
@@ -323,26 +326,26 @@
     },
     "Dr Atoyebi": {
       "name": "Dr. Atoyebi, Aderonke O.",
-      "title": "Lid, BOT"
+      "title": "Programmavoorzitter, BOT"
     },
     "Fadayomi": {
       "name": "Fadayomi, Sefunmi G.",
       "title": "Lid, BOT"
     },
     "Grace": {
-      "name": "Grace Vin-Otebele",
+      "name": "Vin-Otebele, Grace",
       "title": "Toezicht houden"
     },
     "Madu": {
-      "name": "Madu, Ihuomachidire I.",
-      "title": "Lid, BOT"
+      "name": "Ihuoma, Chidire Madu",
+      "title": "Juridisch adviseur, BOT"
     },
     "Mfon": {
       "name": "Mfon, Andikan A.",
       "title": "Lid, BOT"
     },
     "Mikka": {
-      "name": "Mikka Erem",
+      "name": "Erem, Mikka",
       "title": "Programmamedewerker"
     },
     "Nwokafor": {
@@ -350,34 +353,42 @@
       "title": "Lid, BOT"
     },
     "Oluwagbemi-Jacob": {
-      "name": "Oluwagbemi-Jacob Tosin",
+      "name": "Oluwagbemi-Jacob, Tosin",
       "title": "Secretaris, BOT"
     },
     "Oluwatobi": {
-      "name": "Oluwatobi Alawode",
+      "name": "Alawode, Oluwatobi",
       "title": "Logistiek Officier"
     },
     "Prof Obafemi": {
       "name": "Prof. Obafemi, Frances Ngozi",
-      "title": "Lid, BOT"
+      "title": "Economisch adviseur, BOT"
     },
     "Rev Eweje": {
-      "name": "Ds Eweje, John",
+      "name": "Ds. Eweje, John",
       "title": "Vice-voorzitter, BOT"
     },
     "See More": "Meer details",
     "Susan": {
-      "name": "Susan Kebu",
+      "name": "Kebu, Susan",
       "title": "Projectmedewerker"
     },
     "The Work Family": "De werkfamilie",
     "Tolu": {
-      "name": "Tolu Oluwagbemi-Jacob",
+      "name": "Oluwagbemi-Jacob, Tolu",
       "title": "Communications Officer"
     },
     "Uche": {
-      "name": "Uche Kennedy",
+      "name": "Kennedy, Uche",
       "title": "IT-leider"
+    },
+    "Tunji": {
+      "name": "Oyetunji, Ayoola",
+      "title": "Personeel"
+    },
+    "Kome": {
+      "name": "Okah-Ave, Enakome",
+      "title": "Personeel"
     }
   },
   "Testimonials": {
@@ -457,8 +468,8 @@
       },
       "Dr Atoyebi": {
         "description": "<p>Een senior registrar bij de afdeling gemeenschapsgeneeskunde, University College Hospital, Ibadan. \nZe is gespecialiseerd in de gezondheid van vrouwen en gendergerelateerd geweld. \nZe is een arts, gecertificeerd in Economic Evaluation in Global Health en rondt momenteel een Masters of Public Health af. \nZe heeft diverse ervaring, waaronder onderzoeksondersteuning voor de World Maternal Anti-fibrinolytic Trial, toezicht op enquêtes voor de Wereldgezondheidsorganisatie en bijdragen aan de inspanningen om COVID-19 te bestrijden en de implementatie van het reproductieve gezondheidszorgbeleid in Nigeria.</p>",
-        "name": "Dr. Adebayo, Ayodeji Matthew",
-        "title": "Lid, BOT"
+        "name": "Dr. Atoyebi, Aderonke O.",
+        "title": "Programmavoorzitter, BOT"
       },
       "Fadayomi": {
         "description": "<p>Blonde uit als de meest uitmuntende studente tijdens haar Masters aan de Eastern Kentucky University, VS. \nEen volksgezondheidsspecialist op het gebied van milieu en gezondheid op het werk, die momenteel samenwerkt met Owens Corning om basisgezondheidszorg, onderwijs en veilige, efficiënte huisvestingsoplossingen te bevorderen.</p> <p>Ze werkte als beursmedewerker bij het Bethesda Child Support Agency om \nsteun kansarme kinderen met gratis onderwijs in Nigeria.</p>",
@@ -467,8 +478,8 @@
       },
       "Madu": {
         "description": "<p>De partnerschapsmanager en juridisch adviseur bij Silicon Africa Technologies Ltd, en projectmanager voor Social Media Fest (SMFEST); \neen mondiaal platform voor sociale impact dat creatieven blootstelt aan de voordelen en mogelijkheden van sociale media en technologie.</p> <p>Ze is advocaat en mensenrechtenactivist; \neen gepassioneerd pleitbezorger voor de ontwikkeling van jongeren en financiële geletterdheid, die jonge vrouwen inspireert tot leiderschap en verantwoordelijkheid.</p>",
-        "name": "Madu, Ihuomachidire I.",
-        "title": "Lid, BOT"
+        "name": "Ihuoma, Chidire Madu",
+        "title": "Juridisch adviseur, BOT"
       },
       "Mfon": {
         "description": "<p>Een doorgewinterde analist in investment banking bij Afrinvest West Africa Limited. \nHij is een Associate Chartered Accountant, met meer dan vijf jaar expertise op verschillende financiële gebieden, waaronder kapitaalverhoging van eigen en vreemd vermogen, fusies en overnames, bedrijfswaardering en financiële due diligence.</p>",
@@ -482,18 +493,18 @@
       },
       "Oluwagbemi-Jacob": {
         "description": "<p>Een specialist op het gebied van de volksgezondheid en de uitvoerend directeur van het Free Tribe Network. \nMet meer dan 5 jaar geïnvesteerd in administratieve planning, project- en programmabeheer, onderzoek, monitoring en evaluatie, heeft hij op efficiënte wijze meer dan 20 non-profitprojecten en -activiteiten in heel Nigeria beheerd.</p> <p>Zijn samenwerkingen met het University College Hospital, \nIbadan en andere opmerkelijke instituten weerspiegelen een bijzondere belangstelling en toewijding voor geestelijke gezondheid, reproductieve gezondheid en gezinswelzijn.</p>",
-        "name": "Oluwagbemi-Jacob Tosin",
+        "name": "Oluwagbemi-Jacob, Tosin",
         "title": "Secretaris, BOT"
       },
       "Prof Obafemi": {
         "description": "<p>Een hoogleraar monetaire economie met uitgebreide publicaties, ervaring met het opstellen van industriebeleid en adviesrollen bij de Wereldbank en de Industriële Ontwikkelingsorganisatie van de Verenigde Naties (UNIDO). \nZe heeft gediend als research fellow voor het National Defense College, Abuja, en het National Institute for Policy",
         "name": "Prof. Obafemi, Frances Ngozi",
-        "title": "Lid, BOT"
+        "title": "Economisch adviseur, BOT"
       },
       "Rev Eweje": {
         "description": "<p>Een gepensioneerde projectmanager met 30 jaar ervaring bij de Shell Petroleum Development Company uit Nigeria. \nHij heeft een doctoraat in strategie-, project- en programmamanagement en is na zijn pensionering zendeling in Europa.</p>",
-        "name": "Dr. Adebayo, Ayodeji Matthew",
-        "title": "Voorzitter, BOT"
+        "name": "Ds. Eweje, John",
+        "title": "Vice-voorzitter, BOT"
       },
       "title": "Raad van Toezicht"
     },
