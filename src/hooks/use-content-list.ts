@@ -5,20 +5,24 @@ export type UseContentListProps<T, K> = {
   params: K;
   fetchAction: (params: K) => Promise<T>;
   limit: number;
+  initData?: T;
 };
 
 export default function useContentList<T extends PageInfo, K>({
   params,
   fetchAction,
   limit,
+  initData = {} as T,
 }: UseContentListProps<T, K>) {
-  const [isLoading, setIsLoading] = useState(true);
+  const initDataKeysLength = Object.keys(initData).length;
+  const [isLoading, setIsLoading] = useState(!initDataKeysLength);
   const [_isPending, startTransition] = useTransition();
-  const [data, setData] = useState<T>({} as T);
+  const [data, setData] = useState<T>(initData);
 
   const handleFetchPrev: MouseEventHandler<HTMLAnchorElement> = async () => {
     if (!data?.hasPreviousPage) return;
 
+    setIsLoading(true);
     fetchAction({
       ...params,
       first: 0,
@@ -29,12 +33,14 @@ export default function useContentList<T extends PageInfo, K>({
       .then((response) => {
         startTransition(() => setData(response));
       })
-      .catch(console.error);
+      .catch(console.error)
+      .finally(() => setIsLoading(false));
   };
 
   const handleFetchNext: MouseEventHandler<HTMLAnchorElement> = async () => {
     if (!data?.hasNextPage) return;
 
+    setIsLoading(true);
     fetchAction({
       ...params,
       first: limit,
@@ -45,17 +51,19 @@ export default function useContentList<T extends PageInfo, K>({
       .then((response) => {
         startTransition(() => setData(response));
       })
-      .catch(console.error);
+      .catch(console.error)
+      .finally(() => setIsLoading(false));
   };
 
   useEffect(() => {
-    if (!Object.keys(data).length) {
-      fetchAction(params)
-        .then(setData)
-        .catch(console.error)
-        .finally(() => setIsLoading(false));
-    }
-  }, [data, fetchAction, params]);
+    if (initDataKeysLength) return;
+
+    setIsLoading(true);
+    fetchAction(params)
+      .then(setData)
+      .catch(console.error)
+      .finally(() => setIsLoading(false));
+  }, [fetchAction, initDataKeysLength, params]);
 
   return {
     ...data,

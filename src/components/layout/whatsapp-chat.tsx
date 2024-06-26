@@ -4,7 +4,7 @@ import { contactNumber } from "@/lib/data";
 export default function WhatsappChat() {
   return (
     <aside className="fixed right-0 bottom-20 lg:bottom-[10vh] w-full z-[2] pointer-events-none">
-      <div className="container grid justify-end relative lg:-right-4">
+      <div className="max-2xl:container grid justify-end relative 2xl:right-[4%]">
         <a
           href={`https://wa.me/${contactNumber}`}
           className="pointer-events-auto"

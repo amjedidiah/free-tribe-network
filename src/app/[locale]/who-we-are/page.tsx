@@ -1,5 +1,5 @@
 import Partners from "@/components/shared/partners";
-import { Fragment, Suspense } from "react";
+import { Fragment } from "react";
 import Testimonials from "@/components/shared/testimonials";
 import WhoWeAreBanner from "@/components/who-we-are/who-we-are-banner";
 import HistoryMissionVision from "@/components/who-we-are/history-mission-vision";
@@ -10,9 +10,9 @@ import { workFamily } from "@/lib/data";
 import WorkWithUs from "@/components/who-we-are/work-with-us";
 import { MINUTELY_REVALIDATION } from "@/lib/constants";
 import { PropsWithLocaleParam } from "@/lib/types";
-import { unstable_setRequestLocale } from "next-intl/server";
-import { useTranslations } from "next-intl";
+import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import { getMetadata } from "@/lib/actions/metadata";
+import ScrollToSection from "@/components/shared/scroll-to-section";
 
 export const revalidate = MINUTELY_REVALIDATION;
 
@@ -25,16 +25,17 @@ export const generateMetadata = ({
     "Layout.metaData.who we are"
   );
 
-export default function WhoWeAre({ params: { locale } }: PropsWithLocaleParam) {
+export default async function WhoWeAre({
+  params: { locale },
+}: PropsWithLocaleParam) {
   unstable_setRequestLocale(locale);
-  const t = useTranslations("Nav.menu");
+  const t = await getTranslations("Nav.menu");
 
   return (
     <Fragment>
+      <ScrollToSection />
       <WhoWeAreBanner />
-      <Suspense fallback={null}>
-        <HistoryMissionVision />
-      </Suspense>
+      <HistoryMissionVision />
       <WhatWeDo />
       <Bot />
       <Team

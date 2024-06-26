@@ -26,7 +26,7 @@ export default function Banner({
   return (
     <section
       className={cn(
-        "max-h-[692px] h-[85vh] relative mt-20 text-white",
+        "max-h-[692px] h-[85vh] max-lg:max-h-[420px] relative mt-32 text-white",
         className
       )}
       id={id}
@@ -54,7 +54,7 @@ export default function Banner({
         className={`absolute h-full w-full left-0 top-0 flex flex-col justify-center ${wrapperClassName}`}
       >
         <div className="container h1-gap">
-          <h1 className="max-w-[50rem]">{title}</h1>
+          <h1 className="max-w-[50rem] capitalize">{title}</h1>
           {children}
         </div>
       </article>

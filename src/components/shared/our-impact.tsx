@@ -3,6 +3,7 @@ import { stats } from "@/lib/data";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import useScrollToSection from "@/hooks/use-scroll-to-section";
+import CountUpValue from "@/components/home/count-up-value";
 
 export default function OurImpact() {
   const t = useTranslations("Home.Impact");
@@ -13,7 +14,7 @@ export default function OurImpact() {
       className="py-10 lg:pt-10 lg:pb-20"
       id={t("Heading.title").toLowerCase().replaceAll(" ", "-")}
     >
-      <article className="container grid gap-20">
+      <article className="container grid gap-12">
         <div className="h2-gap lg:items-center lg:text-center">
           <h2>{t("Heading.title")}</h2>
           <p className="max-w-3xl">{t("Heading.description")}</p>
@@ -34,7 +35,14 @@ export default function OurImpact() {
                 />
               </div>
               <div className="h3-gap">
-                <h3 className="text-secondary-500">{value}</h3>
+                <h3 className="text-secondary-500">
+                  <CountUpValue
+                    end={value}
+                    duration={5}
+                    separator=","
+                    suffix={value > 1 ? "+" : ""}
+                  />
+                </h3>
                 <p className="max-w-44">{t(`Stats.${title}` as any)}</p>
               </div>
             </div>

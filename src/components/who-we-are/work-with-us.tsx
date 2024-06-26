@@ -1,11 +1,11 @@
 import ContentImage from "@/components/shared/content-image";
 import { Button } from "@/components/ui/button";
 import { currentVacanciesLink, volunteerNowLink } from "@/lib/data";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
-export default function WorkWithUs() {
-  const t = useTranslations("Who we are.Work with us");
-  const tMenu = useTranslations("Nav.menu");
+export default async function WorkWithUs() {
+  const t = await getTranslations("Who we are.Work with us");
+  const tMenu = await getTranslations("Nav.menu");
 
   return (
     <section

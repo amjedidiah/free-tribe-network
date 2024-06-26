@@ -241,14 +241,15 @@ export const contactNumber = "+2348153494508";
 export const contactEmail = "freetribenetwork@gmail.com";
 
 export const contactChannels = [
-  {
-    image: "/icons/message-circle.svg",
-    title: "Chat",
-    href: `mailto:${contactEmail}`,
-  },
+  // {
+  //   image: "/icons/message-circle.svg",
+  //   title: "Chat",
+  //   href: `mailto:${contactEmail}`,
+  // },
   {
     image: "/icons/map-pin.svg",
     title: "Visit",
+    href: `https://maps.app.goo.gl/yJVWErVbF9LLkwHx9?g_st=ic`,
   },
   {
     image: "/icons/phone.svg",
@@ -516,6 +517,14 @@ export const workFamily = [
     src: "work-family-7",
     name: "Grace",
   },
+  {
+    src: "work-family-8",
+    name: "Kome",
+  },
+  {
+    src: "work-family-9",
+    name: "Tunji",
+  },
 ];
 
 export const volunteerNowLink = "https://forms.gle/nFKWiE5SEvCPsyJ26";
@@ -525,25 +534,25 @@ export const currentVacanciesLink =
 export const stats = [
   {
     src: "/images/stats/stat-1.svg",
-    value: "200+",
+    value: 200,
     title: "Advocacy and Awareness Campaigns",
   },
-  { src: "/images/stats/stat-2.svg", value: "20+", title: "Training Programs" },
+  { src: "/images/stats/stat-2.svg", value: 20, title: "Training Programs" },
   {
     src: "/images/stats/stat-3.svg",
-    value: "1",
+    value: 1,
     title: "Policy and Research activities",
   },
-  { src: "/images/stats/stat-4.svg", value: "10+", title: "Community Project" },
-  { src: "/images/stats/stat-5.svg", value: "16+", title: "Collaborations" },
+  { src: "/images/stats/stat-4.svg", value: 10, title: "Community Project" },
+  { src: "/images/stats/stat-5.svg", value: 16, title: "Collaborations" },
   {
     src: "/images/stats/stat-6.svg",
-    value: "3000+",
+    value: 3000,
     title: "Students reached",
   },
   {
     src: "/images/stats/stat-7.svg",
-    value: "25,000+",
+    value: 25000,
     title: "Volunteering Hours",
   },
 ];

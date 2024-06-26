@@ -1,6 +1,7 @@
 import { contactChannels } from "@/lib/data";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import ShouldRender from "@/components/shared/should-render";
 
 type ContactCardProps = (typeof contactChannels)[number];
 
@@ -25,13 +26,17 @@ export default function ContactCard({ image, title, href }: ContactCardProps) {
           {t(`${title}.header` as any)}
         </h3>
         <p>{t(`${title}.subHeader` as any)}</p>
-        {href ? (
-          <a href={href} className="mt-2 text-primary">
-            {t(`${title}.text` as any)}
+        <a href={href} className="mt-2 text-primary">
+          {t(`${title}.text` as any)}
+        </a>
+        <ShouldRender condition={title === "Call"}>
+          <a
+            href="mailto:freetribenetwork@gmail.com"
+            className="-mt-2 text-primary"
+          >
+            {t("Chat.text")}
           </a>
-        ) : (
-          <p className="mt-2 text-primary">{t(`${title}.text` as any)}</p>
-        )}
+        </ShouldRender>
       </div>
     </div>
   );

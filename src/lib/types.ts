@@ -1,5 +1,6 @@
 import { CurrencyKeys } from "@/lib/data";
 import enMessages from "@/locales/en.json";
+import { HTMLAttributes } from "react";
 
 type Messages = typeof enMessages;
 declare global {
@@ -67,15 +68,27 @@ export enum ResourcesIdsNL {
   ProjectActivityReport = "dGVybTo5NA==",
 }
 
+export type ResourcesListProps = {
+  isSecondary?: boolean;
+  hasBorder?: boolean;
+  resourceId: ResourcesIds;
+
+  hasOverflow?: boolean;
+  hideDescription?: boolean;
+} & HTMLAttributes<HTMLDivElement>;
+
+export type ResourceListMainProps = Pick<
+  ResourcesListProps,
+  "hasOverflow" | "isSecondary" | "hasBorder"
+>;
+
 export type FetchCategoriesByIdVars = {
   id: ResourcesIds;
-  hideDescription?: boolean;
   before?: string;
   after?: string;
   first?: number;
   last?: number;
-  hasOverflow?: boolean;
-};
+} & Pick<ResourcesListProps, "hasOverflow" | "hideDescription">;
 
 export type PageInfo = {
   hasPreviousPage: boolean;

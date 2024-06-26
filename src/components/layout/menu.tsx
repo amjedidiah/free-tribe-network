@@ -12,19 +12,18 @@ import {
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { routes } from "@/lib/data";
-import { usePathname } from "next/navigation";
-import { Link } from "@/lib/i18n.config";
+import { Link, usePathname } from "@/lib/i18n.config";
 import { useTranslations } from "next-intl";
 
 type MenuProps = (typeof routes)[number];
 
 export default function Menu({ label, links, href }: MenuProps) {
   const pathname = usePathname();
-  const isActive = pathname.includes(href);
+  const isActive = pathname === href;
   const t = useTranslations("Nav");
 
   return (
-    <NavigationMenu className="block max-lg:[&_*]:animate-none max-lg:[&>div]:static max-lg:[&_*]:justify-start max-lg:[&>div]:block max-lg:[&_div.absolute_*]:p-0 max-lg:[&_div.absolute_*]:border-none max-lg:[&_div.absolute_*]:shadow-none max-lg:[&_div.absolute_ul_li_*]:flex">
+    <NavigationMenu className="block max-xl:[&_*]:animate-none max-xl:[&>div]:static max-xl:[&_*]:justify-start max-xl:[&>div]:block max-xl:[&_div.absolute_*]:p-0 max-xl:[&_div.absolute_*]:border-none max-xl:[&_div.absolute_*]:shadow-none max-xl:[&_div.absolute_ul_li_*]:flex">
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger

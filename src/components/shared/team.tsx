@@ -1,8 +1,8 @@
 import { cn } from "@/lib/utils";
-import ContentImageClient from "@/components/shared/content-image-client";
+import ContentImage from "@/components/shared/content-image";
 import { Link } from "@/lib/i18n.config";
 import { HTMLAttributes } from "react";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
 type Mate = {
   name: string;
@@ -16,7 +16,7 @@ type TeamProps = {
   matesContainerClassName: string;
 } & HTMLAttributes<HTMLDivElement>;
 
-export default function Team({
+export default async function Team({
   title,
   shouldSeeMore = false,
   mates,
@@ -24,7 +24,7 @@ export default function Team({
   className,
   matesContainerClassName,
 }: TeamProps) {
-  const t = useTranslations("Team");
+  const t = await getTranslations("Team");
 
   return (
     <section className={cn("py-10 grid gap-8", className)} id={id}>
@@ -51,17 +51,21 @@ export default function Team({
           {mates.map(({ name, src }) => (
             <div key={name} className="grid gap-4">
               <div className="lg:w-[288px] h-[296px] relative image-container">
-                <ContentImageClient
+                <ContentImage
                   title={src}
                   fill
                   sizes="100%"
-                  style={{ objectFit: "cover", objectPosition: "center" }}
+                  style={{ objectFit: "cover", objectPosition: "top center" }}
                   className="shadow-xl"
                 />
               </div>
               <div>
-                <p className="text-gray-900 text-xl font-medium">{t(`${name}.name` as any)}</p>
-                <p className="text-secondary-500 text-lg capitalize">{t(`${name}.title` as any)}</p>
+                <p className="text-gray-900 text-xl font-medium">
+                  {t(`${name}.name` as any)}
+                </p>
+                <p className="text-secondary-500 text-lg capitalize">
+                  {t(`${name}.title` as any)}
+                </p>
               </div>
             </div>
           ))}

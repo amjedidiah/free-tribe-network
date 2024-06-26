@@ -36,7 +36,7 @@ export default function Slider({
   const plugin = useRef(Autoplay({ delay, stopOnInteraction: true }));
   const [count, setCount] = useState(0);
   const [current, setCurrent] = useState(0);
-  const [clickCount, setClickCount] = useState(0);
+  // const [clickCount, setClickCount] = useState(0);
 
   useEffect(() => {
     if (!api) return;
@@ -75,10 +75,11 @@ export default function Slider({
       });
   }, [api, shouldFit]);
 
-  useEffect(() => {
-    if (clickCount % 1) return;
-    api?.scrollNext();
-  }, [api, clickCount]);
+  // Sliding on click
+  // useEffect(() => {
+  //   if (clickCount % 1) return;
+  //   api?.scrollNext();
+  // }, [api, clickCount]);
 
   return (
     <div className="relative">
