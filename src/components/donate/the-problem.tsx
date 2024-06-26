@@ -1,12 +1,9 @@
-"use client"
-import useScrollToSection from "@/hooks/use-scroll-to-section";
 import { problems } from "@/lib/data";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 
 export default function TheProblem() {
   const t = useTranslations("Donate.Problems");
-  useScrollToSection();
 
   return (
     <section

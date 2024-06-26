@@ -13,6 +13,7 @@ import OurImpact from "@/components/shared/our-impact";
 import { MINUTELY_REVALIDATION } from "@/lib/constants";
 import { PropsWithLocaleParam } from "@/lib/types";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import ScrollToSection from "@/components/shared/scroll-to-section";
 
 const Tweets = dynamic(() => import("../../components/home/tweets"), {
   ssr: false,
@@ -46,6 +47,7 @@ export default async function Home({
       <Support />
       <Partners />
       <Tweets />
+      <ScrollToSection />
     </Fragment>
   );
 }

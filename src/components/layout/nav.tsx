@@ -5,7 +5,6 @@ import { Link, usePathname } from "@/lib/i18n.config";
 import { Link as ScrollLink } from "react-scroll";
 import { Button } from "@/components/ui/button";
 import { Menu as Burger } from "lucide-react";
-// import Search from '../search-box'
 import { routes } from "@/lib/data";
 import { Suspense, memo, useEffect, useState } from "react";
 import { cn } from "@/lib/utils";

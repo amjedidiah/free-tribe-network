@@ -1,13 +1,10 @@
-"use client";
 import { stats } from "@/lib/data";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import useScrollToSection from "@/hooks/use-scroll-to-section";
 import CountUpValue from "@/components/home/count-up-value";
 
 export default function OurImpact() {
   const t = useTranslations("Home.Impact");
-  useScrollToSection();
 
   return (
     <section
