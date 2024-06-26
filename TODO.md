@@ -2,25 +2,22 @@
 
 ## Changelog
 
-- count up for numbers in `Our Impact` session
-- added link to google maps for HQ address
-- added link to call us and updated call hours
-- added link to FTN data confidentiality
-- fixed madu's surname
-- updated susan's title
-- updated kome's name and title
-- updated tunji's title and picture
-- fixed whatsapp icon alignment
-- removed chat for support contact card
-- rearranged bottom footer link: terms and conditions, etc
-- increased side spacing by double on pc
+- fixed issue with website not opening on some devices
+- fixed instant swipe of first home page slider slide
+- reduced slider delay from 15s to 10s
+- reduced banner and slider height across pages
+- reduced font-size of header text across site
+- better bottom footer links display on mobile
+- cookie consent form
+- ignored making nav dropdown on click of arrow
 
 ## Current
 
-- [ ] fix: instant swipe of first home page slider slide
+- [ ] Review legal documents
 - [ ] Search with Algolia
 - [ ] Configure `NEXT_PUBLIC_FLUTTERWAVE_PUBLIC_KEY` and `FLUTTERWAVE_SECRET_KEY` for prod
 
 ## Pending
 
+- [ ] Flutterwave approval
 - [ ] Introductory video

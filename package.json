@@ -23,6 +23,7 @@
     "axios": "^1.6.7",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
+    "cookies-next": "^4.2.1",
     "dotenv": "^16.4.1",
     "embla-carousel": "^8.0.2",
     "embla-carousel-autoplay": "^8.0.2",

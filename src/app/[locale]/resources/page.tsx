@@ -33,7 +33,7 @@ export default function Resources({
         title="resources-banner"
         width={2880}
         height={1246}
-        className="mt-20 min-w-full 2xl:hidden"
+        className="mt-32 min-w-full 2xl:hidden"
         priority
       />
       <Banner imageTitle="resources-banner" className="max-2xl:hidden" />

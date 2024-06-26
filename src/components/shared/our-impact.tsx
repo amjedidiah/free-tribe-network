@@ -8,7 +8,7 @@ export default function OurImpact() {
 
   return (
     <section className="py-10 lg:pt-10 lg:pb-20">
-      <article className="container grid gap-20">
+      <article className="container grid gap-12">
         <div className="h2-gap lg:items-center lg:text-center">
           <h2>{t("Heading.title")}</h2>
           <p className="max-w-3xl">{t("Heading.description")}</p>

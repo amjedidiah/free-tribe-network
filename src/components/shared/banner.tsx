@@ -26,7 +26,7 @@ export default function Banner({
   return (
     <section
       className={cn(
-        "max-h-[692px] h-[85vh] relative mt-20 text-white",
+        "max-h-[692px] h-[85vh] max-lg:max-h-[420px] relative mt-32 text-white",
         className
       )}
       id={id}

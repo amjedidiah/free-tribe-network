@@ -15,6 +15,7 @@ import {
 import { locales } from "@/lib/i18n.config";
 import { PropsWithLocaleParam } from "@/lib/types";
 import { isRtlLang } from "rtl-detect";
+import CookiesConsent from "@/components/layout/cookies-consent";
 
 export async function generateMetadata(
   { params: { locale } }: PropsWithLocaleParam,
@@ -92,6 +93,7 @@ export default async function RootLayout({
           <main>{children}</main>
           <Footer />
           <WhatsappChat />
+          <CookiesConsent />
         </NextIntlClientProvider>
       </body>
     </html>
