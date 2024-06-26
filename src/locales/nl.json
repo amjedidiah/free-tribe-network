@@ -50,7 +50,8 @@
           "question": "Hoe kan ik meedoen?"
         }
       },
-      "title": "Heeft u vragen? \n<br></br> Wij hebben antwoorden!"
+      "title": "Heeft u vragen? \n<br></br> Wij hebben antwoorden!",
+      "id": "Veelgestelde vragen"
     },
     "Problems": {
       "Data Fragmentation": {
@@ -179,7 +180,8 @@
         "subHeader": "Bezoek ons ​​hoofdkantoor.",
         "text": "Nr. 15/11b, YK Abass, Ore-Ofe Estate, Elewiodo, Ibadan."
       },
-      "Who we are": "Wie we zijn"
+      "Who we are": "Wie we zijn",
+      "id": "Contact"
     },
     "Footer": {
       "Copyright": "Free Tribe Network",
@@ -246,7 +248,10 @@
       "Testimonials": "Getuigenissen",
       "Upcoming Activities": "Aankomende activiteiten",
       "What we do": "Wat we doen",
-      "Work with us": "Werk met ons"
+      "Work with us": "Werk met ons",
+      "Our Impact": "Onze impact",
+      "Our Initiatives": "Onze initiatieven",
+      "Our Vision": "Onze visie"
     },
     "Search": {
       "placeholder": "Zoek bronnen en activiteiten..."
@@ -312,7 +317,8 @@
     "Heading": {
       "description": "Sluit u aan bij onze zaak om structuren rond reproductieve gezondheid en gezinswelzijn te transformeren.",
       "title": "Steun vandaag nog onze missie!"
-    }
+    },
+    "id": "steun"
   },
   "Team": {
     "Board of Trustees": "Raad van Toezicht",

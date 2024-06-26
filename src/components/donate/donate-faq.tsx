@@ -14,12 +14,15 @@ export default function DonateFAQ() {
   const t = useTranslations("Donate.FAQ");
 
   return (
-    <section className="bg-secondary-50 py-10 lg:py-16">
+    <section
+      className="bg-secondary-50 py-10 lg:py-16"
+      id={t("id").toLowerCase().replaceAll(" ", "-")}
+    >
       <article className="container flex flex-col gap-8 lg:gap-10">
         <div className="flex flex-row flex-wrap h2-gap justify-between items-center text-center">
           <h2>
             {t.rich("title", {
-              br: () => <br />
+              br: () => <br />,
             })}
           </h2>
           <ScrollLink
@@ -34,9 +37,13 @@ export default function DonateFAQ() {
           <Accordion type="single" collapsible className="w-full">
             {donationFAQs.map((i) => (
               <AccordionItem key={i.id} value={i.id}>
-                <AccordionTrigger>{t(`questions.${i.id}.question` as any)}</AccordionTrigger>
+                <AccordionTrigger>
+                  {t(`questions.${i.id}.question` as any)}
+                </AccordionTrigger>
                 <AccordionContent className="[&_a]:underline">
-                  <SafeHTML htmlContent={t.raw(`questions.${i.id}.answer` as any)} />
+                  <SafeHTML
+                    htmlContent={t.raw(`questions.${i.id}.answer` as any)}
+                  />
                 </AccordionContent>
               </AccordionItem>
             ))}

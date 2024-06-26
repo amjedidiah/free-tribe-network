@@ -7,7 +7,10 @@ export default function Support() {
   const t = useTranslations("Support");
 
   return (
-    <section className="relative z-[2] radial-primary">
+    <section
+      className="relative z-[2] radial-primary"
+      id={t("id").toLowerCase().replaceAll(" ", "-")}
+    >
       <div className="hidden lg:block -z-[2] absolute inset-y-0 lg:-left-52 xl:-left-44 2xl:-left-20 h-full w-[calc(100vw/2)] xl:w-[calc(100vw/2-150px)] 2xl:w-[calc(100vw/2-300px)]">
         <ContentImage
           title="ankara-2"

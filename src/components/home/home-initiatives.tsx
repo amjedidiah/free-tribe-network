@@ -7,8 +7,12 @@ import { useTranslations } from "next-intl";
 
 export default function HomeInitiatives() {
   const t = useTranslations("Home.Our initiatives");
+  
   return (
-    <section className="bg-secondary-600 py-10 lg:py-14 text-white">
+    <section
+      className="bg-secondary-600 py-10 lg:py-14 text-white"
+      id={t("Heading.title").toLowerCase().replaceAll(" ", "-")}
+    >
       <article className="container grid gap-6 text-center justify-center [&_p]:max-w-3xl">
         <div className="h2-gap items-center">
           <h2>{t("Heading.title")}</h2>

@@ -142,7 +142,8 @@
         "subHeader": "Visitez notre siège social.",
         "text": "No 15/11b, YK Abass, domaine Ore-Ofe, Elewiodo, Ibadan."
       },
-      "Who we are": "Qui nous sommes"
+      "Who we are": "Qui nous sommes",
+      "id": "Contact"
     }
   },
   "Nav": {
@@ -169,7 +170,10 @@
       "Testimonials": "Témoignages",
       "Upcoming Activities": "Activités à venir",
       "What we do": "Ce que nous faisons",
-      "Work with us": "Travaille avec nous"
+      "Work with us": "Travaille avec nous",
+      "Our Impact": "Notre impact",
+      "Our Initiatives": "Nos initiatives",
+      "Our Vision": "Notre vision"
     },
     "Search": {
       "placeholder": "Rechercher des ressources et des activités..."
@@ -235,7 +239,8 @@
     "Heading": {
       "description": "Rejoignez notre cause pour transformer les structures autour de la santé reproductive et du bien-être familial.",
       "title": "Soutenez notre mission dès aujourd’hui !"
-    }
+    },
+    "id": "soutien"
   },
   "Team": {
     "Board of Trustees": "Conseil d'administration",
@@ -511,7 +516,8 @@
           "question": "Comment puis-je m'impliquer ?"
         }
       },
-      "title": "Vous avez des questions ? \n<br></br> Nous avons des réponses !"
+      "title": "Vous avez des questions ? \n<br></br> Nous avons des réponses !",
+      "id": "FAQ"
     },
     "Problems": {
       "Data Fragmentation": {
