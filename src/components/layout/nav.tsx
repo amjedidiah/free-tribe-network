@@ -6,7 +6,7 @@ import { Link as ScrollLink } from "react-scroll";
 import { Button } from "@/components/ui/button";
 import { Menu as Burger } from "lucide-react";
 import { routes } from "@/lib/data";
-import { Suspense, memo, useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import NavLink from "@/components/layout/nav-link";
 import LocaleSelector from "@/components/layout/locale-selector";
@@ -33,9 +33,7 @@ function Nav() {
       <div className="border-b border-gray-100 bg-whitesmoke">
         <div className="container pt-[10px] pb-[5px] justify-between flex items-center gap-10">
           <Search />
-          <Suspense fallback={null}>
-            <LocaleSelector />
-          </Suspense>
+          <LocaleSelector />
         </div>
       </div>
       <nav className="bg-white border-b border-gray-100">

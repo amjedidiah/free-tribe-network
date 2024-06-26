@@ -7,7 +7,7 @@ import ShouldRender from "@/components/shared/should-render";
 const CONSENT_COOKIE_NAME = "Xf7oUpXcZ4GVjGirBmNs";
 
 export default function CookiesConsent() {
-  const [showConsent, setShowConsent] = useState(true);
+  const [showConsent, setShowConsent] = useState(false);
 
   const acceptCookies = useCallback(() => {
     setCookie(CONSENT_COOKIE_NAME, true);

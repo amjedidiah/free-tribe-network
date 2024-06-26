@@ -10,7 +10,7 @@ import Partners from "@/components/shared/partners";
 import dynamic from "next/dynamic";
 import { bots } from "@/lib/data";
 import OurImpact from "@/components/shared/our-impact";
-import { MINUTELY_REVALIDATION } from "@/lib/constants";
+import { DAILY_REVALIDATION } from "@/lib/constants";
 import { PropsWithLocaleParam } from "@/lib/types";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import ScrollToSection from "@/components/shared/scroll-to-section";
@@ -20,7 +20,7 @@ const Tweets = dynamic(() => import("../../components/home/tweets"), {
 });
 
 // TODO: Cancel revalidation on this when post has become more than 3
-export const revalidate = MINUTELY_REVALIDATION;
+export const revalidate = DAILY_REVALIDATION;
 
 export default async function Home({
   params: { locale },

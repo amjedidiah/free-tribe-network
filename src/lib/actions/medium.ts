@@ -64,9 +64,9 @@ export const fetchMediumPosts = cache(async () => {
   const rssFeedLink =
     {
       en: "https://medium.com/feed/@freetribenetwork",
-      fr: "https://rss.app/feeds/tOrFQCgn3QxDStbn.xml",
-      nl: "https://rss.app/feeds/5aa66TP5As3ljbGQ.xml",
-    }[locale] || "";
+      // fr: "https://rss.app/feeds/tOrFQCgn3QxDStbn.xml",
+      // nl: "https://rss.app/feeds/5aa66TP5As3ljbGQ.xml",
+    }[locale] || "https://medium.com/feed/@freetribenetwork";
   try {
     const { items } = await parse(rssFeedLink);
 
