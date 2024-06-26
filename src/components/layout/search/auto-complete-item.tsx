@@ -3,7 +3,7 @@ import { ComponentProps, PropsWithChildren } from "react";
 import { LucideIcon, ZoomIn } from "lucide-react";
 import Link from "next/link";
 
-export function AutocompleteItem({
+export default function AutocompleteItem({
   children,
   icon: Icon = ZoomIn,
   actions,

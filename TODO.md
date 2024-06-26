@@ -2,20 +2,16 @@
 
 ## Changelog
 
-- fixed issue with website not opening on some devices
-- fixed instant swipe of first home page slider slide
-- reduced slider delay from 15s to 10s
-- reduced banner and slider height across pages
-- reduced font-size of header text across site
-- better bottom footer links display on mobile
-- cookie consent form
-- ignored making nav dropdown on click of arrow
+- Search with Algolia
 
 ## Current
 
-- [ ] Review legal documents
-- [ ] Search with Algolia
+- subscribe form is not wide enough on lg
+- fix for cookie consent form loading before going off
+- fix for banner covering the page on home screen
+
 - [ ] Configure `NEXT_PUBLIC_FLUTTERWAVE_PUBLIC_KEY` and `FLUTTERWAVE_SECRET_KEY` for prod
+- [ ] Review legal documents
 
 ## Pending
 

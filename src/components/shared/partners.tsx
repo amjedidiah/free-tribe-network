@@ -6,7 +6,7 @@ export default async function Partners() {
   const t = await getTranslations("Partners");
 
   return (
-    <section className="py-10">
+    <section className="py-10" id={t("Heading.id")}>
       <article className="container grid gap-8 text-center">
         <h2 className="text-black">{t("Heading.title")}</h2>
         <div className="flex flex-wrap justify-around gap-5">

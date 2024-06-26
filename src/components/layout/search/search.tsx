@@ -3,10 +3,10 @@ import { useLazyRef } from "@/hooks/use-lazy-ref";
 import { HITS_PER_PAGE, searchClient } from "@/lib/algolia";
 import { createQuerySuggestionsPlugin } from "@algolia/autocomplete-plugin-query-suggestions";
 import { createLocalStorageRecentSearchesPlugin } from "@algolia/autocomplete-plugin-recent-searches";
-import { AutocompleteItem } from "@/components/layout/search/auto-complete-item";
+import AutocompleteItem from "@/components/layout/search/auto-complete-item";
 import { ClockIcon, TrashIcon } from "lucide-react";
 import AutocompleteItemAction from "@/components/layout/search/auto-complete-item-action";
-import { AutocompleteItemHeader } from "@/components/layout/search/auto-complete-item-header";
+import AutocompleteItemHeader from "@/components/layout/search/auto-complete-item-header";
 import { getIdFromCategoryTitle } from "@/lib/utils";
 import { AutocompleteQuerySuggestionsHit } from "@algolia/autocomplete-plugin-query-suggestions/dist/esm/types";
 import { getAlgoliaResults } from "@algolia/autocomplete-js";
@@ -14,7 +14,7 @@ import { useLocale, useTranslations } from "next-intl";
 
 type WordPressPostType = "post" | "activity";
 
-const getSearchItemUrl = (item: AutocompleteQuerySuggestionsHit) => {
+const getWPSearchItemUrl = (item: AutocompleteQuerySuggestionsHit) => {
   const permalink = item.permalink.toString();
   const postType = item.post_type.toString() as WordPressPostType;
 
@@ -43,6 +43,7 @@ export default function Search() {
   const taxonomiesLanguage =
     { en: "English", fr: "Français", nl: "Nederlands" }[locale] || "English";
   const t = useTranslations("Nav.Search");
+  const taxonomiesEnvironment = process.env.NODE_ENV ?? "development";
 
   const getRecentSearchesPlugin = useLazyRef(() =>
     createLocalStorageRecentSearchesPlugin({
@@ -57,7 +58,7 @@ export default function Search() {
               actions={
                 <AutocompleteItemAction
                   icon={TrashIcon}
-                  title="Remove this search"
+                  title={t("titles.Remove")}
                   onClick={(event) => {
                     event.preventDefault();
                     event.stopPropagation();
@@ -70,7 +71,7 @@ export default function Search() {
               <components.ReverseHighlight hit={item} attribute="label" />
             </AutocompleteItem>
           ),
-          header: () => <AutocompleteItemHeader title="Recent search" />,
+          header: () => <AutocompleteItemHeader title={t("titles.Recent")} />,
         },
       }),
     })
@@ -78,14 +79,14 @@ export default function Search() {
   const getQuerySuggestionsPlugin = useLazyRef(() =>
     createQuerySuggestionsPlugin({
       searchClient,
-      indexName: process.env.NEXT_PUBLIC_WP_INDEX as string,
+      indexName: process.env.NEXT_PUBLIC_ALGOLIA_WP_INDEX as string,
       transformSource: ({ source }) => ({
         ...source,
         templates: {
           ...source.templates,
           item: ({ item, components }) => {
             return (
-              <AutocompleteItem href={getSearchItemUrl(item)}>
+              <AutocompleteItem href={getWPSearchItemUrl(item)}>
                 <components.ReverseHighlight
                   hit={item}
                   attribute="post_title"
@@ -93,7 +94,9 @@ export default function Search() {
               </AutocompleteItem>
             );
           },
-          header: () => <AutocompleteItemHeader title="Resources" />,
+          header: () => (
+            <AutocompleteItemHeader title={t("titles.Resources")} />
+          ),
         },
         sourceId: "resources",
         getItems: ({ query }) =>
@@ -101,16 +104,16 @@ export default function Search() {
             searchClient,
             queries: [
               {
-                indexName: process.env.NEXT_PUBLIC_WP_INDEX as string,
+                indexName: process.env.NEXT_PUBLIC_ALGOLIA_WP_INDEX as string,
                 query,
                 params: {
-                  filters: `(post_type:post) AND (taxonomies.language:${taxonomiesLanguage})`,
+                  filters: `(post_type:post) AND (taxonomies.post_tag:${taxonomiesEnvironment}) AND (taxonomies.language:${taxonomiesLanguage})`,
                   hitsPerPage: HITS_PER_PAGE,
                 },
               },
             ],
           }),
-        getItemUrl: ({ item }) => getSearchItemUrl(item),
+        getItemUrl: ({ item }) => getWPSearchItemUrl(item),
       }),
     })
   );
@@ -125,7 +128,7 @@ export default function Search() {
           templates: {
             item: ({ item, components }) => {
               return (
-                <AutocompleteItem href={getSearchItemUrl(item as any)}>
+                <AutocompleteItem href={getWPSearchItemUrl(item as any)}>
                   <components.ReverseHighlight
                     hit={item}
                     attribute="post_title"
@@ -133,7 +136,9 @@ export default function Search() {
                 </AutocompleteItem>
               );
             },
-            header: () => <AutocompleteItemHeader title="Activities" />,
+            header: () => (
+              <AutocompleteItemHeader title={t("titles.Activities")} />
+            ),
           },
           sourceId: "activities",
           getItems: ({ query }) =>
@@ -141,10 +146,38 @@ export default function Search() {
               searchClient,
               queries: [
                 {
-                  indexName: process.env.NEXT_PUBLIC_WP_INDEX as string,
+                  indexName: process.env.NEXT_PUBLIC_ALGOLIA_WP_INDEX as string,
                   query,
                   params: {
-                    filters: `(post_type:activity) AND (taxonomies.language:${taxonomiesLanguage})`,
+                    filters: `(post_type:activity) AND (taxonomies.post_tag:${taxonomiesEnvironment}) AND (taxonomies.language:${taxonomiesLanguage})`,
+                    hitsPerPage: HITS_PER_PAGE,
+                  },
+                },
+              ],
+            }),
+        },
+        {
+          templates: {
+            item: ({ item, components }) => {
+              return (
+                <AutocompleteItem href={item.link as string}>
+                  <components.ReverseHighlight hit={item} attribute="title" />
+                </AutocompleteItem>
+              );
+            },
+            header: () => <AutocompleteItemHeader title={t("titles.Other")} />,
+          },
+          sourceId: "other",
+          getItems: ({ query }) =>
+            getAlgoliaResults({
+              searchClient,
+              queries: [
+                {
+                  indexName: process.env
+                    .NEXT_PUBLIC_ALGOLIA_NEXT_INTL_INDEX as string,
+                  query,
+                  params: {
+                    filters: `(language:${taxonomiesLanguage})`,
                     hitsPerPage: HITS_PER_PAGE,
                   },
                 },

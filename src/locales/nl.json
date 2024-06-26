@@ -51,7 +51,7 @@
         }
       },
       "title": "Heeft u vragen? \n<br></br> Wij hebben antwoorden!",
-      "id": "Veelgestelde vragen"
+      "id": "faqs"
     },
     "Problems": {
       "Data Fragmentation": {
@@ -181,7 +181,7 @@
         "text": "Nr. 15/11b, YK Abass, Ore-Ofe Estate, Elewiodo, Ibadan."
       },
       "Who we are": "Wie we zijn",
-      "id": "Contact"
+      "id": "neem-contact-met-ons-op"
     },
     "Footer": {
       "Copyright": "Free Tribe Network",
@@ -196,7 +196,8 @@
     },
     "Subscribe": {
       "description": "Door u te registreren, geeft u het <b>Free Tribe Network</b> toestemming om uw e-mailadres te verzamelen en op te slaan met als doel u onze maandelijkse nieuwsbrief te sturen.<a>FTN-gegevensvertrouwelijkheid</a>",
-      "title": "Abonneer u op onze mail"
+      "title": "Abonneer u op onze mail",
+      "id": "mailinglijst"
     },
     "metaData": {
       "default": {
@@ -254,7 +255,14 @@
       "Our Vision": "Onze visie"
     },
     "Search": {
-      "placeholder": "Zoek bronnen en activiteiten..."
+      "placeholder": "Zoek bronnen en activiteiten...",
+      "titles": {
+        "Activities": "Activiteiten",
+        "Other": "Ander",
+        "Recent": "Recente zoekopdracht",
+        "Remove": "Verwijder deze zoekopdracht",
+        "Resources": "Bronnen"
+      }
     }
   },
   "News": {
@@ -309,7 +317,8 @@
   },
   "Partners": {
     "Heading": {
-      "title": "Onze partners"
+      "title": "Onze partners",
+      "id": "partners"
     }
   },
   "Support": {

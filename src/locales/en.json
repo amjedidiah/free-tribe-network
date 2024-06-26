@@ -29,7 +29,14 @@
             "Our Vision": "Our Vision"
         },
         "Search": {
-            "placeholder": "Search resources and activities..."
+            "placeholder": "Search resources and activities...",
+            "titles": {
+                "Remove": "Remove this search",
+                "Recent": "Recent search",
+                "Resources": "Resources",
+                "Activities": "Activities",
+                "Other": "Other"
+            }
         }
     },
     "Layout": {
@@ -68,7 +75,7 @@
             "Who we are": "Who we are",
             "Our Initiatives": "Our Initiatives",
             "News & Events": "News & Events",
-            "id": "Contact",
+            "id": "contact-us",
             "Chat": {
                 "header": "Chat for support",
                 "subHeader": "We're here to help. Do you have questions about what we do, or do you want to work with us?",
@@ -86,6 +93,7 @@
             }
         },
         "Subscribe": {
+            "id": "mailing-list",
             "title": "Subscribe to our mail",
             "description": "By registering, you permit the <b>Free Tribe Network</b> to collect and store your email address for the purpose of sending you our monthly newsletter.<a>FTN Data Confidentiality</a>"
         },
@@ -334,7 +342,8 @@
     },
     "Partners": {
         "Heading": {
-            "title": "Our Partners"
+            "title": "Our Partners",
+            "id": "partners"
         }
     },
     "Who we are": {
@@ -512,7 +521,7 @@
             }
         },
         "FAQ": {
-            "id": "FAQS",
+            "id": "faqs",
             "title": "Got Questions? <br></br>  We've Got Answers!",
             "donate": "Donate",
             "questions": {

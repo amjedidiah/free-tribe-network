@@ -95,7 +95,8 @@
     },
     "Subscribe": {
       "description": "En vous inscrivant, vous autorisez le <b>Free Tribe Network</b> à collecter et stocker votre adresse e-mail dans le but de vous envoyer notre newsletter mensuelle.<a>Confidentialité des données FTN</a>",
-      "title": "Abonnez-vous à notre courrier"
+      "title": "Abonnez-vous à notre courrier",
+      "id": "liste-de-diffusion"
     },
     "metaData": {
       "default": {
@@ -143,7 +144,7 @@
         "text": "No 15/11b, YK Abass, domaine Ore-Ofe, Elewiodo, Ibadan."
       },
       "Who we are": "Qui nous sommes",
-      "id": "Contact"
+      "id": "contactez-nous"
     }
   },
   "Nav": {
@@ -176,7 +177,14 @@
       "Our Vision": "Notre vision"
     },
     "Search": {
-      "placeholder": "Rechercher des ressources et des activités..."
+      "placeholder": "Rechercher des ressources et des activités...",
+      "titles": {
+        "Activities": "Activités",
+        "Other": "Autre",
+        "Recent": "Recherche récente",
+        "Remove": "Supprimer cette recherche",
+        "Resources": "Ressources"
+      }
     }
   },
   "News": {
@@ -231,7 +239,8 @@
   },
   "Partners": {
     "Heading": {
-      "title": "Nos partenaires"
+      "title": "Nos partenaires",
+      "id": "partenaires"
     }
   },
   "Support": {
@@ -517,7 +526,7 @@
         }
       },
       "title": "Vous avez des questions ? \n<br></br> Nous avons des réponses !",
-      "id": "FAQ"
+      "id": "faqs"
     },
     "Problems": {
       "Data Fragmentation": {

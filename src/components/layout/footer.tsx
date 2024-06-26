@@ -16,7 +16,7 @@ export default function Footer({ minimal = false }) {
   return (
     <footer>
       <ShouldRender condition={!minimal}>
-        <section className="container" id="contact-us">
+        <section className="container" id={t("Contact.id")}>
           <article className="py-12 lg:py-24 h3-gap">
             <h3 className=" text-black">{t("Heading.title")}</h3>
             <p>{t("Heading.description")}</p>

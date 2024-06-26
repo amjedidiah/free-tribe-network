@@ -7,7 +7,7 @@ export default function SubscribeFormContainer() {
   const t = useTranslations("Layout.Subscribe");
   return (
     <div
-      id="mailing-list"
+      id={t("id")}
       className="max-w-full lg:w-[22rem] flex flex-col justify-between gap-4"
     >
       <div className="flex flex-col gap-1">

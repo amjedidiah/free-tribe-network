@@ -1,5 +1,95 @@
 {
     "/": "/",
+    "/?section=tweets": {
+        "en": "/?section=tweets",
+        "fr": "/?section=tweets",
+        "nl": "/?section=tweets"
+    },
+    "/?section=our-initiatives": {
+        "en": "/?section=our-initiatives",
+        "fr": "/?section=nos-initiatives",
+        "nl": "/?section=onze-initiatieven"
+    },
+    "/?section=nos-initiatives": {
+        "en": "/?section=our-initiatives",
+        "fr": "/?section=nos-initiatives",
+        "nl": "/?section=onze-initiatieven"
+    },
+    "/?section=onze-initiatieven": {
+        "en": "/?section=our-initiatives",
+        "fr": "/?section=nos-initiatives",
+        "nl": "/?section=onze-initiatieven"
+    },
+    "/?section=our-vision": {
+        "en": "/?section=our-vision",
+        "fr": "/?section=notre-vision",
+        "nl": "/?section=onze-visie"
+    },
+    "/?section=notre-vision": {
+        "en": "/?section=our-vision",
+        "fr": "/?section=notre-vision",
+        "nl": "/?section=onze-visie"
+    },
+    "/?section=onze-visie": {
+        "en": "/?section=our-vision",
+        "fr": "/?section=notre-vision",
+        "nl": "/?section=onze-visie"
+    },
+    "/?section=our-impact-in-numbers": {
+        "en": "/?section=our-impact-in-numbers",
+        "fr": "/?section=notre-impact-en-chiffres",
+        "nl": "/?section=onze-impact-in-cijfers"
+    },
+    "/?section=notre-impact-en-chiffres": {
+        "en": "/?section=our-impact-in-numbers",
+        "fr": "/?section=notre-impact-en-chiffres",
+        "nl": "/?section=onze-impact-in-cijfers"
+    },
+    "/?section=onze-impact-in-cijfers": {
+        "en": "/?section=our-impact-in-numbers",
+        "fr": "/?section=notre-impact-en-chiffres",
+        "nl": "/?section=onze-impact-in-cijfers"
+    },
+    "/?section=mailing-list": {
+        "en": "/?section=mailing-list",
+        "fr": "/?section=liste-de-diffusion",
+        "nl": "/?section=mailinglijst"
+    },
+    "/?section=liste-de-diffusion": {
+        "en": "/?section=mailing-list",
+        "fr": "/?section=liste-de-diffusion",
+        "nl": "/?section=mailinglijst"
+    },
+    "/?section=mailinglijst": {
+        "en": "/?section=mailing-list",
+        "fr": "/?section=liste-de-diffusion",
+        "nl": "/?section=mailinglijst"
+    },
+    "/who-we-are?section=partners": {
+        "en": "/who-we-are?section=partners",
+        "fr": "/qui-nous-sommes?section=partenaires",
+        "nl": "/wie-we-zijn?section=partners"
+    },
+    "/who-we-are?section=partenaires": {
+        "en": "/who-we-are?section=partners",
+        "fr": "/qui-nous-sommes?section=partenaires",
+        "nl": "/wie-we-zijn?section=partners"
+    },
+    "/who-we-are?section=contact-us": {
+        "en": "/who-we-are?section=contact-us",
+        "fr": "/qui-nous-sommes?section=contactez-nous",
+        "nl": "/wie-we-zijn?section=neem-contact-met-ons-op"
+    },
+    "/who-we-are?section=contactez-nous": {
+        "en": "/who-we-are?section=contact-us",
+        "fr": "/qui-nous-sommes?section=contactez-nous",
+        "nl": "/wie-we-zijn?section=neem-contact-met-ons-op"
+    },
+    "/who-we-are?section=neem-contact-met-ons-op": {
+        "en": "/who-we-are?section=contact-us",
+        "fr": "/qui-nous-sommes?section=contactez-nous",
+        "nl": "/wie-we-zijn?section=neem-contact-met-ons-op"
+    },
     "/who-we-are?section=our-history": {
         "en": "/who-we-are?section=our-history",
         "fr": "/qui-nous-sommes?section=notre-histoire",
@@ -99,6 +189,21 @@
         "en": "/who-we-are",
         "fr": "/qui-nous-sommes",
         "nl": "/wie-we-zijn"
+    },
+    "/our-initiatives?section=support": {
+        "en": "/our-initiatives?section=support",
+        "fr": "/nos-initiatives?section=soutien",
+        "nl": "/onze-initiatieven?section=steun"
+    },
+    "/our-initiatives?section=soutien": {
+        "en": "/our-initiatives?section=support",
+        "fr": "/nos-initiatives?section=soutien",
+        "nl": "/onze-initiatieven?section=steun"
+    },
+    "/our-initiatives?section=steun": {
+        "en": "/our-initiatives?section=support",
+        "fr": "/nos-initiatives?section=soutien",
+        "nl": "/onze-initiatieven?section=steun"
     },
     "/our-initiatives?section=star-project": {
         "en": "/our-initiatives?section=star-project",
@@ -864,6 +969,26 @@
         "en": "/donate",
         "fr": "/faire-un-don",
         "nl": "/doneer"
+    },
+    "/donate?section=the-problem": {
+        "en": "/donate?section=the-problem",
+        "fr": "/faire-un-don?section=le-problème",
+        "nl": "/doneer?section=het-probleem"
+    },
+    "/donate?section=le-problème": {
+        "en": "/donate?section=the-problem",
+        "fr": "/faire-un-don?section=le-problème",
+        "nl": "/doneer?section=het-probleem"
+    },
+    "/donate?section=het-probleem": {
+        "en": "/donate?section=the-problem",
+        "fr": "/faire-un-don?section=le-problème",
+        "nl": "/doneer?section=het-probleem"
+    },
+    "/donate?section=faqs": {
+        "en": "/donate?section=faqs",
+        "fr": "/faire-un-don?section=faqs",
+        "nl": "/doneer?section=faqs"
     },
     "/activity": {
         "en": "/activity",
