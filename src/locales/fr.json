@@ -145,6 +145,11 @@
       },
       "Who we are": "Qui nous sommes",
       "id": "contactez-nous"
+    },
+    "Cookies Consent": {
+      "all": "Acceptez tous les cookies",
+      "essential": "N'accepter que l'essentiel",
+      "info": "Ce site Web utilise des cookies pour améliorer l'expérience utilisateur. \nEn utilisant notre site Web, vous acceptez toutes les conditions d'utilisation conformément à notre <a>Politique de confidentialité</a>"
     }
   },
   "Nav": {

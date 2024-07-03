@@ -14,6 +14,7 @@ import { useTranslations } from "next-intl";
 import ShouldRender from "@/components/shared/should-render";
 import Search from "@/components/layout/search/search";
 import { useSearchParams } from "next/navigation";
+import { useCookiesConsentContext } from "@/context/cookies-consent-context";
 
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,6 +24,7 @@ function Nav() {
   const searchParams = useSearchParams();
   const section = searchParams.get("section");
   const tLayout = useTranslations("Layout");
+  const { shouldShowSearch } = useCookiesConsentContext();
 
   useEffect(
     () => setIsOpen((prev) => (prev ? false : prev)),
@@ -33,7 +35,9 @@ function Nav() {
     <header className="fixed w-full z-10 shadow">
       <div className="border-b border-gray-100 bg-whitesmoke">
         <div className="container pt-[10px] pb-[5px] justify-between flex items-center gap-10">
-          <Search />
+          <ShouldRender condition={shouldShowSearch}>
+            <Search />
+          </ShouldRender>
           <LocaleSelector />
         </div>
       </div>

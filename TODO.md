@@ -2,17 +2,15 @@
 
 ## Changelog
 
-- fix for navigating to contact us section in other languages asides English
-- changed first slider text
-- fix for custom 404 page
-- custom error page
+- Reviewed legal documents
+- More cookies consent options: essential or all
+- made search opt-in feature based on cookies consent acceptance
+- localization for `CookiesConsent`
+- replaced pink transparent background color for cookie consent form with regular transparent background
 
 ## Current
 
 - [ ] explanation for why we cant Migrate WordPress content to .org
-
-- [ ] Review legal documents
-- [ ] Cookie: more options: reject all or keep basic
 
 - [ ] Navigation issue on iPhone
 

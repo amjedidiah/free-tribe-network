@@ -223,6 +223,11 @@
         "description": "Meer informatie over het Free Tribe-netwerk",
         "title": "Wie we zijn"
       }
+    },
+    "Cookies Consent": {
+      "all": "Accepteer alle cookies",
+      "essential": "Accepteer alleen het essentiële",
+      "info": "Deze website maakt gebruik van cookies om de gebruikerservaring te verbeteren. \nDoor onze website te gebruiken, gaat u akkoord met alle gebruiksvoorwaarden in overeenstemming met ons <a>Privacybeleid</a>"
     }
   },
   "Nav": {

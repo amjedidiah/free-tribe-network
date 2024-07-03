@@ -103,6 +103,11 @@
       "Privacy": "Privacy Policy",
       "Terms": "Terms and Conditions",
       "Cookie": "Cookie Policy"
+    },
+    "Cookies Consent": {
+      "all": "Accept all cookies",
+      "essential": "Accept only essential",
+      "info": "This website uses cookies to improve user experience. By using our website, you consent to all the Terms of Usage in accordance with our <a>Privacy Policy</a>"
     }
   },
   "Home": {

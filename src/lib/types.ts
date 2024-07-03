@@ -197,3 +197,20 @@ export type PropsWithLocaleParam = {
     locale: Locale;
   };
 };
+
+export enum CookieType {
+  // essential cookies
+  Consent = "consent",
+  Translation = "translation",
+
+  // non-essential cookies
+  Search = "search",
+}
+
+export type CookiesConsentContextType = {
+  shouldShowConsent: boolean;
+  shouldShowSearch: boolean;
+
+  acceptAllCookies: () => void;
+  acceptEssentialCookies: () => void;
+}; 
