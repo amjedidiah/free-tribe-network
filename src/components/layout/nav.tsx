@@ -22,6 +22,7 @@ function Nav() {
   const isResourcesPage = pathname === "/resources";
   const searchParams = useSearchParams();
   const section = searchParams.get("section");
+  const tLayout = useTranslations("Layout");
 
   useEffect(
     () => setIsOpen((prev) => (prev ? false : prev)),
@@ -65,7 +66,7 @@ function Nav() {
             </ul>
             <div className="flex gap-6 items-center">
               <ShouldRender condition={!isResourcesPage}>
-                <ScrollLink to="contact-us" href="" smooth>
+                <ScrollLink to={tLayout("Contact.id")} href="" smooth>
                   <Button variant="outline">{t("Contact Us")}</Button>
                 </ScrollLink>
               </ShouldRender>
