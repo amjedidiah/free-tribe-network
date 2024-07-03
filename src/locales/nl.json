@@ -571,5 +571,15 @@
   },
   "Loading": {
     "Empty Resources": "Nog geen <span>{title}</span>"
+  },
+  "NotFound": {
+    "text": "Helaas bestaat deze pagina niet",
+    "action": "Terug naar huis",
+    "title": "404"
+  },
+  "Error": {
+    "action": "Opnieuw proberen",
+    "text": "Oeps! \nEr is een fout opgetreden, onze excuses",
+    "title": "Fout"
   }
 }

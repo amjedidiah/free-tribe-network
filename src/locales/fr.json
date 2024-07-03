@@ -571,5 +571,15 @@
   },
   "Loading": {
     "Empty Resources": "Pas encore de <span>{title}</span>"
+  },
+  "NotFound": {
+    "text": "Malheureusement, cette page n'existe pas",
+    "action": "Rentrer à la maison",
+    "title": "404"
+  },
+  "Error": {
+    "action": "Recommencez",
+    "text": "Oops! \nUne erreur s'est produite, nous nous en excusons",
+    "title": "Erreur"
   }
 }
