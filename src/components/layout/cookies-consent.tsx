@@ -18,7 +18,7 @@ export default function CookiesConsent() {
               {t.rich("info", {
                 a: (chunks) => (
                   <a
-                    href="https://freetribenetwork.com/wp-content/uploads/2024/06/PRIVACY-POLICY.pdf"
+                    href="https://freetribenetwork.com/content/wp-content/uploads/2024/06/PRIVACY-POLICY.pdf"
                     className="inline-flex items-center text-white underline font-semibold"
                   >
                     {chunks}

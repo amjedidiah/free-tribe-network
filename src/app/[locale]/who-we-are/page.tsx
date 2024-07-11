@@ -16,12 +16,10 @@ import ScrollToSection from "@/components/shared/scroll-to-section";
 
 export const revalidate = DAILY_REVALIDATION;
 
-export const generateMetadata = ({
-  params: { locale },
-}: PropsWithLocaleParam) =>
+export const generateMetadata = ({ params: { locale } }: PropsWithLocaleParam) =>
   getMetadata(
     locale,
-    "https://freetribenetwork.com/wp-content/uploads/2024/04/inspiration-scaled.webp",
+    "https://freetribenetwork.com/content/wp-content/uploads/2024/04/inspiration-scaled.webp",
     "Layout.metaData.who we are"
   );
 

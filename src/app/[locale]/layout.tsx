@@ -17,6 +17,7 @@ import { PropsWithLocaleParam } from "@/lib/types";
 import { isRtlLang } from "rtl-detect";
 import CookiesConsent from "@/components/layout/cookies-consent";
 import { CookiesConsentProvider } from "@/context/cookies-consent-context";
+import { OpenGraph } from "next/dist/lib/metadata/types/opengraph-types";
 
 export async function generateMetadata(
   { params: { locale } }: PropsWithLocaleParam,
@@ -31,15 +32,17 @@ export async function generateMetadata(
 
   const image =
     {
-      en: "https://freetribenetwork.com/wp-content/uploads/2024/06/Screenshot-2024-06-17-at-14.34.19.png",
-      fr: "https://freetribenetwork.com/wp-content/uploads/2024/06/Screenshot-2024-06-17-at-14.34.11.png",
-      nl: "https://freetribenetwork.com/wp-content/uploads/2024/06/Screenshot-2024-06-17-at-14.34.04.png",
+      en: "https://freetribenetwork.com/content/wp-content/uploads/2024/06/Screenshot-2024-06-17-at-14.34.19.png",
+      fr: "https://freetribenetwork.com/content/wp-content/uploads/2024/06/Screenshot-2024-06-17-at-14.34.11.png",
+      nl: "https://freetribenetwork.com/content/wp-content/uploads/2024/06/Screenshot-2024-06-17-at-14.34.04.png",
     }[locale] ||
-    "https://freetribenetwork.com/wp-content/uploads/2024/06/Screenshot-2024-06-17-at-14.34.19.png";
+    "https://freetribenetwork.com/content/wp-content/uploads/2024/06/Screenshot-2024-06-17-at-14.34.19.png";
 
-  const graph = {
+  const graph: OpenGraph = {
     images: [image, ...previousImages],
     description,
+    siteName: "Free Tribe Network",
+    url: "https://www.freetribenetwork.org",
   };
 
   return {

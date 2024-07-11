@@ -10,12 +10,10 @@ import { Fragment } from "react";
 
 export const revalidate = MINUTELY_REVALIDATION;
 
-export const generateMetadata = ({
-  params: { locale },
-}: PropsWithLocaleParam) =>
+export const generateMetadata = ({ params: { locale } }: PropsWithLocaleParam) =>
   getMetadata(
     locale,
-    "https://freetribenetwork.com/wp-content/uploads/2024/03/donate-banner-scaled.webp",
+    "https://freetribenetwork.com/content/wp-content/uploads/2024/03/donate-banner-scaled.webp",
     "Layout.metaData.donate"
   );
 

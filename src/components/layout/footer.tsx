@@ -64,15 +64,15 @@ export default function Footer({ minimal = false }) {
           </ShouldRender>
           <div className="flex flex-col lg:flex-row items-center justify-between gap-1">
             <div className="flex max-sm:flex-col items-center gap-2 capitalize">
-              <a href="https://freetribenetwork.com/wp-content/uploads/2024/06/TERMS-AND-CONDITIONS.pdf">
+              <a href="https://freetribenetwork.com/content/wp-content/uploads/2024/06/TERMS-AND-CONDITIONS.pdf">
                 {t("Footer.Terms")}
               </a>{" "}
               <span className="max-sm:hidden">|</span>
-              <a href="https://freetribenetwork.com/wp-content/uploads/2024/06/PRIVACY-POLICY.pdf">
+              <a href="https://freetribenetwork.com/content/wp-content/uploads/2024/06/PRIVACY-POLICY.pdf">
                 {t("Footer.Privacy")}
               </a>{" "}
               <span className="max-sm:hidden">|</span>
-              <a href="https://freetribenetwork.com/wp-content/uploads/2024/06/COOKIE-POLICY.pdf">
+              <a href="https://freetribenetwork.com/content/wp-content/uploads/2024/06/COOKIE-POLICY.pdf">
                 {t("Footer.Cookie")}
               </a>
             </div>

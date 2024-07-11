@@ -11,13 +11,13 @@
     "orientation": "any",
     "icons": [
         {
-            "src": "https://freetribenetwork.com/wp-content/uploads/2024/06/manifest-icon-512.maskable.png",
+            "src": "https://freetribenetwork.com/content/wp-content/uploads/2024/06/manifest-icon-512.maskable.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "maskable"
         },
         {
-            "src": "https://freetribenetwork.com/wp-content/uploads/2024/06/manifest-icon-192.maskable.png",
+            "src": "https://freetribenetwork.com/content/wp-content/uploads/2024/06/manifest-icon-192.maskable.png",
             "sizes": "192x192",
             "type": "image/png",
             "purpose": "any"
