@@ -12,6 +12,8 @@ import {
   fetchActivitiesByCategoryNameVars,
   fetchActivitiesByCategoryNameData,
   Locale,
+  ClientContentImageTitle,
+  ClientContentImages,
 } from "@/lib/types";
 import { getApolloClient } from "@/lib/apollo-client";
 import {
@@ -226,3 +228,21 @@ export const fetchActivitiesByCategoryName = cache(
     }
   }
 );
+
+export async function fetchClientContentImages() {
+  try {
+    const images = await Promise.all(
+      Object.values(ClientContentImageTitle).map(fetchImageByTitle)
+    );
+
+    const result = images.reduce(
+      (a, b) => ({ ...a, [b.title]: b }),
+      {} as ClientContentImages
+    );
+
+    return result;
+  } catch (error) {
+    console.error(`Error fetching client images: ${error}`);
+    return {} as ClientContentImages;
+  }
+}

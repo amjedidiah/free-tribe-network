@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { cn } from "@/lib/utils";
 import { useEffect } from "react";
+import { ClientContentImageTitle } from "@/lib/types";
 
 type BotSlideProps = {
   name: string;
@@ -37,7 +38,7 @@ export default function BotSlide({
 
   return (
     <ContentImageClient
-      title={src}
+      title={src as ClientContentImageTitle}
       width={288}
       height={296}
       style={{ objectFit: "cover" }}

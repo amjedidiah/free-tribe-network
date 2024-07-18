@@ -213,4 +213,48 @@ export type CookiesConsentContextType = {
 
   acceptAllCookies: () => void;
   acceptEssentialCookies: () => void;
-}; 
+};
+
+export enum ClientContentImageTitle {
+  Repromatters1 = "repromatters-1",
+
+  FreeTribeBoostCamp1 = "free-tribe-boost-camp-1",
+  FreeTribeBoostCamp2 = "free-tribe-boost-camp-2",
+  FreeTribeBoostCamp3 = "free-tribe-boost-camp-3",
+
+  FreeTribeHelpline1 = "free-tribe-helpline-1",
+
+  FreeTribeClubs1 = "free-tribe-clubs-1",
+
+  Star1 = "star-1",
+  Star2 = "star-2",
+  Star3 = "star-3",
+
+  RFHAdvocacy1 = "rfh-advocacy-1",
+  RFHAdvocacy2 = "rfh-advocacy-2",
+  RFHAdvocacy3 = "rfh-advocacy-3",
+
+  HomeBannerSlide1 = "home-banner-slide-1",
+  HomeBannerSlide2 = "home-banner-slide-2",
+  HomeBannerSlide3 = "home-banner-slide-3",
+  HomeBannerSlide4 = "home-banner-slide-4",
+  HomeBannerSlide5 = "home-banner-slide-5",
+
+  Bot1 = "bot-1",
+  Bot2 = "bot-2",
+  Bot3 = "bot-3",
+  Bot4 = "bot-4",
+  Bot5 = "bot-5",
+  Bot6 = "bot-6",
+  Bot7 = "bot-7",
+  Bot8 = "bot-8",
+  Bot9 = "bot-9",
+
+  FooterLogo = "footer-logo",
+  HeaderLogo = "header-logo",
+}
+
+export type ClientContentImages = Record<
+  ClientContentImageTitle,
+  IContentImage
+>;

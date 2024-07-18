@@ -15,6 +15,7 @@ import ShouldRender from "@/components/shared/should-render";
 import Search from "@/components/layout/search/search";
 import { useSearchParams } from "next/navigation";
 import { useCookiesConsentContext } from "@/context/cookies-consent-context";
+import { ClientContentImageTitle } from "@/lib/types";
 
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,7 +52,11 @@ function Nav() {
           )}
         >
           <Link href="/">
-            <ContentImageClient title="header-logo" width={60} height={57} />
+            <ContentImageClient
+              title={ClientContentImageTitle.HeaderLogo}
+              width={60}
+              height={57}
+            />
           </Link>
           <div
             className={cn(

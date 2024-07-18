@@ -4,10 +4,11 @@ import { Link } from "@/lib/i18n.config";
 import { Button } from "@/components/ui/button";
 import SafeHTML from "@/components/shared/safe-html";
 import { useTranslations } from "next-intl";
+import { ClientContentImageTitle } from "@/lib/types";
 
 export default function HomeInitiatives() {
   const t = useTranslations("Home.Our initiatives");
-  
+
   return (
     <section
       className="bg-secondary-600 py-10 lg:py-14 text-white"
@@ -25,7 +26,7 @@ export default function HomeInitiatives() {
               <div key={name} className="flex flex-col gap-5">
                 <div className="h-[244px] w-full relative mx-auto">
                   <ContentImageClient
-                    title={images[0]}
+                    title={images[0] as ClientContentImageTitle}
                     fill
                     sizes="100%"
                     style={{ objectFit: "cover" }}

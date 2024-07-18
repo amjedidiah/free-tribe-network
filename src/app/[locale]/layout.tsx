@@ -18,6 +18,8 @@ import { isRtlLang } from "rtl-detect";
 import CookiesConsent from "@/components/layout/cookies-consent";
 import { CookiesConsentProvider } from "@/context/cookies-consent-context";
 import { OpenGraph } from "next/dist/lib/metadata/types/opengraph-types";
+import { ContentImageProvider } from "@/context/content-image-context";
+import { fetchClientContentImages } from "@/lib/actions/wordpress";
 
 export async function generateMetadata(
   { params: { locale } }: PropsWithLocaleParam,
@@ -80,6 +82,7 @@ export default async function RootLayout({
 }: PropsWithChildren<PropsWithLocaleParam>) {
   const messages = await getMessages();
   const dir = isRtlLang(locale) ? "rtl" : "ltr";
+  const clientContentImages = await fetchClientContentImages();
   unstable_setRequestLocale(locale);
 
   return (
@@ -92,11 +95,13 @@ export default async function RootLayout({
       >
         <NextIntlClientProvider locale={locale} messages={messages}>
           <CookiesConsentProvider>
-            <Suspense>
-              <Nav />
-            </Suspense>
-            <main>{children}</main>
-            <Footer />
+            <ContentImageProvider value={clientContentImages}>
+              <Suspense>
+                <Nav />
+              </Suspense>
+              <main>{children}</main>
+              <Footer />
+            </ContentImageProvider>
             <WhatsappChat />
             <CookiesConsent />
           </CookiesConsentProvider>

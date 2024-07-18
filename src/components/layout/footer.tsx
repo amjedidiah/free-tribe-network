@@ -7,6 +7,7 @@ import Socials from "@/components/shared/socials";
 import ContentImageClient from "@/components/shared/content-image-client";
 import { useTranslations } from "next-intl";
 import ShouldRender from "@/components/shared/should-render";
+import { ClientContentImageTitle } from "@/lib/types";
 
 export default function Footer({ minimal = false }) {
   const pathname = usePathname();
@@ -37,7 +38,7 @@ export default function Footer({ minimal = false }) {
                 <Link href="/" aria-label="homepage">
                   <div className="relative h-[60px] w-[60px]">
                     <ContentImageClient
-                      title="footer-logo"
+                      title={ClientContentImageTitle.FooterLogo}
                       fill
                       sizes="100%"
                       style={{ objectFit: "cover", objectPosition: "center" }}
@@ -63,7 +64,7 @@ export default function Footer({ minimal = false }) {
             <hr />
           </ShouldRender>
           <div className="flex flex-col lg:flex-row items-center justify-between gap-1">
-            <div className="flex max-sm:flex-col items-center gap-2 capitalize">
+            <div className="flex max-sm:flex-col items-center gap-2">
               <a href="https://freetribenetwork.com/content/wp-content/uploads/2024/06/TERMS-AND-CONDITIONS.pdf">
                 {t("Footer.Terms")}
               </a>{" "}

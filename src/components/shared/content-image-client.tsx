@@ -1,15 +1,16 @@
 "use client";
 
 import Image, { ImageProps } from "next/image";
-import { fetchImageByTitle } from "@/lib/actions/wordpress";
-import useSWRImmutable from "swr/immutable";
+import { useContentImageContext } from "@/context/content-image-context";
+import { ClientContentImageTitle } from "@/lib/types";
 
 type Props = {
-  title: string;
+  title: ClientContentImageTitle;
 } & Omit<ImageProps, "src" | "alt">;
 
 function ContentImageClient({ title, ...rest }: Props) {
-  const { data } = useSWRImmutable(title, fetchImageByTitle);
+  const clientContentImages = useContentImageContext();
+  const data = clientContentImages?.[title];
   if (!data) return null;
   if (!rest.width && !rest.fill) {
     const ratio =

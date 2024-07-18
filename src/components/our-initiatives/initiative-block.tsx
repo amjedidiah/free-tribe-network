@@ -11,6 +11,7 @@ import useScrollToSection from "@/hooks/use-scroll-to-section";
 import Slider from "@/components/shared/slider";
 import SafeHTML from "@/components/shared/safe-html";
 import { useTranslations } from "next-intl";
+import { ClientContentImageTitle } from "@/lib/types";
 
 type InitiativeBlockProps = (typeof initiatives)[number];
 
@@ -59,7 +60,7 @@ export default function InitiativeBlock({ name }: InitiativeBlockProps) {
               className="h-[200px] sm:h-[300px] lg:h-[400px] relative"
             >
               <ContentImageClient
-                title={i}
+                title={i as ClientContentImageTitle}
                 fill
                 sizes="100%"
                 style={{ objectFit: "cover", objectPosition: "center" }}
