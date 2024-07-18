@@ -206,34 +206,38 @@ export const initiativeData = {
     </p>
   </div>
 `,
-    images: ["star-project-1", "star-project-2", "star-project-3"],
+    images: ["star-1", "star-2", "star-3"],
     summary:
       "A public health project that seeks to capture and reduce the witnessing of inter-parental violence, and the inter-generational transmission of violence to adolescents.",
   },
   repromatters: {
     ...initiatives[1],
     content: `<div><p>A bi-monthly program utilizing real life stories, medical knowledge, public health expertise, and the wide reach of the social media space, to discuss important issues affecting reproductive health and family well-being. Topics covered will center around women’s health, men’s health, children and adolescent health and well-being.</p></div>`,
-    images: ["repro"],
+    images: ["repromatters-1"],
   },
   "free-tribe-boost-camp": {
     ...initiatives[2],
     content: `<div><p>A bi-monthly capacity building program for staff and volunteers of the Free Tribe Network, set to improve corporate work skills, teach industry-relevant skills, and foster bonding amongst members of the Free Tribe Network.</p></div>`,
-    images: ["boost-camp-1", "boost-camp-2", "boost-camp-3"],
+    images: [
+      "free-tribe-boost-camp-1",
+      "free-tribe-boost-camp-2",
+      "free-tribe-boost-camp-3",
+    ],
   },
   "free-tribe-helpline": {
     ...initiatives[3],
     content: `<div><p>A social service for telephone support, access to information, advice, informed interventions, and referral to reproductive and family health professionals.</p></div>`,
-    images: ["helpline"],
+    images: ["free-tribe-helpline-1"],
   },
   "free-tribe-clubs": {
     ...initiatives[4],
     content: `<div><p>These are safe spaces set to promote open conversations, improve social support, enhance monitoring and evaluation, and improve self-led initiatives and re-intervention tactics, to ensure sustainable improvements in reproductive and family health outcomes.</p></div>`,
-    images: ["clubs"],
+    images: ["free-tribe-clubs-1"],
   },
   "rfh-advocacy": {
     ...initiatives[5],
     content: `<div><p>This includes rallies, campaigns, weekly advocacy messages (#TeachTuesday and #FactFriday), and media programs to promote and inspire positive health behaviours.</p></div>`,
-    images: ["family-health-1", "family-health-2", "family-health-3"],
+    images: ["rfh-advocacy-1", "rfh-advocacy-2", "rfh-advocacy-3"],
   },
 };
 
@@ -289,31 +293,31 @@ export const currentYear = new Date().getFullYear();
 
 export const homeBannerData = [
   {
-    image: "home-banner-1",
+    image: "home-banner-slide-1",
     title: "Sustained reproductive health and family well-being",
     picturePosition: "center right",
     wrapperClassName: "max-xl:bg-[rgba(5,83,118,0.45)]",
   },
   {
-    image: "home-banner-2",
+    image: "home-banner-slide-2",
     title: "Mastery",
     picturePosition: "center right",
     wrapperClassName: "max-xl:bg-[rgba(5,83,118,0.45)]",
   },
   {
-    image: "home-banner-3",
+    image: "home-banner-slide-3",
     title: "Social Justice",
     picturePosition: "center",
     wrapperClassName: "max-xl:bg-[rgba(5,83,118,0.45)]",
   },
   {
-    image: "home-banner-4",
+    image: "home-banner-slide-4",
     title: "Equity",
     picturePosition: "center",
     wrapperClassName: "max-xl:bg-[rgba(5,83,118,0.45)]",
   },
   {
-    image: "home-banner-5",
+    image: "home-banner-slide-5",
     title: "Community",
     picturePosition: "center",
     wrapperClassName: "max-xl:bg-[rgba(5,83,118,0.45)]",

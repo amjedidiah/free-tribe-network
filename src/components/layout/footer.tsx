@@ -37,7 +37,7 @@ export default function Footer({ minimal = false }) {
                 <Link href="/" aria-label="homepage">
                   <div className="relative h-[60px] w-[60px]">
                     <ContentImageClient
-                      title="free-tribe-white"
+                      title="footer-logo"
                       fill
                       sizes="100%"
                       style={{ objectFit: "cover", objectPosition: "center" }}
