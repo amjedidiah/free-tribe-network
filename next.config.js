@@ -6,13 +6,16 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        hostname: "cdn-images-1.medium.com",
+        protocol: "https",
+        hostname: "**.medium.com",
       },
       {
+        protocol: "https",
         hostname: "freetribenetwork.com",
       },
       {
-        hostname: "scontent-los2-1.cdninstagram.com",
+        protocol: "https",
+        hostname: "**.cdninstagram.com",
       },
     ],
   },
