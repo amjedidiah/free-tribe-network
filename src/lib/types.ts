@@ -258,3 +258,20 @@ export type ClientContentImages = Record<
   ClientContentImageTitle,
   IContentImage
 >;
+
+export type IGMediaIDObject = {
+  id: string;
+};
+
+export enum IGMediaType {
+  Image = "IMAGE",
+  Video = "VIDEO",
+  Album = "CAROUSEL_ALBUM",
+}
+
+export type IGMedia = {
+  media_url: string;
+  permalink: string;
+  id: string;
+  media_type: IGMediaType;
+};

@@ -11,6 +11,9 @@ const nextConfig = {
       {
         hostname: "freetribenetwork.com",
       },
+      {
+        hostname: "scontent-los2-1.cdninstagram.com",
+      },
     ],
   },
 };

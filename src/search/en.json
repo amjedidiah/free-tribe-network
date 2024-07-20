@@ -218,10 +218,10 @@
   },
   {
     "id": "thirty-two",
-    "title": "Twitter Timeline",
-    "content": "Keep in touch with our activities on X.",
+    "title": "Instagram Feed",
+    "content": "Keep in touch with us on Instagram.",
     "language": "English",
-    "link": "/?section=tweets"
+    "link": "/?section=ig-feed"
   },
   {
     "id": "thirty-three",

@@ -2,15 +2,17 @@
 
 ## Changelog
 
-- fix for delay in loading client images
+- instagram timeline
 
 ## Current
 
-- instagram / facebook timeline
+### Bugs & Improvements
+
+- global error page
+- resizing text and images for mobile
 - lighthouse test
-- [ ] Configure `NEXT_PUBLIC_FLUTTERWAVE_PUBLIC_KEY` and `FLUTTERWAVE_SECRET_KEY` for prod
 
 ## Pending
 
-- [ ] Flutterwave approval
+- [ ] Flutterwave approval: Configure `NEXT_PUBLIC_FLUTTERWAVE_PUBLIC_KEY` and `FLUTTERWAVE_SECRET_KEY` for prod
 - [ ] Introductory video

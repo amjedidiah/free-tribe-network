@@ -1,9 +1,9 @@
 {
     "/": "/",
-    "/?section=tweets": {
-        "en": "/?section=tweets",
-        "fr": "/?section=tweets",
-        "nl": "/?section=tweets"
+    "/?section=ig-feed": {
+        "en": "/?section=ig-feed",
+        "fr": "/?section=ig-feed",
+        "nl": "/?section=ig-feed"
     },
     "/?section=our-initiatives": {
         "en": "/?section=our-initiatives",
