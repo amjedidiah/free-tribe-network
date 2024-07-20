@@ -1,6 +1,6 @@
 "use client";
 
-import ContentImageClient from "@/components/shared/content-image-client";
+import ContentImage from "@/components/shared/content-image";
 import { Link, usePathname } from "@/lib/i18n.config";
 import { Link as ScrollLink } from "react-scroll";
 import { Button } from "@/components/ui/button";
@@ -15,7 +15,6 @@ import ShouldRender from "@/components/shared/should-render";
 import Search from "@/components/layout/search/search";
 import { useSearchParams } from "next/navigation";
 import { useCookiesConsentContext } from "@/context/cookies-consent-context";
-import { ClientContentImageTitle } from "@/lib/types";
 
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,11 +51,7 @@ function Nav() {
           )}
         >
           <Link href="/">
-            <ContentImageClient
-              title={ClientContentImageTitle.HeaderLogo}
-              width={60}
-              height={57}
-            />
+            <ContentImage title="header-logo" width={60} height={57} />
           </Link>
           <div
             className={cn(

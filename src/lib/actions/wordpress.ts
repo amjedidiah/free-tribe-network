@@ -6,20 +6,16 @@ import { cache } from "react";
 import {
   FetchCategoriesByIdData,
   FetchCategoriesByIdVars,
-  IContentImage,
   Resource,
   IActivity,
   fetchActivitiesByCategoryNameVars,
   fetchActivitiesByCategoryNameData,
   Locale,
-  ClientContentImageTitle,
-  ClientContentImages,
 } from "@/lib/types";
 import { getApolloClient } from "@/lib/apollo-client";
 import {
   GET_ACTIVITIES_BY_CATEGORY_NAME,
   GET_ACTIVITY_BY_SLUG,
-  GET_IMAGE_BY_TITLE,
   GET_RESOURCES_BY_CATEGORY_ID,
 } from "@/lib/queries";
 import { getLocale } from "next-intl/server";
@@ -95,24 +91,6 @@ export const fetchResourcesByCategoryId = cache(
     }
   }
 );
-
-export const fetchImageByTitle = cache(async (title: string) => {
-  const apolloClient = getApolloClient();
-
-  try {
-    const imageData = await apolloClient.query({
-      query: GET_IMAGE_BY_TITLE,
-      variables: {
-        title,
-      },
-    });
-
-    return imageData.data.mediaItems.nodes[0] as IContentImage;
-  } catch (error) {
-    console.error(error);
-    return {} as IContentImage;
-  }
-});
 
 function formatDateTime(dateObj: Date, locale: string) {
   const locales =
@@ -228,21 +206,3 @@ export const fetchActivitiesByCategoryName = cache(
     }
   }
 );
-
-export async function fetchClientContentImages() {
-  try {
-    const images = await Promise.all(
-      Object.values(ClientContentImageTitle).map(fetchImageByTitle)
-    );
-
-    const result = images.reduce(
-      (a, b) => ({ ...a, [b.title]: b }),
-      {} as ClientContentImages
-    );
-
-    return result;
-  } catch (error) {
-    console.error(`Error fetching client images: ${error}`);
-    return {} as ClientContentImages;
-  }
-}

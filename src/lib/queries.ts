@@ -52,22 +52,6 @@ export const GET_RESOURCES_BY_CATEGORY_ID = gql`
   }
 `;
 
-export const GET_IMAGE_BY_TITLE = gql`
-  query getImageByTitle($title: String!) {
-    mediaItems(where: { title: $title }) {
-      nodes {
-        id
-        mediaItemUrl
-        title
-        mediaDetails {
-          height
-          width
-        }
-      }
-    }
-  }
-`;
-
 export const GET_ACTIVITY_BY_SLUG = gql`
   query getActivityBySlug($slug: String!, $env: String!) {
     activities(where: { name: $slug, tag: $env }) {

@@ -1,5 +1,5 @@
 "use client";
-import ContentImageClient from "@/components/shared/content-image-client";
+import ContentImage from "@/components/shared/content-image";
 import { CarouselItem } from "@/components/ui/carousel";
 import { useEffect, useState } from "react";
 import { fetchInitiativeData } from "@/lib/utils";
@@ -11,7 +11,6 @@ import useScrollToSection from "@/hooks/use-scroll-to-section";
 import Slider from "@/components/shared/slider";
 import SafeHTML from "@/components/shared/safe-html";
 import { useTranslations } from "next-intl";
-import { ClientContentImageTitle } from "@/lib/types";
 
 type InitiativeBlockProps = (typeof initiatives)[number];
 
@@ -59,8 +58,8 @@ export default function InitiativeBlock({ name }: InitiativeBlockProps) {
               key={i}
               className="h-[200px] sm:h-[300px] lg:h-[400px] relative"
             >
-              <ContentImageClient
-                title={i as ClientContentImageTitle}
+              <ContentImage
+                title={i}
                 fill
                 sizes="100%"
                 style={{ objectFit: "cover", objectPosition: "center" }}

@@ -4,10 +4,9 @@ import SubscribeFormContainer from "@/components/subscribe-form-container";
 import { Link, usePathname } from "@/lib/i18n.config";
 import { contactChannels, currentYear, routes } from "@/lib/data";
 import Socials from "@/components/shared/socials";
-import ContentImageClient from "@/components/shared/content-image-client";
+import ContentImage from "@/components/shared/content-image";
 import { useTranslations } from "next-intl";
 import ShouldRender from "@/components/shared/should-render";
-import { ClientContentImageTitle } from "@/lib/types";
 
 export default function Footer({ minimal = false }) {
   const pathname = usePathname();
@@ -37,8 +36,8 @@ export default function Footer({ minimal = false }) {
               <div className="flex flex-col gap-6">
                 <Link href="/" aria-label="homepage">
                   <div className="relative h-[60px] w-[60px]">
-                    <ContentImageClient
-                      title={ClientContentImageTitle.FooterLogo}
+                    <ContentImage
+                      title="footer-logo"
                       fill
                       sizes="100%"
                       style={{ objectFit: "cover", objectPosition: "center" }}

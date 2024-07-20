@@ -1,8 +1,6 @@
 import { cn } from "@/lib/utils";
 import { HTMLAttributes, PropsWithChildren } from "react";
 import ContentImage from "@/components/shared/content-image";
-import ContentImageClient from "@/components/shared/content-image-client";
-import { ClientContentImageTitle } from "@/lib/types";
 
 type BannerProps = {
   image?: string;
@@ -34,8 +32,8 @@ export default function Banner({
       {...rest}
     >
       {image && (
-        <ContentImageClient
-          title={image as ClientContentImageTitle}
+        <ContentImage
+          title={image}
           fill
           sizes="100%"
           style={{ objectFit: "cover", objectPosition: picturePosition }}

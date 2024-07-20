@@ -1,11 +1,10 @@
 "use client";
-import ContentImageClient from "@/components/shared/content-image-client";
+import ContentImage from "@/components/shared/content-image";
 import { useSwiper, useSwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { cn } from "@/lib/utils";
 import { useEffect } from "react";
-import { ClientContentImageTitle } from "@/lib/types";
 
 type BotSlideProps = {
   name: string;
@@ -37,8 +36,8 @@ export default function BotSlide({
   }, [shouldSlideRight, swiper]);
 
   return (
-    <ContentImageClient
-      title={src as ClientContentImageTitle}
+    <ContentImage
+      title={src}
       width={288}
       height={296}
       style={{ objectFit: "cover" }}

@@ -1,10 +1,9 @@
 import { topInitiativesData } from "@/lib/data";
-import ContentImageClient from "@/components/shared/content-image-client";
+import ContentImage from "@/components/shared/content-image";
 import { Link } from "@/lib/i18n.config";
 import { Button } from "@/components/ui/button";
 import SafeHTML from "@/components/shared/safe-html";
 import { useTranslations } from "next-intl";
-import { ClientContentImageTitle } from "@/lib/types";
 
 export default function HomeInitiatives() {
   const t = useTranslations("Home.Our initiatives");
@@ -25,8 +24,8 @@ export default function HomeInitiatives() {
             {topInitiativesData.map(({ name, content, images, ...rest }) => (
               <div key={name} className="flex flex-col gap-5">
                 <div className="h-[244px] w-full relative mx-auto">
-                  <ContentImageClient
-                    title={images[0] as ClientContentImageTitle}
+                  <ContentImage
+                    title={images[0]}
                     fill
                     sizes="100%"
                     style={{ objectFit: "cover" }}

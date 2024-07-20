@@ -33,7 +33,7 @@ export function getApolloClient() {
 export function _createApolloClient() {
   return new ApolloClient({
     link: new HttpLink({
-      uri: process.env.NEXT_PUBLIC_WORDPRESS_GRAPHQL_ENDPOINT,
+      uri: `${process.env.NEXT_PUBLIC_WORDPRESS_ENDPOINT}/index.php?graphql`,
     }),
     cache: new InMemoryCache(),
     connectToDevTools: isDev,
