@@ -47,7 +47,7 @@ export default function BotSlider({
             loop
             autoHeight={false}
             navigation
-            className="[&_.swiper-button-prev]:absolute [&_.swiper-button-prev]:z-[3] [&_.swiper-button-prev]:top-1/2 [&_.swiper-button-prev]:h-10 [&_.swiper-button-prev]:w-10 [&_.swiper-button-next]:absolute [&_.swiper-button-next]:z-[3] [&_.swiper-button-next]:right-0 [&_.swiper-button-next]:top-1/2 [&_.swiper-button-next]:h-10 [&_.swiper-button-next]:w-10 [&_.swiper-pagination.swiper-pagination-bullets-dynamic]:bottom-0 [&_.swiper-pagination-bullet]:w-5 [&_.swiper-pagination-bullet]:h-2 [&_.swiper-pagination-bullet]:bg-primary-500 [&_.swiper-pagination-bullet]:rounded"
+            className="[&_.swiper-wrapper]:items-center [&_.swiper-button-prev]:absolute [&_.swiper-button-prev]:z-[3] [&_.swiper-button-prev]:top-1/2 [&_.swiper-button-prev]:h-10 [&_.swiper-button-prev]:w-10 [&_.swiper-button-next]:absolute [&_.swiper-button-next]:z-[3] [&_.swiper-button-next]:right-0 [&_.swiper-button-next]:top-1/2 [&_.swiper-button-next]:h-10 [&_.swiper-button-next]:w-10 [&_.swiper-pagination.swiper-pagination-bullets-dynamic]:bottom-0 [&_.swiper-pagination-bullet]:w-5 [&_.swiper-pagination-bullet]:h-2 [&_.swiper-pagination-bullet]:bg-primary-500 [&_.swiper-pagination-bullet]:rounded"
           >
             {bots.map(({ name, src }) => (
               <SwiperSlide key={name}>

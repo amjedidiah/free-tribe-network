@@ -2,22 +2,18 @@
 
 ## Changelog
 
-- instagram timeline
-- fixed error with loading WordPress images
+- issue with Obiora's picture size in Who We Are BOT
 
 ## Current
 
 ### Bugs, Improvements & Clean up
 
-- delete `NEXT_PUBLIC_WORDPRESS_GRAPHQL_ENDPOINT` env variable
-
 - global error page
 - resizing text and images for mobile
-- lighthouse test
-
 - Invalid next.config.js options detected:
  ⚠     "env._next_intl_trailing_slash" is missing, expected string
  ⚠ See more info here: <https://nextjs.org/docs/messages/invalid-next-config>
+- lighthouse test
 
 ## Pending
 

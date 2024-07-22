@@ -36,14 +36,16 @@ export default function BotSlide({
   }, [shouldSlideRight, swiper]);
 
   return (
-    <ContentImage
-      title={src}
-      width={288}
-      height={296}
-      style={{ objectFit: "cover" }}
-      className={cn("shadow-xl mx-auto", {
-        "scale-[75%]": !swiperSlide.isActive,
-      })}
-    />
+    <div className="aspect-square p-1">
+      <ContentImage
+        title={src}
+        fill
+        style={{ objectFit: "cover", objectPosition: "center" }}
+        className={cn("shadow-xl mx-auto", {
+          "max-lg:scale-90": swiperSlide.isActive,
+          "scale-[75%]": !swiperSlide.isActive,
+        })}
+      />
+    </div>
   );
 }
