@@ -23,46 +23,46 @@ export default function useContentList<T extends PageInfo, K>({
     if (!data?.hasPreviousPage) return;
 
     setIsLoading(true);
-    fetchAction({
-      ...params,
-      first: 0,
-      last: limit,
-      before: data.startCursor,
-      after: "",
-    })
-      .then((response) => {
-        startTransition(() => setData(response));
-      })
-      .catch(console.error)
-      .finally(() => setIsLoading(false));
+    // fetchAction({
+    //   ...params,
+    //   first: 0,
+    //   last: limit,
+    //   before: data.startCursor,
+    //   after: "",
+    // })
+    //   .then((response) => {
+    //     startTransition(() => setData(response));
+    //   })
+    //   .catch(console.error)
+    //   .finally(() => setIsLoading(false));
   };
 
   const handleFetchNext: MouseEventHandler<HTMLAnchorElement> = async () => {
     if (!data?.hasNextPage) return;
 
     setIsLoading(true);
-    fetchAction({
-      ...params,
-      first: limit,
-      last: 0,
-      before: "",
-      after: data.endCursor,
-    })
-      .then((response) => {
-        startTransition(() => setData(response));
-      })
-      .catch(console.error)
-      .finally(() => setIsLoading(false));
+    // fetchAction({
+    //   ...params,
+    //   first: limit,
+    //   last: 0,
+    //   before: "",
+    //   after: data.endCursor,
+    // })
+    //   .then((response) => {
+    //     startTransition(() => setData(response));
+    //   })
+    //   .catch(console.error)
+    //   .finally(() => setIsLoading(false));
   };
 
   useEffect(() => {
     if (initDataKeysLength) return;
 
     setIsLoading(true);
-    fetchAction(params)
-      .then(setData)
-      .catch(console.error)
-      .finally(() => setIsLoading(false));
+    // fetchAction(params)
+    //   .then(setData)
+    //   .catch(console.error)
+    //   .finally(() => setIsLoading(false));
   }, [fetchAction, initDataKeysLength, params]);
 
   return {

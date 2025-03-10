@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { ResourcesListProps } from "@/lib/types";
+import { FetchCategoriesByIdData, ResourcesListProps } from "@/lib/types";
 import ResourcesListContainer from "@/components/resources/resources-list-container";
 import { fetchResourcesByCategoryId } from "@/lib/actions/wordpress";
 
@@ -15,7 +15,8 @@ export default async function ResourcesList({
     id: resourceId,
     hideDescription,
   };
-  const data = await fetchResourcesByCategoryId(params);
+  // const data = await fetchResourcesByCategoryId(params);
+  const data = {} as FetchCategoriesByIdData;
 
   const props = {
     hasOverflow,

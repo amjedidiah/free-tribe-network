@@ -3,13 +3,15 @@ import { fetchResourcesByCategoryId } from "@/lib/actions/wordpress";
 import ShouldRender from "@/components/shared/should-render";
 import { getLocale, getTranslations } from "next-intl/server";
 import { getIdFromCategoryTitle, getKeyResource } from "@/lib/utils";
+import { FetchCategoriesByIdData } from "@/lib/types";
 
 export default async function ProjectReport() {
   const locale = await getLocale();
   const keyResource = getKeyResource(locale);
-  const { resourceList, title } = await fetchResourcesByCategoryId({
-    id: keyResource.ProjectActivityReport,
-  });
+  // const { resourceList, title } = await fetchResourcesByCategoryId({
+  //   id: keyResource.ProjectActivityReport,
+  // });
+  const { resourceList, title } = {} as FetchCategoriesByIdData;
   const t = await getTranslations("Loading");
 
   return (
