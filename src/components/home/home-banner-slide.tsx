@@ -8,7 +8,9 @@ import { useTranslations } from "next-intl";
 
 type HomeBannerSlideProps = (typeof homeBannerData)[number];
 
-export default function HomeBannerSlide({ ...rest }: Readonly<HomeBannerSlideProps>) {
+export default function HomeBannerSlide({
+  ...rest
+}: Readonly<HomeBannerSlideProps>) {
   const t = useTranslations("Home.Banners");
 
   return (
