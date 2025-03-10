@@ -6,7 +6,6 @@ import truncateHtml from "truncate-html";
 import { cache } from "react";
 import { Post, PostData } from "@/lib/types";
 import parse from "rss-to-json";
-import { getLocale } from "next-intl/server";
 
 const contentWithoutImage = (text: string) => {
   // Parse the text as HTML using jsdom
@@ -60,13 +59,7 @@ const formatPostsData = (postsData: PostData[]): Post[] =>
   );
 
 export const fetchMediumPosts = cache(async () => {
-  const locale = await getLocale();
-  const rssFeedLink =
-    {
-      en: "https://medium.com/feed/@freetribenetwork",
-      // fr: "https://rss.app/feeds/tOrFQCgn3QxDStbn.xml",
-      // nl: "https://rss.app/feeds/5aa66TP5As3ljbGQ.xml",
-    }[locale] ?? "https://medium.com/feed/@freetribenetwork";
+  const rssFeedLink = "https://medium.com/feed/@freetribenetwork"
   try {
     const { items } = await parse(rssFeedLink);
 

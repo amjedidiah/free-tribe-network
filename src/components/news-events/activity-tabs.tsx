@@ -7,6 +7,8 @@ import { activityTabsData } from "@/lib/data";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 import { useCallback } from "react";
+import Blog from "@/components/news-events/blog";
+import Activity from "@/components/news-events/activity";
 
 type Props = UseScrollToSectionProps & {
   isPrimary?: boolean;
@@ -58,13 +60,17 @@ export default function ActivityTabs({ isPrimary = false, ...rest }: Props) {
             .filter(
               (item) => getTranslatedTrigger(item.trigger) === activeSection
             )
-            .map(({ trigger, Component }) => (
-              <Component
-                key={trigger}
-                translatedTrigger={getTranslatedTrigger(trigger)}
-                trigger={trigger}
-              />
-            ))}
+            .map(({ trigger, componentName }) => {
+              const Component = componentName === "activity" ? Activity : Blog;
+
+              return (
+                <Component
+                  key={trigger}
+                  translatedTrigger={getTranslatedTrigger(trigger)}
+                  trigger={trigger}
+                />
+              );
+            })}
         </div>
       )}
     </Tabs>

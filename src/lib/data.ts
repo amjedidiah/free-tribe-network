@@ -1,18 +1,15 @@
-import Blog from "@/components/news-events/blog";
-import Activity from "@/components/news-events/activity";
-
 export const activityTabsData = [
   {
     trigger: "recent-activities",
-    Component: Activity,
+    componentName: "activity",
   },
   {
     trigger: "upcoming-activities",
-    Component: Activity,
+    componentName: "activity",
   },
   {
     trigger: "blog-posts",
-    Component: Blog,
+    componentName: "blog",
   },
 ];
 
