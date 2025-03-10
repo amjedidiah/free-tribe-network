@@ -4,7 +4,7 @@ import Banner from "@/components/shared/banner";
 import { initiatives } from "@/lib/data";
 import Support from "@/components/shared/support";
 import { MINUTELY_REVALIDATION } from "@/lib/constants";
-import { unstable_setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import { PropsWithLocaleParam } from "@/lib/types";
 import { useTranslations } from "next-intl";
 import { getMetadata } from "@/lib/actions/metadata";
@@ -16,19 +16,19 @@ export const generateMetadata = ({
 }: PropsWithLocaleParam) =>
   getMetadata(
     locale,
-    "https://freetribenetwork.com/wp-content/uploads/2024/03/our-initiatives-banner-scaled.webp",
+    "https://res.cloudinary.com/amjedidiah/image/upload/v1741477549/ftn/initiatives-banner_mz4dwp.webp",
     "Layout.metaData.our initiatives"
   );
 
 export default function OurInitiatives({
   params: { locale },
-}: PropsWithLocaleParam) {
-  unstable_setRequestLocale(locale);
+}: Readonly<PropsWithLocaleParam>) {
+  setRequestLocale(locale);
   const t = useTranslations("Our initiative");
 
   return (
     <Fragment>
-      <Banner imageTitle="our-initiatives-banner" title={t('title')} />
+      <Banner imageTitle="initiatives-banner_mz4dwp" title={t("title")} />
       <section className="container" id="initiativesContainer">
         <Suspense fallback={null}>
           {initiatives.map((item) => (

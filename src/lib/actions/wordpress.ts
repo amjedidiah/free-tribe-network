@@ -32,8 +32,8 @@ const extractResourcesContent = (
     },
     cursor,
   }: any,
+  locales: string,
   hideDescription = false,
-  locales: string
 ): Resource => ({
   id,
   cursor,
@@ -42,7 +42,7 @@ const extractResourcesContent = (
     ? ""
     : truncateHtml(excerpt, 20, {
         byWords: true,
-      }),
+      })?.toString(),
   modifiedDate: new Date(modifiedGmt).toLocaleDateString(locales),
   src: featuredImage?.node?.mediaItemUrl,
   url: resourcesFieldGroup.file?.node?.link,
@@ -82,7 +82,7 @@ export const fetchResourcesByCategoryId = cache(
         ...resourcesData.data.category.posts.pageInfo,
         title: resourcesData.data.category.name,
         resourceList: resourcesData.data.category.posts.edges.map((item: any) =>
-          extractResourcesContent(item, hideDescription, locales)
+          extractResourcesContent(item, locales, hideDescription)
         ),
       } as FetchCategoriesByIdData;
     } catch (error) {
@@ -96,7 +96,7 @@ function formatDateTime(dateObj: Date, locale: string) {
   const locales =
     {
       en: "en-GB",
-    }[locale] || `${locale}-${locale.toUpperCase()}`;
+    }[locale] ?? `${locale}-${locale.toUpperCase()}`;
 
   // Extract components
   const year = dateObj.getFullYear();

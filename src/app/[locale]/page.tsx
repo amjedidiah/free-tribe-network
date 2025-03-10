@@ -10,18 +10,12 @@ import Partners from "@/components/shared/partners";
 import IGFeed from "@/components/home/ig-feed";
 import { bots } from "@/lib/data";
 import OurImpact from "@/components/shared/our-impact";
-import { MINUTELY_REVALIDATION } from "@/lib/constants";
 import { PropsWithLocaleParam } from "@/lib/types";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import ScrollToSection from "@/components/shared/scroll-to-section";
 
-// TODO: Cancel revalidation on this when post has become more than 3
-export const revalidate = MINUTELY_REVALIDATION;
-
-export default async function Home({
-  params: { locale },
-}: PropsWithLocaleParam) {
-  unstable_setRequestLocale(locale);
+export default async function Home({ params: { locale } }: Readonly<PropsWithLocaleParam>) {
+  setRequestLocale(locale);
   const t = await getTranslations("Team");
 
   return (

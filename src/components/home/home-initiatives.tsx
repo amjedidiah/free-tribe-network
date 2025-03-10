@@ -27,7 +27,6 @@ export default function HomeInitiatives() {
                   <ContentImage
                     title={images[0]}
                     fill
-                    sizes="100%"
                     style={{ objectFit: "cover" }}
                     className="shadow-xl"
                   />

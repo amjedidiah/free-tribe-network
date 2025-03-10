@@ -1,6 +1,5 @@
 import ContentImage from "@/components/shared/content-image";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
 
 export default function HomeOurVision() {
   const t = useTranslations("Home.Vision");
@@ -29,7 +28,7 @@ export default function HomeOurVision() {
               </h3>
             </div>
             <div className="flex lg:flex-1 justify-end">
-              <ContentImage title="sdg-5" width={420} height={411} />
+              <ContentImage title="sdg-5_rgqwkr" width={420} height={411} />
             </div>
           </div>
           <div className="flex flex-col justify-between gap-4 bg-[#7daabe]">
@@ -42,7 +41,7 @@ export default function HomeOurVision() {
               </h3>
             </div>
             <div className="flex justify-end">
-              <ContentImage title="sdg-10" width={309} height={241} />
+              <ContentImage title="sdg-10_e0hz2i" width={309} height={241} />
             </div>
           </div>
           <div className="grid items-center gap-4 bg-[#04436e]">
@@ -55,12 +54,7 @@ export default function HomeOurVision() {
               </h3>
             </div>
             <div className="flex justify-end">
-              <Image
-                src="/images/sdg/sdg-3.svg"
-                alt="sdg-3"
-                width={309}
-                height={241}
-              />
+              <ContentImage title="sdg-3_gv7sxn" width={309} height={241} />
             </div>
           </div>
         </div>

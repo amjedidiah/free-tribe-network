@@ -40,28 +40,18 @@ export default function Bot() {
         <div className="flex justify-between items-center">
           <h2 className="text-black">{t("title")}</h2>
           <div className="flex-1 flex items-center gap-10 justify-end">
-            <div
+            <button
               className="w-12 h-12 relative shadow rounded-full cursor-pointer"
               onClick={handleShouldSlideLeft}
             >
-              <Image
-                alt="left-arrow"
-                src="/images/left-arrow.svg"
-                sizes="100%"
-                fill
-              />
-            </div>
-            <div
+              <Image alt="left-arrow" src="/images/left-arrow.svg" fill />
+            </button>
+            <button
               className="w-12 h-12 relative shadow rounded-full cursor-pointer"
               onClick={handleShouldSlideRight}
             >
-              <Image
-                alt="right-arrow"
-                src="/images/right-arrow.svg"
-                sizes="100%"
-                fill
-              />
-            </div>
+              <Image alt="right-arrow" src="/images/right-arrow.svg" fill />
+            </button>
           </div>
         </div>
         <BotSlider

@@ -11,7 +11,7 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "freetribenetwork.com",
+        hostname: "**.cloudinary.com",
       },
       {
         protocol: "https",

@@ -54,7 +54,6 @@ export default async function Team({
                 <ContentImage
                   title={src}
                   fill
-                  sizes="100%"
                   style={{ objectFit: "cover", objectPosition: "top center" }}
                   className="shadow-xl"
                 />

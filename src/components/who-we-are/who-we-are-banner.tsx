@@ -5,7 +5,7 @@ export default async function WhoWeAreBanner() {
   const t = await getTranslations("Who we are");
   return (
     <Banner
-      imageTitle="who-we-are-banner"
+      imageTitle="who-we-are-banner_owokwo"
       title={t("Banner title")}
       wrapperClassName="bg-[rgba(26,26,26,0.25)]"
     >

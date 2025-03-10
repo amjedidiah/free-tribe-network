@@ -5,7 +5,7 @@ export default function DonateBanner() {
   const t = useTranslations("Donate")
   return (
     <Banner
-      imageTitle="donate-banner"
+      imageTitle="donate-banner_n2ad95"
       title={t("Banner.title")}
       wrapperClassName="[&_.container]:relative [&_h1]:lg:max-w-lg [&_h1]:xl:max-w-xl"
       id="donate-banner"
@@ -17,12 +17,10 @@ export default function DonateBanner() {
           donation.
         </p> */}
         <div>
-          <p className="lg:max-w-lg xl:max-w-xl mb-2">
-          {t("Banner.content")}
-          </p>
+          <p className="lg:max-w-lg xl:max-w-xl mb-2">{t("Banner.content")}</p>
           <p>
             <span className="bg-primary-100 text-primary font-semibold rounded py-1 px-2 text-sm">
-            {t("Banner.Coming soon")}
+              {t("Banner.Coming soon")}
             </span>
           </p>
         </div>

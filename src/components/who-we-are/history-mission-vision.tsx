@@ -19,7 +19,7 @@ export default async function HistoryMissionVision() {
           <div className="text-description flex flex-col gap-3 [&_a]:underline">
             <p>{t("content one")}</p>
             <ContentImage
-              title="inspiration"
+              title="inspiration_fn1ixa"
               width={1920}
               height={1080}
               className="rounded shadow-ls"

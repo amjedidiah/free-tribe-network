@@ -5,20 +5,24 @@ import ScrollToSection from "@/components/shared/scroll-to-section";
 import { getMetadata } from "@/lib/actions/metadata";
 import { MINUTELY_REVALIDATION } from "@/lib/constants";
 import { PropsWithLocaleParam } from "@/lib/types";
-import { unstable_setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import { Fragment } from "react";
 
 export const revalidate = MINUTELY_REVALIDATION;
 
-export const generateMetadata = ({ params: { locale } }: PropsWithLocaleParam) =>
+export const generateMetadata = ({
+  params: { locale },
+}: PropsWithLocaleParam) =>
   getMetadata(
     locale,
-    "https://freetribenetwork.com/content/wp-content/uploads/2024/03/donate-banner-scaled.webp",
+    "https://res.cloudinary.com/amjedidiah/image/upload/v1741477860/ftn/donate-banner_n2ad95.webp",
     "Layout.metaData.donate"
   );
 
-export default function Donate({ params: { locale } }: PropsWithLocaleParam) {
-  unstable_setRequestLocale(locale);
+export default function Donate({
+  params: { locale },
+}: Readonly<PropsWithLocaleParam>) {
+  setRequestLocale(locale);
   return (
     <Fragment>
       <DonateBanner />

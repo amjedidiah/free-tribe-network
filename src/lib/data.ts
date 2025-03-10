@@ -206,38 +206,38 @@ export const initiativeData = {
     </p>
   </div>
 `,
-    images: ["star-1", "star-2", "star-3"],
+    images: ["star-project-1_zlnkud", "star-project-2_jonohn", "star-project-3_w2kdgw"],
     summary:
       "A public health project that seeks to capture and reduce the witnessing of inter-parental violence, and the inter-generational transmission of violence to adolescents.",
   },
   repromatters: {
     ...initiatives[1],
     content: `<div><p>A bi-monthly program utilizing real life stories, medical knowledge, public health expertise, and the wide reach of the social media space, to discuss important issues affecting reproductive health and family well-being. Topics covered will center around women’s health, men’s health, children and adolescent health and well-being.</p></div>`,
-    images: ["repromatters-1"],
+    images: ["repro_uopmf7"],
   },
   "free-tribe-boost-camp": {
     ...initiatives[2],
     content: `<div><p>A bi-monthly capacity building program for staff and volunteers of the Free Tribe Network, set to improve corporate work skills, teach industry-relevant skills, and foster bonding amongst members of the Free Tribe Network.</p></div>`,
     images: [
-      "free-tribe-boost-camp-1",
-      "free-tribe-boost-camp-2",
-      "free-tribe-boost-camp-3",
+      "boost-camp-1_f4svwf",
+      "boost-camp-2_b8nia3",
+      "boost-camp-3_bw178p",
     ],
   },
   "free-tribe-helpline": {
     ...initiatives[3],
     content: `<div><p>A social service for telephone support, access to information, advice, informed interventions, and referral to reproductive and family health professionals.</p></div>`,
-    images: ["free-tribe-helpline-1"],
+    images: ["helpline_mxp0ci"],
   },
   "free-tribe-clubs": {
     ...initiatives[4],
     content: `<div><p>These are safe spaces set to promote open conversations, improve social support, enhance monitoring and evaluation, and improve self-led initiatives and re-intervention tactics, to ensure sustainable improvements in reproductive and family health outcomes.</p></div>`,
-    images: ["free-tribe-clubs-1"],
+    images: ["clubs_nb3xsm"],
   },
   "rfh-advocacy": {
     ...initiatives[5],
     content: `<div><p>This includes rallies, campaigns, weekly advocacy messages (#TeachTuesday and #FactFriday), and media programs to promote and inspire positive health behaviours.</p></div>`,
-    images: ["rfh-advocacy-1", "rfh-advocacy-2", "rfh-advocacy-3"],
+    images: ["family-health-1_gk7xb3", "family-health-2_znilnr", "family-health-3_cbpnvg"],
   },
 };
 
@@ -293,31 +293,31 @@ export const currentYear = new Date().getFullYear();
 
 export const homeBannerData = [
   {
-    image: "home-banner-slide-1",
+    image: "home-banner-slide-1_ntqfca",
     title: "Sustained reproductive health and family well-being",
     picturePosition: "center right",
     wrapperClassName: "max-xl:bg-[rgba(5,83,118,0.45)]",
   },
   {
-    image: "home-banner-slide-2",
+    image: "home-banner-slide-2_t5u8e6",
     title: "Mastery",
     picturePosition: "center right",
     wrapperClassName: "max-xl:bg-[rgba(5,83,118,0.45)]",
   },
   {
-    image: "home-banner-slide-3",
+    image: "home-banner-slide-3_i6669l",
     title: "Social Justice",
     picturePosition: "center",
     wrapperClassName: "max-xl:bg-[rgba(5,83,118,0.45)]",
   },
   {
-    image: "home-banner-slide-4",
+    image: "home-banner-slide-4_w4kj9f",
     title: "Equity",
     picturePosition: "center",
     wrapperClassName: "max-xl:bg-[rgba(5,83,118,0.45)]",
   },
   {
-    image: "home-banner-slide-5",
+    image: "home-banner-slide-5_sp3cje",
     title: "Community",
     picturePosition: "center",
     wrapperClassName: "max-xl:bg-[rgba(5,83,118,0.45)]",
@@ -375,103 +375,103 @@ export const topInitiativesData = Object.values(initiativeData).filter((item) =>
 
 export const testimonials = [
   {
-    src: "testimonial-1",
+    src: "testimonial-1_hu99vh",
     name: "Mrs Olakitan Abiola",
   },
   {
-    src: "testimonial-2",
+    src: "testimonial-2_ymtexv",
     name: "Moses Plangkat",
   },
   {
-    src: "testimonial-3",
+    src: "testimonial-3_ivar5x",
     name: "Mrs Blessing Omenka",
   },
   {
-    src: "testimonial-4",
+    src: "testimonial-4_zwihcz",
     name: "Kwamina Obo",
   },
   {
-    src: "testimonial-5",
+    src: "testimonial-5_ezmacx",
     name: "Moyo Adedayo",
   },
   {
-    src: "testimonial-6",
+    src: "testimonial-6_ugmxxk",
     name: "Sayo Eweje",
   },
   {
-    src: "testimonial-7",
+    src: "testimonial-7_kaqw65",
     name: "Dayhana Hernandez",
   },
   {
-    src: "testimonial-8",
+    src: "testimonial-8_cfqaak",
     name: "Dr Gbonjubola Abiri",
   },
   {
-    src: "testimonial-9",
+    src: "testimonial-9_krajav",
     name: "Aziza Kibibi",
   },
   {
-    src: "testimonial-10",
+    src: "testimonial-10_pknqr7",
     name: "Pharm Tobechuckwu Nneji",
   },
   {
-    src: "testimonial-11",
+    src: "testimonial-11_xatiwp",
     name: "Dr Muhammed Odedeji",
   },
   {
-    src: "testimonial-12",
+    src: "testimonial-12_sjryin",
     name: "Dr Jibril Abdulmalik",
   },
   {
-    src: "testimonial-13",
+    src: "testimonial-13_xuuvmb",
     name: "Dr Munirat Antoinette Lecky(Anto Lecky)",
   },
 ];
 
 export const bots = [
   {
-    src: "bot-1",
+    src: "bot-1_zuvvjp",
     name: "Dr Adebayo",
   },
   {
-    src: "bot-2",
+    src: "bot-2_uztk1l",
     name: "Rev Eweje",
   },
   {
-    src: "bot-3",
+    src: "bot-3_zj16bn",
     name: "Oluwagbemi-Jacob",
   },
   {
-    src: "bot-4",
+    src: "bot-4_hocoff",
     name: "Prof Obafemi",
   },
   {
-    src: "bot-5",
+    src: "bot-5_n71inq",
     name: "Dr Atoyebi",
   },
   {
-    src: "bot-6",
+    src: "bot-6_u1hkcd",
     name: "Nwokafor",
   },
   {
-    src: "bot-7",
+    src: "bot-7_ktv6c4",
     name: "Madu",
   },
   {
-    src: "bot-8",
+    src: "bot-8_jdhpho",
     name: "Fadayomi",
   },
   {
-    src: "bot-9",
+    src: "bot-9_uq7m3f",
     name: "Mfon",
   },
 ];
 
 export const partners = [
-  "asido-foundation",
-  "pretty-little-ladies",
-  "chiin",
-  "live-wire",
+  "asido-foundation_pebh1c",
+  "pretty-little-ladies_tfvd3n",
+  "chiin_mgsjfc",
+  "live-wire_sxaoep",
 ];
 
 export const visionMissionData = [
@@ -494,39 +494,39 @@ export const visionMissionData = [
 
 export const workFamily = [
   {
-    src: "work-family-1",
+    src: "work-family-1_jhh57n",
     name: "Busayo",
   },
   {
-    src: "work-family-2",
+    src: "work-family-2_celihz",
     name: "Mikka",
   },
   {
-    src: "work-family-3",
+    src: "work-family-3_rm1ksy",
     name: "Susan",
   },
   {
-    src: "work-family-4",
+    src: "work-family-4_fo1w3i",
     name: "Tolu",
   },
   {
-    src: "work-family-5",
+    src: "work-family-5_wji8uj",
     name: "Uche",
   },
   {
-    src: "work-family-6",
+    src: "work-family-6_bixlcd",
     name: "Oluwatobi",
   },
   {
-    src: "work-family-7",
+    src: "work-family-7_b6rkaq",
     name: "Grace",
   },
   {
-    src: "work-family-8",
+    src: "work-family-8_y8fmda",
     name: "Kome",
   },
   {
-    src: "work-family-9",
+    src: "work-family-9_ya0qx6",
     name: "Tunji",
   },
 ];

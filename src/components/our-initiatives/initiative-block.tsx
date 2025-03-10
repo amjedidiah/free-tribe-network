@@ -14,7 +14,9 @@ import { useTranslations } from "next-intl";
 
 type InitiativeBlockProps = (typeof initiatives)[number];
 
-export default function InitiativeBlock({ name }: InitiativeBlockProps) {
+export default function InitiativeBlock({
+  name,
+}: Readonly<InitiativeBlockProps>) {
   const t = useTranslations("Our initiative.initiatives");
   const [content, setContent] = useState<TrustedHTML | string>();
   const [images, setImages] = useState<string[]>([]);
@@ -61,7 +63,6 @@ export default function InitiativeBlock({ name }: InitiativeBlockProps) {
               <ContentImage
                 title={i}
                 fill
-                sizes="100%"
                 style={{ objectFit: "cover", objectPosition: "center" }}
               />
             </CarouselItem>

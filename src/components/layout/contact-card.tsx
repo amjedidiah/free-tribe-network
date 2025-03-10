@@ -5,7 +5,11 @@ import ShouldRender from "@/components/shared/should-render";
 
 type ContactCardProps = (typeof contactChannels)[number];
 
-export default function ContactCard({ image, title, href }: ContactCardProps) {
+export default function ContactCard({
+  image,
+  title,
+  href,
+}: Readonly<ContactCardProps>) {
   const t = useTranslations("Layout.Contact");
 
   return (
@@ -17,7 +21,6 @@ export default function ContactCard({ image, title, href }: ContactCardProps) {
             alt={`${title}-icon`}
             fill
             style={{ objectFit: "cover", objectPosition: "center" }}
-            sizes="100%"
           />
         </div>
       </div>

@@ -10,6 +10,8 @@ import { Link as ScrollLink } from "react-scroll";
 import SafeHTML from "@/components/shared/safe-html";
 import { useTranslations } from "next-intl";
 
+const LineBreak = () => <br />;
+
 export default function DonateFAQ() {
   const t = useTranslations("Donate.FAQ");
 
@@ -19,7 +21,7 @@ export default function DonateFAQ() {
         <div className="flex flex-row flex-wrap h2-gap justify-between items-center text-center">
           <h2>
             {t.rich("title", {
-              br: () => <br />,
+              br: LineBreak,
             })}
           </h2>
           <ScrollLink

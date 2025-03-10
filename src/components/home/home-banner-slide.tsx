@@ -8,11 +8,9 @@ import { useTranslations } from "next-intl";
 
 type HomeBannerSlideProps = (typeof homeBannerData)[number];
 
-export default function HomeBannerSlide({
-  ...rest
-}: HomeBannerSlideProps) {
-  const t = useTranslations('Home.Banners')
-  
+export default function HomeBannerSlide({ ...rest }: Readonly<HomeBannerSlideProps>) {
+  const t = useTranslations("Home.Banners");
+
   return (
     <CarouselItem className="relative">
       <Banner {...rest} title={t(`${rest.title}.title` as any)}>

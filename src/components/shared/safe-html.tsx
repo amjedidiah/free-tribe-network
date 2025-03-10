@@ -1,6 +1,6 @@
 "use client";
 
-import * as DOMPurify from "isomorphic-dompurify";
+import DOMPurify from "isomorphic-dompurify";
 import { HTMLAttributes } from "react";
 
 type SafeHTMLProps = {

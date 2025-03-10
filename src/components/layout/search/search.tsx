@@ -42,7 +42,7 @@ const getWPSearchItemUrl = (item: AutocompleteQuerySuggestionsHit) => {
 export default function Search() {
   const locale = useLocale();
   const taxonomiesLanguage =
-    { en: "English", fr: "Français", nl: "Nederlands" }[locale] || "English";
+    { en: "English", fr: "Français", nl: "Nederlands" }[locale] ?? "English";
   const t = useTranslations("Nav.Search");
   const taxonomiesEnvironment = process.env.NODE_ENV ?? "development";
 

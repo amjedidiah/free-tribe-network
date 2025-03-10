@@ -10,7 +10,7 @@ import { NextIntlClientProvider } from "next-intl";
 import {
   getMessages,
   getTranslations,
-  unstable_setRequestLocale,
+  setRequestLocale,
 } from "next-intl/server";
 import { locales } from "@/lib/i18n.config";
 import { PropsWithLocaleParam } from "@/lib/types";
@@ -32,11 +32,11 @@ export async function generateMetadata(
 
   const image =
     {
-      en: "https://freetribenetwork.com/content/wp-content/uploads/2024/06/Screenshot-2024-06-17-at-14.34.19.png",
-      fr: "https://freetribenetwork.com/content/wp-content/uploads/2024/06/Screenshot-2024-06-17-at-14.34.11.png",
-      nl: "https://freetribenetwork.com/content/wp-content/uploads/2024/06/Screenshot-2024-06-17-at-14.34.04.png",
+      en: "https://res.cloudinary.com/amjedidiah/image/upload/v1741559780/ftn/Screenshot-en_idoj6z.png",
+      fr: "https://res.cloudinary.com/amjedidiah/image/upload/v1741559779/ftn/Screenshot-fr_sz0pe4.png",
+      nl: "https://res.cloudinary.com/amjedidiah/image/upload/v1741559782/ftn/Screenshot-nl_fjhqgn.png",
     }[locale] ||
-    "https://freetribenetwork.com/content/wp-content/uploads/2024/06/Screenshot-2024-06-17-at-14.34.19.png";
+    "https://res.cloudinary.com/amjedidiah/image/upload/v1741559780/ftn/Screenshot-en_idoj6z.png";
 
   const graph: OpenGraph = {
     images: [image, ...previousImages],
@@ -80,7 +80,7 @@ export default async function RootLayout({
 }: PropsWithChildren<PropsWithLocaleParam>) {
   const messages = await getMessages();
   const dir = isRtlLang(locale) ? "rtl" : "ltr";
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
 
   return (
     <html lang={locale} dir={dir} className="h-full">

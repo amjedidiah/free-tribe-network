@@ -10,7 +10,7 @@ export type UseScrollToSectionProps = {
 
 export default function useScrollToSection(props?: UseScrollToSectionProps) {
   const { initUrlSection, shouldScroll = true } = props || {};
-  const searchParams = useSearchParams();
+  const searchParams = useSearchParams() as unknown as URLSearchParams;
   const router = useRouter();
   const activeSection = searchParams.get("section")?.toLowerCase();
 

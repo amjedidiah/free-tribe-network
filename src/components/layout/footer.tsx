@@ -8,10 +8,10 @@ import ContentImage from "@/components/shared/content-image";
 import { useTranslations } from "next-intl";
 import ShouldRender from "@/components/shared/should-render";
 
-export default function Footer({ minimal = false }) {
+export default function Footer() {
   const pathname = usePathname();
   const t = useTranslations("Layout");
-  minimal = pathname === "/resources";
+  const minimal = pathname === "/resources";
 
   return (
     <footer>
@@ -37,9 +37,8 @@ export default function Footer({ minimal = false }) {
                 <Link href="/" aria-label="homepage">
                   <div className="relative h-[60px] w-[60px]">
                     <ContentImage
-                      title="footer-logo"
+                      title="free_tribe_white_kklsdg"
                       fill
-                      sizes="100%"
                       style={{ objectFit: "cover", objectPosition: "center" }}
                     />
                   </div>
@@ -79,7 +78,7 @@ export default function Footer({ minimal = false }) {
             <p className="text-slate-300">
               <span>
                 &copy; {currentYear} {t("Footer.Copyright")}
-              </span>
+              </span>{" "}
               . <span>{t("Footer.Rights")}</span>
             </p>
           </div>

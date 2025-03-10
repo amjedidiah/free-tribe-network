@@ -35,7 +35,6 @@ export default function Banner({
         <ContentImage
           title={image}
           fill
-          sizes="100%"
           style={{ objectFit: "cover", objectPosition: picturePosition }}
           priority
         />
@@ -44,7 +43,6 @@ export default function Banner({
         <ContentImage
           title={imageTitle}
           fill
-          sizes="100%"
           style={{ objectFit: "cover", objectPosition: picturePosition }}
           priority
         />

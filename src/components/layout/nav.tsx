@@ -51,7 +51,7 @@ function Nav() {
           )}
         >
           <Link href="/">
-            <ContentImage title="header-logo" width={60} height={57} />
+            <ContentImage title="logo_ry2mfi" width={60} height={57} />
           </Link>
           <div
             className={cn(

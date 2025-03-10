@@ -30,7 +30,6 @@ export default function ResourcesCard({
               alt={title}
               src={src}
               fill
-              sizes="100%"
               style={{ objectFit: "cover", objectPosition: "center" }}
               className="rounded-[4px]"
             />

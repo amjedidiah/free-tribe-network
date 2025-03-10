@@ -18,8 +18,10 @@ export default function ActivityContentTop({
   title,
   newsFieldGroup: { dateTime },
   excerpt,
-}: Props) {
-  const imageTitle = isUpcoming ? "activity-ankara-2" : "activity-ankara-1";
+}: Readonly<Props>) {
+  const imageTitle = isUpcoming
+    ? "activity-ankara-2_umuexj"
+    : "activity-ankara-1_g3vwju";
   const t = useTranslations("Activity.Actions");
 
   return (
@@ -38,7 +40,7 @@ export default function ActivityContentTop({
         })}
       />
       <div className="h-72 relative">
-        <ContentImage title={imageTitle} fill sizes="100%" />
+        <ContentImage title={imageTitle} fill />
         {isUpcoming && (
           <div className="absolute left-0 right-0 h-full flex items-center justify-center gap-4 [&_a]:py-[0.625rem] [&_a]:px-[1.125rem] [&_a]:rounded-[0.5rem]">
             <Link href="/donate" className=" text-primary-400 bg-white">

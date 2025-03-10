@@ -37,7 +37,6 @@ export default async function Testimonials() {
                         objectFit: "cover",
                         objectPosition: "center top",
                       }}
-                      sizes="100%"
                     />
                   </div>
                   <div>

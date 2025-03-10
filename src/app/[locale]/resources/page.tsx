@@ -5,36 +5,38 @@ import ProjectReport from "@/components/resources/project-report";
 import ResourcesList from "@/components/resources/resources-list";
 import { PropsWithLocaleParam } from "@/lib/types";
 import Banner from "@/components/shared/banner";
-import { unstable_setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import { getKeyResource } from "@/lib/utils";
 import { getMetadata } from "@/lib/actions/metadata";
 import ScrollToSection from "@/components/shared/scroll-to-section";
 
 export const revalidate = MINUTELY_REVALIDATION;
 
-export const generateMetadata = ({ params: { locale } }: PropsWithLocaleParam) =>
+export const generateMetadata = ({
+  params: { locale },
+}: PropsWithLocaleParam) =>
   getMetadata(
     locale,
-    "https://freetribenetwork.com/content/wp-content/uploads/2024/03/resource-banner.webp",
+    "https://res.cloudinary.com/amjedidiah/image/upload/v1741477701/ftn/resources-banner_ov1th3.webp",
     "Layout.metaData.resources"
   );
 
 export default function Resources({
   params: { locale },
-}: PropsWithLocaleParam) {
-  unstable_setRequestLocale(locale);
+}: Readonly<PropsWithLocaleParam>) {
+  setRequestLocale(locale);
   const keyResource = getKeyResource(locale);
 
   return (
     <Fragment>
       <ContentImage
-        title="resources-banner"
+        title="resources-banner_ov1th3"
         width={2880}
         height={1246}
         className="mt-32 min-w-full 2xl:hidden"
         priority
       />
-      <Banner imageTitle="resources-banner" className="max-2xl:hidden" />
+      <Banner imageTitle="resources-banner_ov1th3" className="max-2xl:hidden" />
       <ProjectReport />
       <ResourcesList
         className="lg:py-16"

@@ -15,7 +15,7 @@ export default function ActivityCard({
   description,
   newsFieldGroup: { date, time, venue },
   categories,
-}: IActivity) {
+}: Readonly<IActivity>) {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -48,8 +48,7 @@ export default function ActivityCard({
       <div className="rounded-[0.5rem] overflow-hidden w-full sm:w-[187px] max-sm:h-52 sm:min-h-[206px] sm:h-full shrink-0 relative ">
         <Image
           fill
-          sizes="100%"
-          src={featuredImage?.node?.mediaItemUrl || "/images/activity.webp"}
+          src={featuredImage?.node?.mediaItemUrl ?? "/images/activity.webp"}
           alt={title}
           style={{ objectPosition: "center", objectFit: "cover" }}
         />
@@ -83,7 +82,7 @@ export default function ActivityCard({
             const purifiedSlug = getPurifiedSlug(item.slug, locale);
 
             return item.parent?.node.slug.includes("initiatives") ? (
-              <div
+              <button
                 key={item.slug}
                 onClick={() => handleInitiativeSelect(purifiedSlug)}
                 className="bg-primary-50 w-fit p-1 rounded-2xl cursor-pointer"
@@ -94,7 +93,7 @@ export default function ActivityCard({
                 >
                   {formatLinkLabel(t(`${purifiedSlug}.id` as any))}
                 </Badge>
-              </div>
+              </button>
             ) : (
               <Badge
                 key={item.slug}

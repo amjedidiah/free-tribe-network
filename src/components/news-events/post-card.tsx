@@ -11,7 +11,7 @@ export default function PostCard({
   desc,
   date,
   link,
-}: Post) {
+}: Readonly<Post>) {
   return (
     <div className="flex flex-col gap-6">
       <div className="w-full relative h-[240px] rounded-[0.625rem]">
@@ -21,7 +21,6 @@ export default function PostCard({
           fill
           style={{ objectPosition: "center", objectFit: "cover" }}
           className="rounded-[0.625rem]"
-          sizes="100%"
           quality={100}
         />
       </div>

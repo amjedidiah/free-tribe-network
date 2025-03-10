@@ -1,15 +1,11 @@
-import Image, { ImageProps } from "next/image";
+"use client";
+import { CldImage } from "next-cloudinary";
+import { ImageProps } from "next/image";
 
 type Props = {
   title: string;
 } & Omit<ImageProps, "src" | "alt">;
 
 export default function ContentImage({ title, ...rest }: Props) {
-  return (
-    <Image
-      src={`${process.env.NEXT_PUBLIC_WORDPRESS_ENDPOINT}/wp-content/uploads/${title}.webp`}
-      alt={title}
-      {...rest}
-    />
-  );
+  return <CldImage src={`ftn/${title}`} alt={title} {...rest} />;
 }

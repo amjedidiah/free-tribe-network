@@ -10,7 +10,7 @@ import { workFamily } from "@/lib/data";
 import WorkWithUs from "@/components/who-we-are/work-with-us";
 import { MINUTELY_REVALIDATION } from "@/lib/constants";
 import { PropsWithLocaleParam } from "@/lib/types";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { getMetadata } from "@/lib/actions/metadata";
 import ScrollToSection from "@/components/shared/scroll-to-section";
 
@@ -19,14 +19,14 @@ export const revalidate = MINUTELY_REVALIDATION;
 export const generateMetadata = ({ params: { locale } }: PropsWithLocaleParam) =>
   getMetadata(
     locale,
-    "https://freetribenetwork.com/content/wp-content/uploads/2024/04/inspiration-scaled.webp",
+    "https://res.cloudinary.com/amjedidiah/image/upload/v1741474041/ftn/who-we-are-banner_owokwo.webp",
     "Layout.metaData.who we are"
   );
 
 export default async function WhoWeAre({
   params: { locale },
-}: PropsWithLocaleParam) {
-  unstable_setRequestLocale(locale);
+}: Readonly<PropsWithLocaleParam>) {
+  setRequestLocale(locale);
   const t = await getTranslations("Nav.menu");
 
   return (

@@ -12,7 +12,7 @@ export default async function VisionMissionCard({
   title,
   icon,
   className,
-}: VisionMissionCardProps) {
+}: Readonly<VisionMissionCardProps>) {
   const t = await getTranslations("Who we are.MissionVision");
 
   return (
@@ -23,7 +23,6 @@ export default async function VisionMissionCard({
             alt="history"
             src={icon}
             fill
-            sizes="100%"
             style={{ objectFit: "cover", objectPosition: "center" }}
           />
         </div>

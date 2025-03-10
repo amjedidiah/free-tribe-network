@@ -19,7 +19,6 @@ const ProjectReportCard = ({ title, minsRead, src, url }: Props) => {
                     src={src}
                     alt={title}
                     fill
-                    sizes="100%"
                     style={{
                       objectFit: "cover",
                       objectPosition: "center",

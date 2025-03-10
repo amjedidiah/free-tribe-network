@@ -43,14 +43,14 @@ const formatPostsData = (postsData: PostData[]): Post[] =>
   postsData.map(
     ({ category, title, content, description, published, link }) => ({
       image:
-        extractContentImage(content || description) ||
+        extractContentImage(content ?? description) ??
         "/images/banners/who-we-are-banner.webp",
       initiatives: category,
       title,
       link,
-      desc: truncateHtml(contentWithoutImage(content || description), 50, {
+      desc: (truncateHtml(contentWithoutImage(content ?? description), 50, {
         byWords: true,
-      }),
+      }) ?? "").toString(),
       date: new Date(published).toLocaleDateString("en-US", {
         year: "numeric",
         month: "long",
@@ -66,7 +66,7 @@ export const fetchMediumPosts = cache(async () => {
       en: "https://medium.com/feed/@freetribenetwork",
       // fr: "https://rss.app/feeds/tOrFQCgn3QxDStbn.xml",
       // nl: "https://rss.app/feeds/5aa66TP5As3ljbGQ.xml",
-    }[locale] || "https://medium.com/feed/@freetribenetwork";
+    }[locale] ?? "https://medium.com/feed/@freetribenetwork";
   try {
     const { items } = await parse(rssFeedLink);
 

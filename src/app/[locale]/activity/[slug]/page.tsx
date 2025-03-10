@@ -5,7 +5,7 @@ import Banner from "@/components/shared/banner";
 import { fetchActivityBySlug } from "@/lib/actions/wordpress";
 import { MINUTELY_REVALIDATION } from "@/lib/constants";
 import { Metadata } from "next";
-import { unstable_setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 
 type Props = {
@@ -18,7 +18,7 @@ type Props = {
 export const revalidate = MINUTELY_REVALIDATION;
 
 const DEFAULT_ACTIVITY_IMAGE =
-  "https://freetribenetwork.com/wp-content/uploads/2024/03/who-we-are-banner-scaled-1.webp";
+  "https://res.cloudinary.com/amjedidiah/image/upload/v1741474041/ftn/who-we-are-banner_owokwo.webp";
 
 export async function generateMetadata({
   params: { slug },
@@ -26,7 +26,7 @@ export async function generateMetadata({
   const activity = await fetchActivityBySlug(slug);
   const graph = {
     images: [
-      activity?.featuredImage.node?.mediaItemUrl || DEFAULT_ACTIVITY_IMAGE,
+      activity?.featuredImage.node?.mediaItemUrl ?? DEFAULT_ACTIVITY_IMAGE,
     ],
     description: activity?.excerpt,
   };
@@ -39,9 +39,11 @@ export async function generateMetadata({
   };
 }
 
-export default async function Page({ params: { slug, locale } }: Props) {
+export default async function Page({
+  params: { slug, locale },
+}: Readonly<Props>) {
   const activity = await fetchActivityBySlug(slug);
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
 
   if (!activity) return notFound();
 
