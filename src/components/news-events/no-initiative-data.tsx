@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Link } from "@/lib/i18n.config";
+import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 
 type Props = {
@@ -7,7 +7,10 @@ type Props = {
   shouldShowRefreshButton?: boolean;
 };
 
-export default function NoInitiativeData({ trigger, shouldShowRefreshButton = true }: Props) {
+export default function NoInitiativeData({
+  trigger,
+  shouldShowRefreshButton = true,
+}: Readonly<Props>) {
   const t = useTranslations("News");
 
   return (

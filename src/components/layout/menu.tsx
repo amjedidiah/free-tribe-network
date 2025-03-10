@@ -12,7 +12,7 @@ import {
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { routes } from "@/lib/data";
-import { Link, usePathname } from "@/lib/i18n.config";
+import { Link, usePathname } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import { PointerEventHandler, useCallback } from "react";
 
@@ -48,7 +48,7 @@ export default function Menu({ label, links, href }: MenuProps) {
             <ul className="p-5 space-y-2">
               {links?.map((i, index) => (
                 <li
-                  key={index}
+                  key={i.label}
                   className="text-secondary hover:bg-gray-100 rounded-md"
                 >
                   <NavigationMenuLink

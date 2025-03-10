@@ -1,6 +1,6 @@
 import { topInitiativesData } from "@/lib/data";
 import ContentImage from "@/components/shared/content-image";
-import { Link } from "@/lib/i18n.config";
+import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import SafeHTML from "@/components/shared/safe-html";
 import { useTranslations } from "next-intl";

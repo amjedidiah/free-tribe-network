@@ -1,7 +1,7 @@
 "use client";
 import { homeBannerData } from "@/lib/data";
 import Banner from "@/components/shared/banner";
-import { Link } from "@/lib/i18n.config";
+import { Link } from "@/i18n/navigation";
 import { Link as ScrollLink } from "react-scroll";
 import { CarouselItem } from "@/components/ui/carousel";
 import { useTranslations } from "next-intl";

@@ -10,19 +10,22 @@ import { Fragment } from "react";
 
 export const revalidate = MINUTELY_REVALIDATION;
 
-export const generateMetadata = ({
-  params: { locale },
-}: PropsWithLocaleParam) =>
-  getMetadata(
+export async function generateMetadata({ params }: PropsWithLocaleParam) {
+  const { locale } = await params;
+
+  return getMetadata(
     locale,
     "https://res.cloudinary.com/amjedidiah/image/upload/v1741477860/ftn/donate-banner_n2ad95.webp",
     "Layout.metaData.donate"
   );
+}
 
-export default function Donate({
-  params: { locale },
+export default async function Donate({
+  params,
 }: Readonly<PropsWithLocaleParam>) {
+  const { locale } = await params;
   setRequestLocale(locale);
+
   return (
     <Fragment>
       <DonateBanner />

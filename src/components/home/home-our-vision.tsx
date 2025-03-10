@@ -21,7 +21,7 @@ export default function HomeOurVision() {
           <div className="flex flex-col max-lg:justify-between lg:flex-row lg:items-center gap-4 bg-[#f69fd2] lg:col-span-2">
             <div className="">
               <span className="bg-primary-900 py-[2px] px-1 text-primary-100">
-                SDG 5
+                {"SDG 5"}
               </span>
               <h3 className="text-2xl lg:text-3xl text-primary-800 uppercase lg:max-w-[11.625rem]">
                 {t("gender equality")}
@@ -34,7 +34,7 @@ export default function HomeOurVision() {
           <div className="flex flex-col justify-between gap-4 bg-[#7daabe]">
             <div className="">
               <span className="bg-secondary-800 py-[2px] px-1 text-secondary-100 ">
-                SDG 10
+                {"SDG 10"}
               </span>
               <h3 className="text-2xl lg:text-3xl text-secondary-800 uppercase">
                 {t("reduced inequalities")}
@@ -47,7 +47,7 @@ export default function HomeOurVision() {
           <div className="grid items-center gap-4 bg-[#04436e]">
             <div className="">
               <span className="bg-secondary-900 py-[2px] px-1 text-secondary-100 ">
-                SDG 3
+                {"SDG 3"}
               </span>
               <h3 className="text-2xl lg:text-3xl text-secondary-100 uppercase">
                 {t("good health and well being")}

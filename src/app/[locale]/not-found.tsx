@@ -1,6 +1,6 @@
 "use client";
 import ErrorLayout from "@/components/shared/error-layout";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/i18n/navigation";
 import { useCallback } from "react";
 
 export default function LocaleNotFound() {

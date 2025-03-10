@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { IActivity } from "@/lib/types";
 import SafeHTML from "@/components/shared/safe-html";
-import { Link, usePathname, useRouter } from "@/lib/i18n.config";
+import { Link, usePathname, useRouter } from "@/i18n/navigation";
 import { useCallback } from "react";
 import { useParams, useSearchParams } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
@@ -33,7 +33,7 @@ export default function ActivityCard({
       router.push(
         {
           pathname: `${pathname}?${updatedParams.toString()}` as any,
-          params,
+          params: params as any,
         },
         {
           scroll: false,

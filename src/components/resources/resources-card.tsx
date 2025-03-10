@@ -57,7 +57,7 @@ export default function ResourcesCard({
           className="text-white text-center py-2 rounded download"
           target="_blank"
         >
-          Download Now
+          {"Download Now"}
         </a>
       )}
     </div>

@@ -28,7 +28,9 @@ const ProjectReportCard = ({ title, minsRead, src, url }: Props) => {
               </a>
             </div>
             <div className="h5-gap text-center">
-              <p className="text-primary-100 text-sm">{minsRead} mins read</p>
+              <p className="text-primary-100 text-sm">
+                {minsRead} {"mins read"}
+              </p>
 
               <h5 className="text-primary-50 capitalize">
                 <a href={url} target="_blank">

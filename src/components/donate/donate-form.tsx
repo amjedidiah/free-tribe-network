@@ -64,7 +64,7 @@ export default function DonateForm() {
             onChange={handleChangeCurrencyLabel}
           >
             <option disabled value={""}>
-              Choose
+              {"Choose"}
             </option>
             {Object.values(currencies).map(({ label }) => (
               <option key={label} value={label}>
@@ -74,7 +74,7 @@ export default function DonateForm() {
           </select>
         </div>
         <div className="grid max-lg:grid-cols-2 gap-4 lg:gap-2">
-          <div
+          <button
             className={cn(
               "cursor-pointer p-3 lg:p-5 rounded-[0.5rem] border border-[#ddd] h5-gap items-start gap-1",
               { "shadow-xl border-2 border-primary-500": !isReoccurring }
@@ -82,11 +82,11 @@ export default function DonateForm() {
             onClick={() => setIsReoccurring(false)}
           >
             <h5 className="text-black flex items-center">
-              <span>One Time</span>
+              <span>{"One Time"}</span>
             </h5>
-            <p className="text-[#777]">Donate once</p>
-          </div>
-          <div
+            <p className="text-[#777]">{"Donate once"}</p>
+          </button>
+          <button
             className={cn(
               "cursor-pointer p-3 lg:p-5 rounded-[0.5rem] border border-[#ddd] h5-gap items-start gap-1",
               { "shadow-xl border-2 border-primary-500": isReoccurring }
@@ -94,16 +94,16 @@ export default function DonateForm() {
             onClick={() => setIsReoccurring(true)}
           >
             <h5 className="text-black flex items-center">
-              <span>Monthly</span>
+              <span>{"Monthly"}</span>
             </h5>
-            <p className="text-[#777]">Donate monthly</p>
-          </div>
+            <p className="text-[#777]">{"Donate monthly"}</p>
+          </button>
         </div>
         <Button
           className="p-4 w-full"
           disabled={!email || !currency || hasError}
         >
-          Donate Now
+          {"Donate Now"}
         </Button>
       </form>
       {message && (

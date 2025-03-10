@@ -12,18 +12,19 @@ import ScrollToSection from "@/components/shared/scroll-to-section";
 
 export const revalidate = MINUTELY_REVALIDATION;
 
-export const generateMetadata = ({
-  params: { locale },
-}: PropsWithLocaleParam) =>
-  getMetadata(
+export async function generateMetadata({ params }: PropsWithLocaleParam) {
+  const { locale } = await params;
+  return getMetadata(
     locale,
     "https://res.cloudinary.com/amjedidiah/image/upload/v1741477701/ftn/resources-banner_ov1th3.webp",
     "Layout.metaData.resources"
   );
+}
 
-export default function Resources({
-  params: { locale },
+export default async function Resources({
+  params,
 }: Readonly<PropsWithLocaleParam>) {
+  const { locale } = await params;
   setRequestLocale(locale);
   const keyResource = getKeyResource(locale);
 

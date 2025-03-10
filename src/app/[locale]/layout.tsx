@@ -12,17 +12,19 @@ import {
   getTranslations,
   setRequestLocale,
 } from "next-intl/server";
-import { locales } from "@/lib/i18n.config";
 import { PropsWithLocaleParam } from "@/lib/types";
 import { isRtlLang } from "rtl-detect";
 import CookiesConsent from "@/components/layout/cookies-consent";
 import { CookiesConsentProvider } from "@/context/cookies-consent-context";
 import { OpenGraph } from "next/dist/lib/metadata/types/opengraph-types";
+import { notFound } from "next/navigation";
+import { routing } from "@/i18n/routing";
 
 export async function generateMetadata(
-  { params: { locale } }: PropsWithLocaleParam,
+  { params }: PropsWithLocaleParam,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
+  const { locale } = await params;
   const t = await getTranslations({
     locale,
     namespace: "Layout.metaData.default",
@@ -35,7 +37,7 @@ export async function generateMetadata(
       en: "https://res.cloudinary.com/amjedidiah/image/upload/v1741559780/ftn/Screenshot-en_idoj6z.png",
       fr: "https://res.cloudinary.com/amjedidiah/image/upload/v1741559779/ftn/Screenshot-fr_sz0pe4.png",
       nl: "https://res.cloudinary.com/amjedidiah/image/upload/v1741559782/ftn/Screenshot-nl_fjhqgn.png",
-    }[locale] ||
+    }[locale] ??
     "https://res.cloudinary.com/amjedidiah/image/upload/v1741559780/ftn/Screenshot-en_idoj6z.png";
 
   const graph: OpenGraph = {
@@ -71,16 +73,20 @@ export const viewport: Viewport = {
 };
 
 export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
+  return routing.locales.map((locale) => ({ locale }));
 }
 
 export default async function RootLayout({
   children,
-  params: { locale },
+  params,
 }: PropsWithChildren<PropsWithLocaleParam>) {
+  const { locale } = await params;
+  if (!routing.locales.includes(locale as any)) notFound();
+
+  setRequestLocale(locale);
+
   const messages = await getMessages();
   const dir = isRtlLang(locale) ? "rtl" : "ltr";
-  setRequestLocale(locale);
 
   return (
     <html lang={locale} dir={dir} className="h-full">
@@ -90,7 +96,7 @@ export default async function RootLayout({
           manrope.variable
         )}
       >
-        <NextIntlClientProvider locale={locale} messages={messages}>
+        <NextIntlClientProvider messages={messages}>
           <CookiesConsentProvider>
             <Suspense>
               <Nav />

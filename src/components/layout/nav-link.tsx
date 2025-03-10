@@ -2,7 +2,7 @@ import Menu from "@/components/layout/menu";
 import { cn } from "@/lib/utils";
 import { routes } from "@/lib/data";
 import { memo } from "react";
-import { Link, usePathname } from "@/lib/i18n.config";
+import { Link, usePathname } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 
 type Props = { route: (typeof routes)[number] };

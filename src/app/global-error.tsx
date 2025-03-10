@@ -7,10 +7,10 @@ import manrope from "@/lib/font";
 export default function GlobalError({
   error,
   reset,
-}: {
+}: Readonly<{
   error: Error & { digest?: string };
   reset: () => void;
-}) {
+}>) {
   useEffect(() => console.error(error), [error]);
 
   return (
@@ -20,15 +20,15 @@ export default function GlobalError({
           <section>
             <article className="container text-center">
               <h1 className="font-extralight text-8xl sm:text-[10rem] md:text-[12rem] lg:text-[14rem]">
-                Error
+                {"Error"}
               </h1>
               <div className="relative flex flex-col gap-2 items-center">
-                <p>Oops! An error occurred, we apologize</p>
+                <p>{"Oops! An error occurred, we apologize"}</p>
                 <button
                   onClick={reset}
                   className="bg-primary-500 text-white px-5 py-3 rounded shadow-md"
                 >
-                  Retry
+                  {"Retry"}
                 </button>
               </div>
             </article>

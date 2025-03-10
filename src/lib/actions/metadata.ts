@@ -11,7 +11,6 @@ export const getMetadata = async (
     IntlMessages,
     | "Layout.metaData.resources"
     | "Layout.metaData.who we are"
-    | "Layout.metaData.resources"
     | "Layout.metaData.our initiatives"
     | "Layout.metaData.news"
     | "Layout.metaData.donate"

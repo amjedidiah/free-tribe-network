@@ -1,4 +1,4 @@
-import { useRouter } from "@/lib/i18n.config";
+import { useRouter } from "@/i18n/navigation";
 import { useSearchParams } from "next/navigation";
 import { useCallback, useEffect } from "react";
 import { scroller } from "react-scroll";
@@ -12,7 +12,7 @@ export default function useScrollToSection(props?: UseScrollToSectionProps) {
   const { initUrlSection, shouldScroll = true } = props || {};
   const searchParams = useSearchParams() as unknown as URLSearchParams;
   const router = useRouter();
-  const activeSection = searchParams.get("section")?.toLowerCase();
+  const activeSection = searchParams.get("section")?.toLowerCase().replaceAll("/", "");
 
   const handleSectionChange = useCallback(
     (id: string) => {

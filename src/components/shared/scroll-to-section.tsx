@@ -10,7 +10,9 @@ function VirtualComponent(props: UseScrollToSectionProps) {
   return null;
 }
 
-export default function ScrollToSection(props: UseScrollToSectionProps) {
+export default function ScrollToSection(
+  props: Readonly<UseScrollToSectionProps>
+) {
   return (
     <Suspense fallback={null}>
       <VirtualComponent {...props} />

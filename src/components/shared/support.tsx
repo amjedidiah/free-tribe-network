@@ -1,6 +1,6 @@
 import ContentImage from "@/components/shared/content-image";
 import { Button } from "@/components/ui/button";
-import { Link } from "@/lib/i18n.config";
+import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 
 export default function Support() {

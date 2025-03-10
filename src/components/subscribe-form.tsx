@@ -36,7 +36,7 @@ function SubscribeForm(props: FormHooks<EmailFormFields>) {
           })}
           disabled={isLoading}
         >
-          Subscribe
+          {"Subscribe"}
         </Button>
       </form>
       <ShouldRender condition={!!message}>

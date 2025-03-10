@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import { ComponentProps, PropsWithChildren } from "react";
 import { LucideIcon, ZoomIn } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 
 export default function AutocompleteItem({
   children,
@@ -17,7 +17,7 @@ export default function AutocompleteItem({
 >) {
   return (
     <Link
-      href={(href || "#") as any}
+      href={(href ?? "#") as any}
       className={cn(
         "flex items-stretch justify-between hover:bg-gray-100 aria-selected:bg-gray-100 transition-colors",
         className

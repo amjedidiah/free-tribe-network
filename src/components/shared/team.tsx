@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import ContentImage from "@/components/shared/content-image";
-import { Link } from "@/lib/i18n.config";
+import { Link } from "@/i18n/navigation";
 import { HTMLAttributes } from "react";
 import { getTranslations } from "next-intl/server";
 

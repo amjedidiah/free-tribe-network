@@ -4,16 +4,15 @@ import MoreActivities from "@/components/activity/more-activities";
 import Banner from "@/components/shared/banner";
 import { fetchActivityBySlug } from "@/lib/actions/wordpress";
 import { MINUTELY_REVALIDATION } from "@/lib/constants";
-import { IActivity } from "@/lib/types";
+import { IActivity, PropsWithLocaleParam } from "@/lib/types";
 import { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 
-type Props = {
-  params: {
+type Props = PropsWithLocaleParam & {
+  params: Promise<{
     slug: string;
-    locale: string;
-  };
+  }>;
 };
 
 export const revalidate = MINUTELY_REVALIDATION;
@@ -21,9 +20,8 @@ export const revalidate = MINUTELY_REVALIDATION;
 const DEFAULT_ACTIVITY_IMAGE =
   "https://res.cloudinary.com/amjedidiah/image/upload/v1741474041/ftn/who-we-are-banner_owokwo.webp";
 
-export async function generateMetadata({
-  params: { slug },
-}: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
   // const activity = await fetchActivityBySlug(slug);
   const activity = {} as IActivity;
   const graph = {
@@ -41,12 +39,12 @@ export async function generateMetadata({
   };
 }
 
-export default async function Page({
-  params: { slug, locale },
-}: Readonly<Props>) {
+export default async function Page({ params }: Readonly<Props>) {
+  const { locale, slug } = await params;
+  setRequestLocale(locale);
+
   // const activity = await fetchActivityBySlug(slug);
   const activity = {} as IActivity;
-  setRequestLocale(locale);
 
   if (!Object.keys(activity)) return notFound();
 

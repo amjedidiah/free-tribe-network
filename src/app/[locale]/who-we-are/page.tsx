@@ -16,17 +16,22 @@ import ScrollToSection from "@/components/shared/scroll-to-section";
 
 export const revalidate = MINUTELY_REVALIDATION;
 
-export const generateMetadata = ({ params: { locale } }: PropsWithLocaleParam) =>
-  getMetadata(
+export async function generateMetadata({ params }: PropsWithLocaleParam) {
+  const { locale } = await params;
+
+  return getMetadata(
     locale,
     "https://res.cloudinary.com/amjedidiah/image/upload/v1741474041/ftn/who-we-are-banner_owokwo.webp",
     "Layout.metaData.who we are"
   );
+}
 
 export default async function WhoWeAre({
-  params: { locale },
+  params,
 }: Readonly<PropsWithLocaleParam>) {
+  const { locale } = await params;
   setRequestLocale(locale);
+
   const t = await getTranslations("Nav.menu");
 
   return (

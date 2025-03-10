@@ -1,4 +1,4 @@
-import { useRouter } from "@/lib/i18n.config";
+import { useRouter } from "@/i18n/navigation";
 import { useLocale } from "next-intl";
 import { useParams, useSearchParams } from "next/navigation";
 import { useCallback, useEffect } from "react";

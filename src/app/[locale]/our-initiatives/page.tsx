@@ -4,27 +4,27 @@ import Banner from "@/components/shared/banner";
 import { initiatives } from "@/lib/data";
 import Support from "@/components/shared/support";
 import { MINUTELY_REVALIDATION } from "@/lib/constants";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { PropsWithLocaleParam } from "@/lib/types";
-import { useTranslations } from "next-intl";
 import { getMetadata } from "@/lib/actions/metadata";
 
 export const revalidate = MINUTELY_REVALIDATION;
 
-export const generateMetadata = ({
-  params: { locale },
-}: PropsWithLocaleParam) =>
-  getMetadata(
+export async function generateMetadata({ params }: PropsWithLocaleParam) {
+  const { locale } = await params;
+  return getMetadata(
     locale,
     "https://res.cloudinary.com/amjedidiah/image/upload/v1741477549/ftn/initiatives-banner_mz4dwp.webp",
     "Layout.metaData.our initiatives"
   );
+}
 
-export default function OurInitiatives({
-  params: { locale },
+export default async function OurInitiatives({
+  params,
 }: Readonly<PropsWithLocaleParam>) {
+  const { locale } = await params;
   setRequestLocale(locale);
-  const t = useTranslations("Our initiative");
+  const t = await getTranslations("Our initiative");
 
   return (
     <Fragment>

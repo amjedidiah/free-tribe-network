@@ -1,6 +1,6 @@
 import BlogList from "@/components/shared/blog-list";
 import { Button } from "@/components/ui/button";
-import { Link } from "@/lib/i18n.config";
+import { Link } from "@/i18n/navigation";
 import { fetchMediumPosts } from "@/lib/actions/medium";
 import {getTranslations} from 'next-intl/server';
 
@@ -8,7 +8,7 @@ export default async function TopPosts() {
   const { posts, topPosts } = await fetchMediumPosts();
   const t = await getTranslations("Home.Post");
 
-  if (!posts.length) return null;
+  if (!posts?.length) return null;
 
   return (
     <section className="py-10 lg:py-28">

@@ -14,8 +14,10 @@ import { PropsWithLocaleParam } from "@/lib/types";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import ScrollToSection from "@/components/shared/scroll-to-section";
 
-export default async function Home({ params: { locale } }: Readonly<PropsWithLocaleParam>) {
+export default async function Home({ params }: Readonly<PropsWithLocaleParam>) {
+  const { locale } = await params;
   setRequestLocale(locale);
+
   const t = await getTranslations("Team");
 
   return (

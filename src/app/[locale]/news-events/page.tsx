@@ -9,19 +9,21 @@ import { Fragment, Suspense } from "react";
 
 export const revalidate = MINUTELY_REVALIDATION;
 
-export const generateMetadata = ({
-  params: { locale },
-}: PropsWithLocaleParam) =>
-  getMetadata(
+export async function generateMetadata({ params }: PropsWithLocaleParam) {
+  const { locale } = await params;
+  return getMetadata(
     locale,
     "https://res.cloudinary.com/amjedidiah/image/upload/v1741477252/ftn/news-banner_x3jjv9.webp",
     "Layout.metaData.news"
   );
+}
 
 export default async function NewsEvents({
-  params: { locale },
+  params,
 }: Readonly<PropsWithLocaleParam>) {
+  const { locale } = await params;
   setRequestLocale(locale);
+
   const t = await getTranslations("News");
 
   return (

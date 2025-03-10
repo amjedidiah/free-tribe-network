@@ -15,7 +15,7 @@ type Props = {
   trigger: string;
 };
 
-export default function Blog({ translatedTrigger, trigger }: Props) {
+export default function Blog({ translatedTrigger, trigger }: Readonly<Props>) {
   const { data, isLoading } = useSWRImmutable("/api/medium", fetchMediumPosts);
   const [start, setStart] = useState(0);
   const t = useTranslations("News");
@@ -42,7 +42,7 @@ export default function Blog({ translatedTrigger, trigger }: Props) {
           )}
         </div>
         <MyPagination
-          hasNextPage={start + BLOG_PAGE_LIMIT < (data?.posts.length || 0)}
+          hasNextPage={start + BLOG_PAGE_LIMIT < (data?.posts.length ?? 0)}
           hasPreviousPage={start > 0}
           onFetchNext={handleFetchNext}
           onFetchPrev={handleFetchPrev}

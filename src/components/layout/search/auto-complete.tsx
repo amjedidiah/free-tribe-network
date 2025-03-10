@@ -8,7 +8,7 @@ import {
 } from "react";
 import { createRoot, Root } from "react-dom/client";
 import type { AutocompleteOptions } from "@algolia/autocomplete-js";
-import { useRouter } from "@/lib/i18n.config";
+import { useRouter } from "@/i18n/navigation";
 
 export default function Autocomplete<TItem extends Record<string, unknown>>({
   className,

@@ -8,7 +8,7 @@ const igFetchMediaIDs = cache(async () => {
     );
     const mediaIDObjects: IGMediaIDObject[] = (await mediaIDsResponse.json())
       .data;
-    if (!mediaIDObjects.length) return;
+    if (!mediaIDObjects?.length) return;
 
     return mediaIDObjects.map((item) => item.id);
   } catch (error) {

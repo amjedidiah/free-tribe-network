@@ -1,7 +1,7 @@
 "use client";
 import ContactCard from "@/components/layout/contact-card";
 import SubscribeFormContainer from "@/components/subscribe-form-container";
-import { Link, usePathname } from "@/lib/i18n.config";
+import { Link, usePathname } from "@/i18n/navigation";
 import { contactChannels, currentYear, routes } from "@/lib/data";
 import Socials from "@/components/shared/socials";
 import ContentImage from "@/components/shared/content-image";
@@ -66,20 +66,21 @@ export default function Footer() {
               <a href="https://freetribenetwork.com/content/wp-content/uploads/2024/06/TERMS-AND-CONDITIONS.pdf">
                 {t("Footer.Terms")}
               </a>{" "}
-              <span className="max-sm:hidden">|</span>
+              <span className="max-sm:hidden">{"|"}</span>
               <a href="https://freetribenetwork.com/content/wp-content/uploads/2024/06/PRIVACY-POLICY.pdf">
                 {t("Footer.Privacy")}
               </a>{" "}
-              <span className="max-sm:hidden">|</span>
+              <span className="max-sm:hidden">{"|"}</span>
               <a href="https://freetribenetwork.com/content/wp-content/uploads/2024/06/COOKIE-POLICY.pdf">
                 {t("Footer.Cookie")}
               </a>
             </div>
             <p className="text-slate-300">
               <span>
-                &copy; {currentYear} {t("Footer.Copyright")}
+                {"©"}
+                {currentYear} {t("Footer.Copyright")}
               </span>{" "}
-              . <span>{t("Footer.Rights")}</span>
+              {"."} <span>{t("Footer.Rights")}</span>
             </p>
           </div>
         </div>

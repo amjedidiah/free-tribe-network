@@ -4,8 +4,9 @@ import { useCallback, useMemo } from "react";
 import ReactFlagsSelect from "react-flags-select";
 import { useSearchParams, useParams } from "next/navigation";
 import { LocaleCountry } from "@/lib/types";
-import { localeLabels, usePathname, useRouter } from "@/lib/i18n.config";
+import { usePathname, useRouter } from "@/i18n/navigation";
 import { useLocale } from "next-intl";
+import { localeLabels } from "@/lib/constants";
 
 export default function LocaleSelector() {
   const searchParams = useSearchParams();
@@ -22,7 +23,7 @@ export default function LocaleSelector() {
       router.replace(
         {
           pathname: newUrl,
-          params,
+          params: params as any,
         },
         { locale: newLocale, scroll: false }
       );

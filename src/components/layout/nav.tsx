@@ -1,7 +1,7 @@
 "use client";
 
 import ContentImage from "@/components/shared/content-image";
-import { Link, usePathname } from "@/lib/i18n.config";
+import { Link, usePathname } from "@/i18n/navigation";
 import { Link as ScrollLink } from "react-scroll";
 import { Button } from "@/components/ui/button";
 import { Menu as Burger } from "lucide-react";

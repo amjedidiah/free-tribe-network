@@ -183,9 +183,7 @@ export enum Locale {
 }
 
 export type PropsWithLocaleParam = {
-  params: {
-    locale: Locale;
-  };
+  params: Promise<{locale: Locale}>;
 };
 
 export enum CookieType {

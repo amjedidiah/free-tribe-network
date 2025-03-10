@@ -3,7 +3,8 @@ import { TabsContent } from "@/components/ui/tabs";
 import { formatLinkLabel } from "@/lib/utils";
 import { PropsWithChildren } from "react";
 import { Badge } from "@/components/ui/badge";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
+import { usePathname, useRouter } from "@/i18n/navigation";
 import ShouldRender from "@/components/shared/should-render";
 
 export default function ActivityTabsContent({
@@ -15,7 +16,7 @@ export default function ActivityTabsContent({
   isBlog?: boolean;
 }>) {
   const searchParams = useSearchParams();
-  const initiative = searchParams.get("initiative") || "";
+  const initiative = searchParams.get("initiative") ?? "";
   const router = useRouter();
   const pathname = usePathname();
 
@@ -23,7 +24,7 @@ export default function ActivityTabsContent({
     const updatedParams = new URLSearchParams(searchParams.toString());
     updatedParams.delete("initiative");
 
-    router.push(`${pathname}?${updatedParams.toString()}`, {
+    router.push(`${pathname}?${updatedParams.toString()}` as any, {
       scroll: false,
     });
   };
@@ -34,12 +35,12 @@ export default function ActivityTabsContent({
         <div className="flex justify-end">
           <Badge className="flex gap-2 items-center text-sm font-bold uppercase opacity-80 hover:bg-primary hover:opacity-100 hover:shadow-md">
             <span>{formatLinkLabel(initiative)}</span>{" "}
-            <span
+            <button
               className="cursor-pointer p-1"
               onClick={handleResetInitiative}
             >
-              x
-            </span>
+              {"x"}
+            </button>
           </Badge>
         </div>
       </ShouldRender>

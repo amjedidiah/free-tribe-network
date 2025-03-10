@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import Socials from "@/components/shared/socials";
-import { Link } from "@/lib/i18n.config";
+import { Link } from "@/i18n/navigation";
 import { volunteerNowLink } from "@/lib/data";
 import { Button } from "@/components/ui/button";
 import ContentImage from "@/components/shared/content-image";

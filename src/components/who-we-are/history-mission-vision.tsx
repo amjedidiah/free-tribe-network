@@ -1,7 +1,7 @@
 import { visionMissionData } from "@/lib/data";
 import VisionMissionCard from "@/components/who-we-are/vision-mission-card";
 import ContentImage from "@/components/shared/content-image";
-import { Link } from "@/lib/i18n.config";
+import { Link } from "@/i18n/navigation";
 import { getTranslations } from "next-intl/server";
 
 export default async function HistoryMissionVision() {
