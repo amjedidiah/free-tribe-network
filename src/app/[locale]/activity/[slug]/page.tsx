@@ -4,7 +4,7 @@ import MoreActivities from "@/components/activity/more-activities";
 import Banner from "@/components/shared/banner";
 import { fetchActivityBySlug } from "@/lib/actions/wordpress";
 import { MINUTELY_REVALIDATION } from "@/lib/constants";
-import { PropsWithLocaleParam } from "@/lib/types";
+import { IActivity, PropsWithLocaleParam } from "@/lib/types";
 import { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -20,13 +20,14 @@ export const revalidate = MINUTELY_REVALIDATION;
 const DEFAULT_ACTIVITY_IMAGE =
   "https://res.cloudinary.com/amjedidiah/image/upload/v1741474041/ftn/who-we-are-banner_owokwo.webp";
 
+const getActivityImage = (activity?: IActivity) =>
+  activity?.featuredImage?.node?.mediaItemUrl ?? DEFAULT_ACTIVITY_IMAGE;
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const activity = await fetchActivityBySlug(slug);
   const graph = {
-    images: [
-      activity?.featuredImage.node?.mediaItemUrl ?? DEFAULT_ACTIVITY_IMAGE,
-    ],
+    images: [getActivityImage(activity)],
     description: activity?.excerpt,
   };
 
@@ -43,17 +44,15 @@ export default async function Page({ params }: Readonly<Props>) {
   setRequestLocale(locale);
 
   const activity = await fetchActivityBySlug(slug);
+  const activityImage = getActivityImage(activity);
 
   if (!activity) return notFound();
 
   return (
     <ActivityContentContainer
-      familiars={JSON.parse(activity.newsFieldGroup.sharedid)}
+      familiars={JSON.parse(activity.newsFieldGroup?.sharedid)}
     >
-      <Banner
-        image={activity.featuredImage?.node?.mediaItemUrl}
-        imageTitle="activity-banner"
-      />
+      <Banner image={activityImage} />
       <ActivityContent activity={activity} />
       <MoreActivities isUpcoming={activity.isUpcoming} />
     </ActivityContentContainer>

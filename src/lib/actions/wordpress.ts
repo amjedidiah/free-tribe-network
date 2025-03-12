@@ -10,7 +10,6 @@ import {
   IActivity,
   fetchActivitiesByCategoryNameVars,
   fetchActivitiesByCategoryNameData,
-  Locale,
 } from "@/lib/types";
 import { getApolloClient } from "@/lib/apollo-client";
 import {
@@ -68,9 +67,7 @@ export const fetchResourcesByCategoryId = cache(
         query: GET_RESOURCES_BY_CATEGORY_ID,
         variables: {
           id,
-          env: `${process.env.NODE_ENV}${
-            locale !== Locale.en ? "-" + locale : ""
-          }`,
+          env: `${process.env.NODE_ENV}${"-" + locale}`,
           first,
           last,
           before,
@@ -79,9 +76,9 @@ export const fetchResourcesByCategoryId = cache(
       });
 
       return {
-        ...resourcesData.data.category.posts.pageInfo,
-        title: resourcesData.data.category.name,
-        resourceList: resourcesData.data.category.posts.edges.map((item: any) =>
+        ...resourcesData.data.category?.posts?.pageInfo,
+        title: resourcesData.data.category?.name,
+        resourceList: resourcesData.data.category?.posts?.edges?.map((item: any) =>
           extractResourcesContent(item, locales, hideDescription)
         ),
       } as FetchCategoriesByIdData;
@@ -150,7 +147,7 @@ export const fetchActivityBySlug = cache(async (slug: string) => {
       query: GET_ACTIVITY_BY_SLUG,
       variables: {
         slug,
-        env: process.env.NODE_ENV,
+        env: `${process.env.NODE_ENV}${"-" + locale}`,
       },
     });
     if (!activityData.data.activities.edges.length) return;
@@ -181,12 +178,8 @@ export const fetchActivitiesByCategoryName = cache(
         query: GET_ACTIVITIES_BY_CATEGORY_NAME,
         variables: {
           language: locale.toUpperCase(),
-          categoryName: `${categoryName}${
-            locale !== Locale.en ? "-" + locale : ""
-          }`,
-          env: `${process.env.NODE_ENV}${
-            locale !== Locale.en ? "-" + locale : ""
-          }`,
+          categoryName: `${categoryName}${"-" + locale}`,
+          env: `${process.env.NODE_ENV}${"-" + locale}`,
           first,
           last,
           before,

@@ -25,7 +25,7 @@ export default function useActivityLocaleHandler(familiars: Familiar) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const params = useParams();
-  const slug = familiars[locale as keyof typeof familiars];
+  const slug = familiars?.[locale as keyof typeof familiars];
 
   const goToTranslatedActivity = useCallback(
     () =>

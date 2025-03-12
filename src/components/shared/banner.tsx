@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import { HTMLAttributes, PropsWithChildren } from "react";
 import ContentImage from "@/components/shared/content-image";
+import Image from "next/image";
 
 type BannerProps = {
   image?: string;
@@ -32,8 +33,9 @@ export default function Banner({
       {...rest}
     >
       {image && (
-        <ContentImage
-          title={image}
+        <Image
+          src={image}
+          alt={image}
           fill
           style={{ objectFit: "cover", objectPosition: picturePosition }}
           priority

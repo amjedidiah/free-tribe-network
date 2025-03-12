@@ -53,19 +53,19 @@ export enum ResourcesIdsEN {
 }
 
 export enum ResourcesIdsFR {
-  AnnualReports = "dGVybToxMTA=",
-  Bulletins = "dGVybToxMDE=",
-  Researches = "dGVybToxMDY=",
-  SpecialPublications = "dGVybToxMTY=",
-  ProjectActivityReport = "dGVybTo5Mg==",
+  AnnualReports = "dGVybToxMDY=",
+  Bulletins = "dGVybToxMTA=",
+  Researches = "dGVybToxMTg=",
+  SpecialPublications = "dGVybToxMjI=",
+  ProjectActivityReport = "dGVybToxMTQ=",
 }
 
 export enum ResourcesIdsNL {
-  AnnualReports = "dGVybToxMTI=",
-  Bulletins = "dGVybToxMDM=",
-  Researches = "dGVybToxMDg=",
-  SpecialPublications = "dGVybToxMTQ=",
-  ProjectActivityReport = "dGVybTo5NA==",
+  AnnualReports = "dGVybToxMDg=",
+  Bulletins = "dGVybToxMTI=",
+  Researches = "dGVybToxMjA=",
+  SpecialPublications = "dGVybToxMjQ=",
+  ProjectActivityReport = "dGVybToxMTY=",
 }
 
 export type ResourcesListProps = {

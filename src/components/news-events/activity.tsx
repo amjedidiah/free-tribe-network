@@ -21,7 +21,10 @@ type Props = {
   trigger: string;
 };
 
-export default function Activity({ trigger, translatedTrigger }: Props) {
+export default function Activity({
+  trigger,
+  translatedTrigger,
+}: Readonly<Props>) {
   const t = useTranslations("News");
   const params: fetchActivitiesByCategoryNameVars = useMemo(
     () => ({
