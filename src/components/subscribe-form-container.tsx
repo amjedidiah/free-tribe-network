@@ -17,7 +17,7 @@ export default function SubscribeFormContainer() {
             b: (chunks) => <b className="text-white">{chunks}</b>,
             a: (chunks) => (
               <a
-                href="https://freetribenetwork.com/content/wp-content/uploads/2024/06/DATA-CONFIDENTIALITY-FOR-MAILING-LIST.pdf"
+                href={`${process.env.NEXT_PUBLIC_WORDPRESS_ENDPOINT}/wp-content/uploads/2024/06/DATA-CONFIDENTIALITY-FOR-MAILING-LIST.pdf`}
                 className="text-white block underline"
               >
                 {chunks}

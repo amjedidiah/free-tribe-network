@@ -2,15 +2,20 @@
   "deepscan.enable": true,
   "cSpell.words": [
     "brevo",
+    "cdninstagram",
     "Ibadan",
     "kklsdg",
     "minsread",
+    "mysql",
     "Oluwagbemi",
     "opengraph",
+    "phar",
     "sendinblue",
+    "sharedid",
     "Titilope",
     "Tosin",
-    "whatsapp"
+    "whatsapp",
+    "wordpress"
   ],
   "i18n-ally.localesPaths": [
     "src/locales"

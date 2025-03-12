@@ -18,11 +18,13 @@ export default function LocaleSelector() {
   const changeLocale = useCallback(
     (code: string) => {
       const newLocale = localeLabels[code as LocaleCountry];
-      const newUrl = `${pathname}?${searchParams.toString()}` as any;
+      const newUrl = `${pathname}?${decodeURIComponent(
+        searchParams.toString()
+      )}`;
 
       router.replace(
         {
-          pathname: newUrl,
+          pathname: newUrl as any,
           params: params as any,
         },
         { locale: newLocale, scroll: false }

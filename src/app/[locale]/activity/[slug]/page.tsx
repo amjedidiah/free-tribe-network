@@ -4,7 +4,7 @@ import MoreActivities from "@/components/activity/more-activities";
 import Banner from "@/components/shared/banner";
 import { fetchActivityBySlug } from "@/lib/actions/wordpress";
 import { MINUTELY_REVALIDATION } from "@/lib/constants";
-import { IActivity, PropsWithLocaleParam } from "@/lib/types";
+import { PropsWithLocaleParam } from "@/lib/types";
 import { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -22,8 +22,7 @@ const DEFAULT_ACTIVITY_IMAGE =
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  // const activity = await fetchActivityBySlug(slug);
-  const activity = {} as IActivity;
+  const activity = await fetchActivityBySlug(slug);
   const graph = {
     images: [
       activity?.featuredImage.node?.mediaItemUrl ?? DEFAULT_ACTIVITY_IMAGE,
@@ -43,10 +42,9 @@ export default async function Page({ params }: Readonly<Props>) {
   const { locale, slug } = await params;
   setRequestLocale(locale);
 
-  // const activity = await fetchActivityBySlug(slug);
-  const activity = {} as IActivity;
+  const activity = await fetchActivityBySlug(slug);
 
-  if (!Object.keys(activity)) return notFound();
+  if (!activity) return notFound();
 
   return (
     <ActivityContentContainer

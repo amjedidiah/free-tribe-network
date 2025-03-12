@@ -26,8 +26,7 @@ const getWPSearchItemUrl = (item: AutocompleteQuerySuggestionsHit) => {
       },
       activity: () => {
         const slug = permalink
-          .replace("https://freetribenetwork.com/content", "")
-          .replace("https://freetribenetwork.com", "")
+          .replace(process.env.NEXT_PUBLIC_WORDPRESS_ENDPOINT!, "")
           .split("/")
           .slice(-2, -1)
           .join();

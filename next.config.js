@@ -17,8 +17,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "**.cdninstagram.com",
       },
+      {
+        hostname: "localhost",
+      },
     ],
   },
-  trailingSlash: true,
 };
 module.exports = withNextIntl(nextConfig);
