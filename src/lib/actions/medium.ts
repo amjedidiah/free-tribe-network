@@ -5,7 +5,7 @@ import { JSDOM } from "jsdom";
 import truncateHtml from "truncate-html";
 import { cache } from "react";
 import { Post, PostData } from "@/lib/types";
-import parse from "rss-to-json";
+import Parser from "rss-parser";
 
 const contentWithoutImage = (text: string) => {
   // Parse the text as HTML using jsdom
@@ -40,16 +40,24 @@ const extractContentImage = (text: string) => {
 
 const formatPostsData = (postsData: PostData[]): Post[] =>
   postsData.map(
-    ({ category, title, content, description, published, link }) => ({
-      image:
-        extractContentImage(content ?? description) ??
-        "/images/banners/who-we-are-banner.webp",
-      initiatives: category,
+    ({
       title,
       link,
-      desc: (truncateHtml(contentWithoutImage(content ?? description), 50, {
-        byWords: true,
-      }) ?? "").toString(),
+      pubDate: published,
+      categories,
+      ["content:encoded"]: content,
+    }) => ({
+      image:
+        extractContentImage(content) ??
+        "/images/banners/who-we-are-banner.webp",
+      initiatives: categories,
+      title,
+      link,
+      desc: (
+        truncateHtml(contentWithoutImage(content), 50, {
+          byWords: true,
+        }) ?? ""
+      ).toString(),
       date: new Date(published).toLocaleDateString("en-US", {
         year: "numeric",
         month: "long",
@@ -59,11 +67,12 @@ const formatPostsData = (postsData: PostData[]): Post[] =>
   );
 
 export const fetchMediumPosts = cache(async () => {
-  const rssFeedLink = "https://medium.com/feed/@freetribenetwork"
+  const rssFeedLink = "https://medium.com/feed/@freetribenetwork";
   try {
-    const { items } = await parse(rssFeedLink);
+    const parser = new Parser();
+    const { items } = await parser.parseURL(rssFeedLink);
 
-    const posts = formatPostsData(items);
+    const posts = formatPostsData(items as any);
     const topPosts = posts.slice(0, 3);
 
     return { posts, topPosts };

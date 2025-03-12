@@ -43,7 +43,7 @@ export default function PostCard({
             </div>
           </div>
           <div className="flex flex-wrap gap-2 w-fit text-secondary-500 items-center text-xs rounded-full font-medium">
-            {initiatives.map((item) => (
+            {initiatives?.map((item) => (
               <Badge
                 key={item}
                 variant={"secondary"}

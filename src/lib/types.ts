@@ -12,14 +12,14 @@ export type PostData = {
   author: string;
   created: number;
   enclosures: string[];
-  content_encoded: string;
+  ["content:encoded"]: string;
   media: any;
 
-  category: string[];
+  categories: string[];
   title: string;
   content: string;
   description: string;
-  published: number;
+  pubDate: string;
 };
 
 export type Post = {

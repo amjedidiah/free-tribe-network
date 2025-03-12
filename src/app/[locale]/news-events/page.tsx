@@ -1,13 +1,13 @@
 import ActivityTabs from "@/components/news-events/activity-tabs";
 import Banner from "@/components/shared/banner";
 import { getMetadata } from "@/lib/actions/metadata";
-import { MINUTELY_REVALIDATION } from "@/lib/constants";
+import { HOURLY_REVALIDATION } from "@/lib/constants";
 import { defaultNewsEventSection } from "@/lib/data";
 import { PropsWithLocaleParam } from "@/lib/types";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Fragment, Suspense } from "react";
 
-export const revalidate = MINUTELY_REVALIDATION;
+export const revalidate = HOURLY_REVALIDATION;
 
 export async function generateMetadata({ params }: PropsWithLocaleParam) {
   const { locale } = await params;

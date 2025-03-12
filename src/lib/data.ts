@@ -290,31 +290,31 @@ export const currentYear = new Date().getFullYear();
 
 export const homeBannerData = [
   {
-    image: "home-banner-slide-1_ntqfca",
+    imageTitle: "home-banner-slide-1_ntqfca",
     title: "Sustained reproductive health and family well-being",
     picturePosition: "center right",
     wrapperClassName: "max-xl:bg-[rgba(5,83,118,0.45)]",
   },
   {
-    image: "home-banner-slide-2_t5u8e6",
+    imageTitle: "home-banner-slide-2_t5u8e6",
     title: "Mastery",
     picturePosition: "center right",
     wrapperClassName: "max-xl:bg-[rgba(5,83,118,0.45)]",
   },
   {
-    image: "home-banner-slide-3_i6669l",
+    imageTitle: "home-banner-slide-3_i6669l",
     title: "Social Justice",
     picturePosition: "center",
     wrapperClassName: "max-xl:bg-[rgba(5,83,118,0.45)]",
   },
   {
-    image: "home-banner-slide-4_w4kj9f",
+    imageTitle: "home-banner-slide-4_w4kj9f",
     title: "Equity",
     picturePosition: "center",
     wrapperClassName: "max-xl:bg-[rgba(5,83,118,0.45)]",
   },
   {
-    image: "home-banner-slide-5_sp3cje",
+    imageTitle: "home-banner-slide-5_sp3cje",
     title: "Community",
     picturePosition: "center",
     wrapperClassName: "max-xl:bg-[rgba(5,83,118,0.45)]",

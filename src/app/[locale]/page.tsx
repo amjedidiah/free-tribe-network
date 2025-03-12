@@ -13,9 +13,9 @@ import OurImpact from "@/components/shared/our-impact";
 import { PropsWithLocaleParam } from "@/lib/types";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import ScrollToSection from "@/components/shared/scroll-to-section";
-import { MINUTELY_REVALIDATION } from "@/lib/constants";
+import { HOURLY_REVALIDATION } from "@/lib/constants";
 
-export const revalidate = MINUTELY_REVALIDATION;
+export const revalidate = HOURLY_REVALIDATION;
 
 export default async function Home({ params }: Readonly<PropsWithLocaleParam>) {
   const { locale } = await params;
