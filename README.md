@@ -1,15 +1,19 @@
 # Free Tribe Network
 
+[![Next.js](https://img.shields.io/badge/Next.js-14-000000?logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-blue?logo=typescript)](https://www.typescriptlang.org/)
+[![WordPress](https://img.shields.io/badge/WordPress-CMS-blue?logo=wordpress)](https://wordpress.org/)
+
 A web platform for a non-profit organization focused on public health initiatives and social justice advocacy.
 
 ## Table of Content
 
 - [Project Info](#project-info)
-- [Quick Start](#quick-start)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Tech Stack](#tech-stack)
 - [Resources](#resources)
 - [License](#license)
-- [Tech Stack](#tech-stack)
-- [Create Next App](#create-next-app)
 
 ## Project Info
 
@@ -25,21 +29,18 @@ Digital platform enabling Free Tribe Network to:
 
 ### Why This Project?
 
-- To create a modern digital presence for health advocacy efforts
-- To centralize community resources and program information
-- To enable efficient content management through CMS integration
-- To support multi-language accessibility for diverse communities
+- Create a modern digital presence for health advocacy efforts
+- Centralize community resources and program information
+- Enable efficient content management through CMS integration
+- Support multi-language accessibility for diverse communities
 
-### App Architecture
+## Getting Started
 
-- Next.js 14 App Router architecture
-- Tailwind CSS with custom design system
-- Internationalization (i18n) support
-- Hybrid static & server-side rendering
-- Cloudinary media management
-- Apollo Client for GraphQL integration with WordPress
+### Prerequisites
 
-## Quick Start
+- Node.js (LTS version)
+- Yarn package manager
+- Docker (for WordPress setup)
 
 ### Installation
 
@@ -47,7 +48,6 @@ Digital platform enabling Free Tribe Network to:
 git clone https://github.com/amjedidiah/free-tribe-network.git
 cd free-tribe-network
 yarn install
-yarn dev
 ```
 
 ### Environment Setup
@@ -63,42 +63,53 @@ Create `.env.local` file with required environment variables (refer to .env.exam
       docker-compose up -d
    ```
 
-2. Run this only once to Setup WordPress
+2. The env variable `NEXT_PUBLIC_WORDPRESS_ENDPOINT` would be the url to view the WordPress site.
 
-   ```bash
-         chmod +x setup-wordpress.sh ./setup-wordpress.sh
-   ```
+3. To view the WordPress admin dashboard, login at `<NEXT_PUBLIC_WORDPRESS_ENDPOINT>/wp-admin`
 
-## Resources
+### Running the Next.js App
 
-- [Figma Design](https://www.figma.com/design/3PAojEhbxDFw6fo9XNCeTW/Free-Tribe-Network-Website?node-id=800-5046)
-- [Google Drive Folder](https://drive.google.com/drive/folders/1SyyuOufjaArZUu9Kqb1Ul3q_PErj7HVi) - Organizational documents and resources
-- [Locale Files](src/locales) - Internationalization content
-- [Component Library](src/components) - Reusable UI components
+1. Open <http://localhost:3000> with your browser to see the result.
 
-## License
+## Project Structure
 
-Proprietary software. All rights reserved by Free Tribe Network.
+```bash
+free-tribe-network/
+├── src/                 # Application source code
+│   ├── app/             # Next.js app router
+│   ├── components/      # Reusable UI components
+│   ├── locales/         # Internationalization files
+│   └── lib/             # Utilities & helpers
+├── public/              # Static assets
+├── wordpress/           # Docker setup for WordPress
+└── tailwind.config.js   # Design system configuration
+```
 
 ## Tech Stack
 
 ### Core Technologies
 
-- Next.js 14
-- React 18
-- TypeScript
-- Tailwind CSS
-- GraphQL (Apollo Client)
-- WordPress
-- Docker
+- Framework: Next.js 14 (App Router)
+- Language: TypeScript
+- Styling: Tailwind CSS + Custom Design System
+- Data Fetching: GraphQL (Apollo Client)
+- CMS: WordPress (Headless)
+- Containerization: Docker
 
 ### Key Integrations
 
 - Cloudinary (Media Management)
-- Flutterwave (Payments)
-- Algolia (Search)
-- Next-Intl (i18n)
+- Flutterwave (Payment Processing)
+- Algolia (Search Functionality)
+- Internationalization: Next-Intl (i18n)
 
-## Create Next App
+## Resources
 
-This project was bootstrapped with [Create Next App](https://nextjs.org/docs/pages/api-reference/create-next-app).
+- [Figma Design](https://www.figma.com/design/3PAojEhbxDFw6fo9XNCeTW/Free-Tribe-Network-Website?node-id=800-5046)
+- [Google Drive Folder](https://drive.google.com/drive/folders/1SyyuOufjaArZUu9Kqb1Ul3q_PErj7HVi) - Organizational documents
+
+## License
+
+Proprietary software. All rights reserved by Free Tribe Network.
+
+> This project was bootstrapped with [Create Next App](https://nextjs.org/docs/pages/api-reference/create-next-app).

@@ -6,6 +6,12 @@
 
 ## Current
 
+- [x] Deploy WordPress
+
+- Fix Algolia search
+- Mailbox setup
+- PDF files not found: privacy policy, terms of service, etc
+
 ### Bugs, Improvements & Clean up
 
 - global error page
@@ -17,5 +23,5 @@
 
 ## Pending
 
-- [ ] Flutterwave approval: Configure `NEXT_PUBLIC_FLUTTERWAVE_PUBLIC_KEY` and `FLUTTERWAVE_SECRET_KEY` for prod
-- [ ] Introductory video
+- Flutterwave approval: Configure `NEXT_PUBLIC_FLUTTERWAVE_PUBLIC_KEY` and `FLUTTERWAVE_SECRET_KEY` for prod
+- Introductory video

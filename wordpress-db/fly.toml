@@ -1,0 +1,27 @@
+# fly.toml app configuration file generated for freetribenetwork-wordpress-db on 2025-06-16T13:46:52+01:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'freetribenetwork-wordpress-db'
+primary_region = 'jnb'
+
+[build]
+  image = 'mysql:8'
+
+[[vm]]
+  memory = '2gb'
+  cpu_kind = 'shared'
+  cpus = 1
+
+[mounts]
+  source = "mysqldata"
+  destination = "/data"
+
+[env]
+  MYSQL_DATABASE = "some_db"
+  MYSQL_USER = "non_root_user"
+
+[processes]
+  app = """--datadir /data/mysql \
+    --mysql-native-password=ON"""

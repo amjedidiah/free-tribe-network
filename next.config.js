@@ -18,6 +18,10 @@ const nextConfig = {
         hostname: "**.cdninstagram.com",
       },
       {
+        protocol: "https",
+        hostname: "**.fly.dev",
+      },
+      {
         hostname: "localhost",
       },
     ],
